@@ -90,9 +90,40 @@ namespace PIYU_SecureID
             mouseDownLocation = e.Location;
         }
 
-        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
+        private void pictureBoxLogo_MouseDown(object sender, MouseEventArgs e)
         {
+            mouseDownLocation = e.Location;
+        }
 
+        private void pictureBoxLogo_MouseMove(object sender, MouseEventArgs e)
+        {
+            panelTitleBar_MouseMove(sender, e);
+        }
+
+        private void pictureBoxLogo_MouseUp(object sender, MouseEventArgs e)
+        {
+            panelTitleBar_MouseDown(sender, e);
+        }
+
+        private void buttonCreateId_Click(object sender, EventArgs e)
+        {
+            ControlCreateId start = new ControlCreateId();
+            start.Dock = DockStyle.Fill;
+            panelActive.Controls.Add(start);
+        }
+
+        private void buttonCheckId_Click(object sender, EventArgs e)
+        {
+            ControlCheckId start = new ControlCheckId();
+            start.Dock = DockStyle.Fill;
+            panelActive.Controls.Add(start);
+        }
+
+        private void buttonVerifyId_Click(object sender, EventArgs e)
+        {
+            ControlVerifyId start = new ControlVerifyId();
+            start.Dock = DockStyle.Fill;
+            panelActive.Controls.Add(start);
         }
     }
 }
