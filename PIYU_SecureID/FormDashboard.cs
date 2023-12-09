@@ -89,5 +89,10 @@ namespace PIYU_SecureID
         {
             mouseDownLocation = e.Location;
         }
+
+        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -31,5 +31,20 @@ namespace PIYU_SecureID
             var totp = new Totp(Base32Encoding.ToBytes(secretKey));
             return totp.VerifyTotp(userCode, out _, new VerificationWindow(2, 2)); // Validate within ±2 time steps.
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "177013")
+            {
+                button2.Visible = true;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form dashboard = new FormDashboard();
+            dashboard.Show();
+        }
     }
 }
