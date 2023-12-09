@@ -98,7 +98,7 @@
             // 
             // panelTitleBar
             // 
-            panelTitleBar.BackColor = Color.FromArgb(64, 64, 64);
+            panelTitleBar.BackColor = Color.FromArgb(53, 69, 93);
             panelTitleBar.Controls.Add(buttonMinimize);
             panelTitleBar.Controls.Add(buttonRestoreDownMaximize);
             panelTitleBar.Controls.Add(buttonClose);
@@ -113,7 +113,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.DarkSlateGray;
+            panel2.BackColor = Color.FromArgb(60, 95, 106);
             panel2.Controls.Add(buttonVerifyId);
             panel2.Controls.Add(buttonCheckId);
             panel2.Controls.Add(buttonCreateId);
