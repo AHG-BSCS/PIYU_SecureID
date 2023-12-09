@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIYU_SecureID", "PIYU_SecureID\PIYU_SecureID.csproj", "{A3270619-9870-43F4-9805-7B7732BA8D19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3270619-9870-43F4-9805-7B7732BA8D19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3270619-9870-43F4-9805-7B7732BA8D19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3270619-9870-43F4-9805-7B7732BA8D19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3270619-9870-43F4-9805-7B7732BA8D19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40E6D25F-C544-4E74-8B14-9056CF6FC498}
+	EndGlobalSection
+EndGlobal
