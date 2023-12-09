@@ -39,9 +39,11 @@
             buttonVerifyId = new Button();
             buttonCheckId = new Button();
             buttonCreateId = new Button();
+            buttonDashboard = new Button();
             labelInstitution = new Label();
             pictureBoxLogo = new PictureBox();
             panelActive = new Panel();
+            buttonLogout = new Button();
             panelTitleBar.SuspendLayout();
             panelNavigation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
@@ -116,10 +118,12 @@
             // panelNavigation
             // 
             panelNavigation.BackColor = Color.FromArgb(60, 95, 106);
+            panelNavigation.Controls.Add(buttonLogout);
             panelNavigation.Controls.Add(labelDateTime);
             panelNavigation.Controls.Add(buttonVerifyId);
             panelNavigation.Controls.Add(buttonCheckId);
             panelNavigation.Controls.Add(buttonCreateId);
+            panelNavigation.Controls.Add(buttonDashboard);
             panelNavigation.Controls.Add(labelInstitution);
             panelNavigation.Controls.Add(pictureBoxLogo);
             panelNavigation.Dock = DockStyle.Left;
@@ -145,7 +149,7 @@
             buttonVerifyId.FlatAppearance.BorderSize = 0;
             buttonVerifyId.FlatStyle = FlatStyle.Flat;
             buttonVerifyId.ForeColor = Color.White;
-            buttonVerifyId.Location = new Point(0, 205);
+            buttonVerifyId.Location = new Point(0, 273);
             buttonVerifyId.Margin = new Padding(3, 2, 3, 2);
             buttonVerifyId.Name = "buttonVerifyId";
             buttonVerifyId.Size = new Size(150, 50);
@@ -160,7 +164,7 @@
             buttonCheckId.FlatAppearance.BorderSize = 0;
             buttonCheckId.FlatStyle = FlatStyle.Flat;
             buttonCheckId.ForeColor = Color.White;
-            buttonCheckId.Location = new Point(0, 155);
+            buttonCheckId.Location = new Point(0, 223);
             buttonCheckId.Margin = new Padding(3, 2, 3, 2);
             buttonCheckId.Name = "buttonCheckId";
             buttonCheckId.Size = new Size(150, 50);
@@ -175,7 +179,7 @@
             buttonCreateId.FlatAppearance.BorderSize = 0;
             buttonCreateId.FlatStyle = FlatStyle.Flat;
             buttonCreateId.ForeColor = Color.White;
-            buttonCreateId.Location = new Point(0, 105);
+            buttonCreateId.Location = new Point(0, 173);
             buttonCreateId.Margin = new Padding(3, 2, 3, 2);
             buttonCreateId.Name = "buttonCreateId";
             buttonCreateId.Size = new Size(150, 50);
@@ -183,6 +187,21 @@
             buttonCreateId.Text = "CREATE ID";
             buttonCreateId.UseVisualStyleBackColor = true;
             buttonCreateId.Click += buttonCreateId_Click;
+            // 
+            // buttonDashboard
+            // 
+            buttonDashboard.Dock = DockStyle.Top;
+            buttonDashboard.FlatAppearance.BorderSize = 0;
+            buttonDashboard.FlatStyle = FlatStyle.Flat;
+            buttonDashboard.ForeColor = Color.White;
+            buttonDashboard.Location = new Point(0, 123);
+            buttonDashboard.Margin = new Padding(3, 2, 3, 2);
+            buttonDashboard.Name = "buttonDashboard";
+            buttonDashboard.Size = new Size(150, 50);
+            buttonDashboard.TabIndex = 5;
+            buttonDashboard.Text = "DASHBOARD";
+            buttonDashboard.UseVisualStyleBackColor = true;
+            buttonDashboard.Click += buttonDashboard_Click;
             // 
             // labelInstitution
             // 
@@ -193,10 +212,10 @@
             labelInstitution.ImageAlign = ContentAlignment.TopCenter;
             labelInstitution.Location = new Point(0, 70);
             labelInstitution.Name = "labelInstitution";
-            labelInstitution.Size = new Size(150, 35);
+            labelInstitution.Size = new Size(150, 53);
             labelInstitution.TabIndex = 0;
             labelInstitution.Text = "SecureID";
-            labelInstitution.TextAlign = ContentAlignment.MiddleCenter;
+            labelInstitution.TextAlign = ContentAlignment.TopCenter;
             labelInstitution.MouseDown += labelInstitution_MouseDown;
             labelInstitution.MouseMove += labelInstitution_MouseMove;
             labelInstitution.MouseUp += labelInstitution_MouseUp;
@@ -224,6 +243,21 @@
             panelActive.Name = "panelActive";
             panelActive.Size = new Size(944, 556);
             panelActive.TabIndex = 5;
+            // 
+            // buttonLogout
+            // 
+            buttonLogout.Dock = DockStyle.Bottom;
+            buttonLogout.FlatAppearance.BorderSize = 0;
+            buttonLogout.FlatStyle = FlatStyle.Flat;
+            buttonLogout.ForeColor = Color.White;
+            buttonLogout.Location = new Point(0, 512);
+            buttonLogout.Margin = new Padding(3, 2, 3, 2);
+            buttonLogout.Name = "buttonLogout";
+            buttonLogout.Size = new Size(150, 50);
+            buttonLogout.TabIndex = 6;
+            buttonLogout.Text = "LOGOUT";
+            buttonLogout.UseVisualStyleBackColor = true;
+            buttonLogout.Click += buttonLogout_Click;
             // 
             // FormDashboard
             // 
@@ -258,5 +292,7 @@
         private Label labelInstitution;
         private Panel panelActive;
         private PictureBox pictureBoxLogo;
+        private Button buttonDashboard;
+        private Button buttonLogout;
     }
 }

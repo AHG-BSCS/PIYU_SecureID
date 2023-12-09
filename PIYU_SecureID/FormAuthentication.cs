@@ -17,7 +17,7 @@ namespace PIYU_SecureID
             {
                 MessageBox.Show("Authentication Success!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
-                Form dashboard = new FormDashboard();
+                Form dashboard = new FormDashboard(this);
                 dashboard.Show();
             }
             else
@@ -43,7 +43,7 @@ namespace PIYU_SecureID
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form dashboard = new FormDashboard();
+            Form dashboard = new FormDashboard(this);
             dashboard.Show();
         }
     }
