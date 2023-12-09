@@ -111,7 +111,7 @@ namespace PIYU_SecureID
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            if (textBoxLastName.Text == "" || textBoxGivenName.Text == "" || textBoxMiddleName.Text == "" ||comboBoxSex.SelectedIndex == -1 ||
+            if (textBoxLastName.Text == "" || textBoxGivenName.Text == "" ||comboBoxSex.SelectedIndex == -1 ||
                 comboBoxBloodType.SelectedIndex == -1 || comboBoxProvince.SelectedIndex == -1 || //comboBoxBarangay.SelectedIndex == -1 ||
                 //comboBoxCity.SelectedIndex == -1 || comboBoxMaritalStatus.SelectedIndex == -1 || dateTimePickerBirthday.Text == null ||
                 pictureBoxSignature.Image == null || pictureBoxIdPhoto.Image == null)

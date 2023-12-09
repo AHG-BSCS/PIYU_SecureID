@@ -223,6 +223,7 @@
             this.buttonBrowse.TabIndex = 15;
             this.buttonBrowse.Text = "Browse";
             this.buttonBrowse.UseVisualStyleBackColor = true;
+            this.buttonBrowse.Click += new System.EventHandler(this.buttonBrowse_Click);
             // 
             // label8
             // 
@@ -254,6 +255,7 @@
             this.buttonCreate.TabIndex = 20;
             this.buttonCreate.Text = "CREATE";
             this.buttonCreate.UseVisualStyleBackColor = true;
+            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
             // buttonClearAll
             // 
@@ -265,6 +267,7 @@
             this.buttonClearAll.TabIndex = 21;
             this.buttonClearAll.Text = "CLEAR";
             this.buttonClearAll.UseVisualStyleBackColor = true;
+            this.buttonClearAll.Click += new System.EventHandler(this.buttonClearAll_Click);
             // 
             // comboBoxBloodType
             // 
@@ -452,6 +455,7 @@
             this.buttonCamera.TabIndex = 30;
             this.buttonCamera.Text = "Take a Photo";
             this.buttonCamera.UseVisualStyleBackColor = true;
+            this.buttonCamera.Click += new System.EventHandler(this.buttonCamera_Click);
             // 
             // buttonClearPhoto
             // 
@@ -462,6 +466,7 @@
             this.buttonClearPhoto.TabIndex = 31;
             this.buttonClearPhoto.Text = "Clear";
             this.buttonClearPhoto.UseVisualStyleBackColor = true;
+            this.buttonClearPhoto.Click += new System.EventHandler(this.buttonClearPhoto_Click);
             // 
             // buttonSignature
             // 
@@ -472,6 +477,7 @@
             this.buttonSignature.TabIndex = 32;
             this.buttonSignature.Text = "Signature";
             this.buttonSignature.UseVisualStyleBackColor = true;
+            this.buttonSignature.Click += new System.EventHandler(this.buttonSignature_Click);
             // 
             // pictureBoxSignature
             // 
@@ -493,6 +499,7 @@
             this.buttonClearSign.TabIndex = 34;
             this.buttonClearSign.Text = "Clear";
             this.buttonClearSign.UseVisualStyleBackColor = true;
+            this.buttonClearSign.Click += new System.EventHandler(this.buttonClearSign_Click);
             // 
             // comboBoxCameras
             // 
