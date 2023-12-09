@@ -128,5 +128,32 @@ namespace PIYU_SecureID
                 verify.ShowDialog();
             }
         }
+
+        private void textBoxLastName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBoxGivenName.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxGivenName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBoxMiddleName.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxMiddleName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBoxSuffix.Focus();
+                e.Handled = true;
+            }
+        }
     }
 }
