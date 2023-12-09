@@ -60,6 +60,7 @@
             buttonSignature = new Button();
             pictureBoxSignature = new PictureBox();
             buttonClearSign = new Button();
+            comboBoxCameras = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSignature).BeginInit();
             SuspendLayout();
@@ -391,11 +392,22 @@
             buttonClearSign.UseVisualStyleBackColor = true;
             buttonClearSign.Click += buttonClearSign_Click;
             // 
+            // comboBoxCameras
+            // 
+            comboBoxCameras.FormattingEnabled = true;
+            comboBoxCameras.Location = new Point(838, 292);
+            comboBoxCameras.Name = "comboBoxCameras";
+            comboBoxCameras.Size = new Size(109, 23);
+            comboBoxCameras.TabIndex = 35;
+            comboBoxCameras.TextChanged += comboBoxCameras_TextChanged;
+            comboBoxCameras.KeyPress += comboBoxCameras_KeyPress;
+            // 
             // ControlCreateId
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
+            Controls.Add(comboBoxCameras);
             Controls.Add(buttonClearSign);
             Controls.Add(pictureBoxSignature);
             Controls.Add(buttonSignature);
@@ -470,5 +482,6 @@
         private Button buttonSignature;
         public PictureBox pictureBoxSignature;
         private Button buttonClearSign;
+        public ComboBox comboBoxCameras;
     }
 }

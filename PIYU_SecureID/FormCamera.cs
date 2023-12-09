@@ -65,9 +65,17 @@ namespace PIYU_SecureID
 
             if (videoDevices.Count > 0)
             {
-                videoSource = new VideoCaptureDevice(videoDevices[0].MonikerString);
-                videoSource.NewFrame += VideoSource_NewFrame;
-                videoSource.Start();
+                if (savePhoto.comboBoxCameras.SelectedItem != null)
+                {
+                    int selectedCameraIndex = savePhoto.comboBoxCameras.SelectedIndex;
+                    videoSource = new VideoCaptureDevice(videoDevices[selectedCameraIndex].MonikerString);
+                    videoSource.NewFrame += VideoSource_NewFrame;
+                    videoSource.Start();
+                }
+                else
+                {
+                    MessageBox.Show("Please select a camera from the list.");
+                }
             }
             else
             {

@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Claims;
+using AForge.Video.DirectShow;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PIYU_SecureID
 {
@@ -18,6 +20,11 @@ namespace PIYU_SecureID
         public ControlCreateId()
         {
             InitializeComponent();
+            FilterInfoCollection filter = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo Device in filter)
+                comboBoxCameras.Items.Add(Device.Name);
+            comboBoxCameras.SelectedIndex = 0;
+            VideoCaptureDevice captureDevice = new VideoCaptureDevice();
         }
 
         private void buttonBrowse_Click(object sender, EventArgs e)
@@ -48,13 +55,26 @@ namespace PIYU_SecureID
 
         private void buttonSignature_Click(object sender, EventArgs e)
         {
-            FormSignature sign = new FormSignature(this);
-            sign.ShowDialog();
+            if (comboBoxCameras.Text != null)
+            {
+                FormSignature sign = new FormSignature(this);
+                sign.ShowDialog();
+            }
         }
 
         private void buttonClearSign_Click(object sender, EventArgs e)
         {
             pictureBoxSignature.Image = null;
+        }
+
+        private void comboBoxCameras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboBoxCameras_TextChanged(object sender, EventArgs e)
+        {
+            pictureBoxIdPhoto.Image = null;
         }
     }
 }
