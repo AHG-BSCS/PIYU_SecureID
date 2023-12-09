@@ -126,9 +126,9 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
+        public TextBox textBox1;
         private Button button1;
-        private Button button2;
+        public Button button2;
         private PictureBox pictureBox1;
         private Label label2;
     }

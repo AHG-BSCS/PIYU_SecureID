@@ -15,11 +15,21 @@ namespace PIYU_SecureID
     public partial class FormDashboard : Form
     {
         private Point mouseDownLocation;
-        public FormDashboard()
+        private static string active = "dashboard";
+        private FormAuthentication auth;
+        private ControlDashboard dashboard = new ControlDashboard();
+        private ControlCreateId create = new ControlCreateId();
+        private ControlCheckId check = new ControlCheckId();
+        private ControlVerifyId verify = new ControlVerifyId();
+        public FormDashboard(FormAuthentication auth)
         {
             InitializeComponent();
 
-            this.DoubleBuffered = true;
+            this.auth = auth;
+
+            ControlDashboard dashboard = new ControlDashboard();
+            dashboard.Dock = DockStyle.Fill;
+            panelActive.Controls.Add(dashboard);
         }
 
         private void timerDateTime_Tick(object sender, EventArgs e)
@@ -34,6 +44,7 @@ namespace PIYU_SecureID
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
+            auth.Close();
             this.Close();
         }
 
@@ -107,23 +118,55 @@ namespace PIYU_SecureID
 
         private void buttonCreateId_Click(object sender, EventArgs e)
         {
-            ControlCreateId start = new ControlCreateId();
-            start.Dock = DockStyle.Fill;
-            panelActive.Controls.Add(start);
+            if (active != "create")
+            {
+                active = "create";
+                create.Dock = DockStyle.Fill;
+                panelActive.Controls.Clear();
+                panelActive.Controls.Add(create);
+            }
         }
 
         private void buttonCheckId_Click(object sender, EventArgs e)
         {
-            ControlCheckId start = new ControlCheckId();
-            start.Dock = DockStyle.Fill;
-            panelActive.Controls.Add(start);
+            if (active != "check")
+            {
+                active = "check";
+                check.Dock = DockStyle.Fill;
+                panelActive.Controls.Clear();
+                panelActive.Controls.Add(check);
+            }
         }
 
         private void buttonVerifyId_Click(object sender, EventArgs e)
         {
-            ControlVerifyId start = new ControlVerifyId();
-            start.Dock = DockStyle.Fill;
-            panelActive.Controls.Add(start);
+            if (active != "verify")
+            {
+                active = "verify";
+                verify.Dock = DockStyle.Fill;
+                panelActive.Controls.Clear();
+                panelActive.Controls.Add(verify);
+            }
+        }
+
+        private void buttonDashboard_Click(object sender, EventArgs e)
+        {
+            if (active != "dashboard")
+            {
+                active = "dashboard";
+                dashboard.Dock = DockStyle.Fill;
+                panelActive.Controls.Clear();
+                panelActive.Controls.Add(dashboard);
+            }
+        }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            auth.Show();
+            auth.textBox1.Text = "";
+            if (auth.button2.Visible)
+                auth.button2.Visible = false;
+            this.Close();
         }
     }
 }
