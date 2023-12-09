@@ -57,7 +57,11 @@
             label12 = new Label();
             buttonCamera = new Button();
             buttonClearPhoto = new Button();
+            buttonSignature = new Button();
+            pictureBoxSignature = new PictureBox();
+            buttonClearSign = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSignature).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -357,11 +361,44 @@
             buttonClearPhoto.UseVisualStyleBackColor = true;
             buttonClearPhoto.Click += buttonClearPhoto_Click;
             // 
+            // buttonSignature
+            // 
+            buttonSignature.Location = new Point(550, 254);
+            buttonSignature.Name = "buttonSignature";
+            buttonSignature.Size = new Size(109, 38);
+            buttonSignature.TabIndex = 32;
+            buttonSignature.Text = "Signature";
+            buttonSignature.UseVisualStyleBackColor = true;
+            buttonSignature.Click += buttonSignature_Click;
+            // 
+            // pictureBoxSignature
+            // 
+            pictureBoxSignature.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxSignature.Location = new Point(550, 33);
+            pictureBoxSignature.Name = "pictureBoxSignature";
+            pictureBoxSignature.Size = new Size(215, 215);
+            pictureBoxSignature.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxSignature.TabIndex = 33;
+            pictureBoxSignature.TabStop = false;
+            // 
+            // buttonClearSign
+            // 
+            buttonClearSign.Location = new Point(656, 254);
+            buttonClearSign.Name = "buttonClearSign";
+            buttonClearSign.Size = new Size(109, 38);
+            buttonClearSign.TabIndex = 34;
+            buttonClearSign.Text = "Clear";
+            buttonClearSign.UseVisualStyleBackColor = true;
+            buttonClearSign.Click += buttonClearSign_Click;
+            // 
             // ControlCreateId
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
+            Controls.Add(buttonClearSign);
+            Controls.Add(pictureBoxSignature);
+            Controls.Add(buttonSignature);
             Controls.Add(buttonClearPhoto);
             Controls.Add(buttonCamera);
             Controls.Add(label12);
@@ -394,6 +431,7 @@
             Name = "ControlCreateId";
             Size = new Size(1116, 633);
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSignature).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -429,5 +467,8 @@
         private Label label12;
         private Button buttonCamera;
         private Button buttonClearPhoto;
+        private Button buttonSignature;
+        public PictureBox pictureBoxSignature;
+        private Button buttonClearSign;
     }
 }
