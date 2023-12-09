@@ -35,6 +35,7 @@
             this.buttonClose = new System.Windows.Forms.Button();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonVerifyId = new System.Windows.Forms.Button();
             this.buttonCheckId = new System.Windows.Forms.Button();
             this.buttonCreateId = new System.Windows.Forms.Button();
@@ -43,6 +44,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelTitleBar.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timerDateTime
@@ -64,6 +66,7 @@
             this.buttonMinimize.TabIndex = 6;
             this.buttonMinimize.Text = "--";
             this.buttonMinimize.UseVisualStyleBackColor = false;
+            this.buttonMinimize.Click += new System.EventHandler(this.buttonMinimize_Click);
             // 
             // buttonRestoreDownMaximize
             // 
@@ -79,6 +82,7 @@
             this.buttonRestoreDownMaximize.TabIndex = 7;
             this.buttonRestoreDownMaximize.Text = "O";
             this.buttonRestoreDownMaximize.UseVisualStyleBackColor = false;
+            this.buttonRestoreDownMaximize.Click += new System.EventHandler(this.buttonRestoreDownMaximize_Click);
             // 
             // buttonClose
             // 
@@ -94,6 +98,7 @@
             this.buttonClose.TabIndex = 8;
             this.buttonClose.Text = "X";
             this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // panelTitleBar
             // 
@@ -112,6 +117,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.buttonVerifyId);
             this.panel2.Controls.Add(this.buttonCheckId);
             this.panel2.Controls.Add(this.buttonCreateId);
@@ -123,6 +129,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(171, 864);
             this.panel2.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PIYU_SecureID.Properties.Resources.PIYU_SecureID;
+            this.pictureBox1.Location = new System.Drawing.Point(41, 735);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(89, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // buttonVerifyId
             // 
@@ -208,6 +224,7 @@
             this.Text = "DASHBOARD";
             this.panelTitleBar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,5 +242,6 @@
         private Label labelDateTime;
         private Label labelInstitution;
         private Panel panel1;
+        private PictureBox pictureBox1;
     }
 }
