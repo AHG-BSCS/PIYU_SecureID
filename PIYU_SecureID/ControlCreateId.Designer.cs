@@ -55,6 +55,8 @@
             label11 = new Label();
             comboBox6 = new ComboBox();
             label12 = new Label();
+            buttonCamera = new Button();
+            buttonClearPhoto = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).BeginInit();
             SuspendLayout();
             // 
@@ -199,7 +201,7 @@
             // 
             // buttonBrowse
             // 
-            buttonBrowse.Location = new Point(896, 254);
+            buttonBrowse.Location = new Point(946, 254);
             buttonBrowse.Name = "buttonBrowse";
             buttonBrowse.Size = new Size(109, 38);
             buttonBrowse.TabIndex = 15;
@@ -335,11 +337,33 @@
             label12.TabIndex = 29;
             label12.Text = "BARANGAY";
             // 
+            // buttonCamera
+            // 
+            buttonCamera.Location = new Point(838, 254);
+            buttonCamera.Name = "buttonCamera";
+            buttonCamera.Size = new Size(109, 38);
+            buttonCamera.TabIndex = 30;
+            buttonCamera.Text = "Take a Photo";
+            buttonCamera.UseVisualStyleBackColor = true;
+            buttonCamera.Click += buttonCamera_Click;
+            // 
+            // buttonClearPhoto
+            // 
+            buttonClearPhoto.Location = new Point(946, 292);
+            buttonClearPhoto.Name = "buttonClearPhoto";
+            buttonClearPhoto.Size = new Size(109, 38);
+            buttonClearPhoto.TabIndex = 31;
+            buttonClearPhoto.Text = "Clear";
+            buttonClearPhoto.UseVisualStyleBackColor = true;
+            buttonClearPhoto.Click += buttonClearPhoto_Click;
+            // 
             // ControlCreateId
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
+            Controls.Add(buttonClearPhoto);
+            Controls.Add(buttonCamera);
             Controls.Add(label12);
             Controls.Add(comboBox6);
             Controls.Add(label11);
@@ -403,5 +427,7 @@
         private Label label11;
         private ComboBox comboBox6;
         private Label label12;
+        private Button buttonCamera;
+        private Button buttonClearPhoto;
     }
 }
