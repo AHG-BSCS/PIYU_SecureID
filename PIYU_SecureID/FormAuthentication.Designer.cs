@@ -29,98 +29,103 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAuthentication));
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            label1 = new Label();
+            textBox1 = new TextBox();
+            button1 = new Button();
+            button2 = new Button();
+            pictureBox1 = new PictureBox();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(394, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 62);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "SecureID";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(345, 56);
+            label1.Name = "label1";
+            label1.Size = new Size(181, 51);
+            label1.TabIndex = 0;
+            label1.Text = "SecureID";
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(226, 181);
-            this.textBox1.MaxLength = 6;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '⚫';
-            this.textBox1.Size = new System.Drawing.Size(354, 61);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            textBox1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(198, 136);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
+            textBox1.MaxLength = 6;
+            textBox1.Name = "textBox1";
+            textBox1.PasswordChar = '⚫';
+            textBox1.Size = new Size(310, 50);
+            textBox1.TabIndex = 1;
+            textBox1.TextAlign = HorizontalAlignment.Center;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(319, 262);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 79);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "LOGIN";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Font = new Font("Segoe UI", 28.2F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(279, 196);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(153, 59);
+            button1.TabIndex = 2;
+            button1.Text = "LOGIN";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(337, 362);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 29);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "★ Debug Bypass";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.Location = new Point(295, 272);
+            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(116, 22);
+            button2.TabIndex = 3;
+            button2.Text = "★ Debug Bypass";
+            button2.UseVisualStyleBackColor = true;
+            button2.Visible = false;
+            button2.Click += button2_Click;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::PIYU_SecureID.Properties.Resources.PIYU_SecureID;
-            this.pictureBox1.Location = new System.Drawing.Point(256, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(141, 138);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.PIYU_SecureID;
+            pictureBox1.Location = new Point(224, 28);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(123, 104);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(403, 136);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Al Hans Gaming";
+            label2.AutoSize = true;
+            label2.Location = new Point(353, 102);
+            label2.Name = "label2";
+            label2.Size = new Size(93, 15);
+            label2.TabIndex = 5;
+            label2.Text = "Al Hans Gaming";
             // 
             // FormAuthentication
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormAuthentication";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LOGIN";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(700, 338);
+            Controls.Add(label2);
+            Controls.Add(pictureBox1);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "FormAuthentication";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "LOGIN";
+            FormClosed += FormAuthentication_FormClosed;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

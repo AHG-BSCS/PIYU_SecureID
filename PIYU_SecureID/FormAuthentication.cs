@@ -46,5 +46,10 @@ namespace PIYU_SecureID
             Form dashboard = new FormDashboard(this);
             dashboard.Show();
         }
+
+        private void FormAuthentication_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -44,8 +44,7 @@ namespace PIYU_SecureID
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            auth.Close();
-            this.Close();
+            Application.Exit();
         }
 
         private void buttonRestoreDownMaximize_Click(object sender, EventArgs e)
