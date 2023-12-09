@@ -173,7 +173,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(137, 104);
+            label1.Location = new Point(135, 104);
             label1.Name = "label1";
             label1.Size = new Size(242, 21);
             label1.TabIndex = 1;
@@ -185,7 +185,7 @@
             buttonSave.FlatAppearance.BorderSize = 0;
             buttonSave.FlatStyle = FlatStyle.Flat;
             buttonSave.ForeColor = Color.White;
-            buttonSave.Location = new Point(794, 263);
+            buttonSave.Location = new Point(794, 295);
             buttonSave.Name = "buttonSave";
             buttonSave.Size = new Size(97, 48);
             buttonSave.TabIndex = 2;
@@ -199,7 +199,7 @@
             buttonPrint.FlatAppearance.BorderSize = 0;
             buttonPrint.FlatStyle = FlatStyle.Flat;
             buttonPrint.ForeColor = Color.White;
-            buttonPrint.Location = new Point(794, 317);
+            buttonPrint.Location = new Point(794, 348);
             buttonPrint.Name = "buttonPrint";
             buttonPrint.Size = new Size(97, 48);
             buttonPrint.TabIndex = 3;
@@ -213,7 +213,7 @@
             buttonCancel.FlatAppearance.BorderSize = 0;
             buttonCancel.FlatStyle = FlatStyle.Flat;
             buttonCancel.ForeColor = Color.White;
-            buttonCancel.Location = new Point(794, 371);
+            buttonCancel.Location = new Point(794, 400);
             buttonCancel.Name = "buttonCancel";
             buttonCancel.Size = new Size(97, 48);
             buttonCancel.TabIndex = 4;
@@ -233,6 +233,7 @@
             Controls.Add(panelMain);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormVerificationInfo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormVerificationInfo";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelMain.ResumeLayout(false);

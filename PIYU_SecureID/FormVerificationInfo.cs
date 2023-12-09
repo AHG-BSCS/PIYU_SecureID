@@ -24,7 +24,7 @@ namespace PIYU_SecureID
             this.transactionNum = transactionNum;
             GenerateAndDisplayQRCode();
 
-            labelName.Text += givenName + " " + middleName + " " + lastName + "" + suffix;
+            labelName.Text += givenName + " " + middleName + " " + lastName + " " + suffix;
             labelTransactionNum.Text += transactionNum.ToString();
 
             panelToPrint = panelMain;
