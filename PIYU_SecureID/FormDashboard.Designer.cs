@@ -35,6 +35,7 @@
             buttonClose = new Button();
             panelTitleBar = new Panel();
             panelNavigation = new Panel();
+            buttonLogout = new Button();
             labelDateTime = new Label();
             buttonVerifyId = new Button();
             buttonCheckId = new Button();
@@ -43,7 +44,6 @@
             labelInstitution = new Label();
             pictureBoxLogo = new PictureBox();
             panelActive = new Panel();
-            buttonLogout = new Button();
             panelTitleBar.SuspendLayout();
             panelNavigation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
@@ -62,7 +62,7 @@
             buttonMinimize.FlatAppearance.BorderSize = 0;
             buttonMinimize.FlatStyle = FlatStyle.Flat;
             buttonMinimize.ForeColor = Color.White;
-            buttonMinimize.Location = new Point(794, 0);
+            buttonMinimize.Location = new Point(966, 0);
             buttonMinimize.Name = "buttonMinimize";
             buttonMinimize.Size = new Size(50, 35);
             buttonMinimize.TabIndex = 6;
@@ -77,7 +77,7 @@
             buttonRestoreDownMaximize.FlatAppearance.BorderSize = 0;
             buttonRestoreDownMaximize.FlatStyle = FlatStyle.Flat;
             buttonRestoreDownMaximize.ForeColor = Color.White;
-            buttonRestoreDownMaximize.Location = new Point(844, 0);
+            buttonRestoreDownMaximize.Location = new Point(1016, 0);
             buttonRestoreDownMaximize.Name = "buttonRestoreDownMaximize";
             buttonRestoreDownMaximize.Size = new Size(50, 35);
             buttonRestoreDownMaximize.TabIndex = 7;
@@ -92,7 +92,7 @@
             buttonClose.FlatAppearance.BorderSize = 0;
             buttonClose.FlatStyle = FlatStyle.Flat;
             buttonClose.ForeColor = Color.White;
-            buttonClose.Location = new Point(894, 0);
+            buttonClose.Location = new Point(1066, 0);
             buttonClose.Name = "buttonClose";
             buttonClose.Size = new Size(50, 35);
             buttonClose.TabIndex = 8;
@@ -109,7 +109,7 @@
             panelTitleBar.Dock = DockStyle.Top;
             panelTitleBar.Location = new Point(150, 0);
             panelTitleBar.Name = "panelTitleBar";
-            panelTitleBar.Size = new Size(944, 35);
+            panelTitleBar.Size = new Size(1116, 35);
             panelTitleBar.TabIndex = 9;
             panelTitleBar.MouseDown += panelTitleBar_MouseDown;
             panelTitleBar.MouseMove += panelTitleBar_MouseMove;
@@ -129,14 +129,29 @@
             panelNavigation.Dock = DockStyle.Left;
             panelNavigation.Location = new Point(0, 0);
             panelNavigation.Name = "panelNavigation";
-            panelNavigation.Size = new Size(150, 591);
+            panelNavigation.Size = new Size(150, 668);
             panelNavigation.TabIndex = 0;
+            // 
+            // buttonLogout
+            // 
+            buttonLogout.Dock = DockStyle.Bottom;
+            buttonLogout.FlatAppearance.BorderSize = 0;
+            buttonLogout.FlatStyle = FlatStyle.Flat;
+            buttonLogout.ForeColor = Color.White;
+            buttonLogout.Location = new Point(0, 589);
+            buttonLogout.Margin = new Padding(3, 2, 3, 2);
+            buttonLogout.Name = "buttonLogout";
+            buttonLogout.Size = new Size(150, 50);
+            buttonLogout.TabIndex = 6;
+            buttonLogout.Text = "LOGOUT";
+            buttonLogout.UseVisualStyleBackColor = true;
+            buttonLogout.Click += buttonLogout_Click;
             // 
             // labelDateTime
             // 
             labelDateTime.Dock = DockStyle.Bottom;
             labelDateTime.ForeColor = Color.White;
-            labelDateTime.Location = new Point(0, 562);
+            labelDateTime.Location = new Point(0, 639);
             labelDateTime.Name = "labelDateTime";
             labelDateTime.Size = new Size(150, 29);
             labelDateTime.TabIndex = 4;
@@ -241,29 +256,14 @@
             panelActive.Location = new Point(150, 35);
             panelActive.Margin = new Padding(3, 2, 3, 2);
             panelActive.Name = "panelActive";
-            panelActive.Size = new Size(944, 556);
+            panelActive.Size = new Size(1116, 633);
             panelActive.TabIndex = 5;
-            // 
-            // buttonLogout
-            // 
-            buttonLogout.Dock = DockStyle.Bottom;
-            buttonLogout.FlatAppearance.BorderSize = 0;
-            buttonLogout.FlatStyle = FlatStyle.Flat;
-            buttonLogout.ForeColor = Color.White;
-            buttonLogout.Location = new Point(0, 512);
-            buttonLogout.Margin = new Padding(3, 2, 3, 2);
-            buttonLogout.Name = "buttonLogout";
-            buttonLogout.Size = new Size(150, 50);
-            buttonLogout.TabIndex = 6;
-            buttonLogout.Text = "LOGOUT";
-            buttonLogout.UseVisualStyleBackColor = true;
-            buttonLogout.Click += buttonLogout_Click;
             // 
             // FormDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1094, 591);
+            ClientSize = new Size(1266, 668);
             Controls.Add(panelActive);
             Controls.Add(panelTitleBar);
             Controls.Add(panelNavigation);
