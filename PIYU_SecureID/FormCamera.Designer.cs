@@ -100,7 +100,6 @@
             Name = "FormCamera";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormSignature";
-            FormClosed += FormCamera_FormClosed;
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).EndInit();
             ResumeLayout(false);
         }

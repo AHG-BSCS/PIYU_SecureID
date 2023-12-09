@@ -99,11 +99,5 @@ namespace PIYU_SecureID
                 MessageBox.Show("Webcam not available or not started.");
             }
         }
-
-        private void FormCamera_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            videoSource.SignalToStop();
-            videoSource.WaitForStop();
-        }
     }
 }
