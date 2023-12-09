@@ -17,14 +17,29 @@ namespace PIYU_SecureID
 {
     public partial class ControlCreateId : UserControl
     {
+        private long transactionNum;
         public ControlCreateId()
         {
             InitializeComponent();
+
+            dateTimePickerBirthday.Text = null;
+
             FilterInfoCollection filter = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo Device in filter)
                 comboBoxCameras.Items.Add(Device.Name);
             comboBoxCameras.SelectedIndex = 0;
             VideoCaptureDevice captureDevice = new VideoCaptureDevice();
+
+            GenerateTransactionNum();
+        }
+
+        private void GenerateTransactionNum()
+        {
+            Random random = new Random();
+
+            long randomValue = (long)(random.NextDouble() * (9999999999999L - 1000000000000L) + 1000000000000L);
+
+            this.transactionNum = randomValue;
         }
 
         private void buttonBrowse_Click(object sender, EventArgs e)
@@ -75,6 +90,43 @@ namespace PIYU_SecureID
         private void comboBoxCameras_TextChanged(object sender, EventArgs e)
         {
             pictureBoxIdPhoto.Image = null;
+        }
+
+        private void buttonClearAll_Click(object sender, EventArgs e)
+        {
+            textBoxLastName.Text = "";
+            textBoxGivenName.Text = "";
+            textBoxMiddleName.Text = "";
+            textBoxSuffix.Text = "";
+            comboBoxSex.SelectedIndex = -1;
+            comboBoxBloodType.SelectedIndex = -1;
+            comboBoxProvince.SelectedIndex = -1;
+            comboBoxBarangay.SelectedIndex = -1;
+            comboBoxCity.SelectedIndex = -1;
+            comboBoxMaritalStatus.SelectedIndex = -1;
+            dateTimePickerBirthday.Text = null;
+            pictureBoxSignature.Image = null;
+            pictureBoxIdPhoto.Image = null;
+        }
+
+        private void buttonCreate_Click(object sender, EventArgs e)
+        {
+            if (textBoxLastName.Text == "" || textBoxGivenName.Text == "" || textBoxMiddleName.Text == "" ||comboBoxSex.SelectedIndex == -1 ||
+                comboBoxBloodType.SelectedIndex == -1 || comboBoxProvince.SelectedIndex == -1 || //comboBoxBarangay.SelectedIndex == -1 ||
+                //comboBoxCity.SelectedIndex == -1 || comboBoxMaritalStatus.SelectedIndex == -1 || dateTimePickerBirthday.Text == null ||
+                pictureBoxSignature.Image == null || pictureBoxIdPhoto.Image == null)
+            {
+                MessageBox.Show("Fill All Information.");
+            }
+            else
+            {
+                string lastName = textBoxLastName.Text;
+                string givenName = textBoxGivenName.Text;
+                string middleName = textBoxMiddleName.Text;
+                string suffix = textBoxSuffix.Text;
+                FormVerificationInfo verify = new FormVerificationInfo(lastName, givenName, middleName, suffix, transactionNum);
+                verify.ShowDialog();
+            }
         }
     }
 }

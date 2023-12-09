@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            textBoxLastName = new TextBox();
+            textBoxGivenName = new TextBox();
             label2 = new Label();
-            textBox3 = new TextBox();
+            textBoxMiddleName = new TextBox();
             label3 = new Label();
-            textBox4 = new TextBox();
+            textBoxSuffix = new TextBox();
             label4 = new Label();
             label5 = new Label();
-            comboBox1 = new ComboBox();
+            comboBoxSex = new ComboBox();
             label6 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dateTimePickerBirthday = new DateTimePicker();
             label7 = new Label();
             pictureBoxIdPhoto = new PictureBox();
             buttonBrowse = new Button();
             label8 = new Label();
             label9 = new Label();
-            button2 = new Button();
-            button3 = new Button();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
-            comboBox4 = new ComboBox();
+            buttonCreate = new Button();
+            buttonClearAll = new Button();
+            comboBoxBloodType = new ComboBox();
+            comboBoxMaritalStatus = new ComboBox();
+            comboBoxProvince = new ComboBox();
             label10 = new Label();
-            comboBox5 = new ComboBox();
+            comboBoxCity = new ComboBox();
             label11 = new Label();
-            comboBox6 = new ComboBox();
+            comboBoxBarangay = new ComboBox();
             label12 = new Label();
             buttonCamera = new Button();
             buttonClearPhoto = new Button();
@@ -75,25 +75,25 @@
             label1.TabIndex = 0;
             label1.Text = "Last Name";
             // 
-            // textBox1
+            // textBoxLastName
             // 
-            textBox1.CharacterCasing = CharacterCasing.Upper;
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(54, 57);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(404, 23);
-            textBox1.TabIndex = 1;
+            textBoxLastName.CharacterCasing = CharacterCasing.Upper;
+            textBoxLastName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxLastName.Location = new Point(54, 57);
+            textBoxLastName.Multiline = true;
+            textBoxLastName.Name = "textBoxLastName";
+            textBoxLastName.Size = new Size(404, 23);
+            textBoxLastName.TabIndex = 1;
             // 
-            // textBox2
+            // textBoxGivenName
             // 
-            textBox2.CharacterCasing = CharacterCasing.Upper;
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(54, 118);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(404, 23);
-            textBox2.TabIndex = 3;
+            textBoxGivenName.CharacterCasing = CharacterCasing.Upper;
+            textBoxGivenName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxGivenName.Location = new Point(54, 118);
+            textBoxGivenName.Multiline = true;
+            textBoxGivenName.Name = "textBoxGivenName";
+            textBoxGivenName.Size = new Size(404, 23);
+            textBoxGivenName.TabIndex = 3;
             // 
             // label2
             // 
@@ -105,15 +105,15 @@
             label2.TabIndex = 2;
             label2.Text = "Given Name";
             // 
-            // textBox3
+            // textBoxMiddleName
             // 
-            textBox3.CharacterCasing = CharacterCasing.Upper;
-            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(54, 179);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(404, 23);
-            textBox3.TabIndex = 5;
+            textBoxMiddleName.CharacterCasing = CharacterCasing.Upper;
+            textBoxMiddleName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxMiddleName.Location = new Point(54, 179);
+            textBoxMiddleName.Multiline = true;
+            textBoxMiddleName.Name = "textBoxMiddleName";
+            textBoxMiddleName.Size = new Size(404, 23);
+            textBoxMiddleName.TabIndex = 5;
             // 
             // label3
             // 
@@ -125,15 +125,15 @@
             label3.TabIndex = 4;
             label3.Text = "Middle Name";
             // 
-            // textBox4
+            // textBoxSuffix
             // 
-            textBox4.CharacterCasing = CharacterCasing.Upper;
-            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(54, 240);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(72, 23);
-            textBox4.TabIndex = 7;
+            textBoxSuffix.CharacterCasing = CharacterCasing.Upper;
+            textBoxSuffix.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxSuffix.Location = new Point(54, 240);
+            textBoxSuffix.Multiline = true;
+            textBoxSuffix.Name = "textBoxSuffix";
+            textBoxSuffix.Size = new Size(72, 23);
+            textBoxSuffix.TabIndex = 7;
             // 
             // label4
             // 
@@ -155,16 +155,16 @@
             label5.TabIndex = 8;
             label5.Text = "Sex";
             // 
-            // comboBox1
+            // comboBoxSex
             // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "MALE", "FEMALE" });
-            comboBox1.Location = new Point(59, 301);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(79, 29);
-            comboBox1.TabIndex = 9;
+            comboBoxSex.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxSex.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxSex.FormattingEnabled = true;
+            comboBoxSex.Items.AddRange(new object[] { "MALE", "FEMALE" });
+            comboBoxSex.Location = new Point(59, 301);
+            comboBoxSex.Name = "comboBoxSex";
+            comboBoxSex.Size = new Size(79, 29);
+            comboBoxSex.TabIndex = 9;
             // 
             // label6
             // 
@@ -176,13 +176,15 @@
             label6.TabIndex = 10;
             label6.Text = "Date of Birth";
             // 
-            // dateTimePicker1
+            // dateTimePickerBirthday
             // 
-            dateTimePicker1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.Location = new Point(59, 367);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(404, 29);
-            dateTimePicker1.TabIndex = 11;
+            dateTimePickerBirthday.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dateTimePickerBirthday.Location = new Point(59, 367);
+            dateTimePickerBirthday.MaxDate = new DateTime(2024, 12, 31, 0, 0, 0, 0);
+            dateTimePickerBirthday.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
+            dateTimePickerBirthday.Name = "dateTimePickerBirthday";
+            dateTimePickerBirthday.Size = new Size(404, 29);
+            dateTimePickerBirthday.TabIndex = 11;
             // 
             // label7
             // 
@@ -234,61 +236,63 @@
             label9.TabIndex = 18;
             label9.Text = "Marital Status";
             // 
-            // button2
+            // buttonCreate
             // 
-            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button2.Location = new Point(970, 557);
-            button2.Name = "button2";
-            button2.Size = new Size(125, 56);
-            button2.TabIndex = 20;
-            button2.Text = "CREATE";
-            button2.UseVisualStyleBackColor = true;
+            buttonCreate.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            buttonCreate.Location = new Point(970, 557);
+            buttonCreate.Name = "buttonCreate";
+            buttonCreate.Size = new Size(125, 56);
+            buttonCreate.TabIndex = 20;
+            buttonCreate.Text = "CREATE";
+            buttonCreate.UseVisualStyleBackColor = true;
+            buttonCreate.Click += buttonCreate_Click;
             // 
-            // button3
+            // buttonClearAll
             // 
-            button3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button3.Location = new Point(839, 557);
-            button3.Name = "button3";
-            button3.Size = new Size(125, 56);
-            button3.TabIndex = 21;
-            button3.Text = "CLEAR";
-            button3.UseVisualStyleBackColor = true;
+            buttonClearAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            buttonClearAll.Location = new Point(839, 557);
+            buttonClearAll.Name = "buttonClearAll";
+            buttonClearAll.Size = new Size(125, 56);
+            buttonClearAll.TabIndex = 21;
+            buttonClearAll.Text = "CLEAR";
+            buttonClearAll.UseVisualStyleBackColor = true;
+            buttonClearAll.Click += buttonClearAll_Click;
             // 
-            // comboBox2
+            // comboBoxBloodType
             // 
-            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" });
-            comboBox2.Location = new Point(226, 301);
-            comboBox2.Margin = new Padding(3, 2, 3, 2);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(79, 29);
-            comboBox2.TabIndex = 22;
+            comboBoxBloodType.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxBloodType.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxBloodType.FormattingEnabled = true;
+            comboBoxBloodType.Items.AddRange(new object[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" });
+            comboBoxBloodType.Location = new Point(226, 301);
+            comboBoxBloodType.Margin = new Padding(3, 2, 3, 2);
+            comboBoxBloodType.Name = "comboBoxBloodType";
+            comboBoxBloodType.Size = new Size(79, 29);
+            comboBoxBloodType.TabIndex = 22;
             // 
-            // comboBox3
+            // comboBoxMaritalStatus
             // 
-            comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "SINGLE", "MARRIED", "ANNULLED", "SEPARATED", "WIDOWED" });
-            comboBox3.Location = new Point(59, 499);
-            comboBox3.Margin = new Padding(3, 2, 3, 2);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(104, 29);
-            comboBox3.TabIndex = 23;
+            comboBoxMaritalStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxMaritalStatus.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxMaritalStatus.FormattingEnabled = true;
+            comboBoxMaritalStatus.Items.AddRange(new object[] { "SINGLE", "MARRIED", "ANNULLED", "SEPARATED", "WIDOWED" });
+            comboBoxMaritalStatus.Location = new Point(59, 499);
+            comboBoxMaritalStatus.Margin = new Padding(3, 2, 3, 2);
+            comboBoxMaritalStatus.Name = "comboBoxMaritalStatus";
+            comboBoxMaritalStatus.Size = new Size(104, 29);
+            comboBoxMaritalStatus.TabIndex = 23;
             // 
-            // comboBox4
+            // comboBoxProvince
             // 
-            comboBox4.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Items.AddRange(new object[] { "ABRA", "AGUSAN DEL NORTE", "AGUSAN DEL SUR", "AKLAN", "ALBAY", "ANTIQUE", "APAYAO", "AURORA", "BASILAN", "BATAAN", "BATANES", "BATANGAS", "BENGUET", "BILIRAN", "BOHOL", "BUKIDNON", "BULACAN", "CAGAYAN", "CAMARINES NORTE", "CAMARINES SUR", "CAMIGUIN", "CAPIZ", "CATANDUANES", "CAVITE", "CEBU", "COTABATO", "DAVAO DE ORO (FORMERLY COMPOSTELA VALLEY)", "DAVAO DEL NORTE", "DAVAO DEL SUR", "DAVAO OCCIDENTAL", "DAVAO ORIENTAL", "DINAGAT ISLANDS", "EASTERN SAMAR", "GUIMARAS", "IFUGAO", "ILOCOS NORTE", "ILOCOS SUR", "ILOILO", "ISABELA", "KALINGA", "LA UNION", "LAGUNA", "LANAO DEL NORTE", "LANAO DEL SUR", "LEYTE", "MAGUINDANAO", "MARINDUQUE", "MASBATE", "MISAMIS OCCIDENTAL", "MISAMIS ORIENTAL", "MOUNTAIN PROVINCE", "NEGROS OCCIDENTAL", "NEGROS ORIENTAL", "NORTHERN SAMAR", "NUEVA ECIJA", "NUEVA VIZCAYA", "OCCIDENTAL MINDORO", "ORIENTAL MINDORO", "PALAWAN", "PAMPANGA", "PANGASINAN", "QUEZON", "QUIRINO", "RIZAL", "ROMBLON", "SAMAR", "SARANGANI", "SIQUIJOR", "SORSOGON", "SOUTH COTABATO", "SOUTHERN LEYTE", "SULTAN KUDARAT", "SULU", "SURIGAO DEL NORTE", "SURIGAO DEL SUR", "TARLAC", "TAWI-TAWI", "ZAMBALES", "ZAMBOANGA DEL NORTE", "ZAMBOANGA DEL SUR", "ZAMBOANGA SIBUGAY" });
-            comboBox4.Location = new Point(59, 433);
-            comboBox4.Margin = new Padding(3, 2, 3, 2);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(190, 29);
-            comboBox4.TabIndex = 24;
+            comboBoxProvince.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxProvince.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxProvince.FormattingEnabled = true;
+            comboBoxProvince.Items.AddRange(new object[] { "ABRA", "AGUSAN DEL NORTE", "AGUSAN DEL SUR", "AKLAN", "ALBAY", "ANTIQUE", "APAYAO", "AURORA", "BASILAN", "BATAAN", "BATANES", "BATANGAS", "BENGUET", "BILIRAN", "BOHOL", "BUKIDNON", "BULACAN", "CAGAYAN", "CAMARINES NORTE", "CAMARINES SUR", "CAMIGUIN", "CAPIZ", "CATANDUANES", "CAVITE", "CEBU", "COTABATO", "DAVAO DE ORO (FORMERLY COMPOSTELA VALLEY)", "DAVAO DEL NORTE", "DAVAO DEL SUR", "DAVAO OCCIDENTAL", "DAVAO ORIENTAL", "DINAGAT ISLANDS", "EASTERN SAMAR", "GUIMARAS", "IFUGAO", "ILOCOS NORTE", "ILOCOS SUR", "ILOILO", "ISABELA", "KALINGA", "LA UNION", "LAGUNA", "LANAO DEL NORTE", "LANAO DEL SUR", "LEYTE", "MAGUINDANAO", "MARINDUQUE", "MASBATE", "MISAMIS OCCIDENTAL", "MISAMIS ORIENTAL", "MOUNTAIN PROVINCE", "NEGROS OCCIDENTAL", "NEGROS ORIENTAL", "NORTHERN SAMAR", "NUEVA ECIJA", "NUEVA VIZCAYA", "OCCIDENTAL MINDORO", "ORIENTAL MINDORO", "PALAWAN", "PAMPANGA", "PANGASINAN", "QUEZON", "QUIRINO", "RIZAL", "ROMBLON", "SAMAR", "SARANGANI", "SIQUIJOR", "SORSOGON", "SOUTH COTABATO", "SOUTHERN LEYTE", "SULTAN KUDARAT", "SULU", "SURIGAO DEL NORTE", "SURIGAO DEL SUR", "TARLAC", "TAWI-TAWI", "ZAMBALES", "ZAMBOANGA DEL NORTE", "ZAMBOANGA DEL SUR", "ZAMBOANGA SIBUGAY" });
+            comboBoxProvince.Location = new Point(59, 433);
+            comboBoxProvince.Margin = new Padding(3, 2, 3, 2);
+            comboBoxProvince.Name = "comboBoxProvince";
+            comboBoxProvince.Size = new Size(190, 29);
+            comboBoxProvince.TabIndex = 24;
             // 
             // label10
             // 
@@ -300,16 +304,16 @@
             label10.TabIndex = 25;
             label10.Text = "PROVINCE";
             // 
-            // comboBox5
+            // comboBoxCity
             // 
-            comboBox5.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Location = new Point(518, 433);
-            comboBox5.Margin = new Padding(3, 2, 3, 2);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(232, 29);
-            comboBox5.TabIndex = 26;
+            comboBoxCity.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxCity.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxCity.FormattingEnabled = true;
+            comboBoxCity.Location = new Point(518, 433);
+            comboBoxCity.Margin = new Padding(3, 2, 3, 2);
+            comboBoxCity.Name = "comboBoxCity";
+            comboBoxCity.Size = new Size(232, 29);
+            comboBoxCity.TabIndex = 26;
             // 
             // label11
             // 
@@ -321,16 +325,16 @@
             label11.TabIndex = 27;
             label11.Text = "CITY";
             // 
-            // comboBox6
+            // comboBoxBarangay
             // 
-            comboBox6.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox6.FormattingEnabled = true;
-            comboBox6.Location = new Point(255, 433);
-            comboBox6.Margin = new Padding(3, 2, 3, 2);
-            comboBox6.Name = "comboBox6";
-            comboBox6.Size = new Size(257, 29);
-            comboBox6.TabIndex = 28;
+            comboBoxBarangay.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxBarangay.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxBarangay.FormattingEnabled = true;
+            comboBoxBarangay.Location = new Point(255, 433);
+            comboBoxBarangay.Margin = new Padding(3, 2, 3, 2);
+            comboBoxBarangay.Name = "comboBoxBarangay";
+            comboBoxBarangay.Size = new Size(257, 29);
+            comboBoxBarangay.TabIndex = 28;
             // 
             // label12
             // 
@@ -414,31 +418,31 @@
             Controls.Add(buttonClearPhoto);
             Controls.Add(buttonCamera);
             Controls.Add(label12);
-            Controls.Add(comboBox6);
+            Controls.Add(comboBoxBarangay);
             Controls.Add(label11);
-            Controls.Add(comboBox5);
+            Controls.Add(comboBoxCity);
             Controls.Add(label10);
-            Controls.Add(comboBox4);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(comboBoxProvince);
+            Controls.Add(comboBoxMaritalStatus);
+            Controls.Add(comboBoxBloodType);
+            Controls.Add(buttonClearAll);
+            Controls.Add(buttonCreate);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(buttonBrowse);
             Controls.Add(pictureBoxIdPhoto);
             Controls.Add(label7);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dateTimePickerBirthday);
             Controls.Add(label6);
-            Controls.Add(comboBox1);
+            Controls.Add(comboBoxSex);
             Controls.Add(label5);
-            Controls.Add(textBox4);
+            Controls.Add(textBoxSuffix);
             Controls.Add(label4);
-            Controls.Add(textBox3);
+            Controls.Add(textBoxMiddleName);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(textBoxGivenName);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxLastName);
             Controls.Add(label1);
             Name = "ControlCreateId";
             Size = new Size(1116, 633);
@@ -451,31 +455,31 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox textBoxLastName;
+        private TextBox textBoxGivenName;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox textBoxMiddleName;
         private Label label3;
-        private TextBox textBox4;
+        private TextBox textBoxSuffix;
         private Label label4;
         private Label label5;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxSex;
         private Label label6;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePickerBirthday;
         private Label label7;
         public PictureBox pictureBoxIdPhoto;
         private Button buttonBrowse;
         private Label label8;
         private Label label9;
-        private Button button2;
-        private Button button3;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
-        private ComboBox comboBox4;
+        private Button buttonCreate;
+        private Button buttonClearAll;
+        private ComboBox comboBoxBloodType;
+        private ComboBox comboBoxMaritalStatus;
+        private ComboBox comboBoxProvince;
         private Label label10;
-        private ComboBox comboBox5;
+        private ComboBox comboBoxCity;
         private Label label11;
-        private ComboBox comboBox6;
+        private ComboBox comboBoxBarangay;
         private Label label12;
         private Button buttonCamera;
         private Button buttonClearPhoto;
