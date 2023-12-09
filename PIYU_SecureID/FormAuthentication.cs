@@ -2,10 +2,10 @@ using OtpNet;
 
 namespace PIYU_SecureID
 {
-    public partial class Form1 : Form
+    public partial class FormAuthentication : Form
     {
         private const string SecretKey = "F7XO6UWCIHG3XAZ4JSBTUYLZVJECUBH7";
-        public Form1()
+        public FormAuthentication()
         {
             InitializeComponent();
         }
@@ -17,7 +17,7 @@ namespace PIYU_SecureID
             {
                 MessageBox.Show("Authentication Success!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
-                Form dashboard = new dashboard();
+                Form dashboard = new FormDashboard();
                 dashboard.Show();
             }
             else

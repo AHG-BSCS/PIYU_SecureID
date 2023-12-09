@@ -1,6 +1,6 @@
 ﻿namespace PIYU_SecureID
 {
-    partial class Form1
+    partial class FormAuthentication
     {
         /// <summary>
         ///  Required designer variable.
