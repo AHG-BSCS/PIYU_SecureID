@@ -174,5 +174,24 @@ namespace PIYU_SecureID
         {
             e.Handled = true;
         }
+
+        private void buttonGenerateID_Click(object sender, EventArgs e)
+        {
+            string lastName = textBoxLastName.Text;
+            string givenName = textBoxGivenName.Text;
+            string middleName = textBoxMiddleName.Text;
+            string suffix = textBoxSuffix.Text;
+            string sex = comboBoxSex.Text;
+            string bloodType = comboBoxBloodType.Text;
+            string province = comboBoxProvince.Text;
+            string city = comboBoxCity.Text;
+            string barangay = comboBoxBarangay.Text;
+            string maritalStatus = comboBoxMaritalStatus.Text;
+            FormIDGenerate generate= new FormIDGenerate(lastName, givenName, middleName, suffix, transactionNum,
+                                                                        sex, bloodType, province, city, barangay, maritalStatus,
+                                                                        this);
+
+            generate.Show();
+        }
     }
 }
