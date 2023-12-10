@@ -30,11 +30,17 @@ namespace PIYU_SecureID
             comboBoxCameras.SelectedIndex = 0;
             VideoCaptureDevice captureDevice = new VideoCaptureDevice();
 
-            InitializeWebCam();
-            if (videoSource.IsRunning)
+            if (comboBoxCameras.SelectedIndex != -1)
             {
-                videoSource.SignalToStop();
-                videoSource.WaitForStop();
+                int selectedCameraIndex = comboBoxCameras.SelectedIndex;
+                videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+                videoSource = new VideoCaptureDevice(videoDevices[selectedCameraIndex].MonikerString);
+
+                if (videoSource.IsRunning)
+                {
+                    videoSource.SignalToStop();
+                    videoSource.WaitForStop();
+                }
             }
         }
 
