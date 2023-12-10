@@ -139,7 +139,7 @@ namespace PIYU_SecureID
                 string maritalStatus = comboBoxMaritalStatus.Text;
                 byte[] idPhoto = ConvertPictureBoxImageToBase64(pictureBoxIdPhoto.Image);
                 byte[] sign = ConvertPictureBoxImageToBase64(pictureBoxSignature.Image);
-                FormVerificationInfo verify = new FormVerificationInfo(lastName, givenName, middleName, suffix, transactionNum, 
+                FormVerificationInfo verify = new FormVerificationInfo(lastName, givenName, middleName, suffix, transactionNum,
                                                                         sex, bloodType, dateOfBirth, province, city, barangay, maritalStatus,
                                                                         idPhoto, sign, this);
                 verify.ShowDialog();
@@ -199,7 +199,7 @@ namespace PIYU_SecureID
             string city = comboBoxCity.Text;
             string barangay = comboBoxBarangay.Text;
             string maritalStatus = comboBoxMaritalStatus.Text;
-            FormIDGenerate generate= new FormIDGenerate(lastName, givenName, middleName, suffix, transactionNum,
+            FormIDGenerate generate = new FormIDGenerate(lastName, givenName, middleName, suffix, transactionNum,
                                                                         sex, bloodType, province, city, barangay, maritalStatus,
                                                                         this);
 

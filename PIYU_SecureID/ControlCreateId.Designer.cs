@@ -28,381 +28,281 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxLastName = new System.Windows.Forms.TextBox();
-            this.textBoxGivenName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxMiddleName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxSuffix = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBoxSex = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePickerBirthday = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBoxIdPhoto = new System.Windows.Forms.PictureBox();
-            this.buttonBrowse = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.buttonCreate = new System.Windows.Forms.Button();
-            this.buttonClearAll = new System.Windows.Forms.Button();
-            this.comboBoxBloodType = new System.Windows.Forms.ComboBox();
-            this.comboBoxMaritalStatus = new System.Windows.Forms.ComboBox();
-            this.comboBoxProvince = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBoxCity = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBoxBarangay = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.buttonCamera = new System.Windows.Forms.Button();
-            this.buttonClearPhoto = new System.Windows.Forms.Button();
-            this.buttonSignature = new System.Windows.Forms.Button();
-            this.pictureBoxSignature = new System.Windows.Forms.PictureBox();
-            this.buttonClearSign = new System.Windows.Forms.Button();
-            this.comboBoxCameras = new System.Windows.Forms.ComboBox();
-            this.buttonGenerateID = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdPhoto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSignature)).BeginInit();
-            this.SuspendLayout();
+            label1 = new Label();
+            textBoxLastName = new TextBox();
+            textBoxGivenName = new TextBox();
+            label2 = new Label();
+            textBoxMiddleName = new TextBox();
+            label3 = new Label();
+            textBoxSuffix = new TextBox();
+            label4 = new Label();
+            label5 = new Label();
+            comboBoxSex = new ComboBox();
+            label6 = new Label();
+            dateTimePickerBirthday = new DateTimePicker();
+            label7 = new Label();
+            pictureBoxIdPhoto = new PictureBox();
+            buttonBrowse = new Button();
+            label8 = new Label();
+            label9 = new Label();
+            buttonCreate = new Button();
+            buttonClearAll = new Button();
+            comboBoxBloodType = new ComboBox();
+            comboBoxMaritalStatus = new ComboBox();
+            comboBoxProvince = new ComboBox();
+            label10 = new Label();
+            comboBoxCity = new ComboBox();
+            label11 = new Label();
+            comboBoxBarangay = new ComboBox();
+            label12 = new Label();
+            buttonCamera = new Button();
+            buttonClearPhoto = new Button();
+            buttonSignature = new Button();
+            pictureBoxSignature = new PictureBox();
+            buttonClearSign = new Button();
+            comboBoxCameras = new ComboBox();
+            buttonGenerateID = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSignature).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(46, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Last Name";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(40, 33);
+            label1.Name = "label1";
+            label1.Size = new Size(86, 21);
+            label1.TabIndex = 0;
+            label1.Text = "Last Name";
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBoxLastName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxLastName.Location = new System.Drawing.Point(62, 76);
-            this.textBoxLastName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(461, 34);
-            this.textBoxLastName.TabIndex = 1;
-            this.textBoxLastName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxLastName_KeyDown);
+            textBoxLastName.CharacterCasing = CharacterCasing.Upper;
+            textBoxLastName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxLastName.Location = new Point(54, 57);
+            textBoxLastName.Name = "textBoxLastName";
+            textBoxLastName.Size = new Size(404, 29);
+            textBoxLastName.TabIndex = 1;
+            textBoxLastName.KeyDown += textBoxLastName_KeyDown;
             // 
             // textBoxGivenName
             // 
-            this.textBoxGivenName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBoxGivenName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxGivenName.Location = new System.Drawing.Point(62, 157);
-            this.textBoxGivenName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxGivenName.Name = "textBoxGivenName";
-            this.textBoxGivenName.Size = new System.Drawing.Size(461, 34);
-            this.textBoxGivenName.TabIndex = 3;
-            this.textBoxGivenName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxGivenName_KeyDown);
+            textBoxGivenName.CharacterCasing = CharacterCasing.Upper;
+            textBoxGivenName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxGivenName.Location = new Point(54, 118);
+            textBoxGivenName.Name = "textBoxGivenName";
+            textBoxGivenName.Size = new Size(404, 29);
+            textBoxGivenName.TabIndex = 3;
+            textBoxGivenName.KeyDown += textBoxGivenName_KeyDown;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(46, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 28);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Given Name";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(40, 94);
+            label2.Name = "label2";
+            label2.Size = new Size(98, 21);
+            label2.TabIndex = 2;
+            label2.Text = "Given Name";
             // 
             // textBoxMiddleName
             // 
-            this.textBoxMiddleName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBoxMiddleName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxMiddleName.Location = new System.Drawing.Point(62, 239);
-            this.textBoxMiddleName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxMiddleName.Name = "textBoxMiddleName";
-            this.textBoxMiddleName.Size = new System.Drawing.Size(461, 34);
-            this.textBoxMiddleName.TabIndex = 5;
-            this.textBoxMiddleName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxMiddleName_KeyDown);
+            textBoxMiddleName.CharacterCasing = CharacterCasing.Upper;
+            textBoxMiddleName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxMiddleName.Location = new Point(54, 179);
+            textBoxMiddleName.Name = "textBoxMiddleName";
+            textBoxMiddleName.Size = new Size(404, 29);
+            textBoxMiddleName.TabIndex = 5;
+            textBoxMiddleName.KeyDown += textBoxMiddleName_KeyDown;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(46, 207);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 28);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Middle Name";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(40, 155);
+            label3.Name = "label3";
+            label3.Size = new Size(109, 21);
+            label3.TabIndex = 4;
+            label3.Text = "Middle Name";
             // 
             // textBoxSuffix
             // 
-            this.textBoxSuffix.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBoxSuffix.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxSuffix.Location = new System.Drawing.Point(62, 320);
-            this.textBoxSuffix.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxSuffix.Name = "textBoxSuffix";
-            this.textBoxSuffix.Size = new System.Drawing.Size(82, 34);
-            this.textBoxSuffix.TabIndex = 7;
+            textBoxSuffix.CharacterCasing = CharacterCasing.Upper;
+            textBoxSuffix.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxSuffix.Location = new Point(54, 240);
+            textBoxSuffix.Name = "textBoxSuffix";
+            textBoxSuffix.Size = new Size(72, 29);
+            textBoxSuffix.TabIndex = 7;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(46, 288);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 28);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Suffix";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(40, 216);
+            label4.Name = "label4";
+            label4.Size = new Size(52, 21);
+            label4.TabIndex = 6;
+            label4.Text = "Suffix";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(46, 369);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 28);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Sex";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(40, 277);
+            label5.Name = "label5";
+            label5.Size = new Size(36, 21);
+            label5.TabIndex = 8;
+            label5.Text = "Sex";
             // 
             // comboBoxSex
             // 
-            this.comboBoxSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSex.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBoxSex.FormattingEnabled = true;
-            this.comboBoxSex.Items.AddRange(new object[] {
-            "MALE",
-            "FEMALE"});
-            this.comboBoxSex.Location = new System.Drawing.Point(67, 401);
-            this.comboBoxSex.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBoxSex.Name = "comboBoxSex";
-            this.comboBoxSex.Size = new System.Drawing.Size(90, 36);
-            this.comboBoxSex.TabIndex = 9;
+            comboBoxSex.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxSex.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxSex.FormattingEnabled = true;
+            comboBoxSex.Items.AddRange(new object[] { "MALE", "FEMALE" });
+            comboBoxSex.Location = new Point(59, 301);
+            comboBoxSex.Name = "comboBoxSex";
+            comboBoxSex.Size = new Size(79, 29);
+            comboBoxSex.TabIndex = 9;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(46, 457);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 28);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Date of Birth";
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(40, 343);
+            label6.Name = "label6";
+            label6.Size = new Size(103, 21);
+            label6.TabIndex = 10;
+            label6.Text = "Date of Birth";
             // 
             // dateTimePickerBirthday
             // 
-            this.dateTimePickerBirthday.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePickerBirthday.Location = new System.Drawing.Point(67, 489);
-            this.dateTimePickerBirthday.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePickerBirthday.MaxDate = new System.DateTime(2024, 12, 31, 0, 0, 0, 0);
-            this.dateTimePickerBirthday.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dateTimePickerBirthday.Name = "dateTimePickerBirthday";
-            this.dateTimePickerBirthday.Size = new System.Drawing.Size(461, 34);
-            this.dateTimePickerBirthday.TabIndex = 11;
+            dateTimePickerBirthday.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dateTimePickerBirthday.Location = new Point(59, 367);
+            dateTimePickerBirthday.MaxDate = new DateTime(2024, 12, 31, 0, 0, 0, 0);
+            dateTimePickerBirthday.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
+            dateTimePickerBirthday.Name = "dateTimePickerBirthday";
+            dateTimePickerBirthday.Size = new Size(404, 29);
+            dateTimePickerBirthday.TabIndex = 11;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(46, 547);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 28);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Address";
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(40, 410);
+            label7.Name = "label7";
+            label7.Size = new Size(70, 21);
+            label7.TabIndex = 12;
+            label7.Text = "Address";
             // 
             // pictureBoxIdPhoto
             // 
-            this.pictureBoxIdPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxIdPhoto.Location = new System.Drawing.Point(959, 44);
-            this.pictureBoxIdPhoto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBoxIdPhoto.Name = "pictureBoxIdPhoto";
-            this.pictureBoxIdPhoto.Size = new System.Drawing.Size(245, 286);
-            this.pictureBoxIdPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxIdPhoto.TabIndex = 14;
-            this.pictureBoxIdPhoto.TabStop = false;
+            pictureBoxIdPhoto.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxIdPhoto.Location = new Point(839, 33);
+            pictureBoxIdPhoto.Name = "pictureBoxIdPhoto";
+            pictureBoxIdPhoto.Size = new Size(215, 215);
+            pictureBoxIdPhoto.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxIdPhoto.TabIndex = 14;
+            pictureBoxIdPhoto.TabStop = false;
             // 
             // buttonBrowse
             // 
-            this.buttonBrowse.Location = new System.Drawing.Point(1081, 339);
-            this.buttonBrowse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonBrowse.Name = "buttonBrowse";
-            this.buttonBrowse.Size = new System.Drawing.Size(125, 51);
-            this.buttonBrowse.TabIndex = 15;
-            this.buttonBrowse.Text = "Browse";
-            this.buttonBrowse.UseVisualStyleBackColor = true;
+            buttonBrowse.Location = new Point(946, 254);
+            buttonBrowse.Name = "buttonBrowse";
+            buttonBrowse.Size = new Size(109, 38);
+            buttonBrowse.TabIndex = 15;
+            buttonBrowse.Text = "Browse";
+            buttonBrowse.UseVisualStyleBackColor = true;
+            buttonBrowse.Click += buttonBrowse_Click;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(237, 369);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 28);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Blood Type";
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(207, 277);
+            label8.Name = "label8";
+            label8.Size = new Size(93, 21);
+            label8.TabIndex = 16;
+            label8.Text = "Blood Type";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(46, 635);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(135, 28);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Marital Status";
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.Location = new Point(40, 476);
+            label9.Name = "label9";
+            label9.Size = new Size(110, 21);
+            label9.TabIndex = 18;
+            label9.Text = "Marital Status";
             // 
             // buttonCreate
             // 
-            this.buttonCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCreate.Location = new System.Drawing.Point(1290, 1023);
-            this.buttonCreate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonCreate.Name = "buttonCreate";
-            this.buttonCreate.Size = new System.Drawing.Size(143, 75);
-            this.buttonCreate.TabIndex = 20;
-            this.buttonCreate.Text = "CREATE";
-            this.buttonCreate.UseVisualStyleBackColor = true;
+            buttonCreate.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            buttonCreate.Location = new Point(953, 524);
+            buttonCreate.Name = "buttonCreate";
+            buttonCreate.Size = new Size(125, 56);
+            buttonCreate.TabIndex = 20;
+            buttonCreate.Text = "CREATE";
+            buttonCreate.UseVisualStyleBackColor = true;
+            buttonCreate.Click += buttonCreate_Click;
             // 
             // buttonClearAll
             // 
-            this.buttonClearAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClearAll.Location = new System.Drawing.Point(1141, 1023);
-            this.buttonClearAll.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonClearAll.Name = "buttonClearAll";
-            this.buttonClearAll.Size = new System.Drawing.Size(143, 75);
-            this.buttonClearAll.TabIndex = 21;
-            this.buttonClearAll.Text = "CLEAR";
-            this.buttonClearAll.UseVisualStyleBackColor = true;
+            buttonClearAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            buttonClearAll.Location = new Point(822, 524);
+            buttonClearAll.Name = "buttonClearAll";
+            buttonClearAll.Size = new Size(125, 56);
+            buttonClearAll.TabIndex = 21;
+            buttonClearAll.Text = "CLEAR";
+            buttonClearAll.UseVisualStyleBackColor = true;
+            buttonClearAll.Click += buttonClearAll_Click;
             // 
             // comboBoxBloodType
             // 
-            this.comboBoxBloodType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxBloodType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBoxBloodType.FormattingEnabled = true;
-            this.comboBoxBloodType.Items.AddRange(new object[] {
-            "A+",
-            "A-",
-            "B+",
-            "B-",
-            "AB+",
-            "AB-",
-            "O+",
-            "O-"});
-            this.comboBoxBloodType.Location = new System.Drawing.Point(258, 401);
-            this.comboBoxBloodType.Name = "comboBoxBloodType";
-            this.comboBoxBloodType.Size = new System.Drawing.Size(90, 36);
-            this.comboBoxBloodType.TabIndex = 22;
+            comboBoxBloodType.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxBloodType.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxBloodType.FormattingEnabled = true;
+            comboBoxBloodType.Items.AddRange(new object[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" });
+            comboBoxBloodType.Location = new Point(226, 301);
+            comboBoxBloodType.Margin = new Padding(3, 2, 3, 2);
+            comboBoxBloodType.Name = "comboBoxBloodType";
+            comboBoxBloodType.Size = new Size(79, 29);
+            comboBoxBloodType.TabIndex = 22;
             // 
             // comboBoxMaritalStatus
             // 
-            this.comboBoxMaritalStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxMaritalStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBoxMaritalStatus.FormattingEnabled = true;
-            this.comboBoxMaritalStatus.Items.AddRange(new object[] {
-            "SINGLE",
-            "MARRIED",
-            "ANNULLED",
-            "SEPARATED",
-            "WIDOWED"});
-            this.comboBoxMaritalStatus.Location = new System.Drawing.Point(67, 665);
-            this.comboBoxMaritalStatus.Name = "comboBoxMaritalStatus";
-            this.comboBoxMaritalStatus.Size = new System.Drawing.Size(118, 36);
-            this.comboBoxMaritalStatus.TabIndex = 23;
+            comboBoxMaritalStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxMaritalStatus.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxMaritalStatus.FormattingEnabled = true;
+            comboBoxMaritalStatus.Items.AddRange(new object[] { "SINGLE", "MARRIED", "ANNULLED", "SEPARATED", "WIDOWED" });
+            comboBoxMaritalStatus.Location = new Point(59, 499);
+            comboBoxMaritalStatus.Margin = new Padding(3, 2, 3, 2);
+            comboBoxMaritalStatus.Name = "comboBoxMaritalStatus";
+            comboBoxMaritalStatus.Size = new Size(104, 29);
+            comboBoxMaritalStatus.TabIndex = 23;
             // 
             // comboBoxProvince
             // 
-            this.comboBoxProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxProvince.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBoxProvince.FormattingEnabled = true;
-            this.comboBoxProvince.Items.AddRange(new object[] {
-            "ABRA",
-            "AGUSAN DEL NORTE",
-            "AGUSAN DEL SUR",
-            "AKLAN",
-            "ALBAY",
-            "ANTIQUE",
-            "APAYAO",
-            "AURORA",
-            "BASILAN",
-            "BATAAN",
-            "BATANES",
-            "BATANGAS",
-            "BENGUET",
-            "BILIRAN",
-            "BOHOL",
-            "BUKIDNON",
-            "BULACAN",
-            "CAGAYAN",
-            "CAMARINES NORTE",
-            "CAMARINES SUR",
-            "CAMIGUIN",
-            "CAPIZ",
-            "CATANDUANES",
-            "CAVITE",
-            "CEBU",
-            "COTABATO",
-            "DAVAO DE ORO (FORMERLY COMPOSTELA VALLEY)",
-            "DAVAO DEL NORTE",
-            "DAVAO DEL SUR",
-            "DAVAO OCCIDENTAL",
-            "DAVAO ORIENTAL",
-            "DINAGAT ISLANDS",
-            "EASTERN SAMAR",
-            "GUIMARAS",
-            "IFUGAO",
-            "ILOCOS NORTE",
-            "ILOCOS SUR",
-            "ILOILO",
-            "ISABELA",
-            "KALINGA",
-            "LA UNION",
-            "LAGUNA",
-            "LANAO DEL NORTE",
-            "LANAO DEL SUR",
-            "LEYTE",
-            "MAGUINDANAO",
-            "MARINDUQUE",
-            "MASBATE",
-            "MISAMIS OCCIDENTAL",
-            "MISAMIS ORIENTAL",
-            "MOUNTAIN PROVINCE",
-            "NEGROS OCCIDENTAL",
-            "NEGROS ORIENTAL",
-            "NORTHERN SAMAR",
-            "NUEVA ECIJA",
-            "NUEVA VIZCAYA",
-            "OCCIDENTAL MINDORO",
-            "ORIENTAL MINDORO",
-            "PALAWAN",
-            "PAMPANGA",
-            "PANGASINAN",
-            "QUEZON",
-            "QUIRINO",
-            "RIZAL",
-            "ROMBLON",
-            "SAMAR",
-            "SARANGANI",
-            "SIQUIJOR",
-            "SORSOGON",
-            "SOUTH COTABATO",
-            "SOUTHERN LEYTE",
-            "SULTAN KUDARAT",
-            "SULU",
-            "SURIGAO DEL NORTE",
-            "SURIGAO DEL SUR",
-            "TARLAC",
-            "TAWI-TAWI",
-            "ZAMBALES",
-            "ZAMBOANGA DEL NORTE",
-            "ZAMBOANGA DEL SUR",
-            "ZAMBOANGA SIBUGAY"});
-            this.comboBoxProvince.Location = new System.Drawing.Point(67, 577);
-            this.comboBoxProvince.Name = "comboBoxProvince";
-            this.comboBoxProvince.Size = new System.Drawing.Size(217, 36);
-            this.comboBoxProvince.TabIndex = 24;
+            comboBoxProvince.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxProvince.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxProvince.FormattingEnabled = true;
+            comboBoxProvince.Items.AddRange(new object[] { "ABRA", "AGUSAN DEL NORTE", "AGUSAN DEL SUR", "AKLAN", "ALBAY", "ANTIQUE", "APAYAO", "AURORA", "BASILAN", "BATAAN", "BATANES", "BATANGAS", "BENGUET", "BILIRAN", "BOHOL", "BUKIDNON", "BULACAN", "CAGAYAN", "CAMARINES NORTE", "CAMARINES SUR", "CAMIGUIN", "CAPIZ", "CATANDUANES", "CAVITE", "CEBU", "COTABATO", "DAVAO DE ORO (FORMERLY COMPOSTELA VALLEY)", "DAVAO DEL NORTE", "DAVAO DEL SUR", "DAVAO OCCIDENTAL", "DAVAO ORIENTAL", "DINAGAT ISLANDS", "EASTERN SAMAR", "GUIMARAS", "IFUGAO", "ILOCOS NORTE", "ILOCOS SUR", "ILOILO", "ISABELA", "KALINGA", "LA UNION", "LAGUNA", "LANAO DEL NORTE", "LANAO DEL SUR", "LEYTE", "MAGUINDANAO", "MARINDUQUE", "MASBATE", "MISAMIS OCCIDENTAL", "MISAMIS ORIENTAL", "MOUNTAIN PROVINCE", "NEGROS OCCIDENTAL", "NEGROS ORIENTAL", "NORTHERN SAMAR", "NUEVA ECIJA", "NUEVA VIZCAYA", "OCCIDENTAL MINDORO", "ORIENTAL MINDORO", "PALAWAN", "PAMPANGA", "PANGASINAN", "QUEZON", "QUIRINO", "RIZAL", "ROMBLON", "SAMAR", "SARANGANI", "SIQUIJOR", "SORSOGON", "SOUTH COTABATO", "SOUTHERN LEYTE", "SULTAN KUDARAT", "SULU", "SURIGAO DEL NORTE", "SURIGAO DEL SUR", "TARLAC", "TAWI-TAWI", "ZAMBALES", "ZAMBOANGA DEL NORTE", "ZAMBOANGA DEL SUR", "ZAMBOANGA SIBUGAY" });
+            comboBoxProvince.Location = new Point(59, 433);
+            comboBoxProvince.Margin = new Padding(3, 2, 3, 2);
+            comboBoxProvince.Name = "comboBoxProvince";
+            comboBoxProvince.Size = new Size(190, 29);
+            comboBoxProvince.TabIndex = 24;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(136, 616);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(77, 19);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "PROVINCE";
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label10.Location = new Point(119, 462);
+            label10.Name = "label10";
+            label10.Size = new Size(61, 13);
+            label10.TabIndex = 25;
+            label10.Text = "PROVINCE";
             // 
             // comboBoxCity
             // 
@@ -410,21 +310,21 @@
             comboBoxCity.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             comboBoxCity.FormattingEnabled = true;
             comboBoxCity.Items.AddRange(new object[] { "CITY1" });
-            comboBoxCity.Location = new Point(518, 433);
+            comboBoxCity.Location = new Point(487, 431);
             comboBoxCity.Margin = new Padding(3, 2, 3, 2);
             comboBoxCity.Name = "comboBoxCity";
-            comboBoxCity.Size = new Size(232, 29);
+            comboBoxCity.Size = new Size(204, 29);
             comboBoxCity.TabIndex = 26;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(704, 616);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(38, 19);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "CITY";
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label11.Location = new Point(582, 462);
+            label11.Name = "label11";
+            label11.Size = new Size(29, 13);
+            label11.TabIndex = 27;
+            label11.Text = "CITY";
             // 
             // comboBoxBarangay
             // 
@@ -432,141 +332,136 @@
             comboBoxBarangay.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             comboBoxBarangay.FormattingEnabled = true;
             comboBoxBarangay.Items.AddRange(new object[] { "BARANGAY1" });
-            comboBoxBarangay.Location = new Point(255, 433);
+            comboBoxBarangay.Location = new Point(257, 431);
             comboBoxBarangay.Margin = new Padding(3, 2, 3, 2);
             comboBoxBarangay.Name = "comboBoxBarangay";
-            comboBoxBarangay.Size = new Size(257, 29);
+            comboBoxBarangay.Size = new Size(225, 29);
             comboBoxBarangay.TabIndex = 28;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(400, 616);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 19);
-            this.label12.TabIndex = 29;
-            this.label12.Text = "BARANGAY";
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label12.Location = new Point(330, 462);
+            label12.Name = "label12";
+            label12.Size = new Size(65, 13);
+            label12.TabIndex = 29;
+            label12.Text = "BARANGAY";
             // 
             // buttonCamera
             // 
-            this.buttonCamera.Location = new System.Drawing.Point(958, 339);
-            this.buttonCamera.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonCamera.Name = "buttonCamera";
-            this.buttonCamera.Size = new System.Drawing.Size(125, 51);
-            this.buttonCamera.TabIndex = 30;
-            this.buttonCamera.Text = "Take a Photo";
-            this.buttonCamera.UseVisualStyleBackColor = true;
+            buttonCamera.Location = new Point(838, 254);
+            buttonCamera.Name = "buttonCamera";
+            buttonCamera.Size = new Size(109, 38);
+            buttonCamera.TabIndex = 30;
+            buttonCamera.Text = "Take a Photo";
+            buttonCamera.UseVisualStyleBackColor = true;
+            buttonCamera.Click += buttonCamera_Click;
             // 
             // buttonClearPhoto
             // 
-            this.buttonClearPhoto.Location = new System.Drawing.Point(1081, 389);
-            this.buttonClearPhoto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonClearPhoto.Name = "buttonClearPhoto";
-            this.buttonClearPhoto.Size = new System.Drawing.Size(125, 51);
-            this.buttonClearPhoto.TabIndex = 31;
-            this.buttonClearPhoto.Text = "Clear";
-            this.buttonClearPhoto.UseVisualStyleBackColor = true;
+            buttonClearPhoto.Location = new Point(946, 292);
+            buttonClearPhoto.Name = "buttonClearPhoto";
+            buttonClearPhoto.Size = new Size(109, 38);
+            buttonClearPhoto.TabIndex = 31;
+            buttonClearPhoto.Text = "Clear";
+            buttonClearPhoto.UseVisualStyleBackColor = true;
+            buttonClearPhoto.Click += buttonClearPhoto_Click;
             // 
             // buttonSignature
             // 
-            this.buttonSignature.Location = new System.Drawing.Point(629, 339);
-            this.buttonSignature.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonSignature.Name = "buttonSignature";
-            this.buttonSignature.Size = new System.Drawing.Size(125, 51);
-            this.buttonSignature.TabIndex = 32;
-            this.buttonSignature.Text = "Signature";
-            this.buttonSignature.UseVisualStyleBackColor = true;
+            buttonSignature.Location = new Point(550, 254);
+            buttonSignature.Name = "buttonSignature";
+            buttonSignature.Size = new Size(109, 38);
+            buttonSignature.TabIndex = 32;
+            buttonSignature.Text = "Signature";
+            buttonSignature.UseVisualStyleBackColor = true;
+            buttonSignature.Click += buttonSignature_Click;
             // 
             // pictureBoxSignature
             // 
-            this.pictureBoxSignature.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxSignature.Location = new System.Drawing.Point(629, 44);
-            this.pictureBoxSignature.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBoxSignature.Name = "pictureBoxSignature";
-            this.pictureBoxSignature.Size = new System.Drawing.Size(245, 286);
-            this.pictureBoxSignature.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxSignature.TabIndex = 33;
-            this.pictureBoxSignature.TabStop = false;
+            pictureBoxSignature.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxSignature.Location = new Point(550, 33);
+            pictureBoxSignature.Name = "pictureBoxSignature";
+            pictureBoxSignature.Size = new Size(215, 215);
+            pictureBoxSignature.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxSignature.TabIndex = 33;
+            pictureBoxSignature.TabStop = false;
             // 
             // buttonClearSign
             // 
-            this.buttonClearSign.Location = new System.Drawing.Point(750, 339);
-            this.buttonClearSign.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonClearSign.Name = "buttonClearSign";
-            this.buttonClearSign.Size = new System.Drawing.Size(125, 51);
-            this.buttonClearSign.TabIndex = 34;
-            this.buttonClearSign.Text = "Clear";
-            this.buttonClearSign.UseVisualStyleBackColor = true;
+            buttonClearSign.Location = new Point(656, 254);
+            buttonClearSign.Name = "buttonClearSign";
+            buttonClearSign.Size = new Size(109, 38);
+            buttonClearSign.TabIndex = 34;
+            buttonClearSign.Text = "Clear";
+            buttonClearSign.UseVisualStyleBackColor = true;
+            buttonClearSign.Click += buttonClearSign_Click;
             // 
             // comboBoxCameras
             // 
-            this.comboBoxCameras.FormattingEnabled = true;
-            this.comboBoxCameras.Location = new System.Drawing.Point(958, 389);
-            this.comboBoxCameras.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBoxCameras.Name = "comboBoxCameras";
-            this.comboBoxCameras.Size = new System.Drawing.Size(124, 28);
-            this.comboBoxCameras.TabIndex = 35;
+            comboBoxCameras.FormattingEnabled = true;
+            comboBoxCameras.Location = new Point(838, 292);
+            comboBoxCameras.Name = "comboBoxCameras";
+            comboBoxCameras.Size = new Size(109, 23);
+            comboBoxCameras.TabIndex = 35;
             // 
             // buttonGenerateID
             // 
-            this.buttonGenerateID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonGenerateID.Location = new System.Drawing.Point(970, 1023);
-            this.buttonGenerateID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonGenerateID.Name = "buttonGenerateID";
-            this.buttonGenerateID.Size = new System.Drawing.Size(143, 75);
-            this.buttonGenerateID.TabIndex = 37;
-            this.buttonGenerateID.Text = "GENERATE ID - BETA";
-            this.buttonGenerateID.UseVisualStyleBackColor = true;
-            this.buttonGenerateID.Click += new System.EventHandler(this.buttonGenerateID_Click);
+            buttonGenerateID.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            buttonGenerateID.Location = new Point(673, 524);
+            buttonGenerateID.Name = "buttonGenerateID";
+            buttonGenerateID.Size = new Size(125, 56);
+            buttonGenerateID.TabIndex = 37;
+            buttonGenerateID.Text = "GENERATE ID - BETA";
+            buttonGenerateID.UseVisualStyleBackColor = true;
+            buttonGenerateID.Click += buttonGenerateID_Click;
             // 
             // ControlCreateId
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.Controls.Add(this.buttonGenerateID);
-            this.Controls.Add(this.comboBoxCameras);
-            this.Controls.Add(this.buttonClearSign);
-            this.Controls.Add(this.pictureBoxSignature);
-            this.Controls.Add(this.buttonSignature);
-            this.Controls.Add(this.buttonClearPhoto);
-            this.Controls.Add(this.buttonCamera);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.comboBoxBarangay);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.comboBoxCity);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.comboBoxProvince);
-            this.Controls.Add(this.comboBoxMaritalStatus);
-            this.Controls.Add(this.comboBoxBloodType);
-            this.Controls.Add(this.buttonClearAll);
-            this.Controls.Add(this.buttonCreate);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.buttonBrowse);
-            this.Controls.Add(this.pictureBoxIdPhoto);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.dateTimePickerBirthday);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBoxSex);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxSuffix);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxMiddleName);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxGivenName);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxLastName);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "ControlCreateId";
-            this.Size = new System.Drawing.Size(1457, 1125);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdPhoto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSignature)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            Controls.Add(buttonGenerateID);
+            Controls.Add(comboBoxCameras);
+            Controls.Add(buttonClearSign);
+            Controls.Add(pictureBoxSignature);
+            Controls.Add(buttonSignature);
+            Controls.Add(buttonClearPhoto);
+            Controls.Add(buttonCamera);
+            Controls.Add(label12);
+            Controls.Add(comboBoxBarangay);
+            Controls.Add(label11);
+            Controls.Add(comboBoxCity);
+            Controls.Add(label10);
+            Controls.Add(comboBoxProvince);
+            Controls.Add(comboBoxMaritalStatus);
+            Controls.Add(comboBoxBloodType);
+            Controls.Add(buttonClearAll);
+            Controls.Add(buttonCreate);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(buttonBrowse);
+            Controls.Add(pictureBoxIdPhoto);
+            Controls.Add(label7);
+            Controls.Add(dateTimePickerBirthday);
+            Controls.Add(label6);
+            Controls.Add(comboBoxSex);
+            Controls.Add(label5);
+            Controls.Add(textBoxSuffix);
+            Controls.Add(label4);
+            Controls.Add(textBoxMiddleName);
+            Controls.Add(label3);
+            Controls.Add(textBoxGivenName);
+            Controls.Add(label2);
+            Controls.Add(textBoxLastName);
+            Controls.Add(label1);
+            Name = "ControlCreateId";
+            Size = new Size(1116, 633);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSignature).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
