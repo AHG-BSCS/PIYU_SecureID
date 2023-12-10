@@ -28,8 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             pictureBoxQrScanner = new PictureBox();
             comboBoxCameras = new ComboBox();
+            buttonStartStop = new Button();
+            timer1 = new System.Windows.Forms.Timer(components);
+            textBoxTransactionNum = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).BeginInit();
             SuspendLayout();
             // 
@@ -51,21 +55,49 @@
             comboBoxCameras.Size = new Size(121, 23);
             comboBoxCameras.TabIndex = 1;
             // 
+            // buttonStartStop
+            // 
+            buttonStartStop.Location = new Point(378, 336);
+            buttonStartStop.Name = "buttonStartStop";
+            buttonStartStop.Size = new Size(75, 23);
+            buttonStartStop.TabIndex = 2;
+            buttonStartStop.Text = "START";
+            buttonStartStop.UseVisualStyleBackColor = true;
+            buttonStartStop.Click += buttonStartStop_Click;
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
+            // textBoxTransactionNum
+            // 
+            textBoxTransactionNum.Location = new Point(684, 308);
+            textBoxTransactionNum.Name = "textBoxTransactionNum";
+            textBoxTransactionNum.Size = new Size(202, 23);
+            textBoxTransactionNum.TabIndex = 3;
+            // 
             // ControlVerifyId
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(textBoxTransactionNum);
+            Controls.Add(buttonStartStop);
             Controls.Add(comboBoxCameras);
             Controls.Add(pictureBoxQrScanner);
             Name = "ControlVerifyId";
             Size = new Size(1116, 633);
+            ParentChanged += ControlVerifyId_ParentChanged;
             ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private PictureBox pictureBoxQrScanner;
         private ComboBox comboBoxCameras;
+        private Button buttonStartStop;
+        private System.Windows.Forms.Timer timer1;
+        private TextBox textBoxTransactionNum;
     }
 }

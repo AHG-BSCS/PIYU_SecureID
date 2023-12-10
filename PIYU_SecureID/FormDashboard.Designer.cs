@@ -290,7 +290,7 @@
         private Button buttonCreateId;
         private Label labelDateTime;
         private Label labelInstitution;
-        private Panel panelActive;
+        public static Panel panelActive;
         private PictureBox pictureBoxLogo;
         private Button buttonDashboard;
         private Button buttonLogout;

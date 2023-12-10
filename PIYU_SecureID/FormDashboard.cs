@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AForge.Video;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace PIYU_SecureID
@@ -20,7 +21,6 @@ namespace PIYU_SecureID
         private ControlDashboard dashboard = new ControlDashboard();
         private ControlCreateId create = new ControlCreateId();
         private ControlCheckId check = new ControlCheckId();
-        private ControlVerifyId verify = new ControlVerifyId();
         public FormDashboard(FormAuthentication auth)
         {
             InitializeComponent();
@@ -44,6 +44,11 @@ namespace PIYU_SecureID
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
+            if (ControlVerifyId.videoSource.IsRunning)
+            {
+                ControlVerifyId.videoSource.SignalToStop();
+                ControlVerifyId.videoSource.WaitForStop();
+            }
             Application.Exit();
         }
 
@@ -141,6 +146,7 @@ namespace PIYU_SecureID
         {
             if (active != "verify")
             {
+                ControlVerifyId verify = new ControlVerifyId();
                 active = "verify";
                 verify.Dock = DockStyle.Fill;
                 panelActive.Controls.Clear();
@@ -165,6 +171,8 @@ namespace PIYU_SecureID
             auth.textBox1.Text = "";
             if (auth.button2.Visible)
                 auth.button2.Visible = false;
+            ControlVerifyId.videoSource.SignalToStop();
+            ControlVerifyId.videoSource.WaitForStop();
             this.Close();
         }
     }
