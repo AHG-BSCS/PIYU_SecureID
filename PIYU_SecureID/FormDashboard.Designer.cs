@@ -169,7 +169,7 @@
             buttonVerifyId.Name = "buttonVerifyId";
             buttonVerifyId.Size = new Size(150, 50);
             buttonVerifyId.TabIndex = 3;
-            buttonVerifyId.Text = "VERIFY ID";
+            buttonVerifyId.Text = "GENERATE ID";
             buttonVerifyId.UseVisualStyleBackColor = true;
             buttonVerifyId.Click += buttonVerifyId_Click;
             // 
@@ -184,7 +184,7 @@
             buttonCheckId.Name = "buttonCheckId";
             buttonCheckId.Size = new Size(150, 50);
             buttonCheckId.TabIndex = 2;
-            buttonCheckId.Text = "CHECK ID";
+            buttonCheckId.Text = "CHECK ID APPLICATION";
             buttonCheckId.UseVisualStyleBackColor = true;
             buttonCheckId.Click += buttonCheckId_Click;
             // 
@@ -199,7 +199,7 @@
             buttonCreateId.Name = "buttonCreateId";
             buttonCreateId.Size = new Size(150, 50);
             buttonCreateId.TabIndex = 1;
-            buttonCreateId.Text = "CREATE ID";
+            buttonCreateId.Text = "ID APPLICATION";
             buttonCreateId.UseVisualStyleBackColor = true;
             buttonCreateId.Click += buttonCreateId_Click;
             // 
@@ -290,9 +290,9 @@
         private Button buttonCreateId;
         private Label labelDateTime;
         private Label labelInstitution;
-        public static Panel panelActive;
         private PictureBox pictureBoxLogo;
         private Button buttonDashboard;
         private Button buttonLogout;
+        public Panel panelActive;
     }
 }

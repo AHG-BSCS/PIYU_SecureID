@@ -60,7 +60,6 @@
             pictureBoxSignature = new PictureBox();
             buttonClearSign = new Button();
             comboBoxCameras = new ComboBox();
-            buttonGenerateID = new Button();
             comboBoxDay = new ComboBox();
             comboBoxMonth = new ComboBox();
             textBoxYear = new TextBox();
@@ -406,17 +405,6 @@
             comboBoxCameras.Size = new Size(109, 23);
             comboBoxCameras.TabIndex = 35;
             // 
-            // buttonGenerateID
-            // 
-            buttonGenerateID.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonGenerateID.Location = new Point(688, 545);
-            buttonGenerateID.Name = "buttonGenerateID";
-            buttonGenerateID.Size = new Size(125, 56);
-            buttonGenerateID.TabIndex = 37;
-            buttonGenerateID.Text = "GENERATE ID - BETA";
-            buttonGenerateID.UseVisualStyleBackColor = true;
-            buttonGenerateID.Click += buttonGenerateID_Click;
-            // 
             // comboBoxDay
             // 
             comboBoxDay.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -492,7 +480,6 @@
             Controls.Add(textBoxYear);
             Controls.Add(comboBoxMonth);
             Controls.Add(comboBoxDay);
-            Controls.Add(buttonGenerateID);
             Controls.Add(comboBoxCameras);
             Controls.Add(buttonClearSign);
             Controls.Add(pictureBoxSignature);
@@ -567,7 +554,6 @@
         public PictureBox pictureBoxSignature;
         private Button buttonClearSign;
         public ComboBox comboBoxCameras;
-        private Button buttonGenerateID;
         private ComboBox comboBoxDay;
         private ComboBox comboBoxMonth;
         private TextBox textBoxYear;
