@@ -129,15 +129,7 @@ namespace PIYU_SecureID
                 string lastName = textBoxLastName.Text;
                 string givenName = textBoxGivenName.Text;
                 string middleName = textBoxMiddleName.Text;
-                if (middleName == null || middleName == "")
-                {
-                    middleName = "NA";
-                }
                 string suffix = textBoxSuffix.Text;
-                if (suffix == null || suffix == "")
-                {
-                    suffix = "NA";
-                }
                 string sex = comboBoxSex.Text;
                 string bloodType = comboBoxBloodType.Text;
                 string dateOfBirth = dateTimePickerBirthday.Text;
