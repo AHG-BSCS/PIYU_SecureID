@@ -90,6 +90,7 @@
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(461, 34);
             this.textBoxLastName.TabIndex = 1;
+            this.textBoxLastName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxLastName_KeyDown);
             // 
             // textBoxGivenName
             // 
@@ -100,6 +101,7 @@
             this.textBoxGivenName.Name = "textBoxGivenName";
             this.textBoxGivenName.Size = new System.Drawing.Size(461, 34);
             this.textBoxGivenName.TabIndex = 3;
+            this.textBoxGivenName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxGivenName_KeyDown);
             // 
             // label2
             // 
@@ -120,6 +122,7 @@
             this.textBoxMiddleName.Name = "textBoxMiddleName";
             this.textBoxMiddleName.Size = new System.Drawing.Size(461, 34);
             this.textBoxMiddleName.TabIndex = 5;
+            this.textBoxMiddleName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxMiddleName_KeyDown);
             // 
             // label3
             // 
