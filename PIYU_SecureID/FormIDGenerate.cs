@@ -1,12 +1,16 @@
-﻿using System;
+﻿using QRCoder;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static QRCoder.PayloadGenerator.SwissQrCode;
 
 namespace PIYU_SecureID
 {
@@ -59,7 +63,7 @@ namespace PIYU_SecureID
             pos = pictureBox1.PointToClient(pos);
             pos2 = pictureBox1.PointToClient(pos2);
             pos3 = pictureBox1.PointToClient(pos3);
-            pos4 = pictureBox2.PointToClient(pos4);
+            pos4 = pictureBox1.PointToClient(pos4);
             pos5 = pictureBox2.PointToClient(pos5);
             pos6 = pictureBox2.PointToClient(pos6);
             pos7 = pictureBox2.PointToClient(pos7);
@@ -82,7 +86,7 @@ namespace PIYU_SecureID
             label5.BackColor = Color.Transparent;
             label5.Text = middleName;
 
-            label6.Parent = pictureBox2;
+            label6.Parent = pictureBox1;
             label6.Location = pos4;
             label6.BackColor = Color.Transparent;
             label6.Text = suffix;
@@ -117,7 +121,32 @@ namespace PIYU_SecureID
             label12.BackColor = Color.Transparent;
             label12.Text = DateTime.Now.ToString("MM/dd/yyyy");
 
+            string fullData = lastName + "/" + givenName + "/" + middleName + "/" + suffix + "/" + sex + "/" + maritalStatus + "/" + bloodType + "/" + DateTime.Now.ToString("MM/dd/yyyy");
+            string titan;
+            string hash = "}1!v5(eQf5iOYw3I#%;6XtFO=$V5eD6c%v3h}Z('Eev'Xx^S~9";
 
+            byte[] data = UTF8Encoding.UTF8.GetBytes(fullData);
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
+
+                using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
+                {
+                    ICryptoTransform transform = tripDes.CreateEncryptor();
+                    byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                    titan = Convert.ToBase64String(results, 0, results.Length);
+                }
+            }
+
+            string dataToEncode = titan ;
+
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(dataToEncode, QRCodeGenerator.ECCLevel.Q);
+            QRCode qrCode = new QRCode(qrCodeData);
+
+            Bitmap qrCodeImage = qrCode.GetGraphic(20);
+
+            pictureBoxQREncrypted.Image = qrCodeImage;
         }
     }
 }

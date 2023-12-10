@@ -42,8 +42,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.pictureBoxQREncrypted = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQREncrypted)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -118,7 +120,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(515, 379);
+            this.label6.Location = new System.Drawing.Point(524, 379);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 20);
             this.label6.TabIndex = 7;
@@ -184,11 +186,21 @@
             this.label12.TabIndex = 13;
             this.label12.Text = "label12";
             // 
+            // pictureBoxQREncrypted
+            // 
+            this.pictureBoxQREncrypted.Location = new System.Drawing.Point(322, 104);
+            this.pictureBoxQREncrypted.Name = "pictureBoxQREncrypted";
+            this.pictureBoxQREncrypted.Size = new System.Drawing.Size(261, 253);
+            this.pictureBoxQREncrypted.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxQREncrypted.TabIndex = 14;
+            this.pictureBoxQREncrypted.TabStop = false;
+            // 
             // FormIDGenerate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1331, 547);
+            this.Controls.Add(this.pictureBoxQREncrypted);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -208,6 +220,7 @@
             this.Load += new System.EventHandler(this.FormIDGenerate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQREncrypted)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,5 +242,6 @@
         private Label label10;
         private Label label11;
         private Label label12;
+        private PictureBox pictureBoxQREncrypted;
     }
 }
