@@ -165,7 +165,7 @@
             // 
             // pictureBoxSign
             // 
-            pictureBoxSign.Location = new Point(450, 83);
+            pictureBoxSign.Location = new Point(435, 239);
             pictureBoxSign.Name = "pictureBoxSign";
             pictureBoxSign.Size = new Size(150, 150);
             pictureBoxSign.SizeMode = PictureBoxSizeMode.Zoom;
@@ -174,7 +174,7 @@
             // 
             // pictureBoxIdPhoto
             // 
-            pictureBoxIdPhoto.Location = new Point(450, 241);
+            pictureBoxIdPhoto.Location = new Point(435, 83);
             pictureBoxIdPhoto.Name = "pictureBoxIdPhoto";
             pictureBoxIdPhoto.Size = new Size(150, 150);
             pictureBoxIdPhoto.SizeMode = PictureBoxSizeMode.Zoom;
