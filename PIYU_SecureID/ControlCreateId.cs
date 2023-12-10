@@ -94,6 +94,12 @@ namespace PIYU_SecureID
 
         private void buttonClearAll_Click(object sender, EventArgs e)
         {
+            RefreshData();
+        }
+
+        public void RefreshData()
+        {
+            GenerateTransactionNum();
             textBoxLastName.Text = "";
             textBoxGivenName.Text = "";
             textBoxMiddleName.Text = "";
@@ -111,9 +117,9 @@ namespace PIYU_SecureID
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            if (textBoxLastName.Text == "" || textBoxGivenName.Text == "" ||comboBoxSex.SelectedIndex == -1 ||
+            if (textBoxLastName.Text == "" || textBoxGivenName.Text == "" || comboBoxSex.SelectedIndex == -1 ||
                 comboBoxBloodType.SelectedIndex == -1 || comboBoxProvince.SelectedIndex == -1 || //comboBoxBarangay.SelectedIndex == -1 ||
-                //comboBoxCity.SelectedIndex == -1 || comboBoxMaritalStatus.SelectedIndex == -1 || dateTimePickerBirthday.Text == null ||
+                                                                                                 //comboBoxCity.SelectedIndex == -1 || comboBoxMaritalStatus.SelectedIndex == -1 || dateTimePickerBirthday.Text == null ||
                 pictureBoxSignature.Image == null || pictureBoxIdPhoto.Image == null)
             {
                 MessageBox.Show("Fill All Information.");
@@ -124,7 +130,15 @@ namespace PIYU_SecureID
                 string givenName = textBoxGivenName.Text;
                 string middleName = textBoxMiddleName.Text;
                 string suffix = textBoxSuffix.Text;
-                FormVerificationInfo verify = new FormVerificationInfo(lastName, givenName, middleName, suffix, transactionNum);
+                string sex = comboBoxSex.Text;
+                string bloodType = comboBoxBloodType.Text;
+                string province = comboBoxProvince.Text;
+                string city = comboBoxCity.Text;
+                string barangay = comboBoxBarangay.Text;
+                string maritalStatus = comboBoxMaritalStatus.Text;
+                FormVerificationInfo verify = new FormVerificationInfo(lastName, givenName, middleName, suffix, transactionNum, 
+                                                                        sex, bloodType, province, city, barangay, maritalStatus,
+                                                                        this);
                 verify.ShowDialog();
             }
         }
@@ -154,6 +168,11 @@ namespace PIYU_SecureID
                 textBoxSuffix.Focus();
                 e.Handled = true;
             }
+        }
+
+        private void comboBoxCameras_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

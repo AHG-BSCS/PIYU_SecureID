@@ -17,11 +17,36 @@ namespace PIYU_SecureID
         private Panel panelToPrint;
         private PrintDocument printDocument;
         private long transactionNum;
-        public FormVerificationInfo(string lastName, string givenName, string middleName, string suffix, long transactionNum)
+        private string lastName;
+        public string givenName;
+        public string middleName;
+        public string suffix;
+        public string sex;
+        public string bloodType;
+        public string province;
+        public string city;
+        public string barangay;
+        public string maritalStatus;
+        public ControlCreateId createId;
+        public FormVerificationInfo(string lastName, string givenName, string middleName, string suffix, long transactionNum,
+                                    string sex, string bloodType, string province, string city, string barangay, string maritalStatus,
+                                    ControlCreateId createId)
         {
             InitializeComponent();
 
             this.transactionNum = transactionNum;
+            this.lastName = lastName;
+            this.givenName = givenName;
+            this.middleName = middleName;
+            this.suffix = suffix;
+            this.sex = sex;
+            this.bloodType = bloodType;
+            this.province = province;
+            this.city = city;
+            this.barangay = barangay;
+            this.maritalStatus = maritalStatus;
+            this.createId = createId;
+
             GenerateAndDisplayQRCode();
 
             labelName.Text += givenName + " " + middleName + " " + lastName + " " + suffix;
@@ -78,7 +103,37 @@ namespace PIYU_SecureID
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            ClassInformation data = new ClassInformation();
+            data.TransactionNum = transactionNum;
+            data.LastName = lastName;
+            data.GivenName = givenName;
+            data.MiddleName = middleName;
+            data.Suffix = suffix;
+            data.Sex = sex;
+            data.BloodType = bloodType;
+            data.Province = province;
+            data.City = city;
+            data.Barangay = barangay;
+            data.MaritalStatus = maritalStatus;
+
+            SaveToFile("info.txt", data);
+
+            createId.RefreshData();
             this.Close();
+        }
+
+        private void SaveToFile(string filename, ClassInformation data)
+        {
+            try
+            {
+                string csvString = data.ToCsvString();
+                File.WriteAllText(filename, csvString);
+                MessageBox.Show("Data saved successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
