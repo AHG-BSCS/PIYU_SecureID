@@ -76,18 +76,18 @@ namespace PIYU_SecureID
                         }
                     }
 
-                    Console.WriteLine($"Record with key {targetKey} not found.");
+                    MessageBox.Show($"Record with key {targetKey} not found.");
                 }
                 else
                 {
-                    Console.WriteLine($"File not found: {filename}. Creating a new data structure.");
+                    MessageBox.Show($"File not found: {filename}. Creating a new data structure.");
                 }
 
                 return new ClassInformation();
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error loading data: {ex.Message}");
+                MessageBox.Show($"Error loading data: {ex.Message}");
                 return new ClassInformation();
             }
         }
