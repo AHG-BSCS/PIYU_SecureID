@@ -118,7 +118,7 @@ namespace PIYU_SecureID
             label11.Parent = pictureBox2;
             label11.Location = pos9;
             label11.BackColor = Color.Transparent;
-            label11.Text = "TEST";
+            label11.Text = "Barangay " + barangay + ", " + city + ", " + province;
             
             label12.Parent = pictureBox2;
             label12.Location = pos10;
