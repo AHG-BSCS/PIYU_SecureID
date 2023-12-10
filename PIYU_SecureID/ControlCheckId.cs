@@ -23,7 +23,6 @@ namespace PIYU_SecureID
             long key = long.Parse(textBoxTransactionNum.Text);
 
             FillData(info.LoadFromFile("info.txt", key));
-
         }
 
         private void FillData(ClassInformation info)
