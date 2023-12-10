@@ -29,6 +29,13 @@ namespace PIYU_SecureID
                 comboBoxCameras.Items.Add(Device.Name);
             comboBoxCameras.SelectedIndex = 0;
             VideoCaptureDevice captureDevice = new VideoCaptureDevice();
+
+            InitializeWebCam();
+            if (videoSource.IsRunning)
+            {
+                videoSource.SignalToStop();
+                videoSource.WaitForStop();
+            }
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -36,8 +43,11 @@ namespace PIYU_SecureID
             if (pictureBoxIdPhoto.Image != null)
             {
                 timer1.Stop();
-                videoSource.SignalToStop();
-                videoSource.WaitForStop();
+                if (videoSource.IsRunning)
+                {
+                    videoSource.SignalToStop();
+                    videoSource.WaitForStop();
+                }
                 pictureBoxQrScanner.Image = null;
                 buttonStartStop.Text = "START";
 

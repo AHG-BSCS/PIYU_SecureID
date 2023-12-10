@@ -103,6 +103,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Location = new Point(47, 293);
@@ -113,6 +114,7 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Location = new Point(248, 330);
@@ -123,6 +125,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Location = new Point(47, 330);
@@ -133,6 +136,7 @@
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
             label6.Location = new Point(483, 330);
@@ -143,6 +147,7 @@
             // 
             // label7
             // 
+            label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
             label7.Location = new Point(63, 76);
@@ -153,6 +158,7 @@
             // 
             // label8
             // 
+            label8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
             label8.Location = new Point(279, 76);
@@ -163,6 +169,7 @@
             // 
             // label9
             // 
+            label9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label9.AutoSize = true;
             label9.BackColor = Color.Transparent;
             label9.Location = new Point(63, 126);
@@ -173,6 +180,7 @@
             // 
             // label10
             // 
+            label10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label10.AutoSize = true;
             label10.BackColor = Color.Transparent;
             label10.Location = new Point(279, 126);
@@ -183,6 +191,7 @@
             // 
             // label11
             // 
+            label11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label11.AutoSize = true;
             label11.BackColor = Color.Transparent;
             label11.Location = new Point(63, 165);
@@ -193,6 +202,7 @@
             // 
             // label12
             // 
+            label12.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label12.AutoSize = true;
             label12.BackColor = Color.Transparent;
             label12.Location = new Point(63, 203);
@@ -203,6 +213,7 @@
             // 
             // pictureBoxQREncrypted
             // 
+            pictureBoxQREncrypted.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBoxQREncrypted.Location = new Point(266, 26);
             pictureBoxQREncrypted.Margin = new Padding(3, 2, 3, 2);
             pictureBoxQREncrypted.Name = "pictureBoxQREncrypted";
@@ -213,9 +224,10 @@
             // 
             // pictureBoxIdPhoto
             // 
+            pictureBoxIdPhoto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBoxIdPhoto.Location = new Point(64, 110);
             pictureBoxIdPhoto.Name = "pictureBoxIdPhoto";
-            pictureBoxIdPhoto.Size = new Size(144, 120);
+            pictureBoxIdPhoto.Size = new Size(144, 122);
             pictureBoxIdPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxIdPhoto.TabIndex = 15;
             pictureBoxIdPhoto.TabStop = false;
@@ -326,12 +338,12 @@
         private Label label10;
         private Label label11;
         private Label label12;
-        public static PictureBox pictureBoxQREncrypted;
         private PictureBox pictureBoxIdPhoto;
         private Button buttonPrint;
         private Button button1;
         private Panel panelFrontId;
         private Panel panelBackId;
         private Button buttonSave;
+        public PictureBox pictureBoxQREncrypted;
     }
 }
