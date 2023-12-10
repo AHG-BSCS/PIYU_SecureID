@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ZXing;
+using ZXing.Windows.Compatibility;
 
 namespace PIYU_SecureID
 {
@@ -23,6 +25,9 @@ namespace PIYU_SecureID
         public byte[] ImageIdPhoto { get; set; }
         public byte[] ImageSign { get; set; }
 
+        public byte[] ImageIdQr { get; set; }
+        public string StrIdQr { get; set; }
+
         public string ToCsvString()
         {
             string imageIdPhotoBase64 = ImageIdPhoto != null ? Convert.ToBase64String(ImageIdPhoto) : string.Empty;
@@ -30,6 +35,27 @@ namespace PIYU_SecureID
 
             return $"{TransactionNum}~{LastName}~{GivenName}~{MiddleName}~{Suffix}~{Sex}~{BloodType}~" +
                 $"{DateOfBirth}~{Province}~{City}~{Barangay}~{MaritalStatus}~{imageIdPhotoBase64}~{imageSignBase64}";
+        }
+
+        public string ToQrIdCsvString()
+        {
+            PictureBox pb = new PictureBox();
+            pb.SizeMode = PictureBoxSizeMode.Zoom;
+            using (MemoryStream memoryStream = new MemoryStream(ImageIdQr, writable: false))
+            {
+                Image image = Image.FromStream(memoryStream);
+
+                pb.Image = image;
+            }
+
+            BarcodeReader barcodeReader = new BarcodeReader();
+            Result result = barcodeReader.Decode((Bitmap)pb.Image);
+            string lastResult = "";
+            if (result != null && result.ToString() != lastResult)
+            {
+                return result.ToString();
+            }
+            return null;
         }
 
         public static ClassInformation FromCsvString(string csv)
@@ -54,6 +80,14 @@ namespace PIYU_SecureID
             };
         }
 
+        public static ClassInformation FromIdQrCsvString(string csv)
+        {
+            return new ClassInformation
+            {
+                StrIdQr = csv
+            };
+        }
+
         public ClassInformation LoadFromFile(string filename, long targetKey)
         {
             try
@@ -70,13 +104,50 @@ namespace PIYU_SecureID
 
                             if (userData != null && userData.TransactionNum == targetKey)
                             {
-                                Console.WriteLine($"Record found for key {targetKey}: {line}");
                                 return userData;
                             }
                         }
                     }
 
                     MessageBox.Show($"Record with key {targetKey} not found.");
+                }
+                else
+                {
+                    MessageBox.Show($"File not found: {filename}. Creating a new data structure.");
+                }
+
+                return new ClassInformation();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading data: {ex.Message}");
+                return new ClassInformation();
+            }
+        }
+
+        public ClassInformation LoadIdQrFromFile(string filename, string targetKey)
+        {
+            try
+            {
+                if (File.Exists(filename))
+                {
+                    string[] lines = File.ReadAllLines(filename);
+
+                    foreach (string line in lines)
+                    {
+                        if (!string.IsNullOrEmpty(line))
+                        {
+                            ClassInformation userData = ClassInformation.FromIdQrCsvString(line);
+
+                            if (userData != null && userData.StrIdQr == targetKey)
+                            {
+                                MessageBox.Show("Record found.");
+                                return userData;
+                            }
+                        }
+                    }
+
+                    MessageBox.Show("Record not found.");
                 }
                 else
                 {

@@ -33,6 +33,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="idQr.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="info.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

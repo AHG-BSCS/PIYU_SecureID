@@ -560,5 +560,6 @@
         private Label label13;
         private Label label14;
         private Label label15;
+        private System.Windows.Forms.Timer timer1;
     }
 }

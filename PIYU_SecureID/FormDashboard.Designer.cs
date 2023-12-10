@@ -173,7 +173,7 @@
             buttonVerifyId.Name = "buttonVerifyId";
             buttonVerifyId.Size = new Size(150, 50);
             buttonVerifyId.TabIndex = 3;
-            buttonVerifyId.Text = "GENERATE ID";
+            buttonVerifyId.Text = "VERIFY ID";
             buttonVerifyId.UseVisualStyleBackColor = true;
             buttonVerifyId.Click += buttonVerifyId_Click;
             // 

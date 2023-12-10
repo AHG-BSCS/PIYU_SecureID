@@ -7,28 +7,55 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AForge.Video;
+using AForge.Video.DirectShow;
+using ZXing;
+using ZXing.QrCode;
+using ZXing.Windows.Compatibility;
 
 namespace PIYU_SecureID
 {
     public partial class ControlCheckId : UserControl
     {
+        private long? key;
+        private FilterInfoCollection videoDevices;
+        private VideoCaptureDevice videoSource;
         public ControlCheckId()
         {
             InitializeComponent();
+
+            FilterInfoCollection filter = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo Device in filter)
+                comboBoxCameras.Items.Add(Device.Name);
+            comboBoxCameras.SelectedIndex = 0;
+            VideoCaptureDevice captureDevice = new VideoCaptureDevice();
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            try
+            if (pictureBoxIdPhoto.Image != null)
             {
-                ClassInformation info = new ClassInformation();
-                long key = long.Parse(textBoxTransactionNum.Text);
+                timer1.Stop();
+                videoSource.SignalToStop();
+                videoSource.WaitForStop();
+                pictureBoxQrScanner.Image = null;
+                buttonStartStop.Text = "START";
 
-                FillData(info.LoadFromFile("info.txt", key));
-            }
-            catch
-            {
-                MessageBox.Show("Invalid transaction number.");
+                long? transactionNum = key;
+                string lastName = labelLastName.Text;
+                string givenName = labelGivenName.Text;
+                string middleName = labelMiddleName.Text;
+                string suffix = labelSuffix.Text;
+                string sex = labelSex.Text;
+                string bloodType = labelBloodType.Text;
+                string dateOfBirth = labelDateOfBirth.Text;
+                string province = labelProvince.Text;
+                string city = labelCity.Text;
+                string barangay = labelBarangay.Text;
+                string maritalStatus = labelMaritalStatus.Text;
+                FormIDGenerate generate = new FormIDGenerate(lastName, givenName, middleName, suffix, transactionNum,
+                                                            sex, bloodType, dateOfBirth, province, city, barangay, maritalStatus, pictureBoxIdPhoto);
+                generate.ShowDialog();
             }
         }
 
@@ -65,12 +92,13 @@ namespace PIYU_SecureID
             }
             catch
             {
-                
+
             }
         }
 
         private void RefreshData()
         {
+            this.key = null;
             labelLastName.Text = "";
             labelGivenName.Text = "";
             labelMiddleName.Text = "";
@@ -84,6 +112,102 @@ namespace PIYU_SecureID
             labelMaritalStatus.Text = "";
             pictureBoxIdPhoto.Image = null;
             pictureBoxSign.Image = null;
+        }
+
+        private void textBoxTransactionNum_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxTransactionNum.TextLength == 13)
+            {
+                try
+                {
+                    ClassInformation info = new ClassInformation();
+                    long key = long.Parse(textBoxTransactionNum.Text);
+
+                    FillData(info.LoadFromFile("info.txt", key));
+                    this.key = key;
+                }
+                catch
+                {
+                    MessageBox.Show("Invalid transaction number.");
+                    RefreshData();
+                }
+            }
+        }
+
+        private void buttonStartStop_Click(object sender, EventArgs e)
+        {
+            if (buttonStartStop.Text == "START")
+            {
+                InitializeWebCam();
+                timer1.Start();
+                buttonStartStop.Text = "STOP";
+            }
+            else
+            {
+                timer1.Stop();
+                videoSource.SignalToStop();
+                videoSource.WaitForStop();
+                pictureBoxQrScanner.Image = null;
+                buttonStartStop.Text = "START";
+            }
+        }
+
+        private void InitializeWebCam()
+        {
+            videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+
+            if (videoDevices.Count > 0)
+            {
+                if (comboBoxCameras.SelectedItem != null)
+                {
+                    int selectedCameraIndex = comboBoxCameras.SelectedIndex;
+                    videoSource = new VideoCaptureDevice(videoDevices[selectedCameraIndex].MonikerString);
+                    videoSource.NewFrame += VideoSource_NewFrame;
+                    videoSource.Start();
+                }
+                else
+                {
+                    MessageBox.Show("Please select a camera from the list.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No video devices found.");
+            }
+        }
+
+        private void VideoSource_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap originalFrame = (Bitmap)eventArgs.Frame.Clone();
+
+            int size = Math.Min(originalFrame.Width, originalFrame.Height);
+            Rectangle cropArea = new Rectangle((originalFrame.Width - size) / 2, (originalFrame.Height - size) / 2, size, size);
+            Bitmap squareFrame = originalFrame.Clone(cropArea, originalFrame.PixelFormat);
+
+            pictureBoxQrScanner.Image = squareFrame;
+        }
+
+        private void ControlCheckId_Leave(object sender, EventArgs e)
+        {
+            videoSource.SignalToStop();
+            videoSource.WaitForStop();
+            buttonStartStop.Text = "START";
+            pictureBoxQrScanner.Image = null;
+            textBoxTransactionNum.Text = "";
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (pictureBoxQrScanner.Image != null)
+            {
+                BarcodeReader barcodeReader = new BarcodeReader();
+                Result result = barcodeReader.Decode((Bitmap)pictureBoxQrScanner.Image);
+                string lastResult = "";
+                if (result != null && result.ToString() != lastResult)
+                {
+                    textBoxTransactionNum.Text = result.ToString();
+                }
+            }
         }
     }
 }

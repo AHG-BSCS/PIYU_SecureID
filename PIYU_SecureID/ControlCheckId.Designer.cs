@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             textBoxTransactionNum = new TextBox();
             buttonSearch = new Button();
             labelLastName = new Label();
@@ -55,29 +56,35 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
+            buttonStartStop = new Button();
+            comboBoxCameras = new ComboBox();
+            pictureBoxQrScanner = new PictureBox();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBoxSign).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).BeginInit();
             panelInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).BeginInit();
             SuspendLayout();
             // 
             // textBoxTransactionNum
             // 
             textBoxTransactionNum.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxTransactionNum.Location = new Point(76, 40);
+            textBoxTransactionNum.Location = new Point(22, 22);
             textBoxTransactionNum.MaxLength = 13;
             textBoxTransactionNum.Multiline = true;
             textBoxTransactionNum.Name = "textBoxTransactionNum";
-            textBoxTransactionNum.Size = new Size(234, 31);
+            textBoxTransactionNum.Size = new Size(299, 31);
             textBoxTransactionNum.TabIndex = 0;
+            textBoxTransactionNum.TextChanged += textBoxTransactionNum_TextChanged;
             // 
             // buttonSearch
             // 
             buttonSearch.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonSearch.Location = new Point(316, 40);
+            buttonSearch.Location = new Point(327, 22);
             buttonSearch.Name = "buttonSearch";
-            buttonSearch.Size = new Size(87, 31);
+            buttonSearch.Size = new Size(120, 31);
             buttonSearch.TabIndex = 1;
-            buttonSearch.Text = "SEARCH";
+            buttonSearch.Text = "GENERATE ID";
             buttonSearch.UseVisualStyleBackColor = true;
             buttonSearch.Click += buttonSearch_Click;
             // 
@@ -182,7 +189,7 @@
             // 
             // pictureBoxSign
             // 
-            pictureBoxSign.Location = new Point(770, 244);
+            pictureBoxSign.Location = new Point(594, 384);
             pictureBoxSign.Name = "pictureBoxSign";
             pictureBoxSign.Size = new Size(150, 150);
             pictureBoxSign.SizeMode = PictureBoxSizeMode.Zoom;
@@ -191,7 +198,7 @@
             // 
             // pictureBoxIdPhoto
             // 
-            pictureBoxIdPhoto.Location = new Point(770, 47);
+            pictureBoxIdPhoto.Location = new Point(438, 384);
             pictureBoxIdPhoto.Name = "pictureBoxIdPhoto";
             pictureBoxIdPhoto.Size = new Size(150, 150);
             pictureBoxIdPhoto.SizeMode = PictureBoxSizeMode.Zoom;
@@ -225,9 +232,9 @@
             panelInfo.Controls.Add(labelBloodType);
             panelInfo.Controls.Add(labelCity);
             panelInfo.Controls.Add(labelProvince);
-            panelInfo.Location = new Point(76, 110);
+            panelInfo.Location = new Point(328, 59);
             panelInfo.Name = "panelInfo";
-            panelInfo.Size = new Size(966, 449);
+            panelInfo.Size = new Size(765, 554);
             panelInfo.TabIndex = 15;
             // 
             // label11
@@ -340,19 +347,58 @@
             label7.TabIndex = 19;
             label7.Text = "Province        : ";
             // 
+            // buttonStartStop
+            // 
+            buttonStartStop.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonStartStop.Location = new Point(22, 364);
+            buttonStartStop.Name = "buttonStartStop";
+            buttonStartStop.Size = new Size(116, 36);
+            buttonStartStop.TabIndex = 18;
+            buttonStartStop.Text = "START";
+            buttonStartStop.UseVisualStyleBackColor = true;
+            buttonStartStop.Click += buttonStartStop_Click;
+            // 
+            // comboBoxCameras
+            // 
+            comboBoxCameras.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxCameras.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxCameras.FormattingEnabled = true;
+            comboBoxCameras.Location = new Point(144, 364);
+            comboBoxCameras.Name = "comboBoxCameras";
+            comboBoxCameras.Size = new Size(178, 29);
+            comboBoxCameras.TabIndex = 17;
+            // 
+            // pictureBoxQrScanner
+            // 
+            pictureBoxQrScanner.Location = new Point(22, 58);
+            pictureBoxQrScanner.Name = "pictureBoxQrScanner";
+            pictureBoxQrScanner.Size = new Size(300, 300);
+            pictureBoxQrScanner.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxQrScanner.TabIndex = 16;
+            pictureBoxQrScanner.TabStop = false;
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
             // ControlCheckId
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panelInfo);
             Controls.Add(buttonSearch);
+            Controls.Add(buttonStartStop);
             Controls.Add(textBoxTransactionNum);
+            Controls.Add(pictureBoxQrScanner);
+            Controls.Add(comboBoxCameras);
             Name = "ControlCheckId";
             Size = new Size(1116, 633);
+            Leave += ControlCheckId_Leave;
             ((System.ComponentModel.ISupportInitialize)pictureBoxSign).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).EndInit();
             panelInfo.ResumeLayout(false);
             panelInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -386,5 +432,9 @@
         private Label label5;
         private Label label6;
         private Label label7;
+        private Button buttonStartStop;
+        private ComboBox comboBoxCameras;
+        private PictureBox pictureBoxQrScanner;
+        private System.Windows.Forms.Timer timer1;
     }
 }

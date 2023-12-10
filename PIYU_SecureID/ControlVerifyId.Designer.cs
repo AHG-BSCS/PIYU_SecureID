@@ -73,13 +73,16 @@
             // 
             // textBoxTransactionNum
             // 
-            textBoxTransactionNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxTransactionNum.Enabled = false;
+            textBoxTransactionNum.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxTransactionNum.Location = new Point(383, 389);
-            textBoxTransactionNum.MaxLength = 13;
+            textBoxTransactionNum.MaxLength = 1000;
+            textBoxTransactionNum.Multiline = true;
             textBoxTransactionNum.Name = "textBoxTransactionNum";
-            textBoxTransactionNum.Size = new Size(300, 29);
+            textBoxTransactionNum.Size = new Size(300, 42);
             textBoxTransactionNum.TabIndex = 3;
             textBoxTransactionNum.TextAlign = HorizontalAlignment.Center;
+            textBoxTransactionNum.Visible = false;
             textBoxTransactionNum.TextChanged += textBoxTransactionNum_TextChanged;
             // 
             // ControlVerifyId

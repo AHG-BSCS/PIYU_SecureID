@@ -74,6 +74,27 @@ namespace PIYU_SecureID
             if (result == DialogResult.OK)
             {
                 printDocument.Print();
+
+                ClassInformation data = new ClassInformation();
+                data.TransactionNum = transactionNum;
+                data.LastName = lastName;
+                data.GivenName = givenName;
+                data.MiddleName = middleName;
+                data.Suffix = suffix;
+                data.Sex = sex;
+                data.BloodType = bloodType;
+                data.DateOfBirth = dateOfBirth;
+                data.Province = province;
+                data.City = city;
+                data.Barangay = barangay;
+                data.MaritalStatus = maritalStatus;
+                data.ImageIdPhoto = idPhoto;
+                data.ImageSign = sign;
+
+                SaveToFile("info.txt", data);
+
+                createId.RefreshData();
+                this.Close();
             }
         }
 

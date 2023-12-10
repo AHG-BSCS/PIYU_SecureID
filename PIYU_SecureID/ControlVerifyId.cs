@@ -106,37 +106,13 @@ namespace PIYU_SecureID
             videoSource.WaitForStop();
             buttonStartStop.Text = "START";
             pictureBoxQrScanner.Image = null;
-            textBoxTransactionNum.Text = "";
         }
 
         private void textBoxTransactionNum_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                if (textBoxTransactionNum.TextLength == 13)
-                {
-                    long key = long.Parse(textBoxTransactionNum.Text);
+            string key = textBoxTransactionNum.Text;
                     
-                    info = info.LoadFromFile("info.txt", key);
-
-                    PictureBox id = new PictureBox();
-                    id.SizeMode = PictureBoxSizeMode.Zoom;
-                    using (MemoryStream memoryStream = new MemoryStream(info.ImageIdPhoto, writable: false))
-                    {
-                        Image image = Image.FromStream(memoryStream);
-
-                        id.Image = image;
-                    }
-                    FormIDGenerate generate = new FormIDGenerate(info.LastName, info.GivenName, info.MiddleName, info.Suffix,
-                                                            info.TransactionNum, info.Sex, info.BloodType, info.DateOfBirth,
-                                                            info.Province, info.City, info.Barangay, info.MaritalStatus, id);
-                    generate.ShowDialog();
-                }
-            }
-            catch
-            {
-                
-            }
+            info = info.LoadIdQrFromFile("idQr.txt", key);
         }
     }
 }

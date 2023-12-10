@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Security.Policy;
@@ -16,6 +18,9 @@ namespace PIYU_SecureID
 {
     public partial class FormIDGenerate : Form
     {
+        private Panel panelToPrint;
+        private PrintDocument printDocument;
+        private int currentPage = 1;
         private long transactionNum;
         private string lastName;
         public string givenName;
@@ -30,11 +35,11 @@ namespace PIYU_SecureID
         public string maritalStatus;
         public PictureBox idPhoto;
         public ControlCreateId createId;
-        public FormIDGenerate(string lastName, string givenName, string middleName, string suffix, long transactionNum,
+        public FormIDGenerate(string lastName, string givenName, string middleName, string suffix, long? transactionNum,
                                     string sex, string bloodType, string dateOfBirth, string province, string city, string barangay, string maritalStatus,
                                     PictureBox idPhoto)
         {
-            this.transactionNum = transactionNum;
+            this.transactionNum = (long)transactionNum;
             this.lastName = lastName;
             this.givenName = givenName;
             this.middleName = middleName;
@@ -48,6 +53,27 @@ namespace PIYU_SecureID
             this.maritalStatus = maritalStatus;
             this.idPhoto = idPhoto;
             InitializeComponent();
+
+            printDocument = new PrintDocument();
+            printDocument.PrintPage += PrintDocument_PrintPage;
+        }
+
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Margins margins = new Margins(100, 100, 100, 100);
+            e.PageSettings.Margins = margins;
+
+            if (currentPage == 1)
+            {
+                PrintPanel(panelFrontId, e.Graphics, e.MarginBounds);
+                currentPage++;
+                e.HasMorePages = true;
+            }
+            else if (currentPage == 2)
+            {
+                PrintPanel(panelBackId, e.Graphics, e.MarginBounds);
+                currentPage = 1;
+            }
         }
 
         private void FormIDGenerate_Load(object sender, EventArgs e)
@@ -99,7 +125,7 @@ namespace PIYU_SecureID
             label7.Location = pos5;
             label7.BackColor = Color.Transparent;
             label7.Text = sex;
-            
+
             label8.Parent = pictureBox2;
             label8.Location = pos6;
             label8.BackColor = Color.Transparent;
@@ -119,7 +145,7 @@ namespace PIYU_SecureID
             label11.Location = pos9;
             label11.BackColor = Color.Transparent;
             label11.Text = "Barangay " + barangay + ", " + city + ", " + province;
-            
+
             label12.Parent = pictureBox2;
             label12.Location = pos10;
             label12.BackColor = Color.Transparent;
@@ -144,7 +170,7 @@ namespace PIYU_SecureID
                 }
             }
 
-            string dataToEncode = titan ;
+            string dataToEncode = titan;
 
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(dataToEncode, QRCodeGenerator.ECCLevel.Q);
@@ -153,6 +179,76 @@ namespace PIYU_SecureID
             Bitmap qrCodeImage = qrCode.GetGraphic(20);
 
             pictureBoxQREncrypted.Image = qrCodeImage;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void PrintPanel(Panel panel, Graphics graphics, Rectangle bounds)
+        {
+            Bitmap bitmap = new Bitmap(panel.Width, panel.Height);
+            panel.DrawToBitmap(bitmap, new Rectangle(0, 0, panel.Width, panel.Height));
+
+            float scalingFactor = Math.Min(bounds.Width / (float)bitmap.Width, bounds.Height / (float)bitmap.Height);
+
+            graphics.DrawImage(bitmap, bounds, new Rectangle(0, 0, (int)(bitmap.Width * scalingFactor), (int)(bitmap.Height * scalingFactor)), GraphicsUnit.Pixel);
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+            printDialog.Document = printDocument;
+
+            DialogResult result = printDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                printDocument.Print();
+
+                ClassInformation data = new ClassInformation();
+
+                data.ImageIdQr = ConvertPictureBoxImageToBase64(pictureBoxQREncrypted.Image);
+
+                SaveToFile("idQr.txt", data);
+
+                this.Close();
+            }
+        }
+
+        private byte[] ConvertPictureBoxImageToBase64(Image image)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                image.Save(ms, ImageFormat.Png);
+                return ms.ToArray();
+            }
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            ClassInformation data = new ClassInformation();
+            
+            data.ImageIdQr = ConvertPictureBoxImageToBase64(pictureBoxQREncrypted.Image);
+
+            SaveToFile("idQr.txt", data);
+
+            this.Close();
+        }
+
+        private void SaveToFile(string filename, ClassInformation data)
+        {
+            try
+            {
+                string csvString = data.ToQrIdCsvString();
+                File.AppendAllText(filename, csvString + Environment.NewLine);
+                MessageBox.Show("Data saved successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
