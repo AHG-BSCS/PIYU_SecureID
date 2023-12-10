@@ -39,7 +39,7 @@
             // 
             // pictureBoxQrScanner
             // 
-            pictureBoxQrScanner.Location = new Point(378, 31);
+            pictureBoxQrScanner.Location = new Point(383, 83);
             pictureBoxQrScanner.Name = "pictureBoxQrScanner";
             pictureBoxQrScanner.Size = new Size(300, 300);
             pictureBoxQrScanner.SizeMode = PictureBoxSizeMode.Zoom;
@@ -49,17 +49,19 @@
             // comboBoxCameras
             // 
             comboBoxCameras.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxCameras.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             comboBoxCameras.FormattingEnabled = true;
-            comboBoxCameras.Location = new Point(557, 337);
+            comboBoxCameras.Location = new Point(261, 354);
             comboBoxCameras.Name = "comboBoxCameras";
-            comboBoxCameras.Size = new Size(121, 23);
+            comboBoxCameras.Size = new Size(116, 29);
             comboBoxCameras.TabIndex = 1;
             // 
             // buttonStartStop
             // 
-            buttonStartStop.Location = new Point(378, 336);
+            buttonStartStop.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonStartStop.Location = new Point(261, 311);
             buttonStartStop.Name = "buttonStartStop";
-            buttonStartStop.Size = new Size(75, 23);
+            buttonStartStop.Size = new Size(116, 36);
             buttonStartStop.TabIndex = 2;
             buttonStartStop.Text = "START";
             buttonStartStop.UseVisualStyleBackColor = true;
@@ -71,10 +73,14 @@
             // 
             // textBoxTransactionNum
             // 
-            textBoxTransactionNum.Location = new Point(684, 308);
+            textBoxTransactionNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxTransactionNum.Location = new Point(383, 389);
+            textBoxTransactionNum.MaxLength = 13;
             textBoxTransactionNum.Name = "textBoxTransactionNum";
-            textBoxTransactionNum.Size = new Size(202, 23);
+            textBoxTransactionNum.Size = new Size(300, 29);
             textBoxTransactionNum.TabIndex = 3;
+            textBoxTransactionNum.TextAlign = HorizontalAlignment.Center;
+            textBoxTransactionNum.TextChanged += textBoxTransactionNum_TextChanged;
             // 
             // ControlVerifyId
             // 
@@ -86,7 +92,7 @@
             Controls.Add(pictureBoxQrScanner);
             Name = "ControlVerifyId";
             Size = new Size(1116, 633);
-            ParentChanged += ControlVerifyId_ParentChanged;
+            Leave += ControlVerifyId_Leave;
             ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).EndInit();
             ResumeLayout(false);
             PerformLayout();
