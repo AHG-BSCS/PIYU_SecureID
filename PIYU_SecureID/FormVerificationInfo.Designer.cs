@@ -76,7 +76,7 @@
             panelMain.Controls.Add(pictureBox1);
             panelMain.Location = new Point(12, 12);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(776, 436);
+            panelMain.Size = new Size(776, 459);
             panelMain.TabIndex = 1;
             // 
             // label9
@@ -185,7 +185,7 @@
             buttonSave.FlatAppearance.BorderSize = 0;
             buttonSave.FlatStyle = FlatStyle.Flat;
             buttonSave.ForeColor = Color.White;
-            buttonSave.Location = new Point(794, 303);
+            buttonSave.Location = new Point(794, 326);
             buttonSave.Name = "buttonSave";
             buttonSave.Size = new Size(97, 48);
             buttonSave.TabIndex = 2;
@@ -199,7 +199,7 @@
             buttonPrint.FlatAppearance.BorderSize = 0;
             buttonPrint.FlatStyle = FlatStyle.Flat;
             buttonPrint.ForeColor = Color.White;
-            buttonPrint.Location = new Point(794, 356);
+            buttonPrint.Location = new Point(794, 379);
             buttonPrint.Name = "buttonPrint";
             buttonPrint.Size = new Size(97, 48);
             buttonPrint.TabIndex = 3;
@@ -213,7 +213,7 @@
             buttonCancel.FlatAppearance.BorderSize = 0;
             buttonCancel.FlatStyle = FlatStyle.Flat;
             buttonCancel.ForeColor = Color.White;
-            buttonCancel.Location = new Point(794, 408);
+            buttonCancel.Location = new Point(794, 431);
             buttonCancel.Name = "buttonCancel";
             buttonCancel.Size = new Size(97, 48);
             buttonCancel.TabIndex = 4;
@@ -226,7 +226,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(53, 69, 93);
-            ClientSize = new Size(894, 459);
+            ClientSize = new Size(894, 483);
             Controls.Add(buttonCancel);
             Controls.Add(buttonPrint);
             Controls.Add(buttonSave);
