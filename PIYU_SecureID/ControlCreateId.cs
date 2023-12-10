@@ -106,6 +106,9 @@ namespace PIYU_SecureID
             textBoxSuffix.Text = "";
             comboBoxSex.SelectedIndex = -1;
             comboBoxBloodType.SelectedIndex = -1;
+            comboBoxMonth.SelectedIndex = -1;
+            comboBoxDay.SelectedIndex = -1;
+            textBoxYear.Text = "";
             comboBoxProvince.SelectedIndex = -1;
             comboBoxBarangay.SelectedIndex = -1;
             comboBoxCity.SelectedIndex = -1;
@@ -194,7 +197,7 @@ namespace PIYU_SecureID
             string city = comboBoxCity.Text;
             string barangay = comboBoxBarangay.Text;
             string maritalStatus = comboBoxMaritalStatus.Text;
-            FormIDGenerate generate = new FormIDGenerate(lastName, givenName, middleName, suffix, transactionNum, sex, bloodType, dateOfBirth, province, city, barangay, maritalStatus);
+            FormIDGenerate generate = new FormIDGenerate(lastName, givenName, middleName, suffix, transactionNum, sex, bloodType, dateOfBirth, province, city, barangay, maritalStatus, pictureBoxIdPhoto);
             generate.Show();
         }
     }

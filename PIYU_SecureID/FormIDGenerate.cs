@@ -28,9 +28,11 @@ namespace PIYU_SecureID
         public string city;
         public string barangay;
         public string maritalStatus;
+        public PictureBox idPhoto;
         public ControlCreateId createId;
         public FormIDGenerate(string lastName, string givenName, string middleName, string suffix, long transactionNum,
-                                    string sex, string bloodType, string dateOfBirth, string province, string city, string barangay, string maritalStatus)
+                                    string sex, string bloodType, string dateOfBirth, string province, string city, string barangay, string maritalStatus,
+                                    PictureBox idPhoto)
         {
             this.transactionNum = transactionNum;
             this.lastName = lastName;
@@ -44,6 +46,7 @@ namespace PIYU_SecureID
             this.city = city;
             this.barangay = barangay;
             this.maritalStatus = maritalStatus;
+            this.idPhoto = idPhoto;
             InitializeComponent();
         }
 
@@ -121,6 +124,8 @@ namespace PIYU_SecureID
             label12.Location = pos10;
             label12.BackColor = Color.Transparent;
             label12.Text = DateTime.Now.ToString("dd/MM/yyyy");
+
+            pictureBoxIdPhoto.Image = idPhoto.Image;
 
             string fullData = lastName + "/" + givenName + "/" + middleName + "/" + suffix + "/" + sex + "/" + maritalStatus + "/" + bloodType + "/" + DateTime.Now.ToString("MM/dd/yyyy");
             string titan;

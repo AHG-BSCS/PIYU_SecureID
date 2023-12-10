@@ -28,202 +28,218 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pictureBoxQREncrypted = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQREncrypted)).BeginInit();
-            this.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            label12 = new Label();
+            pictureBoxQREncrypted = new PictureBox();
+            pictureBoxIdPhoto = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxQREncrypted).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PIYU_SecureID.Properties.Resources.secureid_front;
-            this.pictureBox1.Location = new System.Drawing.Point(74, 74);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(535, 325);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = Properties.Resources.secureid_front;
+            pictureBox1.Location = new Point(65, 56);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(468, 244);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::PIYU_SecureID.Properties.Resources.secureid_back;
-            this.pictureBox2.Location = new System.Drawing.Point(715, 74);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(535, 325);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.Image = Properties.Resources.secureid_back;
+            pictureBox2.Location = new Point(626, 56);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(468, 244);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 1;
+            pictureBox2.TabStop = false;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(292, 420);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "FRONT";
+            label1.AutoSize = true;
+            label1.Location = new Point(256, 315);
+            label1.Name = "label1";
+            label1.Size = new Size(44, 15);
+            label1.TabIndex = 2;
+            label1.Text = "FRONT";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(987, 420);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "BACK";
+            label2.AutoSize = true;
+            label2.Location = new Point(864, 315);
+            label2.Name = "label2";
+            label2.Size = new Size(37, 15);
+            label2.TabIndex = 3;
+            label2.Text = "BACK";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(113, 337);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Location = new Point(99, 253);
+            label3.Name = "label3";
+            label3.Size = new Size(38, 15);
+            label3.TabIndex = 4;
+            label3.Text = "label3";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(297, 379);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "label5";
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Location = new Point(260, 284);
+            label5.Name = "label5";
+            label5.Size = new Size(38, 15);
+            label5.TabIndex = 5;
+            label5.Text = "label5";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(113, 379);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "label4";
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Location = new Point(99, 284);
+            label4.Name = "label4";
+            label4.Size = new Size(38, 15);
+            label4.TabIndex = 6;
+            label4.Text = "label4";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(524, 379);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 20);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "label6";
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Location = new Point(458, 284);
+            label6.Name = "label6";
+            label6.Size = new Size(38, 15);
+            label6.TabIndex = 7;
+            label6.Text = "label6";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(767, 146);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 20);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "label7";
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Location = new Point(671, 110);
+            label7.Name = "label7";
+            label7.Size = new Size(38, 15);
+            label7.TabIndex = 8;
+            label7.Text = "label7";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(968, 146);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 20);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "label8";
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.Location = new Point(847, 110);
+            label8.Name = "label8";
+            label8.Size = new Size(38, 15);
+            label8.TabIndex = 9;
+            label8.Text = "label8";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(767, 186);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 20);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "label9";
+            label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
+            label9.Location = new Point(671, 140);
+            label9.Name = "label9";
+            label9.Size = new Size(38, 15);
+            label9.TabIndex = 10;
+            label9.Text = "label9";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(968, 186);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(58, 20);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "label10";
+            label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
+            label10.Location = new Point(847, 140);
+            label10.Name = "label10";
+            label10.Size = new Size(44, 15);
+            label10.TabIndex = 11;
+            label10.Text = "label10";
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(767, 223);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 20);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "label11";
+            label11.AutoSize = true;
+            label11.BackColor = Color.Transparent;
+            label11.Location = new Point(671, 167);
+            label11.Name = "label11";
+            label11.Size = new Size(44, 15);
+            label11.TabIndex = 12;
+            label11.Text = "label11";
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Location = new System.Drawing.Point(767, 256);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 20);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "label12";
+            label12.AutoSize = true;
+            label12.BackColor = Color.Transparent;
+            label12.Location = new Point(671, 192);
+            label12.Name = "label12";
+            label12.Size = new Size(44, 15);
+            label12.TabIndex = 13;
+            label12.Text = "label12";
             // 
             // pictureBoxQREncrypted
             // 
-            this.pictureBoxQREncrypted.Location = new System.Drawing.Point(322, 104);
-            this.pictureBoxQREncrypted.Name = "pictureBoxQREncrypted";
-            this.pictureBoxQREncrypted.Size = new System.Drawing.Size(261, 253);
-            this.pictureBoxQREncrypted.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxQREncrypted.TabIndex = 14;
-            this.pictureBoxQREncrypted.TabStop = false;
+            pictureBoxQREncrypted.Location = new Point(282, 78);
+            pictureBoxQREncrypted.Margin = new Padding(3, 2, 3, 2);
+            pictureBoxQREncrypted.Name = "pictureBoxQREncrypted";
+            pictureBoxQREncrypted.Size = new Size(228, 190);
+            pictureBoxQREncrypted.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxQREncrypted.TabIndex = 14;
+            pictureBoxQREncrypted.TabStop = false;
+            // 
+            // pictureBoxIdPhoto
+            // 
+            pictureBoxIdPhoto.Location = new Point(138, 131);
+            pictureBoxIdPhoto.Name = "pictureBoxIdPhoto";
+            pictureBoxIdPhoto.Size = new Size(82, 82);
+            pictureBoxIdPhoto.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxIdPhoto.TabIndex = 15;
+            pictureBoxIdPhoto.TabStop = false;
             // 
             // FormIDGenerate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1331, 547);
-            this.Controls.Add(this.pictureBoxQREncrypted);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Name = "FormIDGenerate";
-            this.Text = "FormIDGenerate";
-            this.Load += new System.EventHandler(this.FormIDGenerate_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQREncrypted)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1165, 410);
+            Controls.Add(pictureBoxIdPhoto);
+            Controls.Add(pictureBoxQREncrypted);
+            Controls.Add(label12);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label4);
+            Controls.Add(label5);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "FormIDGenerate";
+            Text = "FormIDGenerate";
+            Load += FormIDGenerate_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxQREncrypted).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -243,5 +259,6 @@
         private Label label11;
         private Label label12;
         private PictureBox pictureBoxQREncrypted;
+        private PictureBox pictureBoxIdPhoto;
     }
 }

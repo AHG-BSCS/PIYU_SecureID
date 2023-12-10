@@ -37,17 +37,17 @@ namespace PIYU_SecureID
             try
             {
                 RefreshData();
-                labelLastName.Text += info.LastName;
-                labelGivenName.Text += info.GivenName;
-                labelMiddleName.Text += info.MiddleName;
-                labelSuffix.Text += info.Suffix;
-                labelSex.Text += info.Sex;
-                labelBloodType.Text += info.BloodType;
-                labelDateOfBirth.Text += info.DateOfBirth;
-                labelProvince.Text += info.Province;
-                labelCity.Text += info.City;
-                labelBarangay.Text += info.Barangay;
-                labelMaritalStatus.Text += info.MaritalStatus;
+                labelLastName.Text = info.LastName;
+                labelGivenName.Text = info.GivenName;
+                labelMiddleName.Text = info.MiddleName;
+                labelSuffix.Text = info.Suffix;
+                labelSex.Text = info.Sex;
+                labelBloodType.Text = info.BloodType;
+                labelDateOfBirth.Text = info.DateOfBirth;
+                labelProvince.Text = info.Province;
+                labelCity.Text = info.City;
+                labelBarangay.Text = info.Barangay;
+                labelMaritalStatus.Text = info.MaritalStatus;
                 byte[] idPhoto = info.ImageIdPhoto;
                 byte[] sign = info.ImageSign;
                 using (MemoryStream memoryStream = new MemoryStream(idPhoto, writable: false))
@@ -65,23 +65,23 @@ namespace PIYU_SecureID
             }
             catch
             {
-                MessageBox.Show($"Record with not found.");
+                
             }
         }
 
         private void RefreshData()
         {
-            labelLastName.Text = "Last Name: ";
-            labelGivenName.Text = "Given Name: ";
-            labelMiddleName.Text = "Middle Name: ";
-            labelSuffix.Text = "Suffix: ";
-            labelSex.Text = "Sex: ";
-            labelBloodType.Text = "Blood Type: ";
-            labelDateOfBirth.Text = "Date of Birth: ";
-            labelProvince.Text = "Province: ";
-            labelCity.Text = "City: ";
-            labelBarangay.Text = "Barangay: ";
-            labelMaritalStatus.Text = "Marital Status: ";
+            labelLastName.Text = "";
+            labelGivenName.Text = "";
+            labelMiddleName.Text = "";
+            labelSuffix.Text = "";
+            labelSex.Text = "";
+            labelBloodType.Text = "";
+            labelDateOfBirth.Text = "";
+            labelProvince.Text = "";
+            labelCity.Text = "";
+            labelBarangay.Text = "";
+            labelMaritalStatus.Text = "";
             pictureBoxIdPhoto.Image = null;
             pictureBoxSign.Image = null;
         }
