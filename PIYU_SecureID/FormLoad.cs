@@ -13,7 +13,6 @@ namespace PIYU_SecureID
     public partial class FormLoad : Form
     {
         private string secureID = "SecureID";
-        private int currentIndex = 0;
         public FormLoad()
         {
             InitializeComponent();

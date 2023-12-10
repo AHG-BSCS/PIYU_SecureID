@@ -15,21 +15,26 @@ namespace PIYU_SecureID
         public string Suffix { get; set; }
         public string Sex { get; set; }
         public string BloodType { get; set; }
+        public string DateOfBirth { get; set; }
         public string Province { get; set; }
         public string City { get; set; }
         public string Barangay { get; set; }
         public string MaritalStatus { get; set; }
+        public byte[] ImageIdPhoto { get; set; }
+        public byte[] ImageSign { get; set; }
 
-        // Custom method to convert UserData to a CSV string
         public string ToCsvString()
         {
-            return $"{TransactionNum},{LastName},{GivenName},{MiddleName},{Suffix},{Sex},{BloodType},{Province},{City},{Barangay},{MaritalStatus}";
+            string imageIdPhotoBase64 = ImageIdPhoto != null ? Convert.ToBase64String(ImageIdPhoto) : string.Empty;
+            string imageSignBase64 = ImageSign != null ? Convert.ToBase64String(ImageSign) : string.Empty;
+
+            return $"{TransactionNum}~{LastName}~{GivenName}~{MiddleName}~{Suffix}~{Sex}~{BloodType}~" +
+                $"{DateOfBirth}~{Province}~{City}~{Barangay}~{MaritalStatus}~{imageIdPhotoBase64}~{imageSignBase64}";
         }
 
-        // Custom method to parse UserData from a CSV string
         public static ClassInformation FromCsvString(string csv)
         {
-            var values = csv.Split(',');
+            var values = csv.Split('~');
             return new ClassInformation
             {
                 TransactionNum = long.Parse(values[0]),
@@ -39,11 +44,52 @@ namespace PIYU_SecureID
                 Suffix = values[4],
                 Sex = values[5],
                 BloodType = values[6],
-                Province = values[7],
-                City = values[8],
-                Barangay = values[9],
-                MaritalStatus = values[10]
+                DateOfBirth = values[7],
+                Province = values[8],
+                City = values[9],
+                Barangay = values[10],
+                MaritalStatus = values[11],
+                ImageIdPhoto = Convert.FromBase64String(values[12]),
+                ImageSign = Convert.FromBase64String(values[13])
             };
+        }
+
+        public ClassInformation LoadFromFile(string filename, long targetKey)
+        {
+            try
+            {
+                if (File.Exists(filename))
+                {
+                    string[] lines = File.ReadAllLines(filename);
+
+                    foreach (string line in lines)
+                    {
+                        if (!string.IsNullOrEmpty(line))
+                        {
+                            ClassInformation userData = ClassInformation.FromCsvString(line);
+
+                            if (userData != null && userData.TransactionNum == targetKey)
+                            {
+                                Console.WriteLine($"Record found for key {targetKey}: {line}");
+                                return userData;
+                            }
+                        }
+                    }
+
+                    Console.WriteLine($"Record with key {targetKey} not found.");
+                }
+                else
+                {
+                    Console.WriteLine($"File not found: {filename}. Creating a new data structure.");
+                }
+
+                return new ClassInformation();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading data: {ex.Message}");
+                return new ClassInformation();
+            }
         }
     }
 }

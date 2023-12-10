@@ -23,14 +23,17 @@ namespace PIYU_SecureID
         public string suffix;
         public string sex;
         public string bloodType;
+        public string dateOfBirth;
         public string province;
         public string city;
         public string barangay;
         public string maritalStatus;
+        public byte[] idPhoto;
+        public byte[] sign;
         public ControlCreateId createId;
         public FormVerificationInfo(string lastName, string givenName, string middleName, string suffix, long transactionNum,
-                                    string sex, string bloodType, string province, string city, string barangay, string maritalStatus,
-                                    ControlCreateId createId)
+                                    string sex, string bloodType, string dateOfBirth, string province, string city, string barangay, string maritalStatus,
+                                    byte[] idPhoto, byte[] sign, ControlCreateId createId)
         {
             InitializeComponent();
 
@@ -41,10 +44,13 @@ namespace PIYU_SecureID
             this.suffix = suffix;
             this.sex = sex;
             this.bloodType = bloodType;
+            this.dateOfBirth = dateOfBirth;
             this.province = province;
             this.city = city;
             this.barangay = barangay;
             this.maritalStatus = maritalStatus;
+            this.idPhoto = idPhoto;
+            this.sign = sign;
             this.createId = createId;
 
             GenerateAndDisplayQRCode();
@@ -111,10 +117,13 @@ namespace PIYU_SecureID
             data.Suffix = suffix;
             data.Sex = sex;
             data.BloodType = bloodType;
+            data.DateOfBirth = dateOfBirth;
             data.Province = province;
             data.City = city;
             data.Barangay = barangay;
             data.MaritalStatus = maritalStatus;
+            data.ImageIdPhoto = idPhoto;
+            data.ImageSign = sign;
 
             SaveToFile("info.txt", data);
 
@@ -127,7 +136,7 @@ namespace PIYU_SecureID
             try
             {
                 string csvString = data.ToCsvString();
-                File.WriteAllText(filename, csvString);
+                File.AppendAllText(filename, csvString + Environment.NewLine);
                 MessageBox.Show("Data saved successfully!");
             }
             catch (Exception ex)

@@ -118,8 +118,8 @@ namespace PIYU_SecureID
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             if (textBoxLastName.Text == "" || textBoxGivenName.Text == "" || comboBoxSex.SelectedIndex == -1 ||
-                comboBoxBloodType.SelectedIndex == -1 || comboBoxProvince.SelectedIndex == -1 || //comboBoxBarangay.SelectedIndex == -1 ||
-                                                                                                 //comboBoxCity.SelectedIndex == -1 || comboBoxMaritalStatus.SelectedIndex == -1 || dateTimePickerBirthday.Text == null ||
+                comboBoxBloodType.SelectedIndex == -1 || comboBoxProvince.SelectedIndex == -1 || comboBoxBarangay.SelectedIndex == -1 ||
+                comboBoxCity.SelectedIndex == -1 || comboBoxMaritalStatus.SelectedIndex == -1 || dateTimePickerBirthday.Text == null ||
                 pictureBoxSignature.Image == null || pictureBoxIdPhoto.Image == null)
             {
                 MessageBox.Show("Fill All Information.");
@@ -129,17 +129,37 @@ namespace PIYU_SecureID
                 string lastName = textBoxLastName.Text;
                 string givenName = textBoxGivenName.Text;
                 string middleName = textBoxMiddleName.Text;
+                if (middleName == null || middleName == "")
+                {
+                    middleName = "NA";
+                }
                 string suffix = textBoxSuffix.Text;
+                if (suffix == null || suffix == "")
+                {
+                    suffix = "NA";
+                }
                 string sex = comboBoxSex.Text;
                 string bloodType = comboBoxBloodType.Text;
+                string dateOfBirth = dateTimePickerBirthday.Text;
                 string province = comboBoxProvince.Text;
                 string city = comboBoxCity.Text;
                 string barangay = comboBoxBarangay.Text;
                 string maritalStatus = comboBoxMaritalStatus.Text;
+                byte[] idPhoto = ConvertPictureBoxImageToBase64(pictureBoxIdPhoto.Image);
+                byte[] sign = ConvertPictureBoxImageToBase64(pictureBoxSignature.Image);
                 FormVerificationInfo verify = new FormVerificationInfo(lastName, givenName, middleName, suffix, transactionNum, 
-                                                                        sex, bloodType, province, city, barangay, maritalStatus,
-                                                                        this);
+                                                                        sex, bloodType, dateOfBirth, province, city, barangay, maritalStatus,
+                                                                        idPhoto, sign, this);
                 verify.ShowDialog();
+            }
+        }
+
+        private byte[] ConvertPictureBoxImageToBase64(Image image)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                image.Save(ms, ImageFormat.Png);
+                return ms.ToArray();
             }
         }
 

@@ -308,6 +308,7 @@
             comboBoxCity.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxCity.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             comboBoxCity.FormattingEnabled = true;
+            comboBoxCity.Items.AddRange(new object[] { "CITY1" });
             comboBoxCity.Location = new Point(518, 433);
             comboBoxCity.Margin = new Padding(3, 2, 3, 2);
             comboBoxCity.Name = "comboBoxCity";
@@ -329,6 +330,7 @@
             comboBoxBarangay.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxBarangay.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             comboBoxBarangay.FormattingEnabled = true;
+            comboBoxBarangay.Items.AddRange(new object[] { "BARANGAY1" });
             comboBoxBarangay.Location = new Point(255, 433);
             comboBoxBarangay.Margin = new Padding(3, 2, 3, 2);
             comboBoxBarangay.Name = "comboBoxBarangay";
