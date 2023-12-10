@@ -99,6 +99,8 @@
             buttonClose.Text = "X";
             buttonClose.UseVisualStyleBackColor = false;
             buttonClose.Click += buttonClose_Click;
+            buttonClose.MouseEnter += buttonClose_MouseEnter;
+            buttonClose.MouseLeave += buttonClose_MouseLeave;
             // 
             // panelTitleBar
             // 
@@ -137,6 +139,7 @@
             buttonLogout.Dock = DockStyle.Bottom;
             buttonLogout.FlatAppearance.BorderSize = 0;
             buttonLogout.FlatStyle = FlatStyle.Flat;
+            buttonLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonLogout.ForeColor = Color.White;
             buttonLogout.Location = new Point(0, 589);
             buttonLogout.Margin = new Padding(3, 2, 3, 2);
@@ -163,6 +166,7 @@
             buttonVerifyId.Dock = DockStyle.Top;
             buttonVerifyId.FlatAppearance.BorderSize = 0;
             buttonVerifyId.FlatStyle = FlatStyle.Flat;
+            buttonVerifyId.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonVerifyId.ForeColor = Color.White;
             buttonVerifyId.Location = new Point(0, 273);
             buttonVerifyId.Margin = new Padding(3, 2, 3, 2);
@@ -178,6 +182,7 @@
             buttonCheckId.Dock = DockStyle.Top;
             buttonCheckId.FlatAppearance.BorderSize = 0;
             buttonCheckId.FlatStyle = FlatStyle.Flat;
+            buttonCheckId.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonCheckId.ForeColor = Color.White;
             buttonCheckId.Location = new Point(0, 223);
             buttonCheckId.Margin = new Padding(3, 2, 3, 2);
@@ -193,6 +198,7 @@
             buttonCreateId.Dock = DockStyle.Top;
             buttonCreateId.FlatAppearance.BorderSize = 0;
             buttonCreateId.FlatStyle = FlatStyle.Flat;
+            buttonCreateId.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonCreateId.ForeColor = Color.White;
             buttonCreateId.Location = new Point(0, 173);
             buttonCreateId.Margin = new Padding(3, 2, 3, 2);
@@ -208,6 +214,7 @@
             buttonDashboard.Dock = DockStyle.Top;
             buttonDashboard.FlatAppearance.BorderSize = 0;
             buttonDashboard.FlatStyle = FlatStyle.Flat;
+            buttonDashboard.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonDashboard.ForeColor = Color.White;
             buttonDashboard.Location = new Point(0, 123);
             buttonDashboard.Margin = new Padding(3, 2, 3, 2);
@@ -222,7 +229,7 @@
             // 
             labelInstitution.Dock = DockStyle.Top;
             labelInstitution.FlatStyle = FlatStyle.Flat;
-            labelInstitution.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelInstitution.Font = new Font("Segoe UI", 23F, FontStyle.Bold, GraphicsUnit.Point);
             labelInstitution.ForeColor = Color.White;
             labelInstitution.ImageAlign = ContentAlignment.TopCenter;
             labelInstitution.Location = new Point(0, 70);

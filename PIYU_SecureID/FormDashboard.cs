@@ -28,7 +28,7 @@ namespace PIYU_SecureID
 
             this.auth = auth;
 
-            ControlDashboard dashboard = new ControlDashboard();
+            buttonDashboard.BackColor = Color.FromArgb(53, 69, 93);
             dashboard.Dock = DockStyle.Fill;
             panelActive.Controls.Add(dashboard);
         }
@@ -120,6 +120,8 @@ namespace PIYU_SecureID
         {
             if (active != "create")
             {
+                NavColorRefresh();
+                buttonCreateId.BackColor = Color.FromArgb(53, 69, 93);
                 active = "create";
                 create.Dock = DockStyle.Fill;
                 panelActive.Controls.Clear();
@@ -131,6 +133,8 @@ namespace PIYU_SecureID
         {
             if (active != "check")
             {
+                NavColorRefresh();
+                buttonCheckId.BackColor = Color.FromArgb(53, 69, 93);
                 active = "check";
                 check.Dock = DockStyle.Fill;
                 panelActive.Controls.Clear();
@@ -142,6 +146,8 @@ namespace PIYU_SecureID
         {
             if (active != "verify")
             {
+                NavColorRefresh();
+                buttonVerifyId.BackColor = Color.FromArgb(53, 69, 93);
                 active = "verify";
                 verify.Dock = DockStyle.Fill;
                 panelActive.Controls.Clear();
@@ -153,6 +159,8 @@ namespace PIYU_SecureID
         {
             if (active != "dashboard")
             {
+                NavColorRefresh();
+                buttonDashboard.BackColor = Color.FromArgb(53, 69, 93);
                 active = "dashboard";
                 dashboard.Dock = DockStyle.Fill;
                 panelActive.Controls.Clear();
@@ -160,13 +168,33 @@ namespace PIYU_SecureID
             }
         }
 
+        private void NavColorRefresh()
+        {
+            buttonDashboard.BackColor = Color.FromArgb(60, 95, 106);
+            buttonCreateId.BackColor = Color.FromArgb(60, 95, 106);
+            buttonCheckId.BackColor = Color.FromArgb(60, 95, 106);
+            buttonVerifyId.BackColor = Color.FromArgb(60, 95, 106);
+        }
+
         private void buttonLogout_Click(object sender, EventArgs e)
         {
+            NavColorRefresh();
+            buttonLogout.BackColor = Color.FromArgb(53, 69, 93);
             auth.Show();
             auth.textBox1.Text = "";
             if (auth.button2.Visible)
                 auth.button2.Visible = false;
             this.Close();
+        }
+
+        private void buttonClose_MouseLeave(object sender, EventArgs e)
+        {
+            buttonClose.BackColor = Color.Transparent;
+        }
+
+        private void buttonClose_MouseEnter(object sender, EventArgs e)
+        {
+            buttonClose.BackColor = Color.Red;
         }
     }
 }
