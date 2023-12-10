@@ -28,17 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
+            pictureBoxQrScanner = new PictureBox();
+            comboBoxCameras = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).BeginInit();
             SuspendLayout();
+            // 
+            // pictureBoxQrScanner
+            // 
+            pictureBoxQrScanner.Location = new Point(378, 31);
+            pictureBoxQrScanner.Name = "pictureBoxQrScanner";
+            pictureBoxQrScanner.Size = new Size(300, 300);
+            pictureBoxQrScanner.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxQrScanner.TabIndex = 0;
+            pictureBoxQrScanner.TabStop = false;
+            // 
+            // comboBoxCameras
+            // 
+            comboBoxCameras.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxCameras.FormattingEnabled = true;
+            comboBoxCameras.Location = new Point(557, 337);
+            comboBoxCameras.Name = "comboBoxCameras";
+            comboBoxCameras.Size = new Size(121, 23);
+            comboBoxCameras.TabIndex = 1;
             // 
             // ControlVerifyId
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(comboBoxCameras);
+            Controls.Add(pictureBoxQrScanner);
             Name = "ControlVerifyId";
             Size = new Size(1116, 633);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private PictureBox pictureBoxQrScanner;
+        private ComboBox comboBoxCameras;
     }
 }
