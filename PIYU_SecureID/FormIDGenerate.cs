@@ -23,13 +23,14 @@ namespace PIYU_SecureID
         public string suffix;
         public string sex;
         public string bloodType;
+        public string dateOfBirth;
         public string province;
         public string city;
         public string barangay;
         public string maritalStatus;
         public ControlCreateId createId;
         public FormIDGenerate(string lastName, string givenName, string middleName, string suffix, long transactionNum,
-                                    string sex, string bloodType, string province, string city, string barangay, string maritalStatus, ControlCreateId createI)
+                                    string sex, string bloodType, string dateOfBirth, string province, string city, string barangay, string maritalStatus)
         {
             this.transactionNum = transactionNum;
             this.lastName = lastName;
@@ -38,11 +39,11 @@ namespace PIYU_SecureID
             this.suffix = suffix;
             this.sex = sex;
             this.bloodType = bloodType;
+            this.dateOfBirth = dateOfBirth;
             this.province = province;
             this.city = city;
             this.barangay = barangay;
             this.maritalStatus = maritalStatus;
-            this.createId = createId;
             InitializeComponent();
         }
 
@@ -104,7 +105,7 @@ namespace PIYU_SecureID
             label9.Parent = pictureBox2;
             label9.Location = pos7;
             label9.BackColor = Color.Transparent;
-            label9.Text = "TEST";
+            label9.Text = dateOfBirth;
 
             label10.Parent = pictureBox2;
             label10.Location = pos8;
@@ -115,11 +116,11 @@ namespace PIYU_SecureID
             label11.Location = pos9;
             label11.BackColor = Color.Transparent;
             label11.Text = "TEST";
-
+            
             label12.Parent = pictureBox2;
             label12.Location = pos10;
             label12.BackColor = Color.Transparent;
-            label12.Text = DateTime.Now.ToString("MM/dd/yyyy");
+            label12.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
             string fullData = lastName + "/" + givenName + "/" + middleName + "/" + suffix + "/" + sex + "/" + maritalStatus + "/" + bloodType + "/" + DateTime.Now.ToString("MM/dd/yyyy");
             string titan;

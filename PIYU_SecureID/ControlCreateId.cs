@@ -18,11 +18,11 @@ namespace PIYU_SecureID
     public partial class ControlCreateId : UserControl
     {
         private long transactionNum;
+        private string dateOfBirth;
+
         public ControlCreateId()
         {
             InitializeComponent();
-
-            dateTimePickerBirthday.Text = null;
 
             FilterInfoCollection filter = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo Device in filter)
@@ -110,7 +110,6 @@ namespace PIYU_SecureID
             comboBoxBarangay.SelectedIndex = -1;
             comboBoxCity.SelectedIndex = -1;
             comboBoxMaritalStatus.SelectedIndex = -1;
-            dateTimePickerBirthday.Text = null;
             pictureBoxSignature.Image = null;
             pictureBoxIdPhoto.Image = null;
         }
@@ -119,7 +118,7 @@ namespace PIYU_SecureID
         {
             if (textBoxLastName.Text == "" || textBoxGivenName.Text == "" || comboBoxSex.SelectedIndex == -1 ||
                 comboBoxBloodType.SelectedIndex == -1 || comboBoxProvince.SelectedIndex == -1 || comboBoxBarangay.SelectedIndex == -1 ||
-                comboBoxCity.SelectedIndex == -1 || comboBoxMaritalStatus.SelectedIndex == -1 || dateTimePickerBirthday.Text == null ||
+                comboBoxCity.SelectedIndex == -1 || comboBoxMaritalStatus.SelectedIndex == -1 ||
                 pictureBoxSignature.Image == null || pictureBoxIdPhoto.Image == null)
             {
                 MessageBox.Show("Fill All Information.");
@@ -132,7 +131,7 @@ namespace PIYU_SecureID
                 string suffix = textBoxSuffix.Text;
                 string sex = comboBoxSex.Text;
                 string bloodType = comboBoxBloodType.Text;
-                string dateOfBirth = dateTimePickerBirthday.Text;
+                string dateOfBirth = comboBoxDay.Text + " " + comboBoxMonth.Text + " " + textBoxYear.Text;
                 string province = comboBoxProvince.Text;
                 string city = comboBoxCity.Text;
                 string barangay = comboBoxBarangay.Text;
@@ -190,14 +189,12 @@ namespace PIYU_SecureID
             string suffix = textBoxSuffix.Text;
             string sex = comboBoxSex.Text;
             string bloodType = comboBoxBloodType.Text;
+            string dateOfBirth = comboBoxDay.Text + " " + comboBoxMonth.Text + " " + textBoxYear.Text;
             string province = comboBoxProvince.Text;
             string city = comboBoxCity.Text;
             string barangay = comboBoxBarangay.Text;
             string maritalStatus = comboBoxMaritalStatus.Text;
-            FormIDGenerate generate = new FormIDGenerate(lastName, givenName, middleName, suffix, transactionNum,
-                                                                        sex, bloodType, province, city, barangay, maritalStatus,
-                                                                        this);
-
+            FormIDGenerate generate = new FormIDGenerate(lastName, givenName, middleName, suffix, transactionNum, sex, bloodType, dateOfBirth, province, city, barangay, maritalStatus);
             generate.Show();
         }
     }
