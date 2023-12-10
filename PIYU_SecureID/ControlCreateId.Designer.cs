@@ -405,6 +405,8 @@
             comboBoxCameras.Name = "comboBoxCameras";
             comboBoxCameras.Size = new Size(109, 23);
             comboBoxCameras.TabIndex = 35;
+            comboBoxCameras.KeyPress += comboBoxCameras_KeyPress;
+            comboBoxCameras.TextChanged += comboBoxCameras_TextChanged;
             // 
             // buttonGenerateID
             // 

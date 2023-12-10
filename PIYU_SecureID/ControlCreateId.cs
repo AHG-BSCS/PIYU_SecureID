@@ -182,11 +182,6 @@ namespace PIYU_SecureID
             }
         }
 
-        private void comboBoxCameras_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
         private void buttonGenerateID_Click(object sender, EventArgs e)
         {
             string lastName = textBoxLastName.Text;
