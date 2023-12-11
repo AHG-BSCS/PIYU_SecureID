@@ -234,7 +234,7 @@
             // buttonCreate
             // 
             buttonCreate.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonCreate.Location = new Point(968, 545);
+            buttonCreate.Location = new Point(970, 553);
             buttonCreate.Name = "buttonCreate";
             buttonCreate.Size = new Size(125, 56);
             buttonCreate.TabIndex = 20;
@@ -245,7 +245,7 @@
             // buttonClearAll
             // 
             buttonClearAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonClearAll.Location = new Point(837, 545);
+            buttonClearAll.Location = new Point(839, 553);
             buttonClearAll.Name = "buttonClearAll";
             buttonClearAll.Size = new Size(125, 56);
             buttonClearAll.TabIndex = 21;
@@ -509,7 +509,7 @@
             Controls.Add(textBoxLastName);
             Controls.Add(label1);
             Name = "ControlCreateId";
-            Size = new Size(1275, 844);
+            Size = new Size(1116, 633);
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSignature).EndInit();
             ResumeLayout(false);

@@ -204,7 +204,10 @@ namespace PIYU_SecureID
         {
             comboBoxCity.Items.Clear();
             comboBoxBarangay.Items.Clear();
-            string selectedProvince = idProvinceArr[comboBoxProvince.SelectedIndex];
+            if (comboBoxProvince.SelectedIndex != -1)
+            {
+                string selectedProvince = idProvinceArr[comboBoxProvince.SelectedIndex];
+            }
             LoadCities(selectedProvince);
         }
         private void LoadProvinces()
