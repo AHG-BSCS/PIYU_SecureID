@@ -112,7 +112,7 @@ namespace PIYU_SecureID
         {
             string key = textBoxTransactionNum.Text;
                     
-            info = info.LoadIdQrFromFile("idQr.txt", key);
+            info = info.LoadIdQrFromFile("Resources/idQr.txt", key);
         }
     }
 }

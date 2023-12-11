@@ -139,7 +139,7 @@ namespace PIYU_SecureID
                     ClassInformation info = new ClassInformation();
                     long key = long.Parse(textBoxTransactionNum.Text);
 
-                    FillData(info.LoadFromFile("info.txt", key));
+                    FillData(info.LoadFromFile("Resources/info.txt", key));
                     this.key = key;
                 }
                 catch

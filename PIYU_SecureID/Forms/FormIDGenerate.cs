@@ -211,7 +211,7 @@ namespace PIYU_SecureID
 
                 data.ImageIdQr = ConvertPictureBoxImageToBase64(pictureBoxQREncrypted.Image);
 
-                SaveToFile("idQr.txt", data);
+                SaveToFile("Resources/idQr.txt", data);
 
                 this.Close();
             }
@@ -232,7 +232,7 @@ namespace PIYU_SecureID
             
             data.ImageIdQr = ConvertPictureBoxImageToBase64(pictureBoxQREncrypted.Image);
 
-            SaveToFile("idQr.txt", data);
+            SaveToFile("Resources/idQr.txt", data);
 
             this.Close();
         }

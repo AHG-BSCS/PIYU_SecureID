@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="FormCamera.cs" />
+    <Compile Update="Forms\FormCamera.cs" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -34,19 +34,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Barangay.txt">
+    <None Update="Resources\Barangay.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="City.txt">
+    <None Update="Resources\City.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="idQr.txt">
+    <None Update="Resources\idQr.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="info.txt">
+    <None Update="Resources\info.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Province.txt">
+    <None Update="Resources\Province.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

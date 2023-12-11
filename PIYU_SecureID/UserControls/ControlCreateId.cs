@@ -21,9 +21,9 @@ namespace PIYU_SecureID
     {
         private long transactionNum;
         private string dateOfBirth;
-        private const string LocalApiCityFilePath = "City.txt";
-        private const string LocalApiProvinceFilePath = "Province.txt";
-        private const string LocalApiBarangayFilePath = "Barangay.txt";
+        private const string LocalApiCityFilePath = "Resources/City.txt";
+        private const string LocalApiProvinceFilePath = "Resources/Province.txt";
+        private const string LocalApiBarangayFilePath = "Resources/Barangay.txt";
         private Dictionary<string, List<string>> ProvinceAddress = new Dictionary<string, List<string>>();
         private string responseBodyProvince;
         private ClassProvince provinceData;

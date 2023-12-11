@@ -91,7 +91,7 @@ namespace PIYU_SecureID
                 data.ImageIdPhoto = idPhoto;
                 data.ImageSign = sign;
 
-                SaveToFile("info.txt", data);
+                SaveToFile("Resources/info.txt", data);
 
                 createId.RefreshData();
                 this.Close();
@@ -146,7 +146,7 @@ namespace PIYU_SecureID
             data.ImageIdPhoto = idPhoto;
             data.ImageSign = sign;
 
-            SaveToFile("info.txt", data);
+            SaveToFile("Resources/info.txt", data);
 
             createId.RefreshData();
             this.Close();
