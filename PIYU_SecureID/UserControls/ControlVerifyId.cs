@@ -1,18 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Net.NetworkInformation;
+using System.IO;
+using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
-using System.Timers;
 using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
 using ZXing;
-using ZXing.QrCode;
 using ZXing.Windows.Compatibility;
 
 namespace PIYU_SecureID
@@ -23,6 +17,8 @@ namespace PIYU_SecureID
         private FilterInfoCollection videoDevices;
         private VideoCaptureDevice videoSource;
         private ClassInformation info = new ClassInformation();
+        private string lastDecodedResult = "";
+
         public ControlVerifyId()
         {
             InitializeComponent();
@@ -93,11 +89,74 @@ namespace PIYU_SecureID
             {
                 BarcodeReader barcodeReader = new BarcodeReader();
                 Result result = barcodeReader.Decode((Bitmap)pictureBoxQrScanner.Image);
-                string lastResult = "";
-                if (result != null && result.ToString() != lastResult)
+                if (result != null)
                 {
-                    textBoxTransactionNum.Text = result.ToString();
+                    string decodedResult = result.ToString();
+
+                    if (decodedResult != lastDecodedResult)
+                    {
+                        lastDecodedResult = decodedResult;
+                        HandleResult(decodedResult);
+                    }
                 }
+            }
+        }
+
+        private void HandleResult(string qrData)
+        {
+            try
+            {
+                string hash = "}1!v5(eQf5iOYw3I#%;6XtFO=$V5eD6c%v3h}Z('Eev'Xx^S~9"; // Replace with your secret key
+                byte[] data = Convert.FromBase64String(qrData);
+
+                using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+                {
+                    byte[] keys = md5.ComputeHash(Encoding.UTF8.GetBytes(hash));
+
+                    using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider()
+                    {
+                        Key = keys,
+                        Mode = CipherMode.ECB,
+                        Padding = PaddingMode.PKCS7
+                    })
+                    {
+                        ICryptoTransform transform = tripDes.CreateDecryptor();
+                        byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+
+                        string decryptedData = Encoding.UTF8.GetString(results);
+                        UpdateLabels(decryptedData);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error decoding QR code: {ex.Message}");
+            }
+        }
+
+        private void UpdateLabels(string decryptedData)
+        {
+            // Assuming the decryptedData is in a specific format (e.g., comma-separated values)
+            string[] pieces = decryptedData.Split('/');
+
+            if (pieces.Length >= 10)
+            {
+                // Update labels with decrypted data
+                labelLastName.Text = pieces[0];
+                labelGivenName.Text = pieces[1];
+                labelMiddleName.Text = pieces[2];
+                labelSuffix.Text = pieces[3];
+                labelSex.Text = pieces[4];
+                labelBloodType.Text = pieces[5];
+                labelDateOfBirth.Text = pieces[6];
+                labelProvince.Text = pieces[7];
+                labelCity.Text = pieces[8];
+                labelBarangay.Text = pieces[9];
+                // ... Continue updating other labels as needed
+            }
+            else
+            {
+                MessageBox.Show("Invalid QR code data format.");
             }
         }
 
@@ -113,7 +172,7 @@ namespace PIYU_SecureID
         private void textBoxTransactionNum_TextChanged(object sender, EventArgs e)
         {
             string key = textBoxTransactionNum.Text;
-                    
+
             info = info.LoadIdQrFromFile("Resources/idQr.txt", key);
             info = info.LoadFromFile("Resources/info.txt", info.TransactionNum);
             FillData(info);
@@ -152,7 +211,7 @@ namespace PIYU_SecureID
             }
             catch
             {
-
+                // Handle exceptions
             }
         }
 
