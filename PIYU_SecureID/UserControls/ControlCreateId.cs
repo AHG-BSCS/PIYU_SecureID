@@ -14,24 +14,13 @@ using AForge.Video.DirectShow;
 using Newtonsoft.Json;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static PIYU_SecureID.ClassCity;
+using System.Drawing.Drawing2D;
 
 namespace PIYU_SecureID
 {
     public partial class ControlCreateId : UserControl
     {
         private long transactionNum;
-        private string dateOfBirth;
-        private const string LocalApiCityFilePath = "Resources/City.txt";
-        private const string LocalApiProvinceFilePath = "Resources/Province.txt";
-        private const string LocalApiBarangayFilePath = "Resources/Barangay.txt";
-        private Dictionary<string, List<string>> ProvinceAddress = new Dictionary<string, List<string>>();
-        private string responseBodyProvince;
-        private ClassProvince provinceData;
-        private string responseBodyCity;
-        private ClassCity cityData;
-        private string responseBodyBarangay;
-        private ClassBarangay barangayData;
-        private string[] idProvinceArr = new string[200];
 
         public ControlCreateId()
         {
@@ -45,8 +34,6 @@ namespace PIYU_SecureID
 
             GenerateTransactionNum();
             LoadProvinces();
-            
-
         }
 
         private void GenerateTransactionNum()
@@ -202,33 +189,31 @@ namespace PIYU_SecureID
 
         private void comboBoxProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBoxCity.Items.Clear();
-            comboBoxBarangay.Items.Clear();
-            string selectedProvince = "";
-            if (comboBoxProvince.SelectedIndex != -1)
-            {
-                selectedProvince = idProvinceArr[comboBoxProvince.SelectedIndex];
-            }
-            LoadCities(selectedProvince);
+            LoadCities(comboBoxProvince.Text);
         }
         private void LoadProvinces()
         {
             try
             {
-                this.responseBodyProvince = File.ReadAllText(LocalApiProvinceFilePath);
-                this.provinceData = JsonConvert.DeserializeObject<ClassProvince>(responseBodyProvince);
+                string file;
+                using (System.IO.StreamReader f = System.IO.File.OpenText("Resources/Address.txt"))
+                {
+                    file = f.ReadToEnd();
+                }
 
-                foreach (var province in provinceData.data)
+                var regionData = JsonConvert.DeserializeObject<Dictionary<string, RegionInfo>>(file);
+                if (regionData != null)
                 {
-                    ProvinceAddress.Add(province.name, new List<string>());
+                    foreach (var scenario in regionData.Values)
+                    {
+                        foreach (var province in scenario.ProvinceList?.Keys ?? Enumerable.Empty<string>())
+                        {
+                            comboBoxProvince.Items.Add(province);
+                        }
+                    }
                 }
-                int i = 0;
-                foreach (var id in provinceData.data) 
-                {
-                    idProvinceArr[i] = id.id.ToString();
-                    i++;
-                }
-                comboBoxProvince.Items.AddRange(ProvinceAddress.Keys.ToArray());
+
+                comboBoxProvince.Sorted = true;
             }
             catch (Exception ex)
             {
@@ -236,18 +221,29 @@ namespace PIYU_SecureID
             }
         }
 
-        private void LoadCities(string selectedProvinceCode)
+        private void LoadCities(string selectedProvince)
         {
             try
             {
-                this.responseBodyCity = File.ReadAllText(LocalApiCityFilePath);
-                this.cityData = JsonConvert.DeserializeObject<ClassCity>(responseBodyCity);
+                comboBoxCity.Items.Clear();
+                comboBoxBarangay.Items.Clear();
 
-                foreach (var city in cityData.data)
+                string file;
+                using (System.IO.StreamReader f = System.IO.File.OpenText("Resources/Address.txt"))
                 {
-                    if (selectedProvinceCode == city.province_code)
+                    file = f.ReadToEnd();
+                }
+
+                var regionData = JsonConvert.DeserializeObject<Dictionary<string, RegionInfo>>(file);
+                if (regionData != null)
+                {
+                    foreach (var scenario in regionData.Values)
                     {
-                        comboBoxCity.Items.Add(city.name);
+                        var selectedProvinceData = scenario.ProvinceList?.GetValueOrDefault(selectedProvince);
+                        foreach (var municipality in selectedProvinceData?.MunicipalityList?.Keys ?? Enumerable.Empty<string>())
+                        {
+                            comboBoxCity.Items.Add(municipality);
+                        }
                     }
                 }
             }
@@ -257,29 +253,29 @@ namespace PIYU_SecureID
             }
         }
 
-        private void LoadBarangay()
+        private void LoadBarangay(string selectedProvince, string selectedCity)
         {
             try
             {
-                this.responseBodyBarangay = File.ReadAllText(LocalApiBarangayFilePath);
-                this.barangayData = JsonConvert.DeserializeObject<ClassBarangay>(responseBodyBarangay);
-                this.responseBodyCity = File.ReadAllText(LocalApiCityFilePath);
-                this.cityData = JsonConvert.DeserializeObject<ClassCity>(responseBodyCity);
-                string cityCode = "";
+                comboBoxBarangay.Items.Clear();
 
-                foreach (var city in cityData.data)
+                string file;
+                using (System.IO.StreamReader f = System.IO.File.OpenText("Resources/Address.txt"))
                 {
-                    if (comboBoxCity.Text == city.name)
-                    {
-                        cityCode = city.id.ToString();
-                        break;
-                    }
+                    file = f.ReadToEnd();
                 }
-                foreach (var barangay in barangayData.data)
+
+                var regionData = JsonConvert.DeserializeObject<Dictionary<string, RegionInfo>>(file);
+                if (regionData != null)
                 {
-                    if (cityCode == barangay.city_code)
+                    foreach (var scenario in regionData.Values)
                     {
-                        comboBoxBarangay.Items.Add(barangay.name);
+                        var selectedProvinceData = scenario.ProvinceList?.GetValueOrDefault(selectedProvince);
+                        var selectedCityData = selectedProvinceData?.MunicipalityList?.GetValueOrDefault(selectedCity);
+                        foreach (var barangay in selectedCityData?.BarangayList ?? Enumerable.Empty<string>())
+                        {
+                            comboBoxBarangay.Items.Add(barangay);
+                        }
                     }
                 }
             }
@@ -288,11 +284,11 @@ namespace PIYU_SecureID
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
+
 
         private void comboBoxCity_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBoxBarangay.Items.Clear();
-            LoadBarangay();
+            LoadBarangay(comboBoxProvince.Text, comboBoxCity.Text);
         }
     }
 }
