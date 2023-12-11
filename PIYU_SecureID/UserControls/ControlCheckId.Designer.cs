@@ -60,10 +60,32 @@
             comboBoxCameras = new ComboBox();
             pictureBoxQrScanner = new PictureBox();
             timer1 = new System.Windows.Forms.Timer(components);
+            panel1 = new Panel();
+            panel2 = new Panel();
+            panel3 = new Panel();
+            panel4 = new Panel();
+            panel5 = new Panel();
+            panel6 = new Panel();
+            panel7 = new Panel();
+            panel8 = new Panel();
+            panel9 = new Panel();
+            panel10 = new Panel();
+            panel11 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSign).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).BeginInit();
             panelInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).BeginInit();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            panel4.SuspendLayout();
+            panel5.SuspendLayout();
+            panel6.SuspendLayout();
+            panel7.SuspendLayout();
+            panel8.SuspendLayout();
+            panel9.SuspendLayout();
+            panel10.SuspendLayout();
+            panel11.SuspendLayout();
             SuspendLayout();
             // 
             // textBoxTransactionNum
@@ -91,8 +113,9 @@
             // labelLastName
             // 
             labelLastName.AutoSize = true;
+            labelLastName.Dock = DockStyle.Left;
             labelLastName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelLastName.Location = new Point(145, 47);
+            labelLastName.Location = new Point(118, 0);
             labelLastName.Name = "labelLastName";
             labelLastName.Size = new Size(0, 21);
             labelLastName.TabIndex = 2;
@@ -100,8 +123,9 @@
             // labelGivenName
             // 
             labelGivenName.AutoSize = true;
+            labelGivenName.Dock = DockStyle.Left;
             labelGivenName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelGivenName.Location = new Point(145, 89);
+            labelGivenName.Location = new Point(118, 0);
             labelGivenName.Name = "labelGivenName";
             labelGivenName.Size = new Size(0, 21);
             labelGivenName.TabIndex = 3;
@@ -109,8 +133,9 @@
             // labelMiddleName
             // 
             labelMiddleName.AutoSize = true;
+            labelMiddleName.Dock = DockStyle.Left;
             labelMiddleName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelMiddleName.Location = new Point(145, 131);
+            labelMiddleName.Location = new Point(117, 0);
             labelMiddleName.Name = "labelMiddleName";
             labelMiddleName.Size = new Size(0, 21);
             labelMiddleName.TabIndex = 4;
@@ -118,8 +143,9 @@
             // labelSuffix
             // 
             labelSuffix.AutoSize = true;
+            labelSuffix.Dock = DockStyle.Left;
             labelSuffix.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelSuffix.Location = new Point(145, 173);
+            labelSuffix.Location = new Point(116, 0);
             labelSuffix.Name = "labelSuffix";
             labelSuffix.Size = new Size(0, 21);
             labelSuffix.TabIndex = 5;
@@ -127,8 +153,9 @@
             // labelCity
             // 
             labelCity.AutoSize = true;
+            labelCity.Dock = DockStyle.Left;
             labelCity.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCity.Location = new Point(145, 286);
+            labelCity.Location = new Point(114, 0);
             labelCity.Name = "labelCity";
             labelCity.Size = new Size(0, 21);
             labelCity.TabIndex = 9;
@@ -136,8 +163,9 @@
             // labelProvince
             // 
             labelProvince.AutoSize = true;
+            labelProvince.Dock = DockStyle.Left;
             labelProvince.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelProvince.Location = new Point(145, 244);
+            labelProvince.Location = new Point(113, 0);
             labelProvince.Name = "labelProvince";
             labelProvince.Size = new Size(0, 21);
             labelProvince.TabIndex = 8;
@@ -145,8 +173,9 @@
             // labelBloodType
             // 
             labelBloodType.AutoSize = true;
+            labelBloodType.Dock = DockStyle.Left;
             labelBloodType.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelBloodType.Location = new Point(554, 131);
+            labelBloodType.Location = new Point(121, 0);
             labelBloodType.Name = "labelBloodType";
             labelBloodType.Size = new Size(0, 21);
             labelBloodType.TabIndex = 7;
@@ -154,8 +183,9 @@
             // labelSex
             // 
             labelSex.AutoSize = true;
+            labelSex.Dock = DockStyle.Left;
             labelSex.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelSex.Location = new Point(554, 89);
+            labelSex.Location = new Point(120, 0);
             labelSex.Name = "labelSex";
             labelSex.Size = new Size(0, 21);
             labelSex.TabIndex = 6;
@@ -163,8 +193,9 @@
             // labelMaritalStatus
             // 
             labelMaritalStatus.AutoSize = true;
+            labelMaritalStatus.Dock = DockStyle.Left;
             labelMaritalStatus.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelMaritalStatus.Location = new Point(554, 244);
+            labelMaritalStatus.Location = new Point(118, 0);
             labelMaritalStatus.Name = "labelMaritalStatus";
             labelMaritalStatus.Size = new Size(0, 21);
             labelMaritalStatus.TabIndex = 11;
@@ -172,8 +203,9 @@
             // labelBarangay
             // 
             labelBarangay.AutoSize = true;
+            labelBarangay.Dock = DockStyle.Left;
             labelBarangay.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelBarangay.Location = new Point(145, 328);
+            labelBarangay.Location = new Point(113, 0);
             labelBarangay.Name = "labelBarangay";
             labelBarangay.Size = new Size(0, 21);
             labelBarangay.TabIndex = 10;
@@ -181,14 +213,16 @@
             // labelDateOfBirth
             // 
             labelDateOfBirth.AutoSize = true;
+            labelDateOfBirth.Dock = DockStyle.Left;
             labelDateOfBirth.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelDateOfBirth.Location = new Point(554, 173);
+            labelDateOfBirth.Location = new Point(119, 0);
             labelDateOfBirth.Name = "labelDateOfBirth";
             labelDateOfBirth.Size = new Size(0, 21);
             labelDateOfBirth.TabIndex = 12;
             // 
             // pictureBoxSign
             // 
+            pictureBoxSign.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBoxSign.Location = new Point(594, 384);
             pictureBoxSign.Name = "pictureBoxSign";
             pictureBoxSign.Size = new Size(150, 150);
@@ -198,6 +232,7 @@
             // 
             // pictureBoxIdPhoto
             // 
+            pictureBoxIdPhoto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBoxIdPhoto.Location = new Point(438, 384);
             pictureBoxIdPhoto.Name = "pictureBoxIdPhoto";
             pictureBoxIdPhoto.Size = new Size(150, 150);
@@ -208,30 +243,19 @@
             // panelInfo
             // 
             panelInfo.BorderStyle = BorderStyle.FixedSingle;
-            panelInfo.Controls.Add(label11);
-            panelInfo.Controls.Add(label8);
-            panelInfo.Controls.Add(label9);
-            panelInfo.Controls.Add(label10);
-            panelInfo.Controls.Add(label1);
-            panelInfo.Controls.Add(label2);
-            panelInfo.Controls.Add(label3);
-            panelInfo.Controls.Add(label4);
-            panelInfo.Controls.Add(label5);
-            panelInfo.Controls.Add(label6);
-            panelInfo.Controls.Add(label7);
-            panelInfo.Controls.Add(labelLastName);
+            panelInfo.Controls.Add(panel11);
+            panelInfo.Controls.Add(panel10);
+            panelInfo.Controls.Add(panel9);
+            panelInfo.Controls.Add(panel8);
+            panelInfo.Controls.Add(panel7);
+            panelInfo.Controls.Add(panel6);
+            panelInfo.Controls.Add(panel5);
+            panelInfo.Controls.Add(panel4);
+            panelInfo.Controls.Add(panel3);
+            panelInfo.Controls.Add(panel2);
+            panelInfo.Controls.Add(panel1);
             panelInfo.Controls.Add(pictureBoxIdPhoto);
-            panelInfo.Controls.Add(labelGivenName);
             panelInfo.Controls.Add(pictureBoxSign);
-            panelInfo.Controls.Add(labelMiddleName);
-            panelInfo.Controls.Add(labelDateOfBirth);
-            panelInfo.Controls.Add(labelSuffix);
-            panelInfo.Controls.Add(labelMaritalStatus);
-            panelInfo.Controls.Add(labelSex);
-            panelInfo.Controls.Add(labelBarangay);
-            panelInfo.Controls.Add(labelBloodType);
-            panelInfo.Controls.Add(labelCity);
-            panelInfo.Controls.Add(labelProvince);
             panelInfo.Location = new Point(328, 59);
             panelInfo.Name = "panelInfo";
             panelInfo.Size = new Size(765, 554);
@@ -240,8 +264,9 @@
             // label11
             // 
             label11.AutoSize = true;
+            label11.Dock = DockStyle.Left;
             label11.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(438, 89);
+            label11.Location = new Point(0, 0);
             label11.Name = "label11";
             label11.Size = new Size(120, 21);
             label11.TabIndex = 25;
@@ -250,8 +275,9 @@
             // label8
             // 
             label8.AutoSize = true;
+            label8.Dock = DockStyle.Left;
             label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(438, 173);
+            label8.Location = new Point(0, 0);
             label8.Name = "label8";
             label8.Size = new Size(119, 21);
             label8.TabIndex = 24;
@@ -260,8 +286,9 @@
             // label9
             // 
             label9.AutoSize = true;
+            label9.Dock = DockStyle.Left;
             label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(438, 244);
+            label9.Location = new Point(0, 0);
             label9.Name = "label9";
             label9.Size = new Size(118, 21);
             label9.TabIndex = 23;
@@ -270,8 +297,9 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.Dock = DockStyle.Left;
             label10.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(438, 131);
+            label10.Location = new Point(0, 0);
             label10.Name = "label10";
             label10.Size = new Size(121, 21);
             label10.TabIndex = 22;
@@ -280,8 +308,9 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Dock = DockStyle.Left;
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(31, 47);
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.Size = new Size(118, 21);
             label1.TabIndex = 15;
@@ -290,8 +319,9 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Dock = DockStyle.Left;
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(31, 89);
+            label2.Location = new Point(0, 0);
             label2.Name = "label2";
             label2.Size = new Size(118, 21);
             label2.TabIndex = 16;
@@ -300,8 +330,9 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Dock = DockStyle.Left;
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(31, 131);
+            label3.Location = new Point(0, 0);
             label3.Name = "label3";
             label3.Size = new Size(117, 21);
             label3.TabIndex = 17;
@@ -310,8 +341,9 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Dock = DockStyle.Left;
             label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(31, 173);
+            label4.Location = new Point(0, 0);
             label4.Name = "label4";
             label4.Size = new Size(116, 21);
             label4.TabIndex = 18;
@@ -320,8 +352,9 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Dock = DockStyle.Left;
             label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(31, 328);
+            label5.Location = new Point(0, 0);
             label5.Name = "label5";
             label5.Size = new Size(113, 21);
             label5.TabIndex = 21;
@@ -330,8 +363,9 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Dock = DockStyle.Left;
             label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(31, 286);
+            label6.Location = new Point(0, 0);
             label6.Name = "label6";
             label6.Size = new Size(114, 21);
             label6.TabIndex = 20;
@@ -340,8 +374,9 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.Dock = DockStyle.Left;
             label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(31, 244);
+            label7.Location = new Point(0, 0);
             label7.Name = "label7";
             label7.Size = new Size(113, 21);
             label7.TabIndex = 19;
@@ -381,24 +416,144 @@
             // 
             timer1.Tick += timer1_Tick;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(labelLastName);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(31, 43);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(392, 21);
+            panel1.TabIndex = 26;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(labelGivenName);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(31, 89);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(392, 21);
+            panel2.TabIndex = 27;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(labelMiddleName);
+            panel3.Controls.Add(label3);
+            panel3.Location = new Point(31, 131);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(392, 21);
+            panel3.TabIndex = 28;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(labelSuffix);
+            panel4.Controls.Add(label4);
+            panel4.Location = new Point(31, 173);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(392, 21);
+            panel4.TabIndex = 29;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(labelProvince);
+            panel5.Controls.Add(label7);
+            panel5.Location = new Point(31, 244);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(392, 21);
+            panel5.TabIndex = 30;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(labelCity);
+            panel6.Controls.Add(label6);
+            panel6.Location = new Point(31, 286);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(392, 21);
+            panel6.TabIndex = 31;
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(labelBarangay);
+            panel7.Controls.Add(label5);
+            panel7.Location = new Point(31, 328);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(392, 21);
+            panel7.TabIndex = 32;
+            // 
+            // panel8
+            // 
+            panel8.Controls.Add(labelMaritalStatus);
+            panel8.Controls.Add(label9);
+            panel8.Location = new Point(438, 244);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(306, 21);
+            panel8.TabIndex = 33;
+            // 
+            // panel9
+            // 
+            panel9.Controls.Add(labelDateOfBirth);
+            panel9.Controls.Add(label8);
+            panel9.Location = new Point(438, 173);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(306, 21);
+            panel9.TabIndex = 34;
+            // 
+            // panel10
+            // 
+            panel10.Controls.Add(labelBloodType);
+            panel10.Controls.Add(label10);
+            panel10.Location = new Point(438, 131);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(306, 21);
+            panel10.TabIndex = 35;
+            // 
+            // panel11
+            // 
+            panel11.Controls.Add(labelSex);
+            panel11.Controls.Add(label11);
+            panel11.Location = new Point(438, 89);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(306, 21);
+            panel11.TabIndex = 36;
+            // 
             // ControlCheckId
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panelInfo);
             Controls.Add(buttonSearch);
             Controls.Add(buttonStartStop);
             Controls.Add(textBoxTransactionNum);
             Controls.Add(pictureBoxQrScanner);
             Controls.Add(comboBoxCameras);
+            Controls.Add(panelInfo);
             Name = "ControlCheckId";
             Size = new Size(1116, 633);
             Leave += ControlCheckId_Leave;
             ((System.ComponentModel.ISupportInitialize)pictureBoxSign).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).EndInit();
             panelInfo.ResumeLayout(false);
-            panelInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel9.PerformLayout();
+            panel10.ResumeLayout(false);
+            panel10.PerformLayout();
+            panel11.ResumeLayout(false);
+            panel11.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -436,5 +591,16 @@
         private ComboBox comboBoxCameras;
         private PictureBox pictureBoxQrScanner;
         private System.Windows.Forms.Timer timer1;
+        private Panel panel1;
+        private Panel panel2;
+        private Panel panel6;
+        private Panel panel5;
+        private Panel panel4;
+        private Panel panel3;
+        private Panel panel11;
+        private Panel panel10;
+        private Panel panel9;
+        private Panel panel8;
+        private Panel panel7;
     }
 }

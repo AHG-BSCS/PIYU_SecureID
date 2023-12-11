@@ -137,7 +137,7 @@
             textBoxSuffix.Location = new Point(54, 240);
             textBoxSuffix.MaxLength = 32;
             textBoxSuffix.Name = "textBoxSuffix";
-            textBoxSuffix.Size = new Size(72, 29);
+            textBoxSuffix.Size = new Size(109, 29);
             textBoxSuffix.TabIndex = 7;
             // 
             // label4
@@ -168,7 +168,7 @@
             comboBoxSex.Items.AddRange(new object[] { "MALE", "FEMALE" });
             comboBoxSex.Location = new Point(54, 296);
             comboBoxSex.Name = "comboBoxSex";
-            comboBoxSex.Size = new Size(79, 29);
+            comboBoxSex.Size = new Size(109, 29);
             comboBoxSex.TabIndex = 9;
             // 
             // label6
@@ -193,7 +193,6 @@
             // 
             // pictureBoxIdPhoto
             // 
-            pictureBoxIdPhoto.BorderStyle = BorderStyle.FixedSingle;
             pictureBoxIdPhoto.Location = new Point(839, 33);
             pictureBoxIdPhoto.Name = "pictureBoxIdPhoto";
             pictureBoxIdPhoto.Size = new Size(215, 215);
@@ -259,10 +258,10 @@
             comboBoxBloodType.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             comboBoxBloodType.FormattingEnabled = true;
             comboBoxBloodType.Items.AddRange(new object[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" });
-            comboBoxBloodType.Location = new Point(226, 301);
+            comboBoxBloodType.Location = new Point(222, 296);
             comboBoxBloodType.Margin = new Padding(3, 2, 3, 2);
             comboBoxBloodType.Name = "comboBoxBloodType";
-            comboBoxBloodType.Size = new Size(79, 29);
+            comboBoxBloodType.Size = new Size(109, 29);
             comboBoxBloodType.TabIndex = 22;
             // 
             // comboBoxMaritalStatus
@@ -282,10 +281,10 @@
             comboBoxProvince.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxProvince.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             comboBoxProvince.FormattingEnabled = true;
-            comboBoxProvince.Location = new Point(59, 433);
+            comboBoxProvince.Location = new Point(54, 429);
             comboBoxProvince.Margin = new Padding(3, 2, 3, 2);
             comboBoxProvince.Name = "comboBoxProvince";
-            comboBoxProvince.Size = new Size(190, 29);
+            comboBoxProvince.Size = new Size(224, 29);
             comboBoxProvince.TabIndex = 24;
             comboBoxProvince.SelectedIndexChanged += comboBoxProvince_SelectedIndexChanged;
             // 
@@ -293,7 +292,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label10.Location = new Point(119, 462);
+            label10.Location = new Point(129, 460);
             label10.Name = "label10";
             label10.Size = new Size(61, 13);
             label10.TabIndex = 25;
@@ -304,10 +303,10 @@
             comboBoxCity.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxCity.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             comboBoxCity.FormattingEnabled = true;
-            comboBoxCity.Location = new Point(254, 431);
+            comboBoxCity.Location = new Point(284, 429);
             comboBoxCity.Margin = new Padding(3, 2, 3, 2);
             comboBoxCity.Name = "comboBoxCity";
-            comboBoxCity.Size = new Size(204, 29);
+            comboBoxCity.Size = new Size(224, 29);
             comboBoxCity.TabIndex = 26;
             comboBoxCity.SelectedIndexChanged += comboBoxCity_SelectedIndexChanged;
             // 
@@ -315,7 +314,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label11.Location = new Point(334, 460);
+            label11.Location = new Point(384, 460);
             label11.Name = "label11";
             label11.Size = new Size(29, 13);
             label11.TabIndex = 27;
@@ -326,17 +325,17 @@
             comboBoxBarangay.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxBarangay.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             comboBoxBarangay.FormattingEnabled = true;
-            comboBoxBarangay.Location = new Point(463, 433);
+            comboBoxBarangay.Location = new Point(514, 429);
             comboBoxBarangay.Margin = new Padding(3, 2, 3, 2);
             comboBoxBarangay.Name = "comboBoxBarangay";
-            comboBoxBarangay.Size = new Size(225, 29);
+            comboBoxBarangay.Size = new Size(224, 29);
             comboBoxBarangay.TabIndex = 28;
             // 
             // label12
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label12.Location = new Point(536, 464);
+            label12.Location = new Point(594, 460);
             label12.Name = "label12";
             label12.Size = new Size(65, 13);
             label12.TabIndex = 29;
@@ -374,7 +373,6 @@
             // 
             // pictureBoxSignature
             // 
-            pictureBoxSignature.BorderStyle = BorderStyle.FixedSingle;
             pictureBoxSignature.Location = new Point(550, 33);
             pictureBoxSignature.Name = "pictureBoxSignature";
             pictureBoxSignature.Size = new Size(215, 215);
@@ -419,16 +417,16 @@
             comboBoxMonth.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             comboBoxMonth.FormattingEnabled = true;
             comboBoxMonth.Items.AddRange(new object[] { "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER" });
-            comboBoxMonth.Location = new Point(138, 366);
+            comboBoxMonth.Location = new Point(128, 365);
             comboBoxMonth.Margin = new Padding(3, 2, 3, 2);
             comboBoxMonth.Name = "comboBoxMonth";
-            comboBoxMonth.Size = new Size(136, 29);
+            comboBoxMonth.Size = new Size(150, 29);
             comboBoxMonth.TabIndex = 39;
             // 
             // textBoxYear
             // 
             textBoxYear.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxYear.Location = new Point(280, 366);
+            textBoxYear.Location = new Point(284, 365);
             textBoxYear.Margin = new Padding(3, 2, 3, 2);
             textBoxYear.MaxLength = 4;
             textBoxYear.Name = "textBoxYear";

@@ -210,6 +210,7 @@ namespace PIYU_SecureID
             buttonStartStop.Text = "START";
             pictureBoxQrScanner.Image = null;
             textBoxTransactionNum.Text = "";
+            RefreshData();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -224,6 +225,11 @@ namespace PIYU_SecureID
                     textBoxTransactionNum.Text = result.ToString();
                 }
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
