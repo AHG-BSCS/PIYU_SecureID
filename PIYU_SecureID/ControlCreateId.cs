@@ -21,22 +21,17 @@ namespace PIYU_SecureID
     {
         private long transactionNum;
         private string dateOfBirth;
-       
-        // Path to the local file containing the API response
         private const string LocalApiCityFilePath = "City.txt";
         private const string LocalApiProvinceFilePath = "Province.txt";
-        private const string LocalApiBarangayFilePath = "City.txt";
-
-        // Dictionary to store cities and barangays for each province
-        private Dictionary<string, List<string>> CityAddress = new Dictionary<string, List<string>>();
-
-        // Read the content of the local file
-        string responseBody;
-        // Deserialize the JSON response into the ProvinceData class
-        public ClassProvince provinceData;
-
-        private string[] idArr = new string[200];
-
+        private const string LocalApiBarangayFilePath = "Barangay.txt";
+        private Dictionary<string, List<string>> ProvinceAddress = new Dictionary<string, List<string>>();
+        private string responseBodyProvince;
+        private ClassProvince provinceData;
+        private string responseBodyCity;
+        private ClassCity cityData;
+        private string responseBodyBarangay;
+        private ClassBarangay barangayData;
+        private string[] idProvinceArr = new string[200];
 
         public ControlCreateId()
         {
@@ -207,44 +202,29 @@ namespace PIYU_SecureID
 
         private void comboBoxProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Clear existing items in the comboBoxCity and comboBoxBarangay
             comboBoxCity.Items.Clear();
-
-            // Get the selected province
-            string selectedProvince = idArr[comboBoxProvince.SelectedIndex];
-
-            // Get the selected province code from the dictionary
-
-            string selectedProvinceCode = CityAddress.TryGetValue(selectedProvince, out var provinceCodes)
-            ? provinceCodes.FirstOrDefault()
-            : null;
-            selectedProvinceCode = "0308";
-            if (selectedProvinceCode != null)
-            {
-                LoadCities(selectedProvinceCode);
-            }
+            comboBoxBarangay.Items.Clear();
+            string selectedProvince = idProvinceArr[comboBoxProvince.SelectedIndex];
+            LoadCities(selectedProvince);
         }
         private void LoadProvinces()
         {
             try
             {
-                this.responseBody = File.ReadAllText(LocalApiProvinceFilePath);
-                this.provinceData = JsonConvert.DeserializeObject<ClassProvince>(responseBody);
+                this.responseBodyProvince = File.ReadAllText(LocalApiProvinceFilePath);
+                this.provinceData = JsonConvert.DeserializeObject<ClassProvince>(responseBodyProvince);
 
-
-                // Initialize the CityAddress dictionary with the fetched provinces
                 foreach (var province in provinceData.data)
                 {
-                    CityAddress.Add(province.name, new List<string>());
+                    ProvinceAddress.Add(province.name, new List<string>());
                 }
                 int i = 0;
                 foreach (var id in provinceData.data) 
                 {
-                    idArr[i] = id.id.ToString();
+                    idProvinceArr[i] = id.id.ToString();
                     i++;
                 }
-                // Populate the comboBoxProvince
-                comboBoxProvince.Items.AddRange(CityAddress.Keys.ToArray());
+                comboBoxProvince.Items.AddRange(ProvinceAddress.Keys.ToArray());
             }
             catch (Exception ex)
             {
@@ -256,38 +236,59 @@ namespace PIYU_SecureID
         {
             try
             {
-                // Read the content of the local file
-                string responseBody = File.ReadAllText(LocalApiCityFilePath);
+                this.responseBodyCity = File.ReadAllText(LocalApiCityFilePath);
+                this.cityData = JsonConvert.DeserializeObject<ClassCity>(responseBodyCity);
 
-                // Deserialize the JSON response into a list of City objects
-                List<City> cities = JsonConvert.DeserializeObject<List<City>>(responseBody);
-                
-                // Clear existing items in the comboBoxCity
-                comboBoxCity.Items.Clear();
-
-                // Filter cities based on the selected province code
-                var filteredCities = cities.Where(city => city.province_code == selectedProvinceCode);
-
-                // Add filtered cities to the comboBoxCity
-                comboBoxCity.Items.AddRange(filteredCities.Select(city => city.name).ToArray());
+                foreach (var city in cityData.data)
+                {
+                    if (selectedProvinceCode == city.province_code)
+                    {
+                        comboBoxCity.Items.Add(city.name);
+                    }
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while loading cities: {ex.Message}");
+                MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
 
+        private void LoadBarangay()
+        {
+            try
+            {
+                this.responseBodyBarangay = File.ReadAllText(LocalApiBarangayFilePath);
+                this.barangayData = JsonConvert.DeserializeObject<ClassBarangay>(responseBodyBarangay);
+                this.responseBodyCity = File.ReadAllText(LocalApiCityFilePath);
+                this.cityData = JsonConvert.DeserializeObject<ClassCity>(responseBodyCity);
+                string cityCode = "";
 
-
-
-
+                foreach (var city in cityData.data)
+                {
+                    if (comboBoxCity.Text == city.name)
+                    {
+                        cityCode = city.id.ToString();
+                        break;
+                    }
+                }
+                foreach (var barangay in barangayData.data)
+                {
+                    if (cityCode == barangay.city_code)
+                    {
+                        comboBoxBarangay.Items.Add(barangay.name);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+        }
 
         private void comboBoxCity_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
-            
+            comboBoxBarangay.Items.Clear();
+            LoadBarangay();
         }
-
-       
     }
 }
