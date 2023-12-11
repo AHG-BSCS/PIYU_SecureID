@@ -45,47 +45,47 @@
             pictureBoxSign = new PictureBox();
             pictureBoxIdPhoto = new PictureBox();
             panelInfo = new Panel();
+            panel11 = new Panel();
             label11 = new Label();
-            label8 = new Label();
-            label9 = new Label();
+            panel10 = new Panel();
             label10 = new Label();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
+            panel9 = new Panel();
+            label8 = new Label();
+            panel8 = new Panel();
+            label9 = new Label();
+            panel7 = new Panel();
             label5 = new Label();
+            panel6 = new Panel();
             label6 = new Label();
+            panel5 = new Panel();
             label7 = new Label();
+            panel4 = new Panel();
+            label4 = new Label();
+            panel3 = new Panel();
+            label3 = new Label();
+            panel2 = new Panel();
+            label2 = new Label();
+            panel1 = new Panel();
+            label1 = new Label();
             buttonStartStop = new Button();
             comboBoxCameras = new ComboBox();
             pictureBoxQrScanner = new PictureBox();
             timer1 = new System.Windows.Forms.Timer(components);
-            panel1 = new Panel();
-            panel2 = new Panel();
-            panel3 = new Panel();
-            panel4 = new Panel();
-            panel5 = new Panel();
-            panel6 = new Panel();
-            panel7 = new Panel();
-            panel8 = new Panel();
-            panel9 = new Panel();
-            panel10 = new Panel();
-            panel11 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSign).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).BeginInit();
             panelInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).BeginInit();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
-            panel4.SuspendLayout();
-            panel5.SuspendLayout();
-            panel6.SuspendLayout();
-            panel7.SuspendLayout();
-            panel8.SuspendLayout();
-            panel9.SuspendLayout();
-            panel10.SuspendLayout();
             panel11.SuspendLayout();
+            panel10.SuspendLayout();
+            panel9.SuspendLayout();
+            panel8.SuspendLayout();
+            panel7.SuspendLayout();
+            panel6.SuspendLayout();
+            panel5.SuspendLayout();
+            panel4.SuspendLayout();
+            panel3.SuspendLayout();
+            panel2.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).BeginInit();
             SuspendLayout();
             // 
             // textBoxTransactionNum
@@ -261,6 +261,15 @@
             panelInfo.Size = new Size(765, 554);
             panelInfo.TabIndex = 15;
             // 
+            // panel11
+            // 
+            panel11.Controls.Add(labelSex);
+            panel11.Controls.Add(label11);
+            panel11.Location = new Point(438, 89);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(306, 21);
+            panel11.TabIndex = 36;
+            // 
             // label11
             // 
             label11.AutoSize = true;
@@ -272,27 +281,14 @@
             label11.TabIndex = 25;
             label11.Text = "Sex                   : ";
             // 
-            // label8
+            // panel10
             // 
-            label8.AutoSize = true;
-            label8.Dock = DockStyle.Left;
-            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(0, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(119, 21);
-            label8.TabIndex = 24;
-            label8.Text = "Date of Birth  : ";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Dock = DockStyle.Left;
-            label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(0, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(118, 21);
-            label9.TabIndex = 23;
-            label9.Text = "Marital Status: ";
+            panel10.Controls.Add(labelBloodType);
+            panel10.Controls.Add(label10);
+            panel10.Location = new Point(438, 131);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(306, 21);
+            panel10.TabIndex = 35;
             // 
             // label10
             // 
@@ -305,49 +301,54 @@
             label10.TabIndex = 22;
             label10.Text = "Blood Type     : ";
             // 
-            // label1
+            // panel9
             // 
-            label1.AutoSize = true;
-            label1.Dock = DockStyle.Left;
-            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(118, 21);
-            label1.TabIndex = 15;
-            label1.Text = "Last Name      : ";
+            panel9.Controls.Add(labelDateOfBirth);
+            panel9.Controls.Add(label8);
+            panel9.Location = new Point(438, 173);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(306, 21);
+            panel9.TabIndex = 34;
             // 
-            // label2
+            // label8
             // 
-            label2.AutoSize = true;
-            label2.Dock = DockStyle.Left;
-            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(0, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(118, 21);
-            label2.TabIndex = 16;
-            label2.Text = "Given Name   : ";
+            label8.AutoSize = true;
+            label8.Dock = DockStyle.Left;
+            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(0, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(119, 21);
+            label8.TabIndex = 24;
+            label8.Text = "Date of Birth  : ";
             // 
-            // label3
+            // panel8
             // 
-            label3.AutoSize = true;
-            label3.Dock = DockStyle.Left;
-            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(0, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(117, 21);
-            label3.TabIndex = 17;
-            label3.Text = "Middle Name: ";
+            panel8.Controls.Add(labelMaritalStatus);
+            panel8.Controls.Add(label9);
+            panel8.Location = new Point(438, 244);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(306, 21);
+            panel8.TabIndex = 33;
             // 
-            // label4
+            // label9
             // 
-            label4.AutoSize = true;
-            label4.Dock = DockStyle.Left;
-            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(0, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(116, 21);
-            label4.TabIndex = 18;
-            label4.Text = "Suffix              : ";
+            label9.AutoSize = true;
+            label9.Dock = DockStyle.Left;
+            label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.Location = new Point(0, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(118, 21);
+            label9.TabIndex = 23;
+            label9.Text = "Marital Status: ";
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(labelBarangay);
+            panel7.Controls.Add(label5);
+            panel7.Location = new Point(31, 328);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(392, 21);
+            panel7.TabIndex = 32;
             // 
             // label5
             // 
@@ -360,6 +361,15 @@
             label5.TabIndex = 21;
             label5.Text = "Barangay       : ";
             // 
+            // panel6
+            // 
+            panel6.Controls.Add(labelCity);
+            panel6.Controls.Add(label6);
+            panel6.Location = new Point(31, 286);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(392, 21);
+            panel6.TabIndex = 31;
+            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -371,6 +381,15 @@
             label6.TabIndex = 20;
             label6.Text = "City                 : ";
             // 
+            // panel5
+            // 
+            panel5.Controls.Add(labelProvince);
+            panel5.Controls.Add(label7);
+            panel5.Location = new Point(31, 244);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(392, 21);
+            panel5.TabIndex = 30;
+            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -381,6 +400,86 @@
             label7.Size = new Size(113, 21);
             label7.TabIndex = 19;
             label7.Text = "Province        : ";
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(labelSuffix);
+            panel4.Controls.Add(label4);
+            panel4.Location = new Point(31, 173);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(392, 21);
+            panel4.TabIndex = 29;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Dock = DockStyle.Left;
+            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(0, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(116, 21);
+            label4.TabIndex = 18;
+            label4.Text = "Suffix              : ";
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(labelMiddleName);
+            panel3.Controls.Add(label3);
+            panel3.Location = new Point(31, 131);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(392, 21);
+            panel3.TabIndex = 28;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Dock = DockStyle.Left;
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(0, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(117, 21);
+            label3.TabIndex = 17;
+            label3.Text = "Middle Name: ";
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(labelGivenName);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(31, 89);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(392, 21);
+            panel2.TabIndex = 27;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Dock = DockStyle.Left;
+            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(0, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(118, 21);
+            label2.TabIndex = 16;
+            label2.Text = "Given Name   : ";
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(labelLastName);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(31, 43);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(392, 21);
+            panel1.TabIndex = 26;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Dock = DockStyle.Left;
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(118, 21);
+            label1.TabIndex = 15;
+            label1.Text = "Last Name      : ";
             // 
             // buttonStartStop
             // 
@@ -416,105 +515,6 @@
             // 
             timer1.Tick += timer1_Tick;
             // 
-            // panel1
-            // 
-            panel1.Controls.Add(labelLastName);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(31, 43);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(392, 21);
-            panel1.TabIndex = 26;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(labelGivenName);
-            panel2.Controls.Add(label2);
-            panel2.Location = new Point(31, 89);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(392, 21);
-            panel2.TabIndex = 27;
-            // 
-            // panel3
-            // 
-            panel3.Controls.Add(labelMiddleName);
-            panel3.Controls.Add(label3);
-            panel3.Location = new Point(31, 131);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(392, 21);
-            panel3.TabIndex = 28;
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(labelSuffix);
-            panel4.Controls.Add(label4);
-            panel4.Location = new Point(31, 173);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(392, 21);
-            panel4.TabIndex = 29;
-            // 
-            // panel5
-            // 
-            panel5.Controls.Add(labelProvince);
-            panel5.Controls.Add(label7);
-            panel5.Location = new Point(31, 244);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(392, 21);
-            panel5.TabIndex = 30;
-            // 
-            // panel6
-            // 
-            panel6.Controls.Add(labelCity);
-            panel6.Controls.Add(label6);
-            panel6.Location = new Point(31, 286);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(392, 21);
-            panel6.TabIndex = 31;
-            // 
-            // panel7
-            // 
-            panel7.Controls.Add(labelBarangay);
-            panel7.Controls.Add(label5);
-            panel7.Location = new Point(31, 328);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(392, 21);
-            panel7.TabIndex = 32;
-            // 
-            // panel8
-            // 
-            panel8.Controls.Add(labelMaritalStatus);
-            panel8.Controls.Add(label9);
-            panel8.Location = new Point(438, 244);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(306, 21);
-            panel8.TabIndex = 33;
-            // 
-            // panel9
-            // 
-            panel9.Controls.Add(labelDateOfBirth);
-            panel9.Controls.Add(label8);
-            panel9.Location = new Point(438, 173);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(306, 21);
-            panel9.TabIndex = 34;
-            // 
-            // panel10
-            // 
-            panel10.Controls.Add(labelBloodType);
-            panel10.Controls.Add(label10);
-            panel10.Location = new Point(438, 131);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(306, 21);
-            panel10.TabIndex = 35;
-            // 
-            // panel11
-            // 
-            panel11.Controls.Add(labelSex);
-            panel11.Controls.Add(label11);
-            panel11.Location = new Point(438, 89);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(306, 21);
-            panel11.TabIndex = 36;
-            // 
             // ControlCheckId
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -531,29 +531,29 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxSign).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).EndInit();
             panelInfo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
-            panel9.ResumeLayout(false);
-            panel9.PerformLayout();
-            panel10.ResumeLayout(false);
-            panel10.PerformLayout();
             panel11.ResumeLayout(false);
             panel11.PerformLayout();
+            panel10.ResumeLayout(false);
+            panel10.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel9.PerformLayout();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

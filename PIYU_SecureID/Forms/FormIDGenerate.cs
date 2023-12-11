@@ -241,7 +241,7 @@ namespace PIYU_SecureID
         {
             try
             {
-                string csvString = data.ToQrIdCsvString();
+                string csvString = data.ToQrIdCsvString(transactionNum);
                 File.AppendAllText(filename, csvString + Environment.NewLine);
                 MessageBox.Show("Data saved successfully!");
             }

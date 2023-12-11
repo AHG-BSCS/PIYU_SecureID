@@ -19,6 +19,7 @@ namespace PIYU_SecureID
 {
     public partial class ControlVerifyId : UserControl
     {
+        private long? key;
         private FilterInfoCollection videoDevices;
         private VideoCaptureDevice videoSource;
         private ClassInformation info = new ClassInformation();
@@ -106,6 +107,7 @@ namespace PIYU_SecureID
             videoSource.WaitForStop();
             buttonStartStop.Text = "START";
             pictureBoxQrScanner.Image = null;
+            RefreshData();
         }
 
         private void textBoxTransactionNum_TextChanged(object sender, EventArgs e)
@@ -113,6 +115,63 @@ namespace PIYU_SecureID
             string key = textBoxTransactionNum.Text;
                     
             info = info.LoadIdQrFromFile("Resources/idQr.txt", key);
+            info = info.LoadFromFile("Resources/info.txt", info.TransactionNum);
+            FillData(info);
+        }
+
+        private void FillData(ClassInformation info)
+        {
+            try
+            {
+                RefreshData();
+                labelLastName.Text = info.LastName;
+                labelGivenName.Text = info.GivenName;
+                labelMiddleName.Text = info.MiddleName;
+                labelSuffix.Text = info.Suffix;
+                labelSex.Text = info.Sex;
+                labelBloodType.Text = info.BloodType;
+                labelDateOfBirth.Text = info.DateOfBirth;
+                labelProvince.Text = info.Province;
+                labelCity.Text = info.City;
+                labelBarangay.Text = info.Barangay;
+                labelMaritalStatus.Text = info.MaritalStatus;
+                byte[] idPhoto = info.ImageIdPhoto;
+                byte[] sign = info.ImageSign;
+                using (MemoryStream memoryStream = new MemoryStream(idPhoto, writable: false))
+                {
+                    Image image = Image.FromStream(memoryStream);
+
+                    pictureBoxIdPhoto.Image = image;
+                }
+                using (MemoryStream memoryStream = new MemoryStream(sign, writable: false))
+                {
+                    Image image = Image.FromStream(memoryStream);
+
+                    pictureBoxSign.Image = image;
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void RefreshData()
+        {
+            this.key = null;
+            labelLastName.Text = "";
+            labelGivenName.Text = "";
+            labelMiddleName.Text = "";
+            labelSuffix.Text = "";
+            labelSex.Text = "";
+            labelBloodType.Text = "";
+            labelDateOfBirth.Text = "";
+            labelProvince.Text = "";
+            labelCity.Text = "";
+            labelBarangay.Text = "";
+            labelMaritalStatus.Text = "";
+            pictureBoxIdPhoto.Image = null;
+            pictureBoxSign.Image = null;
         }
     }
 }

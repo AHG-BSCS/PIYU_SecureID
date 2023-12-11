@@ -37,7 +37,7 @@ namespace PIYU_SecureID
                 $"{DateOfBirth}~{Province}~{City}~{Barangay}~{MaritalStatus}~{imageIdPhotoBase64}~{imageSignBase64}";
         }
 
-        public string ToQrIdCsvString()
+        public string ToQrIdCsvString(long? transactionNum)
         {
             PictureBox pb = new PictureBox();
             pb.SizeMode = PictureBoxSizeMode.Zoom;
@@ -53,7 +53,7 @@ namespace PIYU_SecureID
             string lastResult = "";
             if (result != null && result.ToString() != lastResult)
             {
-                return result.ToString();
+                return $"{result.ToString()}~{transactionNum}";
             }
             return null;
         }
@@ -82,9 +82,11 @@ namespace PIYU_SecureID
 
         public static ClassInformation FromIdQrCsvString(string csv)
         {
+            var values = csv.Split('~');
             return new ClassInformation
             {
-                StrIdQr = csv
+                StrIdQr = values[0],
+                TransactionNum = long.Parse(values[1])
             };
         }
 
@@ -141,7 +143,6 @@ namespace PIYU_SecureID
 
                             if (userData != null && userData.StrIdQr == targetKey)
                             {
-                                MessageBox.Show("Record found.");
                                 return userData;
                             }
                         }
