@@ -11,7 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Claims;
 using AForge.Video.DirectShow;
+using Newtonsoft.Json;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static PIYU_SecureID.ClassCity;
 
 namespace PIYU_SecureID
 {
@@ -19,6 +21,22 @@ namespace PIYU_SecureID
     {
         private long transactionNum;
         private string dateOfBirth;
+       
+        // Path to the local file containing the API response
+        private const string LocalApiCityFilePath = "City.txt";
+        private const string LocalApiProvinceFilePath = "Province.txt";
+        private const string LocalApiBarangayFilePath = "City.txt";
+
+        // Dictionary to store cities and barangays for each province
+        private Dictionary<string, List<string>> CityAddress = new Dictionary<string, List<string>>();
+
+        // Read the content of the local file
+        string responseBody;
+        // Deserialize the JSON response into the ProvinceData class
+        public ClassProvince provinceData;
+
+        private string[] idArr = new string[200];
+
 
         public ControlCreateId()
         {
@@ -31,6 +49,9 @@ namespace PIYU_SecureID
             VideoCaptureDevice captureDevice = new VideoCaptureDevice();
 
             GenerateTransactionNum();
+            LoadProvinces();
+            
+
         }
 
         private void GenerateTransactionNum()
@@ -183,5 +204,90 @@ namespace PIYU_SecureID
                 e.Handled = true;
             }
         }
+
+        private void comboBoxProvince_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Clear existing items in the comboBoxCity and comboBoxBarangay
+            comboBoxCity.Items.Clear();
+
+            // Get the selected province
+            string selectedProvince = idArr[comboBoxProvince.SelectedIndex];
+
+            // Get the selected province code from the dictionary
+
+            string selectedProvinceCode = CityAddress.TryGetValue(selectedProvince, out var provinceCodes)
+            ? provinceCodes.FirstOrDefault()
+            : null;
+            selectedProvinceCode = "0308";
+            if (selectedProvinceCode != null)
+            {
+                LoadCities(selectedProvinceCode);
+            }
+        }
+        private void LoadProvinces()
+        {
+            try
+            {
+                this.responseBody = File.ReadAllText(LocalApiProvinceFilePath);
+                this.provinceData = JsonConvert.DeserializeObject<ClassProvince>(responseBody);
+
+
+                // Initialize the CityAddress dictionary with the fetched provinces
+                foreach (var province in provinceData.data)
+                {
+                    CityAddress.Add(province.name, new List<string>());
+                }
+                int i = 0;
+                foreach (var id in provinceData.data) 
+                {
+                    idArr[i] = id.id.ToString();
+                    i++;
+                }
+                // Populate the comboBoxProvince
+                comboBoxProvince.Items.AddRange(CityAddress.Keys.ToArray());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+        }
+
+        private void LoadCities(string selectedProvinceCode)
+        {
+            try
+            {
+                // Read the content of the local file
+                string responseBody = File.ReadAllText(LocalApiCityFilePath);
+
+                // Deserialize the JSON response into a list of City objects
+                List<City> cities = JsonConvert.DeserializeObject<List<City>>(responseBody);
+                
+                // Clear existing items in the comboBoxCity
+                comboBoxCity.Items.Clear();
+
+                // Filter cities based on the selected province code
+                var filteredCities = cities.Where(city => city.province_code == selectedProvinceCode);
+
+                // Add filtered cities to the comboBoxCity
+                comboBoxCity.Items.AddRange(filteredCities.Select(city => city.name).ToArray());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while loading cities: {ex.Message}");
+            }
+        }
+
+
+
+
+
+
+        private void comboBoxCity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+            
+        }
+
+       
     }
 }

@@ -31,10 +31,10 @@ namespace PIYU_SecureID
             foreach (char c in secureID)
             {
                 labelName.Text += c;
-                await Task.Delay(200);
+                await Task.Delay(100);
                 Application.DoEvents();
             }
-            Thread.Sleep(5000);
+            Thread.Sleep(1000);
             this.Hide();
             FormAuthentication auth = new FormAuthentication();
             auth.Show();
