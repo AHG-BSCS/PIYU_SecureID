@@ -139,7 +139,7 @@ namespace PIYU_SecureID
             // Assuming the decryptedData is in a specific format (e.g., comma-separated values)
             string[] pieces = decryptedData.Split('~');
 
-            if (pieces.Length >= 10)
+            try
             {
                 // Update labels with decrypted data
                 labelLastName.Text = pieces[0];
@@ -154,7 +154,7 @@ namespace PIYU_SecureID
                 labelBarangay.Text = pieces[9];
                 // ... Continue updating other labels as needed
             }
-            else
+            catch
             {
                 MessageBox.Show("Invalid QR code data format.");
             }
