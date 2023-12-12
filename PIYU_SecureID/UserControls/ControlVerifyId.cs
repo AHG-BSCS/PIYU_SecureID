@@ -136,23 +136,21 @@ namespace PIYU_SecureID
 
         private void UpdateLabels(string decryptedData)
         {
-            // Assuming the decryptedData is in a specific format (e.g., comma-separated values)
             string[] pieces = decryptedData.Split('~');
 
             try
             {
-                // Update labels with decrypted data
                 labelLastName.Text = pieces[0];
                 labelGivenName.Text = pieces[1];
                 labelMiddleName.Text = pieces[2];
                 labelSuffix.Text = pieces[3];
                 labelSex.Text = pieces[4];
-                labelBloodType.Text = pieces[5];
-                labelDateOfBirth.Text = pieces[6];
-                labelProvince.Text = pieces[7];
-                labelCity.Text = pieces[8];
-                labelBarangay.Text = pieces[9];
-                // ... Continue updating other labels as needed
+                labelMaritalStatus.Text = pieces[5];
+                labelBloodType.Text = pieces[6];
+                labelDateOfBirth.Text = pieces[7];
+                labelProvince.Text = pieces[8];
+                labelCity.Text = pieces[9];
+                labelBarangay.Text = pieces[10];
             }
             catch
             {
