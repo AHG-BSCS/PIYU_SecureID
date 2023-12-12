@@ -28,261 +28,265 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            timerDateTime = new System.Windows.Forms.Timer(components);
-            buttonMinimize = new Button();
-            buttonRestoreDownMaximize = new Button();
-            buttonClose = new Button();
-            panelTitleBar = new Panel();
-            panelNavigation = new Panel();
-            buttonLogout = new Button();
-            labelDateTime = new Label();
-            buttonVerifyId = new Button();
-            buttonCheckId = new Button();
-            buttonCreateId = new Button();
-            buttonDashboard = new Button();
-            labelInstitution = new Label();
-            pictureBoxLogo = new PictureBox();
-            panelActive = new Panel();
-            panelTitleBar.SuspendLayout();
-            panelNavigation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.timerDateTime = new System.Windows.Forms.Timer(this.components);
+            this.buttonMinimize = new System.Windows.Forms.Button();
+            this.buttonRestoreDownMaximize = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.panelNavigation = new System.Windows.Forms.Panel();
+            this.buttonSettings = new System.Windows.Forms.Button();
+            this.buttonLogout = new System.Windows.Forms.Button();
+            this.labelDateTime = new System.Windows.Forms.Label();
+            this.buttonVerifyId = new System.Windows.Forms.Button();
+            this.buttonCheckId = new System.Windows.Forms.Button();
+            this.buttonCreateId = new System.Windows.Forms.Button();
+            this.buttonDashboard = new System.Windows.Forms.Button();
+            this.labelInstitution = new System.Windows.Forms.Label();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.panelActive = new System.Windows.Forms.Panel();
+            this.panelTitleBar.SuspendLayout();
+            this.panelNavigation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.SuspendLayout();
             // 
             // timerDateTime
             // 
-            timerDateTime.Enabled = true;
-            timerDateTime.Interval = 1000;
-            timerDateTime.Tick += timerDateTime_Tick;
+            this.timerDateTime.Enabled = true;
+            this.timerDateTime.Interval = 1000;
             // 
             // buttonMinimize
             // 
-            buttonMinimize.BackColor = Color.Transparent;
-            buttonMinimize.Dock = DockStyle.Right;
-            buttonMinimize.FlatAppearance.BorderSize = 0;
-            buttonMinimize.FlatStyle = FlatStyle.Flat;
-            buttonMinimize.ForeColor = Color.White;
-            buttonMinimize.Location = new Point(966, 0);
-            buttonMinimize.Name = "buttonMinimize";
-            buttonMinimize.Size = new Size(50, 35);
-            buttonMinimize.TabIndex = 6;
-            buttonMinimize.Text = "--";
-            buttonMinimize.UseVisualStyleBackColor = false;
-            buttonMinimize.Click += buttonMinimize_Click;
+            this.buttonMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.buttonMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonMinimize.FlatAppearance.BorderSize = 0;
+            this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMinimize.ForeColor = System.Drawing.Color.White;
+            this.buttonMinimize.Location = new System.Drawing.Point(966, 0);
+            this.buttonMinimize.Name = "buttonMinimize";
+            this.buttonMinimize.Size = new System.Drawing.Size(50, 35);
+            this.buttonMinimize.TabIndex = 6;
+            this.buttonMinimize.Text = "--";
+            this.buttonMinimize.UseVisualStyleBackColor = false;
             // 
             // buttonRestoreDownMaximize
             // 
-            buttonRestoreDownMaximize.BackColor = Color.Transparent;
-            buttonRestoreDownMaximize.Dock = DockStyle.Right;
-            buttonRestoreDownMaximize.FlatAppearance.BorderSize = 0;
-            buttonRestoreDownMaximize.FlatStyle = FlatStyle.Flat;
-            buttonRestoreDownMaximize.ForeColor = Color.White;
-            buttonRestoreDownMaximize.Location = new Point(1016, 0);
-            buttonRestoreDownMaximize.Name = "buttonRestoreDownMaximize";
-            buttonRestoreDownMaximize.Size = new Size(50, 35);
-            buttonRestoreDownMaximize.TabIndex = 7;
-            buttonRestoreDownMaximize.Text = "O";
-            buttonRestoreDownMaximize.UseVisualStyleBackColor = false;
-            buttonRestoreDownMaximize.Click += buttonRestoreDownMaximize_Click;
+            this.buttonRestoreDownMaximize.BackColor = System.Drawing.Color.Transparent;
+            this.buttonRestoreDownMaximize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonRestoreDownMaximize.FlatAppearance.BorderSize = 0;
+            this.buttonRestoreDownMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRestoreDownMaximize.ForeColor = System.Drawing.Color.White;
+            this.buttonRestoreDownMaximize.Location = new System.Drawing.Point(1016, 0);
+            this.buttonRestoreDownMaximize.Name = "buttonRestoreDownMaximize";
+            this.buttonRestoreDownMaximize.Size = new System.Drawing.Size(50, 35);
+            this.buttonRestoreDownMaximize.TabIndex = 7;
+            this.buttonRestoreDownMaximize.Text = "O";
+            this.buttonRestoreDownMaximize.UseVisualStyleBackColor = false;
             // 
             // buttonClose
             // 
-            buttonClose.BackColor = Color.Transparent;
-            buttonClose.Dock = DockStyle.Right;
-            buttonClose.FlatAppearance.BorderSize = 0;
-            buttonClose.FlatStyle = FlatStyle.Flat;
-            buttonClose.ForeColor = Color.White;
-            buttonClose.Location = new Point(1066, 0);
-            buttonClose.Name = "buttonClose";
-            buttonClose.Size = new Size(50, 35);
-            buttonClose.TabIndex = 8;
-            buttonClose.Text = "X";
-            buttonClose.UseVisualStyleBackColor = false;
-            buttonClose.Click += buttonClose_Click;
-            buttonClose.MouseEnter += buttonClose_MouseEnter;
-            buttonClose.MouseLeave += buttonClose_MouseLeave;
+            this.buttonClose.BackColor = System.Drawing.Color.Transparent;
+            this.buttonClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.ForeColor = System.Drawing.Color.White;
+            this.buttonClose.Location = new System.Drawing.Point(1066, 0);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(50, 35);
+            this.buttonClose.TabIndex = 8;
+            this.buttonClose.Text = "X";
+            this.buttonClose.UseVisualStyleBackColor = false;
             // 
             // panelTitleBar
             // 
-            panelTitleBar.BackColor = Color.FromArgb(53, 69, 93);
-            panelTitleBar.Controls.Add(buttonMinimize);
-            panelTitleBar.Controls.Add(buttonRestoreDownMaximize);
-            panelTitleBar.Controls.Add(buttonClose);
-            panelTitleBar.Dock = DockStyle.Top;
-            panelTitleBar.Location = new Point(150, 0);
-            panelTitleBar.Name = "panelTitleBar";
-            panelTitleBar.Size = new Size(1116, 35);
-            panelTitleBar.TabIndex = 9;
-            panelTitleBar.MouseDown += panelTitleBar_MouseDown;
-            panelTitleBar.MouseMove += panelTitleBar_MouseMove;
-            panelTitleBar.MouseUp += panelTitleBar_MouseUp;
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(69)))), ((int)(((byte)(93)))));
+            this.panelTitleBar.Controls.Add(this.buttonMinimize);
+            this.panelTitleBar.Controls.Add(this.buttonRestoreDownMaximize);
+            this.panelTitleBar.Controls.Add(this.buttonClose);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(150, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(1116, 35);
+            this.panelTitleBar.TabIndex = 9;
             // 
             // panelNavigation
             // 
-            panelNavigation.BackColor = Color.FromArgb(60, 95, 106);
-            panelNavigation.Controls.Add(buttonLogout);
-            panelNavigation.Controls.Add(labelDateTime);
-            panelNavigation.Controls.Add(buttonVerifyId);
-            panelNavigation.Controls.Add(buttonCheckId);
-            panelNavigation.Controls.Add(buttonCreateId);
-            panelNavigation.Controls.Add(buttonDashboard);
-            panelNavigation.Controls.Add(labelInstitution);
-            panelNavigation.Controls.Add(pictureBoxLogo);
-            panelNavigation.Dock = DockStyle.Left;
-            panelNavigation.Location = new Point(0, 0);
-            panelNavigation.Name = "panelNavigation";
-            panelNavigation.Size = new Size(150, 668);
-            panelNavigation.TabIndex = 0;
+            this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(95)))), ((int)(((byte)(106)))));
+            this.panelNavigation.Controls.Add(this.buttonSettings);
+            this.panelNavigation.Controls.Add(this.buttonLogout);
+            this.panelNavigation.Controls.Add(this.labelDateTime);
+            this.panelNavigation.Controls.Add(this.buttonVerifyId);
+            this.panelNavigation.Controls.Add(this.buttonCheckId);
+            this.panelNavigation.Controls.Add(this.buttonCreateId);
+            this.panelNavigation.Controls.Add(this.buttonDashboard);
+            this.panelNavigation.Controls.Add(this.labelInstitution);
+            this.panelNavigation.Controls.Add(this.pictureBoxLogo);
+            this.panelNavigation.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelNavigation.Location = new System.Drawing.Point(0, 0);
+            this.panelNavigation.Name = "panelNavigation";
+            this.panelNavigation.Size = new System.Drawing.Size(150, 663);
+            this.panelNavigation.TabIndex = 0;
+            // 
+            // buttonSettings
+            // 
+            this.buttonSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonSettings.FlatAppearance.BorderSize = 0;
+            this.buttonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSettings.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSettings.ForeColor = System.Drawing.Color.White;
+            this.buttonSettings.Location = new System.Drawing.Point(0, 534);
+            this.buttonSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSettings.Name = "buttonSettings";
+            this.buttonSettings.Size = new System.Drawing.Size(150, 50);
+            this.buttonSettings.TabIndex = 7;
+            this.buttonSettings.Text = "SETTINGS";
+            this.buttonSettings.UseVisualStyleBackColor = true;
+            this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
             // 
             // buttonLogout
             // 
-            buttonLogout.Dock = DockStyle.Bottom;
-            buttonLogout.FlatAppearance.BorderSize = 0;
-            buttonLogout.FlatStyle = FlatStyle.Flat;
-            buttonLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonLogout.ForeColor = Color.White;
-            buttonLogout.Location = new Point(0, 589);
-            buttonLogout.Margin = new Padding(3, 2, 3, 2);
-            buttonLogout.Name = "buttonLogout";
-            buttonLogout.Size = new Size(150, 50);
-            buttonLogout.TabIndex = 6;
-            buttonLogout.Text = "LOGOUT";
-            buttonLogout.UseVisualStyleBackColor = true;
-            buttonLogout.Click += buttonLogout_Click;
+            this.buttonLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonLogout.FlatAppearance.BorderSize = 0;
+            this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonLogout.ForeColor = System.Drawing.Color.White;
+            this.buttonLogout.Location = new System.Drawing.Point(0, 584);
+            this.buttonLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.Size = new System.Drawing.Size(150, 50);
+            this.buttonLogout.TabIndex = 6;
+            this.buttonLogout.Text = "LOGOUT";
+            this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // labelDateTime
             // 
-            labelDateTime.Dock = DockStyle.Bottom;
-            labelDateTime.ForeColor = Color.White;
-            labelDateTime.Location = new Point(0, 639);
-            labelDateTime.Name = "labelDateTime";
-            labelDateTime.Size = new Size(150, 29);
-            labelDateTime.TabIndex = 4;
-            labelDateTime.Text = "00/00/00 00:00:00 AM";
-            labelDateTime.TextAlign = ContentAlignment.MiddleCenter;
+            this.labelDateTime.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.labelDateTime.ForeColor = System.Drawing.Color.White;
+            this.labelDateTime.Location = new System.Drawing.Point(0, 634);
+            this.labelDateTime.Name = "labelDateTime";
+            this.labelDateTime.Size = new System.Drawing.Size(150, 29);
+            this.labelDateTime.TabIndex = 4;
+            this.labelDateTime.Text = "00/00/00 00:00:00 AM";
+            this.labelDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonVerifyId
             // 
-            buttonVerifyId.Dock = DockStyle.Top;
-            buttonVerifyId.FlatAppearance.BorderSize = 0;
-            buttonVerifyId.FlatStyle = FlatStyle.Flat;
-            buttonVerifyId.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonVerifyId.ForeColor = Color.White;
-            buttonVerifyId.Location = new Point(0, 273);
-            buttonVerifyId.Margin = new Padding(3, 2, 3, 2);
-            buttonVerifyId.Name = "buttonVerifyId";
-            buttonVerifyId.Size = new Size(150, 50);
-            buttonVerifyId.TabIndex = 3;
-            buttonVerifyId.Text = "VERIFY ID";
-            buttonVerifyId.UseVisualStyleBackColor = true;
-            buttonVerifyId.Click += buttonVerifyId_Click;
+            this.buttonVerifyId.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonVerifyId.FlatAppearance.BorderSize = 0;
+            this.buttonVerifyId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVerifyId.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonVerifyId.ForeColor = System.Drawing.Color.White;
+            this.buttonVerifyId.Location = new System.Drawing.Point(0, 273);
+            this.buttonVerifyId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonVerifyId.Name = "buttonVerifyId";
+            this.buttonVerifyId.Size = new System.Drawing.Size(150, 50);
+            this.buttonVerifyId.TabIndex = 3;
+            this.buttonVerifyId.Text = "VERIFY ID";
+            this.buttonVerifyId.UseVisualStyleBackColor = true;
+            this.buttonVerifyId.Click += new System.EventHandler(this.buttonVerifyId_Click);
             // 
             // buttonCheckId
             // 
-            buttonCheckId.Dock = DockStyle.Top;
-            buttonCheckId.FlatAppearance.BorderSize = 0;
-            buttonCheckId.FlatStyle = FlatStyle.Flat;
-            buttonCheckId.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCheckId.ForeColor = Color.White;
-            buttonCheckId.Location = new Point(0, 223);
-            buttonCheckId.Margin = new Padding(3, 2, 3, 2);
-            buttonCheckId.Name = "buttonCheckId";
-            buttonCheckId.Size = new Size(150, 50);
-            buttonCheckId.TabIndex = 2;
-            buttonCheckId.Text = "CHECK ID APPLICATION";
-            buttonCheckId.UseVisualStyleBackColor = true;
-            buttonCheckId.Click += buttonCheckId_Click;
+            this.buttonCheckId.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCheckId.FlatAppearance.BorderSize = 0;
+            this.buttonCheckId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCheckId.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCheckId.ForeColor = System.Drawing.Color.White;
+            this.buttonCheckId.Location = new System.Drawing.Point(0, 223);
+            this.buttonCheckId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCheckId.Name = "buttonCheckId";
+            this.buttonCheckId.Size = new System.Drawing.Size(150, 50);
+            this.buttonCheckId.TabIndex = 2;
+            this.buttonCheckId.Text = "CHECK ID APPLICATION";
+            this.buttonCheckId.UseVisualStyleBackColor = true;
+            this.buttonCheckId.Click += new System.EventHandler(this.buttonCheckId_Click);
             // 
             // buttonCreateId
             // 
-            buttonCreateId.Dock = DockStyle.Top;
-            buttonCreateId.FlatAppearance.BorderSize = 0;
-            buttonCreateId.FlatStyle = FlatStyle.Flat;
-            buttonCreateId.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCreateId.ForeColor = Color.White;
-            buttonCreateId.Location = new Point(0, 173);
-            buttonCreateId.Margin = new Padding(3, 2, 3, 2);
-            buttonCreateId.Name = "buttonCreateId";
-            buttonCreateId.Size = new Size(150, 50);
-            buttonCreateId.TabIndex = 1;
-            buttonCreateId.Text = "ID APPLICATION";
-            buttonCreateId.UseVisualStyleBackColor = true;
-            buttonCreateId.Click += buttonCreateId_Click;
+            this.buttonCreateId.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCreateId.FlatAppearance.BorderSize = 0;
+            this.buttonCreateId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCreateId.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCreateId.ForeColor = System.Drawing.Color.White;
+            this.buttonCreateId.Location = new System.Drawing.Point(0, 173);
+            this.buttonCreateId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCreateId.Name = "buttonCreateId";
+            this.buttonCreateId.Size = new System.Drawing.Size(150, 50);
+            this.buttonCreateId.TabIndex = 1;
+            this.buttonCreateId.Text = "ID APPLICATION";
+            this.buttonCreateId.UseVisualStyleBackColor = true;
+            this.buttonCreateId.Click += new System.EventHandler(this.buttonCreateId_Click);
             // 
             // buttonDashboard
             // 
-            buttonDashboard.Dock = DockStyle.Top;
-            buttonDashboard.FlatAppearance.BorderSize = 0;
-            buttonDashboard.FlatStyle = FlatStyle.Flat;
-            buttonDashboard.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonDashboard.ForeColor = Color.White;
-            buttonDashboard.Location = new Point(0, 123);
-            buttonDashboard.Margin = new Padding(3, 2, 3, 2);
-            buttonDashboard.Name = "buttonDashboard";
-            buttonDashboard.Size = new Size(150, 50);
-            buttonDashboard.TabIndex = 5;
-            buttonDashboard.Text = "DASHBOARD";
-            buttonDashboard.UseVisualStyleBackColor = true;
-            buttonDashboard.Click += buttonDashboard_Click;
+            this.buttonDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonDashboard.FlatAppearance.BorderSize = 0;
+            this.buttonDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDashboard.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonDashboard.ForeColor = System.Drawing.Color.White;
+            this.buttonDashboard.Location = new System.Drawing.Point(0, 123);
+            this.buttonDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDashboard.Name = "buttonDashboard";
+            this.buttonDashboard.Size = new System.Drawing.Size(150, 50);
+            this.buttonDashboard.TabIndex = 5;
+            this.buttonDashboard.Text = "DASHBOARD";
+            this.buttonDashboard.UseVisualStyleBackColor = true;
+            this.buttonDashboard.Click += new System.EventHandler(this.buttonDashboard_Click);
             // 
             // labelInstitution
             // 
-            labelInstitution.Dock = DockStyle.Top;
-            labelInstitution.FlatStyle = FlatStyle.Flat;
-            labelInstitution.Font = new Font("Segoe UI", 23F, FontStyle.Bold, GraphicsUnit.Point);
-            labelInstitution.ForeColor = Color.White;
-            labelInstitution.ImageAlign = ContentAlignment.TopCenter;
-            labelInstitution.Location = new Point(0, 70);
-            labelInstitution.Name = "labelInstitution";
-            labelInstitution.Size = new Size(150, 53);
-            labelInstitution.TabIndex = 0;
-            labelInstitution.Text = "SecureID";
-            labelInstitution.TextAlign = ContentAlignment.TopCenter;
-            labelInstitution.MouseDown += labelInstitution_MouseDown;
-            labelInstitution.MouseMove += labelInstitution_MouseMove;
-            labelInstitution.MouseUp += labelInstitution_MouseUp;
+            this.labelInstitution.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelInstitution.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelInstitution.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelInstitution.ForeColor = System.Drawing.Color.White;
+            this.labelInstitution.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelInstitution.Location = new System.Drawing.Point(0, 70);
+            this.labelInstitution.Name = "labelInstitution";
+            this.labelInstitution.Size = new System.Drawing.Size(150, 53);
+            this.labelInstitution.TabIndex = 0;
+            this.labelInstitution.Text = "SecureID";
+            this.labelInstitution.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pictureBoxLogo
             // 
-            pictureBoxLogo.Dock = DockStyle.Top;
-            pictureBoxLogo.Image = Properties.Resources.PIYU_SecureID;
-            pictureBoxLogo.Location = new Point(0, 0);
-            pictureBoxLogo.Margin = new Padding(3, 2, 3, 2);
-            pictureBoxLogo.Name = "pictureBoxLogo";
-            pictureBoxLogo.Size = new Size(150, 70);
-            pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxLogo.TabIndex = 0;
-            pictureBoxLogo.TabStop = false;
-            pictureBoxLogo.MouseDown += pictureBoxLogo_MouseDown;
-            pictureBoxLogo.MouseMove += pictureBoxLogo_MouseMove;
-            pictureBoxLogo.MouseUp += pictureBoxLogo_MouseUp;
+            this.pictureBoxLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBoxLogo.Image = global::PIYU_SecureID.Properties.Resources.PIYU_SecureID;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(150, 70);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 0;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // panelActive
             // 
-            panelActive.Dock = DockStyle.Fill;
-            panelActive.Location = new Point(150, 35);
-            panelActive.Margin = new Padding(3, 2, 3, 2);
-            panelActive.Name = "panelActive";
-            panelActive.Size = new Size(1116, 633);
-            panelActive.TabIndex = 5;
+            this.panelActive.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelActive.Location = new System.Drawing.Point(150, 35);
+            this.panelActive.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelActive.Name = "panelActive";
+            this.panelActive.Size = new System.Drawing.Size(1116, 628);
+            this.panelActive.TabIndex = 5;
             // 
             // FormDashboard
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1266, 668);
-            Controls.Add(panelActive);
-            Controls.Add(panelTitleBar);
-            Controls.Add(panelNavigation);
-            FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "FormDashboard";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "DASHBOARD";
-            panelTitleBar.ResumeLayout(false);
-            panelNavigation.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1266, 663);
+            this.Controls.Add(this.panelActive);
+            this.Controls.Add(this.panelTitleBar);
+            this.Controls.Add(this.panelNavigation);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "FormDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "DASHBOARD";
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelNavigation.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -301,5 +305,6 @@
         private Button buttonDashboard;
         private Button buttonLogout;
         public Panel panelActive;
+        private Button buttonSettings;
     }
 }
