@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using static PIYU_SecureID.ClassCity;
-using static PIYU_SecureID.ClassProvince;
 
 namespace PIYU_SecureID
 {

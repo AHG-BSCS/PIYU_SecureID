@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
@@ -151,10 +152,23 @@ namespace PIYU_SecureID
                 labelProvince.Text = pieces[8];
                 labelCity.Text = pieces[9];
                 labelBarangay.Text = pieces[10];
+                labelDateIssued.Text = pieces[11];
+                //string idStr = pieces[12];
+                //byte[] idByte = Convert.FromBase64String(idStr);
+                //pictureBoxIdPhoto.Image = BytesToImage(idByte);
             }
             catch
             {
                 MessageBox.Show("Invalid QR code data format.");
+            }
+        }
+        
+
+        public static Image BytesToImage(byte[] bytes)
+        {
+            using (MemoryStream ms = new MemoryStream(bytes))
+            {
+                return Image.FromStream(ms);
             }
         }
 

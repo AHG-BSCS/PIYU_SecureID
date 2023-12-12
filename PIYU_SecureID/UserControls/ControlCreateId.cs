@@ -13,7 +13,6 @@ using System.Security.Claims;
 using AForge.Video.DirectShow;
 using Newtonsoft.Json;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static PIYU_SecureID.ClassCity;
 using System.Drawing.Drawing2D;
 
 namespace PIYU_SecureID

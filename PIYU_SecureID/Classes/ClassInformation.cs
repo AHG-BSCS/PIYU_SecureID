@@ -27,6 +27,7 @@ namespace PIYU_SecureID
 
         public byte[] ImageIdQr { get; set; }
         public string StrIdQr { get; set; }
+        public string DateIssued { get; set; }
 
         public string ToCsvString()
         {
@@ -37,25 +38,10 @@ namespace PIYU_SecureID
                 $"{DateOfBirth}~{Province}~{City}~{Barangay}~{MaritalStatus}~{imageIdPhotoBase64}~{imageSignBase64}";
         }
 
-        public string ToQrIdCsvString(long? transactionNum)
+        public string ToQrIdCsvString()
         {
-            PictureBox pb = new PictureBox();
-            pb.SizeMode = PictureBoxSizeMode.Zoom;
-            using (MemoryStream memoryStream = new MemoryStream(ImageIdQr, writable: false))
-            {
-                Image image = Image.FromStream(memoryStream);
-
-                pb.Image = image;
-            }
-
-            BarcodeReader barcodeReader = new BarcodeReader();
-            Result result = barcodeReader.Decode((Bitmap)pb.Image);
-            string lastResult = "";
-            if (result != null && result.ToString() != lastResult)
-            {
-                return $"{result.ToString()}~{transactionNum}";
-            }
-            return null;
+            string imageQrBase64 = ImageIdQr != null ? Convert.ToBase64String(ImageIdQr) : string.Empty;
+            return $"{imageQrBase64}~";
         }
 
         public static ClassInformation FromCsvString(string csv)
@@ -85,8 +71,20 @@ namespace PIYU_SecureID
             var values = csv.Split('~');
             return new ClassInformation
             {
-                StrIdQr = values[0],
-                TransactionNum = long.Parse(values[1])
+                LastName = values[0],
+                GivenName = values[1],
+                MiddleName = values[2],
+                Suffix = values[3],
+                Sex = values[4],
+                MaritalStatus = values[5],
+                BloodType = values[6],
+                DateOfBirth = values[7],
+                Province = values[8],
+                City = values[9],
+                Barangay = values[10],
+                DateIssued = values[11],
+                ImageIdPhoto = Convert.FromBase64String(values[12]),
+                ImageSign = Convert.FromBase64String(values[13])
             };
         }
 

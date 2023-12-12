@@ -33,11 +33,12 @@ namespace PIYU_SecureID
         public string city;
         public string barangay;
         public string maritalStatus;
-        public PictureBox idPhoto;
+        public byte[] idPhoto;
+        public byte[] sign;
         public ControlCreateId createId;
         public FormIDGenerate(string lastName, string givenName, string middleName, string suffix, long? transactionNum,
                                     string sex, string bloodType, string dateOfBirth, string province, string city, string barangay, string maritalStatus,
-                                    PictureBox idPhoto)
+                                    byte[] idPhoto)
         {
             this.transactionNum = (long)transactionNum;
             this.lastName = lastName;
@@ -53,6 +54,8 @@ namespace PIYU_SecureID
             this.maritalStatus = maritalStatus;
             this.idPhoto = idPhoto;
             InitializeComponent();
+
+            pictureBoxIdPhoto.Image = BytesToImage(idPhoto);
 
             printDocument = new PrintDocument();
             printDocument.PrintPage += PrintDocument_PrintPage;
@@ -151,9 +154,24 @@ namespace PIYU_SecureID
             label12.BackColor = Color.Transparent;
             label12.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
-            pictureBoxIdPhoto.Image = idPhoto.Image;
+            LoadQr();
+        }
 
-            string fullData = lastName + "~" + givenName + "~" + middleName + "~" + suffix + "~" + sex + "~" + maritalStatus + "~" + bloodType + "~"+ dateOfBirth + "~" + province + "~" + city + "~" + barangay + "~" + "~" + DateTime.Now.ToString("MM/dd/yyyy");
+        public static Image BytesToImage(byte[] bytes)
+        {
+            using (MemoryStream ms = new MemoryStream(bytes))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
+        private void LoadQr()
+        {
+            string idStr = idPhoto != null ? Convert.ToBase64String(idPhoto) : string.Empty;
+            MessageBox.Show(idStr);
+            string fullData = lastName + "~" + givenName + "~" + middleName + "~" + suffix + "~" + sex + "~"
+                + maritalStatus + "~" + bloodType + "~" + dateOfBirth + "~" + province + "~" + city + "~"
+                + barangay + "~" + DateTime.Now.ToString("MM/dd/yyyy"); //+ "~" + idStr;
             string titan;
             string hash = "}1!v5(eQf5iOYw3I#%;6XtFO=$V5eD6c%v3h}Z('Eev'Xx^S~9";
 
@@ -216,7 +234,6 @@ namespace PIYU_SecureID
                 this.Close();
             }
         }
-
         private byte[] ConvertPictureBoxImageToBase64(Image image)
         {
             using (MemoryStream ms = new MemoryStream())
@@ -241,7 +258,7 @@ namespace PIYU_SecureID
         {
             try
             {
-                string csvString = data.ToQrIdCsvString(transactionNum);
+                string csvString = data.ToQrIdCsvString();
                 File.AppendAllText(filename, csvString + Environment.NewLine);
                 MessageBox.Show("Data saved successfully!");
             }

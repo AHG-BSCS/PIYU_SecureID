@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,8 +71,18 @@ namespace PIYU_SecureID
                 string barangay = labelBarangay.Text;
                 string maritalStatus = labelMaritalStatus.Text;
                 FormIDGenerate generate = new FormIDGenerate(lastName, givenName, middleName, suffix, transactionNum,
-                                                            sex, bloodType, dateOfBirth, province, city, barangay, maritalStatus, pictureBoxIdPhoto);
+                                                            sex, bloodType, dateOfBirth, province, city, barangay, maritalStatus,
+                                                            ConvertPictureBoxImageToBase64(pictureBoxIdPhoto.Image));
                 generate.ShowDialog();
+            }
+        }
+
+        private byte[] ConvertPictureBoxImageToBase64(Image image)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                image.Save(ms, ImageFormat.Png);
+                return ms.ToArray();
             }
         }
 
