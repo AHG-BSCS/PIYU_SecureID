@@ -137,7 +137,7 @@ namespace PIYU_SecureID
         private void UpdateLabels(string decryptedData)
         {
             // Assuming the decryptedData is in a specific format (e.g., comma-separated values)
-            string[] pieces = decryptedData.Split('/');
+            string[] pieces = decryptedData.Split('~');
 
             if (pieces.Length >= 10)
             {

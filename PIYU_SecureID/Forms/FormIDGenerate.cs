@@ -153,7 +153,7 @@ namespace PIYU_SecureID
 
             pictureBoxIdPhoto.Image = idPhoto.Image;
 
-            string fullData = lastName + "/" + givenName + "/" + middleName + "/" + suffix + "/" + sex + "/" + maritalStatus + "/" + bloodType + "/" + DateTime.Now.ToString("MM/dd/yyyy");
+            string fullData = lastName + "~" + givenName + "~" + middleName + "~" + suffix + "~" + sex + "~" + maritalStatus + "~" + bloodType + "~"+ DateTime.Now.ToString("MM/dd/yyyy");
             string titan;
             string hash = "}1!v5(eQf5iOYw3I#%;6XtFO=$V5eD6c%v3h}Z('Eev'Xx^S~9";
 
