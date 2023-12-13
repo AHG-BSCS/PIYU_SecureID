@@ -30,24 +30,24 @@
         {
             components = new System.ComponentModel.Container();
             timerDateTime = new System.Windows.Forms.Timer(components);
-            buttonMinimize = new Button();
-            buttonRestoreDownMaximize = new Button();
-            buttonClose = new Button();
-            panelTitleBar = new Panel();
-            panelNavigation = new Panel();
-            buttonSettings = new Button();
-            buttonLogout = new Button();
-            labelDateTime = new Label();
-            buttonVerifyId = new Button();
-            buttonCheckId = new Button();
-            buttonCreateId = new Button();
-            buttonDashboard = new Button();
-            labelInstitution = new Label();
-            pictureBoxLogo = new PictureBox();
-            panelActive = new Panel();
-            panelTitleBar.SuspendLayout();
-            panelNavigation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
+            btnMinimize = new Button();
+            btnMinimizeMaximize = new Button();
+            btnClose = new Button();
+            pnlTitleBar = new Panel();
+            plnSideNavigation = new Panel();
+            btnSettings = new Button();
+            btnLogout = new Button();
+            lblLiveDateTime = new Label();
+            btnVerifyId = new Button();
+            btnCheckId = new Button();
+            btnCreateId = new Button();
+            btnDashboard = new Button();
+            lblAppName = new Label();
+            picBoxAppLogo = new PictureBox();
+            pnlActiveTab = new Panel();
+            pnlTitleBar.SuspendLayout();
+            plnSideNavigation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picBoxAppLogo).BeginInit();
             SuspendLayout();
             // 
             // timerDateTime
@@ -55,269 +55,269 @@
             timerDateTime.Enabled = true;
             timerDateTime.Interval = 1000;
             // 
-            // buttonMinimize
+            // btnMinimize
             // 
-            buttonMinimize.BackColor = Color.Transparent;
-            buttonMinimize.Dock = DockStyle.Right;
-            buttonMinimize.FlatAppearance.BorderSize = 0;
-            buttonMinimize.FlatStyle = FlatStyle.Flat;
-            buttonMinimize.ForeColor = Color.White;
-            buttonMinimize.Image = Properties.Resources.icons_minimize;
-            buttonMinimize.Location = new Point(966, 0);
-            buttonMinimize.Name = "buttonMinimize";
-            buttonMinimize.Size = new Size(50, 35);
-            buttonMinimize.TabIndex = 6;
-            buttonMinimize.UseVisualStyleBackColor = false;
-            buttonMinimize.Click += buttonMinimize_Click;
+            btnMinimize.BackColor = Color.Transparent;
+            btnMinimize.Dock = DockStyle.Right;
+            btnMinimize.FlatAppearance.BorderSize = 0;
+            btnMinimize.FlatStyle = FlatStyle.Flat;
+            btnMinimize.ForeColor = Color.White;
+            btnMinimize.Image = Properties.Resources.icons_minimize;
+            btnMinimize.Location = new Point(1116, 0);
+            btnMinimize.Name = "btnMinimize";
+            btnMinimize.Size = new Size(50, 35);
+            btnMinimize.TabIndex = 6;
+            btnMinimize.UseVisualStyleBackColor = false;
+            btnMinimize.Click += btnMinimize_Click;
             // 
-            // buttonRestoreDownMaximize
+            // btnMinimizeMaximize
             // 
-            buttonRestoreDownMaximize.BackColor = Color.Transparent;
-            buttonRestoreDownMaximize.Dock = DockStyle.Right;
-            buttonRestoreDownMaximize.FlatAppearance.BorderSize = 0;
-            buttonRestoreDownMaximize.FlatStyle = FlatStyle.Flat;
-            buttonRestoreDownMaximize.ForeColor = Color.White;
-            buttonRestoreDownMaximize.Image = Properties.Resources.icons_square;
-            buttonRestoreDownMaximize.Location = new Point(1016, 0);
-            buttonRestoreDownMaximize.Name = "buttonRestoreDownMaximize";
-            buttonRestoreDownMaximize.Size = new Size(50, 35);
-            buttonRestoreDownMaximize.TabIndex = 7;
-            buttonRestoreDownMaximize.UseVisualStyleBackColor = false;
-            buttonRestoreDownMaximize.Click += buttonRestoreDownMaximize_Click;
+            btnMinimizeMaximize.BackColor = Color.Transparent;
+            btnMinimizeMaximize.Dock = DockStyle.Right;
+            btnMinimizeMaximize.FlatAppearance.BorderSize = 0;
+            btnMinimizeMaximize.FlatStyle = FlatStyle.Flat;
+            btnMinimizeMaximize.ForeColor = Color.White;
+            btnMinimizeMaximize.Image = Properties.Resources.icons_square;
+            btnMinimizeMaximize.Location = new Point(1166, 0);
+            btnMinimizeMaximize.Name = "btnMinimizeMaximize";
+            btnMinimizeMaximize.Size = new Size(50, 35);
+            btnMinimizeMaximize.TabIndex = 7;
+            btnMinimizeMaximize.UseVisualStyleBackColor = false;
+            btnMinimizeMaximize.Click += btnMinimizeMaximize_Click;
             // 
-            // buttonClose
+            // btnClose
             // 
-            buttonClose.BackColor = Color.Transparent;
-            buttonClose.Dock = DockStyle.Right;
-            buttonClose.FlatAppearance.BorderSize = 0;
-            buttonClose.FlatStyle = FlatStyle.Flat;
-            buttonClose.ForeColor = Color.White;
-            buttonClose.Image = Properties.Resources.icons_close;
-            buttonClose.Location = new Point(1066, 0);
-            buttonClose.Name = "buttonClose";
-            buttonClose.Size = new Size(50, 35);
-            buttonClose.TabIndex = 8;
-            buttonClose.UseVisualStyleBackColor = false;
-            buttonClose.Click += buttonClose_Click;
-            buttonClose.MouseEnter += buttonClose_MouseEnter;
-            buttonClose.MouseLeave += buttonClose_MouseLeave;
+            btnClose.BackColor = Color.Transparent;
+            btnClose.Dock = DockStyle.Right;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.ForeColor = Color.White;
+            btnClose.Image = Properties.Resources.icons_close;
+            btnClose.Location = new Point(1216, 0);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(50, 35);
+            btnClose.TabIndex = 8;
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
+            btnClose.MouseEnter += buttonClose_MouseEnter;
+            btnClose.MouseLeave += buttonClose_MouseLeave;
             // 
-            // panelTitleBar
+            // pnlTitleBar
             // 
-            panelTitleBar.BackColor = Color.FromArgb(53, 69, 93);
-            panelTitleBar.Controls.Add(buttonMinimize);
-            panelTitleBar.Controls.Add(buttonRestoreDownMaximize);
-            panelTitleBar.Controls.Add(buttonClose);
-            panelTitleBar.Dock = DockStyle.Top;
-            panelTitleBar.Location = new Point(150, 0);
-            panelTitleBar.Name = "panelTitleBar";
-            panelTitleBar.Size = new Size(1116, 35);
-            panelTitleBar.TabIndex = 9;
-            panelTitleBar.MouseDown += labelInstitution_MouseDown;
-            panelTitleBar.MouseMove += labelInstitution_MouseMove;
-            panelTitleBar.MouseUp += labelInstitution_MouseUp;
+            pnlTitleBar.BackColor = Color.FromArgb(53, 69, 93);
+            pnlTitleBar.Controls.Add(btnMinimize);
+            pnlTitleBar.Controls.Add(btnMinimizeMaximize);
+            pnlTitleBar.Controls.Add(btnClose);
+            pnlTitleBar.Dock = DockStyle.Top;
+            pnlTitleBar.Location = new Point(0, 0);
+            pnlTitleBar.Name = "pnlTitleBar";
+            pnlTitleBar.Size = new Size(1266, 35);
+            pnlTitleBar.TabIndex = 9;
+            pnlTitleBar.MouseDown += lblAppName_MouseDown;
+            pnlTitleBar.MouseMove += lblAppName_MouseMove;
+            pnlTitleBar.MouseUp += lblAppName_MouseUp;
             // 
-            // panelNavigation
+            // plnSideNavigation
             // 
-            panelNavigation.BackColor = Color.FromArgb(60, 95, 106);
-            panelNavigation.Controls.Add(buttonSettings);
-            panelNavigation.Controls.Add(buttonLogout);
-            panelNavigation.Controls.Add(labelDateTime);
-            panelNavigation.Controls.Add(buttonVerifyId);
-            panelNavigation.Controls.Add(buttonCheckId);
-            panelNavigation.Controls.Add(buttonCreateId);
-            panelNavigation.Controls.Add(buttonDashboard);
-            panelNavigation.Controls.Add(labelInstitution);
-            panelNavigation.Controls.Add(pictureBoxLogo);
-            panelNavigation.Dock = DockStyle.Left;
-            panelNavigation.Location = new Point(0, 0);
-            panelNavigation.Name = "panelNavigation";
-            panelNavigation.Size = new Size(150, 663);
-            panelNavigation.TabIndex = 0;
+            plnSideNavigation.BackColor = Color.FromArgb(60, 95, 106);
+            plnSideNavigation.Controls.Add(btnSettings);
+            plnSideNavigation.Controls.Add(btnLogout);
+            plnSideNavigation.Controls.Add(lblLiveDateTime);
+            plnSideNavigation.Controls.Add(btnVerifyId);
+            plnSideNavigation.Controls.Add(btnCheckId);
+            plnSideNavigation.Controls.Add(btnCreateId);
+            plnSideNavigation.Controls.Add(btnDashboard);
+            plnSideNavigation.Controls.Add(lblAppName);
+            plnSideNavigation.Controls.Add(picBoxAppLogo);
+            plnSideNavigation.Dock = DockStyle.Left;
+            plnSideNavigation.Location = new Point(0, 35);
+            plnSideNavigation.Name = "plnSideNavigation";
+            plnSideNavigation.Size = new Size(150, 628);
+            plnSideNavigation.TabIndex = 0;
             // 
-            // buttonSettings
+            // btnSettings
             // 
-            buttonSettings.Dock = DockStyle.Bottom;
-            buttonSettings.FlatAppearance.BorderSize = 0;
-            buttonSettings.FlatStyle = FlatStyle.Flat;
-            buttonSettings.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonSettings.ForeColor = Color.White;
-            buttonSettings.Location = new Point(0, 534);
-            buttonSettings.Margin = new Padding(3, 2, 3, 2);
-            buttonSettings.Name = "buttonSettings";
-            buttonSettings.Size = new Size(150, 50);
-            buttonSettings.TabIndex = 7;
-            buttonSettings.Text = "SETTINGS";
-            buttonSettings.UseVisualStyleBackColor = true;
-            buttonSettings.Click += buttonSettings_Click;
+            btnSettings.Dock = DockStyle.Bottom;
+            btnSettings.FlatAppearance.BorderSize = 0;
+            btnSettings.FlatStyle = FlatStyle.Flat;
+            btnSettings.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSettings.ForeColor = Color.White;
+            btnSettings.Location = new Point(0, 499);
+            btnSettings.Margin = new Padding(3, 2, 3, 2);
+            btnSettings.Name = "btnSettings";
+            btnSettings.Size = new Size(150, 50);
+            btnSettings.TabIndex = 7;
+            btnSettings.Text = "SETTINGS";
+            btnSettings.UseVisualStyleBackColor = true;
+            btnSettings.Click += btnSettings_Click;
             // 
-            // buttonLogout
+            // btnLogout
             // 
-            buttonLogout.Dock = DockStyle.Bottom;
-            buttonLogout.FlatAppearance.BorderSize = 0;
-            buttonLogout.FlatStyle = FlatStyle.Flat;
-            buttonLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonLogout.ForeColor = Color.White;
-            buttonLogout.Location = new Point(0, 584);
-            buttonLogout.Margin = new Padding(3, 2, 3, 2);
-            buttonLogout.Name = "buttonLogout";
-            buttonLogout.Size = new Size(150, 50);
-            buttonLogout.TabIndex = 6;
-            buttonLogout.Text = "LOGOUT";
-            buttonLogout.UseVisualStyleBackColor = true;
-            buttonLogout.Click += buttonLogout_Click;
+            btnLogout.Dock = DockStyle.Bottom;
+            btnLogout.FlatAppearance.BorderSize = 0;
+            btnLogout.FlatStyle = FlatStyle.Flat;
+            btnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLogout.ForeColor = Color.White;
+            btnLogout.Location = new Point(0, 549);
+            btnLogout.Margin = new Padding(3, 2, 3, 2);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(150, 50);
+            btnLogout.TabIndex = 6;
+            btnLogout.Text = "LOGOUT";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
             // 
-            // labelDateTime
+            // lblLiveDateTime
             // 
-            labelDateTime.Dock = DockStyle.Bottom;
-            labelDateTime.ForeColor = Color.White;
-            labelDateTime.Location = new Point(0, 634);
-            labelDateTime.Name = "labelDateTime";
-            labelDateTime.Size = new Size(150, 29);
-            labelDateTime.TabIndex = 4;
-            labelDateTime.Text = "00/00/00 00:00:00 AM";
-            labelDateTime.TextAlign = ContentAlignment.MiddleCenter;
+            lblLiveDateTime.Dock = DockStyle.Bottom;
+            lblLiveDateTime.ForeColor = Color.White;
+            lblLiveDateTime.Location = new Point(0, 599);
+            lblLiveDateTime.Name = "lblLiveDateTime";
+            lblLiveDateTime.Size = new Size(150, 29);
+            lblLiveDateTime.TabIndex = 4;
+            lblLiveDateTime.Text = "00/00/00 00:00:00 AM";
+            lblLiveDateTime.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // buttonVerifyId
+            // btnVerifyId
             // 
-            buttonVerifyId.Dock = DockStyle.Top;
-            buttonVerifyId.FlatAppearance.BorderSize = 0;
-            buttonVerifyId.FlatStyle = FlatStyle.Flat;
-            buttonVerifyId.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonVerifyId.ForeColor = Color.White;
-            buttonVerifyId.Location = new Point(0, 273);
-            buttonVerifyId.Margin = new Padding(3, 2, 3, 2);
-            buttonVerifyId.Name = "buttonVerifyId";
-            buttonVerifyId.Size = new Size(150, 50);
-            buttonVerifyId.TabIndex = 3;
-            buttonVerifyId.Text = "VERIFY ID";
-            buttonVerifyId.UseVisualStyleBackColor = true;
-            buttonVerifyId.Click += buttonVerifyId_Click;
+            btnVerifyId.Dock = DockStyle.Top;
+            btnVerifyId.FlatAppearance.BorderSize = 0;
+            btnVerifyId.FlatStyle = FlatStyle.Flat;
+            btnVerifyId.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnVerifyId.ForeColor = Color.White;
+            btnVerifyId.Location = new Point(0, 273);
+            btnVerifyId.Margin = new Padding(3, 2, 3, 2);
+            btnVerifyId.Name = "btnVerifyId";
+            btnVerifyId.Size = new Size(150, 50);
+            btnVerifyId.TabIndex = 3;
+            btnVerifyId.Text = "VERIFY ID";
+            btnVerifyId.UseVisualStyleBackColor = true;
+            btnVerifyId.Click += btnVerifyId_Click;
             // 
-            // buttonCheckId
+            // btnCheckId
             // 
-            buttonCheckId.Dock = DockStyle.Top;
-            buttonCheckId.FlatAppearance.BorderSize = 0;
-            buttonCheckId.FlatStyle = FlatStyle.Flat;
-            buttonCheckId.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCheckId.ForeColor = Color.White;
-            buttonCheckId.Location = new Point(0, 223);
-            buttonCheckId.Margin = new Padding(3, 2, 3, 2);
-            buttonCheckId.Name = "buttonCheckId";
-            buttonCheckId.Size = new Size(150, 50);
-            buttonCheckId.TabIndex = 2;
-            buttonCheckId.Text = "CHECK ID APPLICATION";
-            buttonCheckId.UseVisualStyleBackColor = true;
-            buttonCheckId.Click += buttonCheckId_Click;
+            btnCheckId.Dock = DockStyle.Top;
+            btnCheckId.FlatAppearance.BorderSize = 0;
+            btnCheckId.FlatStyle = FlatStyle.Flat;
+            btnCheckId.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCheckId.ForeColor = Color.White;
+            btnCheckId.Location = new Point(0, 223);
+            btnCheckId.Margin = new Padding(3, 2, 3, 2);
+            btnCheckId.Name = "btnCheckId";
+            btnCheckId.Size = new Size(150, 50);
+            btnCheckId.TabIndex = 2;
+            btnCheckId.Text = "CHECK ID APPLICATION";
+            btnCheckId.UseVisualStyleBackColor = true;
+            btnCheckId.Click += btnCheckId_Click;
             // 
-            // buttonCreateId
+            // btnCreateId
             // 
-            buttonCreateId.Dock = DockStyle.Top;
-            buttonCreateId.FlatAppearance.BorderSize = 0;
-            buttonCreateId.FlatStyle = FlatStyle.Flat;
-            buttonCreateId.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCreateId.ForeColor = Color.White;
-            buttonCreateId.Location = new Point(0, 173);
-            buttonCreateId.Margin = new Padding(3, 2, 3, 2);
-            buttonCreateId.Name = "buttonCreateId";
-            buttonCreateId.Size = new Size(150, 50);
-            buttonCreateId.TabIndex = 1;
-            buttonCreateId.Text = "ID APPLICATION";
-            buttonCreateId.UseVisualStyleBackColor = true;
-            buttonCreateId.Click += buttonCreateId_Click;
+            btnCreateId.Dock = DockStyle.Top;
+            btnCreateId.FlatAppearance.BorderSize = 0;
+            btnCreateId.FlatStyle = FlatStyle.Flat;
+            btnCreateId.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCreateId.ForeColor = Color.White;
+            btnCreateId.Location = new Point(0, 173);
+            btnCreateId.Margin = new Padding(3, 2, 3, 2);
+            btnCreateId.Name = "btnCreateId";
+            btnCreateId.Size = new Size(150, 50);
+            btnCreateId.TabIndex = 1;
+            btnCreateId.Text = "ID APPLICATION";
+            btnCreateId.UseVisualStyleBackColor = true;
+            btnCreateId.Click += btnCreateId_Click;
             // 
-            // buttonDashboard
+            // btnDashboard
             // 
-            buttonDashboard.Dock = DockStyle.Top;
-            buttonDashboard.FlatAppearance.BorderSize = 0;
-            buttonDashboard.FlatStyle = FlatStyle.Flat;
-            buttonDashboard.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonDashboard.ForeColor = Color.White;
-            buttonDashboard.Location = new Point(0, 123);
-            buttonDashboard.Margin = new Padding(3, 2, 3, 2);
-            buttonDashboard.Name = "buttonDashboard";
-            buttonDashboard.Size = new Size(150, 50);
-            buttonDashboard.TabIndex = 5;
-            buttonDashboard.Text = "DASHBOARD";
-            buttonDashboard.UseVisualStyleBackColor = true;
-            buttonDashboard.Click += buttonDashboard_Click;
+            btnDashboard.Dock = DockStyle.Top;
+            btnDashboard.FlatAppearance.BorderSize = 0;
+            btnDashboard.FlatStyle = FlatStyle.Flat;
+            btnDashboard.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDashboard.ForeColor = Color.White;
+            btnDashboard.Location = new Point(0, 123);
+            btnDashboard.Margin = new Padding(3, 2, 3, 2);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(150, 50);
+            btnDashboard.TabIndex = 5;
+            btnDashboard.Text = "DASHBOARD";
+            btnDashboard.UseVisualStyleBackColor = true;
+            btnDashboard.Click += btnDashboard_Click;
             // 
-            // labelInstitution
+            // lblAppName
             // 
-            labelInstitution.Dock = DockStyle.Top;
-            labelInstitution.FlatStyle = FlatStyle.Flat;
-            labelInstitution.Font = new Font("Segoe UI", 23F, FontStyle.Bold, GraphicsUnit.Point);
-            labelInstitution.ForeColor = Color.White;
-            labelInstitution.ImageAlign = ContentAlignment.TopCenter;
-            labelInstitution.Location = new Point(0, 70);
-            labelInstitution.Name = "labelInstitution";
-            labelInstitution.Size = new Size(150, 53);
-            labelInstitution.TabIndex = 0;
-            labelInstitution.Text = "SecureID";
-            labelInstitution.TextAlign = ContentAlignment.TopCenter;
-            labelInstitution.MouseDown += labelInstitution_MouseDown;
-            labelInstitution.MouseMove += labelInstitution_MouseMove;
-            labelInstitution.MouseUp += labelInstitution_MouseUp;
+            lblAppName.Dock = DockStyle.Top;
+            lblAppName.FlatStyle = FlatStyle.Flat;
+            lblAppName.Font = new Font("Segoe UI", 23F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAppName.ForeColor = Color.White;
+            lblAppName.ImageAlign = ContentAlignment.TopCenter;
+            lblAppName.Location = new Point(0, 70);
+            lblAppName.Name = "lblAppName";
+            lblAppName.Size = new Size(150, 53);
+            lblAppName.TabIndex = 0;
+            lblAppName.Text = "SecureID";
+            lblAppName.TextAlign = ContentAlignment.TopCenter;
+            lblAppName.MouseDown += lblAppName_MouseDown;
+            lblAppName.MouseMove += lblAppName_MouseMove;
+            lblAppName.MouseUp += lblAppName_MouseUp;
             // 
-            // pictureBoxLogo
+            // picBoxAppLogo
             // 
-            pictureBoxLogo.Dock = DockStyle.Top;
-            pictureBoxLogo.Image = Properties.Resources.PIYU_SecureID;
-            pictureBoxLogo.Location = new Point(0, 0);
-            pictureBoxLogo.Margin = new Padding(3, 2, 3, 2);
-            pictureBoxLogo.Name = "pictureBoxLogo";
-            pictureBoxLogo.Size = new Size(150, 70);
-            pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxLogo.TabIndex = 0;
-            pictureBoxLogo.TabStop = false;
-            pictureBoxLogo.MouseDown += labelInstitution_MouseDown;
-            pictureBoxLogo.MouseMove += labelInstitution_MouseMove;
-            pictureBoxLogo.MouseUp += labelInstitution_MouseUp;
+            picBoxAppLogo.Dock = DockStyle.Top;
+            picBoxAppLogo.Image = Properties.Resources.PIYU_SecureID;
+            picBoxAppLogo.Location = new Point(0, 0);
+            picBoxAppLogo.Margin = new Padding(3, 2, 3, 2);
+            picBoxAppLogo.Name = "picBoxAppLogo";
+            picBoxAppLogo.Size = new Size(150, 70);
+            picBoxAppLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            picBoxAppLogo.TabIndex = 0;
+            picBoxAppLogo.TabStop = false;
+            picBoxAppLogo.MouseDown += lblAppName_MouseDown;
+            picBoxAppLogo.MouseMove += lblAppName_MouseMove;
+            picBoxAppLogo.MouseUp += lblAppName_MouseUp;
             // 
-            // panelActive
+            // pnlActiveTab
             // 
-            panelActive.Dock = DockStyle.Fill;
-            panelActive.Location = new Point(150, 35);
-            panelActive.Margin = new Padding(3, 2, 3, 2);
-            panelActive.Name = "panelActive";
-            panelActive.Size = new Size(1116, 628);
-            panelActive.TabIndex = 5;
+            pnlActiveTab.Dock = DockStyle.Fill;
+            pnlActiveTab.Location = new Point(150, 35);
+            pnlActiveTab.Margin = new Padding(3, 2, 3, 2);
+            pnlActiveTab.Name = "pnlActiveTab";
+            pnlActiveTab.Size = new Size(1116, 628);
+            pnlActiveTab.TabIndex = 5;
             // 
             // FormDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1266, 663);
-            Controls.Add(panelActive);
-            Controls.Add(panelTitleBar);
-            Controls.Add(panelNavigation);
+            Controls.Add(pnlActiveTab);
+            Controls.Add(plnSideNavigation);
+            Controls.Add(pnlTitleBar);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormDashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "DASHBOARD";
-            panelTitleBar.ResumeLayout(false);
-            panelNavigation.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
+            pnlTitleBar.ResumeLayout(false);
+            plnSideNavigation.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)picBoxAppLogo).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
         private System.Windows.Forms.Timer timerDateTime;
-        private Button buttonMinimize;
-        private Button buttonRestoreDownMaximize;
-        private Button buttonClose;
-        private Panel panelTitleBar;
-        private Panel panelNavigation;
-        private Button buttonVerifyId;
-        private Button buttonCheckId;
-        private Button buttonCreateId;
-        private Label labelDateTime;
-        private Label labelInstitution;
-        private PictureBox pictureBoxLogo;
-        private Button buttonDashboard;
-        private Button buttonLogout;
-        public Panel panelActive;
-        private Button buttonSettings;
+        private Button btnMinimize;
+        private Button btnMinimizeMaximize;
+        private Button btnClose;
+        private Panel pnlTitleBar;
+        private Panel plnSideNavigation;
+        private Button btnVerifyId;
+        private Button btnCheckId;
+        private Button btnCreateId;
+        private Label lblLiveDateTime;
+        private Label lblAppName;
+        private PictureBox picBoxAppLogo;
+        private Button btnDashboard;
+        private Button btnLogout;
+        public Panel pnlActiveTab;
+        private Button btnSettings;
     }
 }

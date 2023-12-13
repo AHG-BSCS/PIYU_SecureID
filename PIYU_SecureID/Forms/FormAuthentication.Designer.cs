@@ -63,7 +63,8 @@
             txtBoxPasscode.Size = new Size(202, 33);
             txtBoxPasscode.TabIndex = 1;
             txtBoxPasscode.TextAlign = HorizontalAlignment.Center;
-            txtBoxPasscode.TextChanged += TxtBoxPasscode_TextChanged;
+            txtBoxPasscode.TextChanged += txtBoxPasscode_TextChanged;
+            txtBoxPasscode.KeyPress += FormAuthentication_KeyPress;
             // 
             // btnLogin
             // 
@@ -78,7 +79,7 @@
             btnLogin.TabIndex = 2;
             btnLogin.Text = "LOGIN";
             btnLogin.UseVisualStyleBackColor = false;
-            btnLogin.Click += BtnLogin_Click;
+            btnLogin.Click += btnLogin_Click;
             // 
             // btnBypass
             // 
@@ -94,7 +95,7 @@
             btnBypass.Text = "★ Debug Bypass";
             btnBypass.UseVisualStyleBackColor = false;
             btnBypass.Visible = false;
-            btnBypass.Click += BtnBypass_Click;
+            btnBypass.Click += btnBypass_Click;
             // 
             // picBoxAppLogo
             // 
@@ -147,7 +148,6 @@
             Name = "FormAuthentication";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LOGIN";
-            FormClosed += FormAuthentication_FormClosed;
             ((System.ComponentModel.ISupportInitialize)picBoxAppLogo).EndInit();
             pnlAppBanner.ResumeLayout(false);
             pnlAppBanner.PerformLayout();

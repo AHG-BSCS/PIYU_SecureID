@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace PIYU_SecureID
 {
@@ -20,17 +12,17 @@ namespace PIYU_SecureID
 
         private async void StartupAnimation()
         {
-            string applicationName = "SecureID";
+            string appName = "SecureID";
             lblAppName.Text = string.Empty;
 
             for (int i = 256; i >= 156; i--)
             {
-                picBoxAppLogo.Location = new Point(i, 115);
+                picBoxAppLogo.Location = new Point(i, 113);
                 await Task.Delay(1);
                 Application.DoEvents();
             }
 
-            foreach (char c in applicationName)
+            foreach (char c in appName)
             {
                 lblAppName.Text += c;
                 await Task.Delay(100);
@@ -38,12 +30,12 @@ namespace PIYU_SecureID
             }
 
             Thread.Sleep(1000);
-            showNewForm(new FormAuthentication());
+            ShowNewForm(new FormAuthentication());
         }
 
-        private void showNewForm(Form form)
+        private void ShowNewForm(Form newForm)
         {
-            form.Show();
+            newForm.Show();
             this.Hide();
         }
     }
