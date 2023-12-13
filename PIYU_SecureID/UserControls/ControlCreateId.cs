@@ -289,5 +289,15 @@ namespace PIYU_SecureID
         {
             LoadBarangay(comboBoxProvince.Text, comboBoxCity.Text);
         }
+
+        private void ControlCreateId_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ControlCreateId_Enter(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

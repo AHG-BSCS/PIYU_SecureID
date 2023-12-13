@@ -15,35 +15,27 @@ namespace PIYU_SecureID
 {
     public partial class FormDashboard : Form
     {
-        private Point mouseDownLocation;
-        private static string active = "dashboard";
-        private FormAuthentication auth;
         private ControlDashboard dashboard = new ControlDashboard();
         private ControlCreateId create = new ControlCreateId();
         private ControlCheckId check = new ControlCheckId();
         private ControlVerifyId verify = new ControlVerifyId();
         private ControlSettings settings = new ControlSettings();
         private ClassInformation info = new ClassInformation();
+        private Point mouseDownLocation;
+        private FormAuthentication auth;
+        private static string active = "";
         public FormDashboard(FormAuthentication auth)
         {
             InitializeComponent();
 
             this.auth = auth;
 
-            buttonDashboard.BackColor = Color.FromArgb(53, 69, 93);
-            dashboard.labelTotalTransaction.Text = "Total Transactions: " + info.LoadTotalTransaction().ToString();
-            dashboard.Dock = DockStyle.Fill;
-            panelActive.Controls.Add(dashboard);
+            UpdateActiveSelection("dashboard");
         }
 
         private void timerDateTime_Tick(object sender, EventArgs e)
         {
             UpdateDateTime();
-        }
-
-        void UpdateDateTime()
-        {
-            labelDateTime.Text = DateTime.Now.ToString();
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -70,57 +62,28 @@ namespace PIYU_SecureID
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void buttonDashboard_Click(object sender, EventArgs e)
+        {
+            UpdateActiveSelection("dashboard");
+        }
+
         private void buttonCreateId_Click(object sender, EventArgs e)
         {
-            if (active != "create")
-            {
-                NavColorRefresh();
-                buttonCreateId.BackColor = Color.FromArgb(53, 69, 93);
-                active = "create";
-                create.Dock = DockStyle.Fill;
-                panelActive.Controls.Clear();
-                panelActive.Controls.Add(create);
-            }
+            UpdateActiveSelection("create");
         }
 
         private void buttonCheckId_Click(object sender, EventArgs e)
         {
-            if (active != "check")
-            {
-                NavColorRefresh();
-                buttonCheckId.BackColor = Color.FromArgb(53, 69, 93);
-                active = "check";
-                check.Dock = DockStyle.Fill;
-                panelActive.Controls.Clear();
-                panelActive.Controls.Add(check);
-            }
+            UpdateActiveSelection("check");
         }
 
         private void buttonVerifyId_Click(object sender, EventArgs e)
         {
-            if (active != "verify")
-            {
-                NavColorRefresh();
-                buttonVerifyId.BackColor = Color.FromArgb(53, 69, 93);
-                active = "verify";
-                verify.Dock = DockStyle.Fill;
-                panelActive.Controls.Clear();
-                panelActive.Controls.Add(verify);
-            }
+            UpdateActiveSelection("verify");
         }
-
-        private void buttonDashboard_Click(object sender, EventArgs e)
+        private void buttonSettings_Click(object sender, EventArgs e)
         {
-            if (active != "dashboard")
-            {
-                NavColorRefresh();
-                buttonDashboard.BackColor = Color.FromArgb(53, 69, 93);
-                active = "dashboard";
-                dashboard.labelTotalTransaction.Text = "Total Transactions: " + info.LoadTotalTransaction().ToString();
-                dashboard.Dock = DockStyle.Fill;
-                panelActive.Controls.Clear();
-                panelActive.Controls.Add(dashboard);
-            }
+            UpdateActiveSelection("settings");
         }
 
         private void NavColorRefresh()
@@ -129,12 +92,16 @@ namespace PIYU_SecureID
             buttonCreateId.BackColor = Color.FromArgb(60, 95, 106);
             buttonCheckId.BackColor = Color.FromArgb(60, 95, 106);
             buttonVerifyId.BackColor = Color.FromArgb(60, 95, 106);
+            buttonSettings.BackColor = Color.FromArgb(60, 95, 106);
+            buttonDashboard.ForeColor = Color.White;
+            buttonCreateId.ForeColor = Color.White;
+            buttonCheckId.ForeColor = Color.White;
+            buttonVerifyId.ForeColor = Color.White;
+            buttonSettings.ForeColor = Color.White;
         }
 
         private void buttonLogout_Click(object sender, EventArgs e)
         {
-            NavColorRefresh();
-            buttonLogout.BackColor = Color.FromArgb(53, 69, 93);
             auth.Show();
             auth.txtBoxPasscode.Text = "";
             if (auth.btnBypass.Visible)
@@ -150,19 +117,6 @@ namespace PIYU_SecureID
         private void buttonClose_MouseEnter(object sender, EventArgs e)
         {
             buttonClose.BackColor = Color.Red;
-        }
-
-        private void buttonSettings_Click(object sender, EventArgs e)
-        {
-            if (active != "settings")
-            {
-                NavColorRefresh();
-                buttonDashboard.BackColor = Color.FromArgb(53, 69, 93);
-                active = "settings";
-                dashboard.Dock = DockStyle.Fill;
-                panelActive.Controls.Clear();
-                panelActive.Controls.Add(settings);
-            }
         }
 
         private void labelInstitution_MouseMove(object sender, MouseEventArgs e)
@@ -184,6 +138,66 @@ namespace PIYU_SecureID
         private void labelInstitution_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDownLocation = Point.Empty;
+        }
+
+        private void UpdateDateTime()
+        {
+            labelDateTime.Text = DateTime.Now.ToString();
+        }
+
+        private void UpdateActiveSelection(string newActive)
+        {
+            if (active != "dashboard" && newActive == "dashboard")
+            {
+                NavColorRefresh();
+                buttonDashboard.BackColor = Color.White;
+                buttonDashboard.ForeColor = Color.FromArgb(53, 69, 93);
+                active = "dashboard";
+                dashboard.labelTotalTransaction.Text = "Total Transactions: " + info.LoadTotalTransaction().ToString();
+                dashboard.Dock = DockStyle.Fill;
+                panelActive.Controls.Clear();
+                panelActive.Controls.Add(dashboard);
+            }
+            else if (active != "create" && newActive == "create")
+            {
+                NavColorRefresh();
+                buttonCreateId.BackColor = Color.White;
+                buttonCreateId.ForeColor = Color.FromArgb(53, 69, 93);
+                active = "create";
+                create.Dock = DockStyle.Fill;
+                panelActive.Controls.Clear();
+                panelActive.Controls.Add(create);
+            }
+            else if (active != "check" && newActive == "check")
+            {
+                NavColorRefresh();
+                buttonCheckId.BackColor = Color.White;
+                buttonCheckId.ForeColor = Color.FromArgb(53, 69, 93);
+                active = "check";
+                check.Dock = DockStyle.Fill;
+                panelActive.Controls.Clear();
+                panelActive.Controls.Add(check);
+            }
+            else if (active != "verify" && newActive == "verify")
+            {
+                NavColorRefresh();
+                buttonVerifyId.BackColor = Color.White;
+                buttonVerifyId.ForeColor = Color.FromArgb(53, 69, 93);
+                active = "verify";
+                verify.Dock = DockStyle.Fill;
+                panelActive.Controls.Clear();
+                panelActive.Controls.Add(verify);
+            }
+            else if (active != "settings" && newActive == "settings")
+            {
+                NavColorRefresh();
+                buttonSettings.BackColor = Color.White;
+                buttonSettings.ForeColor = Color.FromArgb(53, 69, 93);
+                active = "settings";
+                settings.Dock = DockStyle.Fill;
+                panelActive.Controls.Clear();
+                panelActive.Controls.Add(settings);
+            }
         }
     }
 }

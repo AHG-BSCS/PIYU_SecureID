@@ -44,6 +44,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             Controls.Add(labelTotalTransaction);
             Name = "ControlDashboard";
             Size = new Size(799, 354);

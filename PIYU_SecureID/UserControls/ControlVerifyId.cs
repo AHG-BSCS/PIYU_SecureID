@@ -24,11 +24,7 @@ namespace PIYU_SecureID
         {
             InitializeComponent();
 
-            FilterInfoCollection filter = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            foreach (FilterInfo Device in filter)
-                comboBoxCameras.Items.Add(Device.Name);
-            comboBoxCameras.SelectedIndex = 0;
-            VideoCaptureDevice captureDevice = new VideoCaptureDevice();
+            UpdateCameraSelection();
         }
 
         private void buttonStartStop_Click(object sender, EventArgs e)
@@ -165,7 +161,7 @@ namespace PIYU_SecureID
                 MessageBox.Show("Invalid QR code data format.");
             }
         }
-        
+
 
         public static Image BytesToImage(byte[] bytes)
         {
@@ -177,17 +173,15 @@ namespace PIYU_SecureID
 
         private void ControlVerifyId_Leave(object sender, EventArgs e)
         {
-            videoSource.SignalToStop();
-            videoSource.WaitForStop();
+            if (videoSource != null)
+            {
+                videoSource.SignalToStop();
+                videoSource.WaitForStop();
+            }
             buttonStartStop.Text = "START";
             pictureBoxQrScanner.Image = null;
             panelInfo.Visible = false;
             RefreshData();
-        }
-
-        private void textBoxTransactionNum_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void RefreshData()
@@ -207,6 +201,15 @@ namespace PIYU_SecureID
             pictureBoxIdPhoto.Image = null;
             pictureBoxSign.Image = null;
             panelInfo.Visible = false;
+        }
+
+        private void UpdateCameraSelection()
+        {
+            FilterInfoCollection filter = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo Device in filter)
+                comboBoxCameras.Items.Add(Device.Name);
+            comboBoxCameras.SelectedIndex = 0;
+            VideoCaptureDevice captureDevice = new VideoCaptureDevice();
         }
     }
 }

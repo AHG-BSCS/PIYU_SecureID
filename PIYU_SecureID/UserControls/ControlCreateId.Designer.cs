@@ -468,6 +468,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
+            BackColor = Color.White;
             Controls.Add(label15);
             Controls.Add(label14);
             Controls.Add(label13);
@@ -508,6 +509,8 @@
             Controls.Add(label1);
             Name = "ControlCreateId";
             Size = new Size(1116, 633);
+            Enter += ControlCreateId_Enter;
+            Leave += ControlCreateId_Leave;
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSignature).EndInit();
             ResumeLayout(false);

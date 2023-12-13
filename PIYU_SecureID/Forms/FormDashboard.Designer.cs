@@ -54,6 +54,7 @@
             // 
             timerDateTime.Enabled = true;
             timerDateTime.Interval = 1000;
+            timerDateTime.Tick += timerDateTime_Tick;
             // 
             // buttonMinimize
             // 

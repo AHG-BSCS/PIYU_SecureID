@@ -25,24 +25,7 @@ namespace PIYU_SecureID
         {
             InitializeComponent();
 
-            FilterInfoCollection filter = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            foreach (FilterInfo Device in filter)
-                comboBoxCameras.Items.Add(Device.Name);
-            comboBoxCameras.SelectedIndex = 0;
-            VideoCaptureDevice captureDevice = new VideoCaptureDevice();
-
-            if (comboBoxCameras.SelectedIndex != -1)
-            {
-                int selectedCameraIndex = comboBoxCameras.SelectedIndex;
-                videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-                videoSource = new VideoCaptureDevice(videoDevices[selectedCameraIndex].MonikerString);
-
-                if (videoSource.IsRunning)
-                {
-                    videoSource.SignalToStop();
-                    videoSource.WaitForStop();
-                }
-            }
+            UpdateCameraSelection();
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -218,8 +201,11 @@ namespace PIYU_SecureID
 
         private void ControlCheckId_Leave(object sender, EventArgs e)
         {
-            videoSource.SignalToStop();
-            videoSource.WaitForStop();
+            if (videoSource != null)
+            {
+                videoSource.SignalToStop();
+                videoSource.WaitForStop();
+            }
             buttonStartStop.Text = "START";
             pictureBoxQrScanner.Image = null;
             textBoxTransactionNum.Text = "";
@@ -239,10 +225,13 @@ namespace PIYU_SecureID
                 }
             }
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void UpdateCameraSelection()
         {
-
+            FilterInfoCollection filter = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo Device in filter)
+                comboBoxCameras.Items.Add(Device.Name);
+            comboBoxCameras.SelectedIndex = 0;
+            VideoCaptureDevice captureDevice = new VideoCaptureDevice();
         }
     }
 }

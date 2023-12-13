@@ -137,7 +137,6 @@
             textBoxTransactionNum.TabIndex = 3;
             textBoxTransactionNum.TextAlign = HorizontalAlignment.Center;
             textBoxTransactionNum.Visible = false;
-            textBoxTransactionNum.TextChanged += textBoxTransactionNum_TextChanged;
             // 
             // panelInfo
             // 
@@ -546,6 +545,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             Controls.Add(panelInfo);
             Controls.Add(textBoxTransactionNum);
             Controls.Add(buttonStartStop);
