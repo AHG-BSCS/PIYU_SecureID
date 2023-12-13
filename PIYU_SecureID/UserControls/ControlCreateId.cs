@@ -356,6 +356,14 @@ namespace PIYU_SecureID
             {
                 e.Handled = true;
             }
+            else if (char.IsLetter(e.KeyChar) || e.KeyChar == '\b')
+            {
+                
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }
