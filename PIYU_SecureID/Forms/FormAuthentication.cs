@@ -4,21 +4,38 @@ namespace PIYU_SecureID
 {
     public partial class FormAuthentication : Form
     {
-        private const string SecretKey = "F7XO6UWCIHG3XAZ4JSBTUYLZVJECUBH7";
         public FormAuthentication()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void TxtBoxPasscode_TextChanged(object sender, EventArgs e)
         {
+            if (txtBoxPasscode.Text == "177013")
+            {
+                btnBypass.Visible = true;
+            }
+        }
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            const string SECRETKEY = "F7XO6UWCIHG3XAZ4JSBTUYLZVJECUBH7";
             string userCode = txtBoxPasscode.Text;
-            if (ValidateCode(SecretKey, userCode))
+
+            if (string.IsNullOrEmpty(userCode))
+            {
+                // Do noting if passcode is empty
+            }
+            else if (txtBoxPasscode.Text.Length < 6)
+            {
+                MessageBox.Show("Passcode is too short!. Required at least six (6) digits", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (ValidateCode(SECRETKEY, userCode))
             {
                 MessageBox.Show("Authentication Success!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
                 Form dashboard = new FormDashboard(this);
                 dashboard.Show();
+                this.Hide();
             }
             else
             {
@@ -32,19 +49,11 @@ namespace PIYU_SecureID
             return totp.VerifyTotp(userCode, out _, new VerificationWindow(2, 2)); // Validate within ±2 time steps.
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void BtnBypass_Click(object sender, EventArgs e)
         {
-            if (txtBoxPasscode.Text == "177013")
-            {
-                btnBypass.Visible = true;
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
             Form dashboard = new FormDashboard(this);
             dashboard.Show();
+            this.Hide();
         }
 
         private void FormAuthentication_FormClosed(object sender, FormClosedEventArgs e)

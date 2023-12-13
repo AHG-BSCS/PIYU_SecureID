@@ -63,7 +63,7 @@
             txtBoxPasscode.Size = new Size(202, 33);
             txtBoxPasscode.TabIndex = 1;
             txtBoxPasscode.TextAlign = HorizontalAlignment.Center;
-            txtBoxPasscode.TextChanged += textBox1_TextChanged;
+            txtBoxPasscode.TextChanged += TxtBoxPasscode_TextChanged;
             // 
             // btnLogin
             // 
@@ -78,7 +78,7 @@
             btnLogin.TabIndex = 2;
             btnLogin.Text = "LOGIN";
             btnLogin.UseVisualStyleBackColor = false;
-            btnLogin.Click += button1_Click;
+            btnLogin.Click += BtnLogin_Click;
             // 
             // btnBypass
             // 
@@ -94,7 +94,7 @@
             btnBypass.Text = "★ Debug Bypass";
             btnBypass.UseVisualStyleBackColor = false;
             btnBypass.Visible = false;
-            btnBypass.Click += button2_Click;
+            btnBypass.Click += BtnBypass_Click;
             // 
             // picBoxAppLogo
             // 
