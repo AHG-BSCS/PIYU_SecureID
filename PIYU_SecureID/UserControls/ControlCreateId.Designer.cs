@@ -91,6 +91,7 @@
             textBoxLastName.Name = "textBoxLastName";
             textBoxLastName.Size = new Size(404, 29);
             textBoxLastName.TabIndex = 1;
+            textBoxLastName.KeyPress += textBoxLastName_KeyPress;
             // 
             // textBoxGivenName
             // 
@@ -102,6 +103,7 @@
             textBoxGivenName.Name = "textBoxGivenName";
             textBoxGivenName.Size = new Size(404, 29);
             textBoxGivenName.TabIndex = 2;
+            textBoxGivenName.KeyPress += textBoxLastName_KeyPress;
             // 
             // label2
             // 
@@ -124,6 +126,7 @@
             textBoxMiddleName.Name = "textBoxMiddleName";
             textBoxMiddleName.Size = new Size(404, 29);
             textBoxMiddleName.TabIndex = 3;
+            textBoxMiddleName.KeyPress += textBoxLastName_KeyPress;
             // 
             // label3
             // 
@@ -146,6 +149,7 @@
             textBoxSuffix.Name = "textBoxSuffix";
             textBoxSuffix.Size = new Size(109, 29);
             textBoxSuffix.TabIndex = 4;
+            textBoxSuffix.KeyPress += textBoxLastName_KeyPress;
             // 
             // label4
             // 

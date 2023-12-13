@@ -324,10 +324,10 @@ namespace PIYU_SecureID
         {
             if (textBoxYear.TextLength == 4)
             {
-                if (!int.TryParse(textBoxYear.Text, out int year) || year < 1900 || year > 2025)
+                if (!int.TryParse(textBoxYear.Text, out int year) || year < 1900 || year > DateTime.Now.Year)
                 {
                     textBoxYear.Text = "";
-                    MessageBox.Show("Enter valid year (1900 - 2025)");
+                    MessageBox.Show($"Enter valid year (1900 - {DateTime.Now.Year})");
                 }
             }
         }
@@ -347,6 +347,14 @@ namespace PIYU_SecureID
                         e.Handled = true;
                     }
                 }
+            }
+        }
+
+        private void textBoxLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }
