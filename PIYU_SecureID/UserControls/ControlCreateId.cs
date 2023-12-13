@@ -297,7 +297,50 @@ namespace PIYU_SecureID
 
         private void ControlCreateId_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void comboBoxSex_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxSex_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxSex_DropDownClosed(object sender, EventArgs e)
+        {
+            label1.Focus();
+        }
+
+        private void ControlCreateId_Click(object sender, EventArgs e)
+        {
+            label1.Focus();
+        }
+
+        private void textBoxYear_TextChanged(object sender, EventArgs e)
+        {
             
+        }
+
+        private void textBoxYear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (char.IsDigit(e.KeyChar))
+            {
+                if (textBoxYear.SelectionStart == 0)
+                {
+                    if (e.KeyChar != '1' && e.KeyChar != '2')
+                    {
+                        e.Handled = true;
+                    }
+                }
+            }
         }
     }
 }
