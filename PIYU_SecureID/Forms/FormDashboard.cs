@@ -23,6 +23,7 @@ namespace PIYU_SecureID
         private ControlCheckId check = new ControlCheckId();
         private ControlVerifyId verify = new ControlVerifyId();
         private ControlSettings settings = new ControlSettings();
+        private ClassInformation info = new ClassInformation();
         public FormDashboard(FormAuthentication auth)
         {
             InitializeComponent();
@@ -30,6 +31,7 @@ namespace PIYU_SecureID
             this.auth = auth;
 
             buttonDashboard.BackColor = Color.FromArgb(53, 69, 93);
+            dashboard.labelTotalTransaction.Text = "Total Transactions: " + info.LoadTotalTransaction().ToString();
             dashboard.Dock = DockStyle.Fill;
             panelActive.Controls.Add(dashboard);
         }
@@ -165,6 +167,7 @@ namespace PIYU_SecureID
                 NavColorRefresh();
                 buttonDashboard.BackColor = Color.FromArgb(53, 69, 93);
                 active = "dashboard";
+                dashboard.labelTotalTransaction.Text = "Total Transactions: " + info.LoadTotalTransaction().ToString();
                 dashboard.Dock = DockStyle.Fill;
                 panelActive.Controls.Clear();
                 panelActive.Controls.Add(dashboard);

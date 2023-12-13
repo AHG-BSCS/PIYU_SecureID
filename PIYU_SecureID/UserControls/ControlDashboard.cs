@@ -12,12 +12,14 @@ namespace PIYU_SecureID
 {
     public partial class ControlDashboard : UserControl
     {
-        ClassInformation info = new ClassInformation();
         public ControlDashboard()
         {
             InitializeComponent();
+        }
 
-            labelTotalTransaction.Text += info.LoadTotalTransaction().ToString();
+        private void ControlDashboard_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

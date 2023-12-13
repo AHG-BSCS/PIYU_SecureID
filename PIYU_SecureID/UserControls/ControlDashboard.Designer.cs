@@ -47,12 +47,13 @@
             Controls.Add(labelTotalTransaction);
             Name = "ControlDashboard";
             Size = new Size(799, 354);
+            Load += ControlDashboard_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label labelTotalTransaction;
+        public Label labelTotalTransaction;
     }
 }

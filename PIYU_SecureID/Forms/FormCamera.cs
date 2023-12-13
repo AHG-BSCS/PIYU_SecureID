@@ -23,7 +23,7 @@ namespace PIYU_SecureID
             this.savePhoto = savePhoto;
             pictureBoxIdPhoto.SizeMode = PictureBoxSizeMode.Zoom;
             InitializeWebCam();
-            Thread.Sleep(500);
+            Thread.Sleep(1000);
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
