@@ -5,6 +5,7 @@ namespace PIYU_SecureID
     public partial class FormAuthentication : Form
     {
         private FormDashboard dashboard;
+        private Point mouseDownLocation;
 
         public FormAuthentication()
         {
@@ -75,6 +76,21 @@ namespace PIYU_SecureID
             {
                 btnLogin_Click(sender, e);
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Transparent;
+        }
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Red;
         }
     }
 }

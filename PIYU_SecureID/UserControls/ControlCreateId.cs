@@ -289,5 +289,81 @@ namespace PIYU_SecureID
         {
             LoadBarangay(comboBoxProvince.Text, comboBoxCity.Text);
         }
+
+        private void ControlCreateId_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ControlCreateId_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxSex_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxSex_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxSex_DropDownClosed(object sender, EventArgs e)
+        {
+            label1.Focus();
+        }
+
+        private void ControlCreateId_Click(object sender, EventArgs e)
+        {
+            label1.Focus();
+        }
+
+        private void textBoxYear_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxYear.TextLength == 4)
+            {
+                if (!int.TryParse(textBoxYear.Text, out int year) || year < 1900 || year > DateTime.Now.Year)
+                {
+                    textBoxYear.Text = "";
+                    MessageBox.Show($"Enter valid year (1900 - {DateTime.Now.Year})");
+                }
+            }
+        }
+
+        private void textBoxYear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (char.IsDigit(e.KeyChar))
+            {
+                if (textBoxYear.SelectionStart == 0)
+                {
+                    if (e.KeyChar != '1' && e.KeyChar != '2')
+                    {
+                        e.Handled = true;
+                    }
+                }
+            }
+        }
+
+        private void textBoxLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (char.IsLetter(e.KeyChar) || e.KeyChar == '\b')
+            {
+                
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

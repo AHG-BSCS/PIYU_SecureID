@@ -148,14 +148,19 @@ namespace PIYU_SecureID
             Application.Exit();
         }
 
-        private void buttonClose_MouseLeave(object sender, EventArgs e)
+        private void btnClose_MouseLeave(object sender, EventArgs e)
         {
             btnClose.BackColor = Color.Transparent;
         }
 
-        private void buttonClose_MouseEnter(object sender, EventArgs e)
+        private void btnClose_MouseEnter(object sender, EventArgs e)
         {
             btnClose.BackColor = Color.Red;
+        }
+
+        private void UpdateDateTime()
+        {
+            lblLiveDateTime.Text = DateTime.Now.ToString();
         }
     }
 }

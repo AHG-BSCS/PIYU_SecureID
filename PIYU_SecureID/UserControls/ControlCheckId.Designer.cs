@@ -520,6 +520,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             Controls.Add(buttonSearch);
             Controls.Add(buttonStartStop);
             Controls.Add(textBoxTransactionNum);

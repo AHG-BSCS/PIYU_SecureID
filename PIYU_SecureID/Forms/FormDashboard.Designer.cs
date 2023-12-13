@@ -54,6 +54,7 @@
             // 
             timerDateTime.Enabled = true;
             timerDateTime.Interval = 1000;
+            timerDateTime.Tick += timerDateTime_Tick;
             // 
             // btnMinimize
             // 
@@ -99,8 +100,8 @@
             btnClose.TabIndex = 8;
             btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
-            btnClose.MouseEnter += buttonClose_MouseEnter;
-            btnClose.MouseLeave += buttonClose_MouseLeave;
+            btnClose.MouseEnter += btnClose_MouseEnter;
+            btnClose.MouseLeave += btnClose_MouseLeave;
             // 
             // pnlTitleBar
             // 

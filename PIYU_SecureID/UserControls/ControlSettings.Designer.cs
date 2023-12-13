@@ -28,39 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            label1 = new Label();
+            label2 = new Label();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 99);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "plan";
+            label1.AutoSize = true;
+            label1.Location = new Point(67, 74);
+            label1.Name = "label1";
+            label1.Size = new Size(30, 15);
+            label1.TabIndex = 0;
+            label1.Text = "plan";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(77, 182);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "user nominated otp key";
+            label2.AutoSize = true;
+            label2.Location = new Point(67, 136);
+            label2.Name = "label2";
+            label2.Size = new Size(132, 15);
+            label2.TabIndex = 1;
+            label2.Text = "user nominated otp key";
             // 
             // ControlSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Name = "ControlSettings";
-            this.Size = new System.Drawing.Size(1155, 547);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "ControlSettings";
+            Size = new Size(1011, 410);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
