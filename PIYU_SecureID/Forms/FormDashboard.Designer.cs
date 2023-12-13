@@ -35,6 +35,7 @@
             buttonClose = new Button();
             panelTitleBar = new Panel();
             panelNavigation = new Panel();
+            buttonSettings = new Button();
             buttonLogout = new Button();
             labelDateTime = new Label();
             buttonVerifyId = new Button();
@@ -53,7 +54,6 @@
             // 
             timerDateTime.Enabled = true;
             timerDateTime.Interval = 1000;
-            timerDateTime.Tick += timerDateTime_Tick;
             // 
             // buttonMinimize
             // 
@@ -113,13 +113,11 @@
             panelTitleBar.Name = "panelTitleBar";
             panelTitleBar.Size = new Size(1116, 35);
             panelTitleBar.TabIndex = 9;
-            panelTitleBar.MouseDown += panelTitleBar_MouseDown;
-            panelTitleBar.MouseMove += panelTitleBar_MouseMove;
-            panelTitleBar.MouseUp += panelTitleBar_MouseUp;
             // 
             // panelNavigation
             // 
             panelNavigation.BackColor = Color.FromArgb(60, 95, 106);
+            panelNavigation.Controls.Add(buttonSettings);
             panelNavigation.Controls.Add(buttonLogout);
             panelNavigation.Controls.Add(labelDateTime);
             panelNavigation.Controls.Add(buttonVerifyId);
@@ -131,8 +129,24 @@
             panelNavigation.Dock = DockStyle.Left;
             panelNavigation.Location = new Point(0, 0);
             panelNavigation.Name = "panelNavigation";
-            panelNavigation.Size = new Size(150, 668);
+            panelNavigation.Size = new Size(150, 663);
             panelNavigation.TabIndex = 0;
+            // 
+            // buttonSettings
+            // 
+            buttonSettings.Dock = DockStyle.Bottom;
+            buttonSettings.FlatAppearance.BorderSize = 0;
+            buttonSettings.FlatStyle = FlatStyle.Flat;
+            buttonSettings.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonSettings.ForeColor = Color.White;
+            buttonSettings.Location = new Point(0, 534);
+            buttonSettings.Margin = new Padding(3, 2, 3, 2);
+            buttonSettings.Name = "buttonSettings";
+            buttonSettings.Size = new Size(150, 50);
+            buttonSettings.TabIndex = 7;
+            buttonSettings.Text = "SETTINGS";
+            buttonSettings.UseVisualStyleBackColor = true;
+            buttonSettings.Click += buttonSettings_Click;
             // 
             // buttonLogout
             // 
@@ -141,7 +155,7 @@
             buttonLogout.FlatStyle = FlatStyle.Flat;
             buttonLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonLogout.ForeColor = Color.White;
-            buttonLogout.Location = new Point(0, 589);
+            buttonLogout.Location = new Point(0, 584);
             buttonLogout.Margin = new Padding(3, 2, 3, 2);
             buttonLogout.Name = "buttonLogout";
             buttonLogout.Size = new Size(150, 50);
@@ -154,7 +168,7 @@
             // 
             labelDateTime.Dock = DockStyle.Bottom;
             labelDateTime.ForeColor = Color.White;
-            labelDateTime.Location = new Point(0, 639);
+            labelDateTime.Location = new Point(0, 634);
             labelDateTime.Name = "labelDateTime";
             labelDateTime.Size = new Size(150, 29);
             labelDateTime.TabIndex = 4;
@@ -238,9 +252,6 @@
             labelInstitution.TabIndex = 0;
             labelInstitution.Text = "SecureID";
             labelInstitution.TextAlign = ContentAlignment.TopCenter;
-            labelInstitution.MouseDown += labelInstitution_MouseDown;
-            labelInstitution.MouseMove += labelInstitution_MouseMove;
-            labelInstitution.MouseUp += labelInstitution_MouseUp;
             // 
             // pictureBoxLogo
             // 
@@ -253,9 +264,6 @@
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxLogo.TabIndex = 0;
             pictureBoxLogo.TabStop = false;
-            pictureBoxLogo.MouseDown += pictureBoxLogo_MouseDown;
-            pictureBoxLogo.MouseMove += pictureBoxLogo_MouseMove;
-            pictureBoxLogo.MouseUp += pictureBoxLogo_MouseUp;
             // 
             // panelActive
             // 
@@ -263,14 +271,14 @@
             panelActive.Location = new Point(150, 35);
             panelActive.Margin = new Padding(3, 2, 3, 2);
             panelActive.Name = "panelActive";
-            panelActive.Size = new Size(1116, 633);
+            panelActive.Size = new Size(1116, 628);
             panelActive.TabIndex = 5;
             // 
             // FormDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1266, 668);
+            ClientSize = new Size(1266, 663);
             Controls.Add(panelActive);
             Controls.Add(panelTitleBar);
             Controls.Add(panelNavigation);
@@ -301,5 +309,6 @@
         private Button buttonDashboard;
         private Button buttonLogout;
         public Panel panelActive;
+        private Button buttonSettings;
     }
 }
