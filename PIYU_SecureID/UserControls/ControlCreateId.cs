@@ -322,7 +322,14 @@ namespace PIYU_SecureID
 
         private void textBoxYear_TextChanged(object sender, EventArgs e)
         {
-            
+            if (textBoxYear.TextLength == 4)
+            {
+                if (!int.TryParse(textBoxYear.Text, out int year) || year < 1900 || year > 2025)
+                {
+                    textBoxYear.Text = "";
+                    MessageBox.Show("Enter valid year (1900 - 2025)");
+                }
+            }
         }
 
         private void textBoxYear_KeyPress(object sender, KeyPressEventArgs e)
