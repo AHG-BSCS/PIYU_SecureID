@@ -62,11 +62,11 @@
             buttonMinimize.FlatAppearance.BorderSize = 0;
             buttonMinimize.FlatStyle = FlatStyle.Flat;
             buttonMinimize.ForeColor = Color.White;
+            buttonMinimize.Image = Properties.Resources.icons_minimize;
             buttonMinimize.Location = new Point(966, 0);
             buttonMinimize.Name = "buttonMinimize";
             buttonMinimize.Size = new Size(50, 35);
             buttonMinimize.TabIndex = 6;
-            buttonMinimize.Text = "--";
             buttonMinimize.UseVisualStyleBackColor = false;
             buttonMinimize.Click += buttonMinimize_Click;
             // 
@@ -77,11 +77,11 @@
             buttonRestoreDownMaximize.FlatAppearance.BorderSize = 0;
             buttonRestoreDownMaximize.FlatStyle = FlatStyle.Flat;
             buttonRestoreDownMaximize.ForeColor = Color.White;
+            buttonRestoreDownMaximize.Image = Properties.Resources.icons_square;
             buttonRestoreDownMaximize.Location = new Point(1016, 0);
             buttonRestoreDownMaximize.Name = "buttonRestoreDownMaximize";
             buttonRestoreDownMaximize.Size = new Size(50, 35);
             buttonRestoreDownMaximize.TabIndex = 7;
-            buttonRestoreDownMaximize.Text = "O";
             buttonRestoreDownMaximize.UseVisualStyleBackColor = false;
             buttonRestoreDownMaximize.Click += buttonRestoreDownMaximize_Click;
             // 
@@ -92,11 +92,11 @@
             buttonClose.FlatAppearance.BorderSize = 0;
             buttonClose.FlatStyle = FlatStyle.Flat;
             buttonClose.ForeColor = Color.White;
+            buttonClose.Image = Properties.Resources.icons_close;
             buttonClose.Location = new Point(1066, 0);
             buttonClose.Name = "buttonClose";
             buttonClose.Size = new Size(50, 35);
             buttonClose.TabIndex = 8;
-            buttonClose.Text = "X";
             buttonClose.UseVisualStyleBackColor = false;
             buttonClose.Click += buttonClose_Click;
             buttonClose.MouseEnter += buttonClose_MouseEnter;

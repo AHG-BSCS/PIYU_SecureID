@@ -107,7 +107,7 @@ namespace PIYU_SecureID
         {
             try
             {
-                string hash = "}1!v5(eQf5iOYw3I#%;6XtFO=$V5eD6c%v3h}Z('Eev'Xx^S~9"; // Replace with your secret key
+                string hash = "}1!v5(eQf5iOYw3I#%;6XtFO=$V5eD6c%v3h}Z('Eev'Xx^S~9";
                 byte[] data = Convert.FromBase64String(qrData);
 
                 using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())

@@ -118,13 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PIYU_SecureID" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PIYU_SecureID2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="secureid_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\secureid_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons-close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PIYU_SecureID" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PIYU_SecureID2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="secureid_front" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\secureid_front.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons_minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons-minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons_restore_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons-restore-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons_square" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons-square.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -53,10 +53,12 @@ namespace PIYU_SecureID
             if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
+                buttonRestoreDownMaximize.Image = Properties.Resources.icons_square;
             }
             else
             {
                 this.WindowState = FormWindowState.Maximized;
+                buttonRestoreDownMaximize.Image = Properties.Resources.icons_restore_down;
             }
         }
 
