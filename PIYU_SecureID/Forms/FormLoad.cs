@@ -21,18 +21,18 @@ namespace PIYU_SecureID
         private async void StartupAnimation()
         {
             string applicationName = "SecureID";
-            lblApplicationName.Text = string.Empty;
+            lblAppName.Text = string.Empty;
 
-            for (int i = 318; i >= 218; i--)
+            for (int i = 256; i >= 156; i--)
             {
-                picBoxApplicationLogo.Location = new Point(i, 115);
+                picBoxAppLogo.Location = new Point(i, 115);
                 await Task.Delay(1);
                 Application.DoEvents();
             }
 
             foreach (char c in applicationName)
             {
-                lblApplicationName.Text += c;
+                lblAppName.Text += c;
                 await Task.Delay(100);
                 Application.DoEvents();
             }
@@ -43,8 +43,8 @@ namespace PIYU_SecureID
 
         private void showNewForm(Form form)
         {
-            this.Hide();
             form.Show();
+            this.Hide();
         }
     }
 }

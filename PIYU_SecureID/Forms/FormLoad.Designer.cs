@@ -28,54 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            picBoxApplicationLogo = new PictureBox();
-            lblApplicationName = new Label();
-            ((System.ComponentModel.ISupportInitialize)picBoxApplicationLogo).BeginInit();
+            picBoxAppLogo = new PictureBox();
+            lblAppName = new Label();
+            ((System.ComponentModel.ISupportInitialize)picBoxAppLogo).BeginInit();
             SuspendLayout();
             // 
-            // picBoxApplicationLogo
+            // picBoxAppLogo
             // 
-            picBoxApplicationLogo.Image = Properties.Resources.PIYU_SecureID;
-            picBoxApplicationLogo.Location = new Point(218, 113);
-            picBoxApplicationLogo.Margin = new Padding(1000, 3, 1000, 3);
-            picBoxApplicationLogo.Name = "picBoxApplicationLogo";
-            picBoxApplicationLogo.Size = new Size(125, 125);
-            picBoxApplicationLogo.SizeMode = PictureBoxSizeMode.Zoom;
-            picBoxApplicationLogo.TabIndex = 0;
-            picBoxApplicationLogo.TabStop = false;
+            picBoxAppLogo.Image = Properties.Resources.PIYU_SecureID;
+            picBoxAppLogo.Location = new Point(156, 113);
+            picBoxAppLogo.Margin = new Padding(1000, 3, 1000, 3);
+            picBoxAppLogo.Name = "picBoxAppLogo";
+            picBoxAppLogo.Size = new Size(125, 125);
+            picBoxAppLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            picBoxAppLogo.TabIndex = 0;
+            picBoxAppLogo.TabStop = false;
             // 
-            // lblApplicationName
+            // lblAppName
             // 
-            lblApplicationName.AutoSize = true;
-            lblApplicationName.BackColor = Color.Transparent;
-            lblApplicationName.Font = new Font("Corbel", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            lblApplicationName.ForeColor = Color.Black;
-            lblApplicationName.Location = new Point(343, 158);
-            lblApplicationName.Name = "lblApplicationName";
-            lblApplicationName.Size = new Size(140, 39);
-            lblApplicationName.TabIndex = 1;
-            lblApplicationName.Text = "SecureID";
+            lblAppName.AutoSize = true;
+            lblAppName.BackColor = Color.Transparent;
+            lblAppName.Font = new Font("Corbel", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAppName.ForeColor = Color.FromArgb(250, 201, 48);
+            lblAppName.Location = new Point(281, 153);
+            lblAppName.Name = "lblAppName";
+            lblAppName.Size = new Size(163, 45);
+            lblAppName.TabIndex = 1;
+            lblAppName.Text = "SecureID";
             // 
             // FormLoad
             // 
             AutoScaleDimensions = new SizeF(6F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(53, 69, 93);
-            ClientSize = new Size(700, 350);
-            Controls.Add(picBoxApplicationLogo);
-            Controls.Add(lblApplicationName);
+            ClientSize = new Size(600, 350);
+            Controls.Add(picBoxAppLogo);
+            Controls.Add(lblAppName);
             Font = new Font("Corbel", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormLoad";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormLoad";
-            ((System.ComponentModel.ISupportInitialize)picBoxApplicationLogo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picBoxAppLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private PictureBox picBoxApplicationLogo;
-        private Label lblApplicationName;
+        private PictureBox picBoxAppLogo;
+        private Label lblAppName;
     }
 }

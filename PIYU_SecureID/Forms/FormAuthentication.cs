@@ -12,7 +12,7 @@ namespace PIYU_SecureID
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string userCode = textBox1.Text;
+            string userCode = txtBoxPasscode.Text;
             if (ValidateCode(SecretKey, userCode))
             {
                 MessageBox.Show("Authentication Success!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -34,9 +34,9 @@ namespace PIYU_SecureID
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text == "177013")
+            if (txtBoxPasscode.Text == "177013")
             {
-                button2.Visible = true;
+                btnBypass.Visible = true;
             }
         }
 

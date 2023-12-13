@@ -187,9 +187,9 @@ namespace PIYU_SecureID
             NavColorRefresh();
             buttonLogout.BackColor = Color.FromArgb(53, 69, 93);
             auth.Show();
-            auth.textBox1.Text = "";
-            if (auth.button2.Visible)
-                auth.button2.Visible = false;
+            auth.txtBoxPasscode.Text = "";
+            if (auth.btnBypass.Visible)
+                auth.btnBypass.Visible = false;
             this.Close();
         }
 

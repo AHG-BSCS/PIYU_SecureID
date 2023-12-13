@@ -29,112 +29,140 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAuthentication));
-            label1 = new Label();
-            textBox1 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            pictureBox1 = new PictureBox();
-            label2 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            lblAppName = new Label();
+            txtBoxPasscode = new TextBox();
+            btnLogin = new Button();
+            btnBypass = new Button();
+            picBoxAppLogo = new PictureBox();
+            lblDeveloper = new Label();
+            pnlAppBanner = new Panel();
+            ((System.ComponentModel.ISupportInitialize)picBoxAppLogo).BeginInit();
+            pnlAppBanner.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // lblAppName
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(345, 56);
-            label1.Name = "label1";
-            label1.Size = new Size(181, 51);
-            label1.TabIndex = 0;
-            label1.Text = "SecureID";
+            lblAppName.AutoSize = true;
+            lblAppName.Font = new Font("Corbel", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAppName.ForeColor = Color.FromArgb(250, 201, 48);
+            lblAppName.Location = new Point(261, 34);
+            lblAppName.Name = "lblAppName";
+            lblAppName.Size = new Size(163, 45);
+            lblAppName.TabIndex = 0;
+            lblAppName.Text = "SecureID";
             // 
-            // textBox1
+            // txtBoxPasscode
             // 
-            textBox1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(198, 136);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.MaxLength = 6;
-            textBox1.Name = "textBox1";
-            textBox1.PasswordChar = '⚫';
-            textBox1.Size = new Size(310, 50);
-            textBox1.TabIndex = 1;
-            textBox1.TextAlign = HorizontalAlignment.Center;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtBoxPasscode.BorderStyle = BorderStyle.None;
+            txtBoxPasscode.Font = new Font("Corbel", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBoxPasscode.Location = new Point(191, 158);
+            txtBoxPasscode.Margin = new Padding(3, 2, 3, 2);
+            txtBoxPasscode.MaxLength = 6;
+            txtBoxPasscode.Name = "txtBoxPasscode";
+            txtBoxPasscode.PasswordChar = '⚫';
+            txtBoxPasscode.Size = new Size(202, 33);
+            txtBoxPasscode.TabIndex = 1;
+            txtBoxPasscode.TextAlign = HorizontalAlignment.Center;
+            txtBoxPasscode.TextChanged += textBox1_TextChanged;
             // 
-            // button1
+            // btnLogin
             // 
-            button1.Font = new Font("Segoe UI", 28.2F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(279, 196);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(153, 59);
-            button1.TabIndex = 2;
-            button1.Text = "LOGIN";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnLogin.BackColor = Color.FromArgb(29, 146, 61);
+            btnLogin.FlatAppearance.BorderSize = 0;
+            btnLogin.FlatStyle = FlatStyle.Flat;
+            btnLogin.Font = new Font("Corbel", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogin.Location = new Point(252, 207);
+            btnLogin.Margin = new Padding(3, 2, 3, 2);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(80, 35);
+            btnLogin.TabIndex = 2;
+            btnLogin.Text = "LOGIN";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += button1_Click;
             // 
-            // button2
+            // btnBypass
             // 
-            button2.Location = new Point(295, 272);
-            button2.Margin = new Padding(3, 2, 3, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(116, 22);
-            button2.TabIndex = 3;
-            button2.Text = "★ Debug Bypass";
-            button2.UseVisualStyleBackColor = true;
-            button2.Visible = false;
-            button2.Click += button2_Click;
+            btnBypass.BackColor = Color.FromArgb(250, 201, 48);
+            btnBypass.FlatAppearance.BorderSize = 0;
+            btnBypass.FlatStyle = FlatStyle.Flat;
+            btnBypass.Font = new Font("Corbel", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBypass.Location = new Point(237, 258);
+            btnBypass.Margin = new Padding(3, 2, 3, 2);
+            btnBypass.Name = "btnBypass";
+            btnBypass.Size = new Size(110, 25);
+            btnBypass.TabIndex = 3;
+            btnBypass.Text = "★ Debug Bypass";
+            btnBypass.UseVisualStyleBackColor = false;
+            btnBypass.Visible = false;
+            btnBypass.Click += button2_Click;
             // 
-            // pictureBox1
+            // picBoxAppLogo
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = Properties.Resources.PIYU_SecureID;
-            pictureBox1.Location = new Point(224, 28);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(123, 104);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
+            picBoxAppLogo.BackColor = Color.Transparent;
+            picBoxAppLogo.Image = Properties.Resources.PIYU_SecureID;
+            picBoxAppLogo.Location = new Point(161, 17);
+            picBoxAppLogo.Margin = new Padding(3, 2, 3, 2);
+            picBoxAppLogo.Name = "picBoxAppLogo";
+            picBoxAppLogo.Size = new Size(100, 100);
+            picBoxAppLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            picBoxAppLogo.TabIndex = 4;
+            picBoxAppLogo.TabStop = false;
             // 
-            // label2
+            // lblDeveloper
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(353, 102);
-            label2.Name = "label2";
-            label2.Size = new Size(93, 15);
-            label2.TabIndex = 5;
-            label2.Text = "Al Hans Gaming";
+            lblDeveloper.AutoSize = true;
+            lblDeveloper.Font = new Font("Corbel", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDeveloper.ForeColor = Color.FromArgb(250, 201, 48);
+            lblDeveloper.Location = new Point(268, 76);
+            lblDeveloper.Name = "lblDeveloper";
+            lblDeveloper.Size = new Size(93, 15);
+            lblDeveloper.TabIndex = 5;
+            lblDeveloper.Text = "Al Hans Gaming";
+            // 
+            // pnlAppBanner
+            // 
+            pnlAppBanner.BackColor = Color.FromArgb(53, 69, 93);
+            pnlAppBanner.Controls.Add(picBoxAppLogo);
+            pnlAppBanner.Controls.Add(lblAppName);
+            pnlAppBanner.Controls.Add(lblDeveloper);
+            pnlAppBanner.Dock = DockStyle.Top;
+            pnlAppBanner.Location = new Point(0, 0);
+            pnlAppBanner.Name = "pnlAppBanner";
+            pnlAppBanner.Size = new Size(584, 134);
+            pnlAppBanner.TabIndex = 6;
             // 
             // FormAuthentication
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(6F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
-            Controls.Add(label2);
-            Controls.Add(pictureBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
+            ClientSize = new Size(584, 311);
+            Controls.Add(pnlAppBanner);
+            Controls.Add(txtBoxPasscode);
+            Controls.Add(btnLogin);
+            Controls.Add(btnBypass);
+            Font = new Font("Corbel", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormAuthentication";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LOGIN";
             FormClosed += FormAuthentication_FormClosed;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picBoxAppLogo).EndInit();
+            pnlAppBanner.ResumeLayout(false);
+            pnlAppBanner.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        public TextBox textBox1;
-        private Button button1;
-        public Button button2;
-        private PictureBox pictureBox1;
-        private Label label2;
+        private Label lblAppName;
+        public TextBox txtBoxPasscode;
+        private Button btnLogin;
+        public Button btnBypass;
+        private PictureBox picBoxAppLogo;
+        private Label lblDeveloper;
+        private Panel pnlAppBanner;
     }
 }
