@@ -97,8 +97,11 @@ namespace PIYU_SecureID
                     if (decodedResult != lastDecodedResult)
                     {
                         lastDecodedResult = decodedResult;
-                        lastDecodedResult = "";
                         HandleResult(decodedResult);
+                    }
+                    else
+                    {
+                        HandleResult(lastDecodedResult);
                     }
                 }
             }
