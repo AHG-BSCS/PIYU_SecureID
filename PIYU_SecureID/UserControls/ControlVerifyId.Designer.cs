@@ -35,6 +35,9 @@
             timer1 = new System.Windows.Forms.Timer(components);
             textBoxTransactionNum = new TextBox();
             panelInfo = new Panel();
+            panel12 = new Panel();
+            labelDateIssued = new Label();
+            label13 = new Label();
             panel11 = new Panel();
             labelSex = new Label();
             label11 = new Label();
@@ -70,11 +73,9 @@
             label1 = new Label();
             pictureBoxIdPhoto = new PictureBox();
             pictureBoxSign = new PictureBox();
-            panel12 = new Panel();
-            labelDateIssued = new Label();
-            label13 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).BeginInit();
             panelInfo.SuspendLayout();
+            panel12.SuspendLayout();
             panel11.SuspendLayout();
             panel10.SuspendLayout();
             panel9.SuspendLayout();
@@ -88,7 +89,6 @@
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSign).BeginInit();
-            panel12.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBoxQrScanner
@@ -160,6 +160,37 @@
             panelInfo.Name = "panelInfo";
             panelInfo.Size = new Size(765, 554);
             panelInfo.TabIndex = 16;
+            panelInfo.Visible = false;
+            // 
+            // panel12
+            // 
+            panel12.Controls.Add(labelDateIssued);
+            panel12.Controls.Add(label13);
+            panel12.Location = new Point(438, 286);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(306, 21);
+            panel12.TabIndex = 37;
+            // 
+            // labelDateIssued
+            // 
+            labelDateIssued.AutoSize = true;
+            labelDateIssued.Dock = DockStyle.Left;
+            labelDateIssued.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            labelDateIssued.Location = new Point(115, 0);
+            labelDateIssued.Name = "labelDateIssued";
+            labelDateIssued.Size = new Size(0, 21);
+            labelDateIssued.TabIndex = 11;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Dock = DockStyle.Left;
+            label13.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label13.Location = new Point(0, 0);
+            label13.Name = "label13";
+            label13.Size = new Size(115, 21);
+            label13.TabIndex = 23;
+            label13.Text = "Date Issued    :";
             // 
             // panel11
             // 
@@ -511,36 +542,6 @@
             pictureBoxSign.TabIndex = 13;
             pictureBoxSign.TabStop = false;
             // 
-            // panel12
-            // 
-            panel12.Controls.Add(labelDateIssued);
-            panel12.Controls.Add(label13);
-            panel12.Location = new Point(438, 286);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(306, 21);
-            panel12.TabIndex = 37;
-            // 
-            // labelDateIssued
-            // 
-            labelDateIssued.AutoSize = true;
-            labelDateIssued.Dock = DockStyle.Left;
-            labelDateIssued.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelDateIssued.Location = new Point(115, 0);
-            labelDateIssued.Name = "labelDateIssued";
-            labelDateIssued.Size = new Size(0, 21);
-            labelDateIssued.TabIndex = 11;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Dock = DockStyle.Left;
-            label13.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.Location = new Point(0, 0);
-            label13.Name = "label13";
-            label13.Size = new Size(115, 21);
-            label13.TabIndex = 23;
-            label13.Text = "Date Issued    :";
-            // 
             // ControlVerifyId
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -555,6 +556,8 @@
             Leave += ControlVerifyId_Leave;
             ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).EndInit();
             panelInfo.ResumeLayout(false);
+            panel12.ResumeLayout(false);
+            panel12.PerformLayout();
             panel11.ResumeLayout(false);
             panel11.PerformLayout();
             panel10.ResumeLayout(false);
@@ -579,8 +582,6 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSign).EndInit();
-            panel12.ResumeLayout(false);
-            panel12.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }

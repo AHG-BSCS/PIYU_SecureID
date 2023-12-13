@@ -70,57 +70,6 @@ namespace PIYU_SecureID
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
-        {
-            mouseDownLocation = e.Location;
-        }
-
-        private void panelTitleBar_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                int deltaX = e.X - mouseDownLocation.X;
-                int deltaY = e.Y - mouseDownLocation.Y;
-
-                this.Location = new Point(this.Location.X + deltaX, this.Location.Y + deltaY);
-            }
-        }
-
-        private void panelTitleBar_MouseUp(object sender, MouseEventArgs e)
-        {
-            mouseDownLocation = Point.Empty;
-        }
-
-        private void labelInstitution_MouseUp(object sender, MouseEventArgs e)
-        {
-            panelTitleBar_MouseDown(sender, e);
-        }
-
-        private void labelInstitution_MouseMove(object sender, MouseEventArgs e)
-        {
-            panelTitleBar_MouseMove(sender, e);
-        }
-
-        private void labelInstitution_MouseDown(object sender, MouseEventArgs e)
-        {
-            mouseDownLocation = e.Location;
-        }
-
-        private void pictureBoxLogo_MouseDown(object sender, MouseEventArgs e)
-        {
-            mouseDownLocation = e.Location;
-        }
-
-        private void pictureBoxLogo_MouseMove(object sender, MouseEventArgs e)
-        {
-            panelTitleBar_MouseMove(sender, e);
-        }
-
-        private void pictureBoxLogo_MouseUp(object sender, MouseEventArgs e)
-        {
-            panelTitleBar_MouseDown(sender, e);
-        }
-
         private void buttonCreateId_Click(object sender, EventArgs e)
         {
             if (active != "create")
@@ -214,6 +163,27 @@ namespace PIYU_SecureID
                 panelActive.Controls.Clear();
                 panelActive.Controls.Add(settings);
             }
+        }
+
+        private void labelInstitution_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                int deltaX = e.X - mouseDownLocation.X;
+                int deltaY = e.Y - mouseDownLocation.Y;
+
+                this.Location = new Point(this.Location.X + deltaX, this.Location.Y + deltaY);
+            }
+        }
+
+        private void labelInstitution_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownLocation = e.Location;
+        }
+
+        private void labelInstitution_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDownLocation = Point.Empty;
         }
     }
 }

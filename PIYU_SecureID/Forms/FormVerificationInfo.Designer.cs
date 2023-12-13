@@ -231,7 +231,7 @@
             Controls.Add(buttonPrint);
             Controls.Add(buttonSave);
             Controls.Add(panelMain);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FormVerificationInfo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormVerificationInfo";

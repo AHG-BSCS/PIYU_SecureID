@@ -260,6 +260,7 @@
             panelInfo.Name = "panelInfo";
             panelInfo.Size = new Size(765, 554);
             panelInfo.TabIndex = 15;
+            panelInfo.Visible = false;
             // 
             // panel11
             // 

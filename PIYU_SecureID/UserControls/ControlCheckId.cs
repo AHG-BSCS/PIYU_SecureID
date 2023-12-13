@@ -116,6 +116,7 @@ namespace PIYU_SecureID
 
                     pictureBoxSign.Image = image;
                 }
+                panelInfo.Visible = true;
             }
             catch
             {
@@ -139,6 +140,7 @@ namespace PIYU_SecureID
             labelMaritalStatus.Text = "";
             pictureBoxIdPhoto.Image = null;
             pictureBoxSign.Image = null;
+            panelInfo.Visible = false;
         }
 
         private void textBoxTransactionNum_TextChanged(object sender, EventArgs e)

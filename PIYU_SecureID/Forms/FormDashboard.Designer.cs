@@ -113,6 +113,9 @@
             panelTitleBar.Name = "panelTitleBar";
             panelTitleBar.Size = new Size(1116, 35);
             panelTitleBar.TabIndex = 9;
+            panelTitleBar.MouseDown += labelInstitution_MouseDown;
+            panelTitleBar.MouseMove += labelInstitution_MouseMove;
+            panelTitleBar.MouseUp += labelInstitution_MouseUp;
             // 
             // panelNavigation
             // 
@@ -252,6 +255,9 @@
             labelInstitution.TabIndex = 0;
             labelInstitution.Text = "SecureID";
             labelInstitution.TextAlign = ContentAlignment.TopCenter;
+            labelInstitution.MouseDown += labelInstitution_MouseDown;
+            labelInstitution.MouseMove += labelInstitution_MouseMove;
+            labelInstitution.MouseUp += labelInstitution_MouseUp;
             // 
             // pictureBoxLogo
             // 
@@ -264,6 +270,9 @@
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxLogo.TabIndex = 0;
             pictureBoxLogo.TabStop = false;
+            pictureBoxLogo.MouseDown += labelInstitution_MouseDown;
+            pictureBoxLogo.MouseMove += labelInstitution_MouseMove;
+            pictureBoxLogo.MouseUp += labelInstitution_MouseUp;
             // 
             // panelActive
             // 

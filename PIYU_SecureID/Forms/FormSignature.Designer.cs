@@ -99,7 +99,7 @@
             Controls.Add(buttonClear);
             Controls.Add(pictureBoxSignature);
             Controls.Add(buttonSave);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FormSignature";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormSignature";

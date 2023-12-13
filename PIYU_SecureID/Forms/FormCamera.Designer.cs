@@ -96,7 +96,7 @@
             Controls.Add(buttonClearPhoto);
             Controls.Add(pictureBoxIdPhoto);
             Controls.Add(buttonSave);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FormCamera";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormSignature";
