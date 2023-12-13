@@ -36,8 +36,11 @@
             picBoxAppLogo = new PictureBox();
             lblDeveloper = new Label();
             pnlAppBanner = new Panel();
+            panelTitleBar = new Panel();
+            buttonClose = new Button();
             ((System.ComponentModel.ISupportInitialize)picBoxAppLogo).BeginInit();
             pnlAppBanner.SuspendLayout();
+            panelTitleBar.SuspendLayout();
             SuspendLayout();
             // 
             // lblAppName
@@ -53,9 +56,10 @@
             // 
             // txtBoxPasscode
             // 
+            txtBoxPasscode.Anchor = AnchorStyles.Bottom;
             txtBoxPasscode.BorderStyle = BorderStyle.None;
             txtBoxPasscode.Font = new Font("Corbel", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtBoxPasscode.Location = new Point(191, 158);
+            txtBoxPasscode.Location = new Point(191, 193);
             txtBoxPasscode.Margin = new Padding(3, 2, 3, 2);
             txtBoxPasscode.MaxLength = 6;
             txtBoxPasscode.Name = "txtBoxPasscode";
@@ -67,11 +71,12 @@
             // 
             // btnLogin
             // 
+            btnLogin.Anchor = AnchorStyles.Bottom;
             btnLogin.BackColor = Color.FromArgb(29, 146, 61);
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Corbel", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLogin.Location = new Point(252, 207);
+            btnLogin.Location = new Point(252, 242);
             btnLogin.Margin = new Padding(3, 2, 3, 2);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(80, 35);
@@ -82,11 +87,12 @@
             // 
             // btnBypass
             // 
+            btnBypass.Anchor = AnchorStyles.Bottom;
             btnBypass.BackColor = Color.FromArgb(250, 201, 48);
             btnBypass.FlatAppearance.BorderSize = 0;
             btnBypass.FlatStyle = FlatStyle.Flat;
             btnBypass.Font = new Font("Corbel", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnBypass.Location = new Point(237, 258);
+            btnBypass.Location = new Point(237, 293);
             btnBypass.Margin = new Padding(3, 2, 3, 2);
             btnBypass.Name = "btnBypass";
             btnBypass.Size = new Size(110, 25);
@@ -126,22 +132,53 @@
             pnlAppBanner.Controls.Add(lblAppName);
             pnlAppBanner.Controls.Add(lblDeveloper);
             pnlAppBanner.Dock = DockStyle.Top;
-            pnlAppBanner.Location = new Point(0, 0);
+            pnlAppBanner.Location = new Point(0, 35);
             pnlAppBanner.Name = "pnlAppBanner";
             pnlAppBanner.Size = new Size(584, 134);
             pnlAppBanner.TabIndex = 6;
+            // 
+            // panelTitleBar
+            // 
+            panelTitleBar.BackColor = Color.FromArgb(53, 69, 93);
+            panelTitleBar.Controls.Add(buttonClose);
+            panelTitleBar.Dock = DockStyle.Top;
+            panelTitleBar.Location = new Point(0, 0);
+            panelTitleBar.Name = "panelTitleBar";
+            panelTitleBar.Size = new Size(584, 35);
+            panelTitleBar.TabIndex = 10;
+            panelTitleBar.MouseDown += panelTitleBar_MouseDown;
+            panelTitleBar.MouseMove += panelTitleBar_MouseMove;
+            panelTitleBar.MouseUp += panelTitleBar_MouseUp;
+            // 
+            // buttonClose
+            // 
+            buttonClose.BackColor = Color.Transparent;
+            buttonClose.Dock = DockStyle.Right;
+            buttonClose.FlatAppearance.BorderSize = 0;
+            buttonClose.FlatStyle = FlatStyle.Flat;
+            buttonClose.ForeColor = Color.White;
+            buttonClose.Image = Properties.Resources.icons_close;
+            buttonClose.Location = new Point(534, 0);
+            buttonClose.Name = "buttonClose";
+            buttonClose.Size = new Size(50, 35);
+            buttonClose.TabIndex = 8;
+            buttonClose.UseVisualStyleBackColor = false;
+            buttonClose.Click += buttonClose_Click;
+            buttonClose.MouseEnter += buttonClose_MouseEnter;
+            buttonClose.MouseLeave += buttonClose_MouseLeave;
             // 
             // FormAuthentication
             // 
             AutoScaleDimensions = new SizeF(6F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(584, 311);
+            ClientSize = new Size(584, 346);
             Controls.Add(pnlAppBanner);
             Controls.Add(txtBoxPasscode);
             Controls.Add(btnLogin);
             Controls.Add(btnBypass);
+            Controls.Add(panelTitleBar);
             Font = new Font("Corbel", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormAuthentication";
@@ -151,6 +188,7 @@
             ((System.ComponentModel.ISupportInitialize)picBoxAppLogo).EndInit();
             pnlAppBanner.ResumeLayout(false);
             pnlAppBanner.PerformLayout();
+            panelTitleBar.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -164,5 +202,7 @@
         private PictureBox picBoxAppLogo;
         private Label lblDeveloper;
         private Panel pnlAppBanner;
+        private Panel panelTitleBar;
+        private Button buttonClose;
     }
 }

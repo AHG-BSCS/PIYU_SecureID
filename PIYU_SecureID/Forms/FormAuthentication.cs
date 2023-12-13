@@ -5,6 +5,7 @@ namespace PIYU_SecureID
     public partial class FormAuthentication : Form
     {
         private const string SecretKey = "F7XO6UWCIHG3XAZ4JSBTUYLZVJECUBH7";
+        private Point mouseDownLocation;
         public FormAuthentication()
         {
             InitializeComponent();
@@ -50,6 +51,42 @@ namespace PIYU_SecureID
         private void FormAuthentication_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonClose_MouseLeave(object sender, EventArgs e)
+        {
+            buttonClose.BackColor = Color.Transparent;
+        }
+
+        private void buttonClose_MouseEnter(object sender, EventArgs e)
+        {
+            buttonClose.BackColor = Color.Red;
+        }
+
+        private void panelTitleBar_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                int deltaX = e.X - mouseDownLocation.X;
+                int deltaY = e.Y - mouseDownLocation.Y;
+
+                this.Location = new Point(this.Location.X + deltaX, this.Location.Y + deltaY);
+            }
+        }
+
+        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownLocation = e.Location;
+        }
+
+        private void panelTitleBar_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDownLocation = Point.Empty;
         }
     }
 }
