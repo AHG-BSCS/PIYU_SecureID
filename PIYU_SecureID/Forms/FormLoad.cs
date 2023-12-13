@@ -12,32 +12,39 @@ namespace PIYU_SecureID
 {
     public partial class FormLoad : Form
     {
-        private string secureID = "SecureID";
         public FormLoad()
         {
             InitializeComponent();
-            LoadAsync();
+            StartupAnimation();
         }
 
-        private async void LoadAsync()
+        private async void StartupAnimation()
         {
-            for (int i = 300; i >= 200; i--)
+            string applicationName = "SecureID";
+            lblApplicationName.Text = string.Empty;
+
+            for (int i = 318; i >= 218; i--)
             {
-                pictureBoxLogo.Location = new Point(i, 115);
+                picBoxApplicationLogo.Location = new Point(i, 115);
                 await Task.Delay(1);
                 Application.DoEvents();
             }
-            labelName.Text = "";
-            foreach (char c in secureID)
+
+            foreach (char c in applicationName)
             {
-                labelName.Text += c;
+                lblApplicationName.Text += c;
                 await Task.Delay(100);
                 Application.DoEvents();
             }
+
             Thread.Sleep(1000);
+            showNewForm(new FormAuthentication());
+        }
+
+        private void showNewForm(Form form)
+        {
             this.Hide();
-            FormAuthentication auth = new FormAuthentication();
-            auth.Show();
+            form.Show();
         }
     }
 }

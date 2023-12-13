@@ -28,60 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            pictureBoxLogo = new PictureBox();
-            timerStart = new System.Windows.Forms.Timer(components);
-            labelName = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
+            picBoxApplicationLogo = new PictureBox();
+            lblApplicationName = new Label();
+            ((System.ComponentModel.ISupportInitialize)picBoxApplicationLogo).BeginInit();
             SuspendLayout();
             // 
-            // pictureBoxLogo
+            // picBoxApplicationLogo
             // 
-            pictureBoxLogo.Image = Properties.Resources.PIYU_SecureID;
-            pictureBoxLogo.Location = new Point(354, 110);
-            pictureBoxLogo.Name = "pictureBoxLogo";
-            pictureBoxLogo.Size = new Size(125, 125);
-            pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxLogo.TabIndex = 0;
-            pictureBoxLogo.TabStop = false;
+            picBoxApplicationLogo.Image = Properties.Resources.PIYU_SecureID;
+            picBoxApplicationLogo.Location = new Point(218, 113);
+            picBoxApplicationLogo.Margin = new Padding(1000, 3, 1000, 3);
+            picBoxApplicationLogo.Name = "picBoxApplicationLogo";
+            picBoxApplicationLogo.Size = new Size(125, 125);
+            picBoxApplicationLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            picBoxApplicationLogo.TabIndex = 0;
+            picBoxApplicationLogo.TabStop = false;
             // 
-            // timerStart
+            // lblApplicationName
             // 
-            timerStart.Enabled = true;
-            timerStart.Interval = 10000;
-            // 
-            // labelName
-            // 
-            labelName.AutoSize = true;
-            labelName.BackColor = Color.Transparent;
-            labelName.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            labelName.ForeColor = Color.White;
-            labelName.Location = new Point(325, 155);
-            labelName.Name = "labelName";
-            labelName.Size = new Size(0, 37);
-            labelName.TabIndex = 1;
+            lblApplicationName.AutoSize = true;
+            lblApplicationName.BackColor = Color.Transparent;
+            lblApplicationName.Font = new Font("Corbel", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            lblApplicationName.ForeColor = Color.Black;
+            lblApplicationName.Location = new Point(343, 158);
+            lblApplicationName.Name = "lblApplicationName";
+            lblApplicationName.Size = new Size(140, 39);
+            lblApplicationName.TabIndex = 1;
+            lblApplicationName.Text = "SecureID";
             // 
             // FormLoad
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(6F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(53, 69, 93);
             ClientSize = new Size(700, 350);
-            Controls.Add(pictureBoxLogo);
-            Controls.Add(labelName);
+            Controls.Add(picBoxApplicationLogo);
+            Controls.Add(lblApplicationName);
+            Font = new Font("Corbel", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormLoad";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormLoad";
-            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picBoxApplicationLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private PictureBox pictureBoxLogo;
-        private System.Windows.Forms.Timer timerStart;
-        private Label labelName;
+        private PictureBox picBoxApplicationLogo;
+        private Label lblApplicationName;
     }
 }
