@@ -38,12 +38,6 @@ namespace PIYU_SecureID
                 $"{DateOfBirth}~{Province}~{City}~{Barangay}~{MaritalStatus}~{imageIdPhotoBase64}~{imageSignBase64}";
         }
 
-        public string ToQrIdCsvString()
-        {
-            string imageQrBase64 = ImageIdQr != null ? Convert.ToBase64String(ImageIdQr) : string.Empty;
-            return $"{imageQrBase64}~";
-        }
-
         public static ClassInformation FromCsvString(string csv)
         {
             var values = csv.Split('~');
@@ -61,28 +55,6 @@ namespace PIYU_SecureID
                 City = values[9],
                 Barangay = values[10],
                 MaritalStatus = values[11],
-                ImageIdPhoto = Convert.FromBase64String(values[12]),
-                ImageSign = Convert.FromBase64String(values[13])
-            };
-        }
-
-        public static ClassInformation FromIdQrCsvString(string csv)
-        {
-            var values = csv.Split('~');
-            return new ClassInformation
-            {
-                LastName = values[0],
-                GivenName = values[1],
-                MiddleName = values[2],
-                Suffix = values[3],
-                Sex = values[4],
-                MaritalStatus = values[5],
-                BloodType = values[6],
-                DateOfBirth = values[7],
-                Province = values[8],
-                City = values[9],
-                Barangay = values[10],
-                DateIssued = values[11],
                 ImageIdPhoto = Convert.FromBase64String(values[12]),
                 ImageSign = Convert.FromBase64String(values[13])
             };
@@ -125,6 +97,34 @@ namespace PIYU_SecureID
             }
         }
 
+        public string ToQrIdCsvString()
+        {
+            string imageQrBase64 = ImageIdQr != null ? Convert.ToBase64String(ImageIdQr) : string.Empty;
+            return $"{imageQrBase64}~";
+        }
+
+        public static ClassInformation FromIdQrCsvString(string csv)
+        {
+            var values = csv.Split('~');
+            return new ClassInformation
+            {
+                LastName = values[0],
+                GivenName = values[1],
+                MiddleName = values[2],
+                Suffix = values[3],
+                Sex = values[4],
+                MaritalStatus = values[5],
+                BloodType = values[6],
+                DateOfBirth = values[7],
+                Province = values[8],
+                City = values[9],
+                Barangay = values[10],
+                DateIssued = values[11],
+                ImageIdPhoto = Convert.FromBase64String(values[12]),
+                ImageSign = Convert.FromBase64String(values[13])
+            };
+        }
+
         public ClassInformation LoadIdQrFromFile(string filename, string targetKey)
         {
             try
@@ -159,6 +159,35 @@ namespace PIYU_SecureID
             {
                 MessageBox.Show($"Error loading data: {ex.Message}");
                 return new ClassInformation();
+            }
+        }
+
+        public int LoadTotalTransaction()
+        {
+            try
+            {
+                if (File.Exists("Resources/info.txt"))
+                {
+                    string[] lines = File.ReadAllLines("Resources/info.txt");
+
+                    int i = 0;
+                    foreach (string line in lines)
+                    {
+                        i++;
+                    }
+                    return i;
+                }
+                else
+                {
+                    MessageBox.Show($"File not found. Creating a new data structure.");
+                }
+
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading data: {ex.Message}");
+                return 0;
             }
         }
     }

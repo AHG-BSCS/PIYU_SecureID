@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            labelTotalTransaction = new Label();
             SuspendLayout();
             // 
-            // label1
+            // labelTotalTransaction
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(104, 76);
-            label1.Name = "label1";
-            label1.Size = new Size(90, 30);
-            label1.TabIndex = 0;
-            label1.Text = "Total ID Created\r\nTotal ID Verified\r\n";
+            labelTotalTransaction.AutoSize = true;
+            labelTotalTransaction.Location = new Point(104, 76);
+            labelTotalTransaction.Name = "labelTotalTransaction";
+            labelTotalTransaction.Size = new Size(106, 15);
+            labelTotalTransaction.TabIndex = 0;
+            labelTotalTransaction.Text = "Total Transactions: ";
             // 
             // ControlDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label1);
+            Controls.Add(labelTotalTransaction);
             Name = "ControlDashboard";
             Size = new Size(799, 354);
             ResumeLayout(false);
@@ -53,6 +53,6 @@
 
         #endregion
 
-        private Label label1;
+        private Label labelTotalTransaction;
     }
 }
