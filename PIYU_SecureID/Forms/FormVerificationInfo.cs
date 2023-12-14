@@ -90,6 +90,7 @@ namespace PIYU_SecureID
 
                 createId.RefreshData();
                 this.Close();
+                FormDashboard.lblTransactionCounter.Text = data.LoadTotalTransaction().ToString();
             }
         }
 
