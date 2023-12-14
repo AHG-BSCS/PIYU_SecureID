@@ -17,9 +17,9 @@ namespace PIYU_SecureID
             string appName = "SecureID";
             lblAppName.Text = string.Empty;
 
-            for (int i = 256; i >= 156; i--)
+            for (int i = 262; i >= 162; i--)
             {
-                picBoxAppLogo.Location = new Point(i, 113);
+                picBoxAppLogo.Location = new Point(i, 120);
                 await Task.Delay(1);
                 Application.DoEvents();
             }

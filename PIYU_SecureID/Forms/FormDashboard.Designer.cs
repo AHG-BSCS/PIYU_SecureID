@@ -72,9 +72,10 @@
             btnMinimize.FlatStyle = FlatStyle.Flat;
             btnMinimize.ForeColor = SystemColors.Control;
             btnMinimize.Image = Properties.Resources.icons_minimize;
-            btnMinimize.Location = new Point(1016, 0);
+            btnMinimize.Location = new Point(988, 0);
+            btnMinimize.Margin = new Padding(4, 3, 4, 3);
             btnMinimize.Name = "btnMinimize";
-            btnMinimize.Size = new Size(35, 30);
+            btnMinimize.Size = new Size(41, 32);
             btnMinimize.TabIndex = 7;
             btnMinimize.UseVisualStyleBackColor = false;
             btnMinimize.Click += btnMinimize_Click;
@@ -88,9 +89,10 @@
             btnMinimizeMaximize.FlatStyle = FlatStyle.Flat;
             btnMinimizeMaximize.ForeColor = SystemColors.Control;
             btnMinimizeMaximize.Image = Properties.Resources.icons_square;
-            btnMinimizeMaximize.Location = new Point(1051, 0);
+            btnMinimizeMaximize.Location = new Point(1029, 0);
+            btnMinimizeMaximize.Margin = new Padding(4, 3, 4, 3);
             btnMinimizeMaximize.Name = "btnMinimizeMaximize";
-            btnMinimizeMaximize.Size = new Size(35, 30);
+            btnMinimizeMaximize.Size = new Size(41, 32);
             btnMinimizeMaximize.TabIndex = 8;
             btnMinimizeMaximize.UseVisualStyleBackColor = false;
             btnMinimizeMaximize.Click += btnMinimizeMaximize_Click;
@@ -104,9 +106,10 @@
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.ForeColor = SystemColors.Control;
             btnClose.Image = Properties.Resources.icons_close;
-            btnClose.Location = new Point(1086, 0);
+            btnClose.Location = new Point(1070, 0);
+            btnClose.Margin = new Padding(4, 3, 4, 3);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(35, 30);
+            btnClose.Size = new Size(41, 32);
             btnClose.TabIndex = 9;
             btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
@@ -120,9 +123,10 @@
             pnlTitleBar.Controls.Add(btnMinimizeMaximize);
             pnlTitleBar.Controls.Add(btnClose);
             pnlTitleBar.Dock = DockStyle.Top;
-            pnlTitleBar.Location = new Point(145, 0);
+            pnlTitleBar.Location = new Point(155, 0);
+            pnlTitleBar.Margin = new Padding(4, 3, 4, 3);
             pnlTitleBar.Name = "pnlTitleBar";
-            pnlTitleBar.Size = new Size(1121, 30);
+            pnlTitleBar.Size = new Size(1111, 32);
             pnlTitleBar.TabIndex = 0;
             pnlTitleBar.MouseDown += lblAppName_MouseDown;
             pnlTitleBar.MouseMove += lblAppName_MouseMove;
@@ -146,9 +150,10 @@
             plnSideNavigation.Controls.Add(panel1);
             plnSideNavigation.Dock = DockStyle.Left;
             plnSideNavigation.Location = new Point(0, 0);
+            plnSideNavigation.Margin = new Padding(4, 3, 4, 3);
             plnSideNavigation.Name = "plnSideNavigation";
             plnSideNavigation.Padding = new Padding(0, 0, 0, 10);
-            plnSideNavigation.Size = new Size(145, 649);
+            plnSideNavigation.Size = new Size(155, 649);
             plnSideNavigation.TabIndex = 0;
             // 
             // lblTransactionCounter
@@ -156,9 +161,10 @@
             lblTransactionCounter.Dock = DockStyle.Top;
             lblTransactionCounter.Font = new Font("Segoe UI Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblTransactionCounter.ForeColor = Color.FromArgb(92, 176, 21);
-            lblTransactionCounter.Location = new Point(0, 281);
+            lblTransactionCounter.Location = new Point(0, 310);
+            lblTransactionCounter.Margin = new Padding(4, 0, 4, 0);
             lblTransactionCounter.Name = "lblTransactionCounter";
-            lblTransactionCounter.Size = new Size(145, 40);
+            lblTransactionCounter.Size = new Size(155, 43);
             lblTransactionCounter.TabIndex = 13;
             lblTransactionCounter.Text = "0";
             lblTransactionCounter.TextAlign = ContentAlignment.TopCenter;
@@ -166,11 +172,12 @@
             // lblTransactions
             // 
             lblTransactions.Dock = DockStyle.Top;
-            lblTransactions.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTransactions.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblTransactions.ForeColor = Color.FromArgb(92, 176, 21);
-            lblTransactions.Location = new Point(0, 251);
+            lblTransactions.Location = new Point(0, 278);
+            lblTransactions.Margin = new Padding(4, 0, 4, 0);
             lblTransactions.Name = "lblTransactions";
-            lblTransactions.Size = new Size(145, 30);
+            lblTransactions.Size = new Size(155, 32);
             lblTransactions.TabIndex = 0;
             lblTransactions.Text = "Transactions";
             lblTransactions.TextAlign = ContentAlignment.BottomCenter;
@@ -179,9 +186,10 @@
             // 
             pnlMiddleSeparator.BackColor = Color.FromArgb(92, 176, 21);
             pnlMiddleSeparator.Dock = DockStyle.Top;
-            pnlMiddleSeparator.Location = new Point(0, 246);
+            pnlMiddleSeparator.Location = new Point(0, 273);
+            pnlMiddleSeparator.Margin = new Padding(4, 3, 4, 3);
             pnlMiddleSeparator.Name = "pnlMiddleSeparator";
-            pnlMiddleSeparator.Size = new Size(145, 5);
+            pnlMiddleSeparator.Size = new Size(155, 5);
             pnlMiddleSeparator.TabIndex = 11;
             // 
             // btnSettings
@@ -190,13 +198,13 @@
             btnSettings.Dock = DockStyle.Bottom;
             btnSettings.FlatAppearance.BorderSize = 0;
             btnSettings.FlatStyle = FlatStyle.Flat;
-            btnSettings.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSettings.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnSettings.ForeColor = Color.White;
-            btnSettings.Location = new Point(0, 524);
-            btnSettings.Margin = new Padding(3, 2, 3, 2);
+            btnSettings.Location = new Point(0, 508);
+            btnSettings.Margin = new Padding(4, 2, 4, 2);
             btnSettings.Name = "btnSettings";
-            btnSettings.Padding = new Padding(10, 0, 0, 0);
-            btnSettings.Size = new Size(145, 40);
+            btnSettings.Padding = new Padding(12, 0, 0, 0);
+            btnSettings.Size = new Size(155, 43);
             btnSettings.TabIndex = 5;
             btnSettings.Text = "Settings";
             btnSettings.TextAlign = ContentAlignment.MiddleLeft;
@@ -209,13 +217,13 @@
             btnLogout.Dock = DockStyle.Bottom;
             btnLogout.FlatAppearance.BorderSize = 0;
             btnLogout.FlatStyle = FlatStyle.Flat;
-            btnLogout.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogout.ForeColor = Color.White;
-            btnLogout.Location = new Point(0, 564);
-            btnLogout.Margin = new Padding(3, 2, 3, 2);
+            btnLogout.Location = new Point(0, 551);
+            btnLogout.Margin = new Padding(4, 2, 4, 2);
             btnLogout.Name = "btnLogout";
-            btnLogout.Padding = new Padding(10, 0, 0, 0);
-            btnLogout.Size = new Size(145, 45);
+            btnLogout.Padding = new Padding(12, 0, 0, 0);
+            btnLogout.Size = new Size(155, 48);
             btnLogout.TabIndex = 6;
             btnLogout.Text = "Logout";
             btnLogout.TextAlign = ContentAlignment.MiddleLeft;
@@ -228,20 +236,22 @@
             pnlLiveDateTime.Controls.Add(lblLiveTime);
             pnlLiveDateTime.Controls.Add(lblLiveDate);
             pnlLiveDateTime.Dock = DockStyle.Bottom;
-            pnlLiveDateTime.Location = new Point(0, 609);
+            pnlLiveDateTime.Location = new Point(0, 599);
+            pnlLiveDateTime.Margin = new Padding(4, 3, 4, 3);
             pnlLiveDateTime.Name = "pnlLiveDateTime";
-            pnlLiveDateTime.Size = new Size(145, 30);
+            pnlLiveDateTime.Size = new Size(155, 40);
             pnlLiveDateTime.TabIndex = 0;
             // 
             // lblLiveTime
             // 
             lblLiveTime.Dock = DockStyle.Top;
-            lblLiveTime.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLiveTime.Font = new Font("Segoe UI Semilight", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             lblLiveTime.ForeColor = Color.White;
-            lblLiveTime.Location = new Point(0, 15);
+            lblLiveTime.Location = new Point(0, 20);
+            lblLiveTime.Margin = new Padding(4, 0, 4, 0);
             lblLiveTime.Name = "lblLiveTime";
-            lblLiveTime.Padding = new Padding(10, 0, 0, 0);
-            lblLiveTime.Size = new Size(145, 15);
+            lblLiveTime.Padding = new Padding(12, 0, 0, 0);
+            lblLiveTime.Size = new Size(155, 20);
             lblLiveTime.TabIndex = 0;
             lblLiveTime.Text = "00:00:00 AM";
             lblLiveTime.TextAlign = ContentAlignment.MiddleLeft;
@@ -249,12 +259,13 @@
             // lblLiveDate
             // 
             lblLiveDate.Dock = DockStyle.Top;
-            lblLiveDate.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLiveDate.Font = new Font("Segoe UI Semilight", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             lblLiveDate.ForeColor = SystemColors.Control;
             lblLiveDate.Location = new Point(0, 0);
+            lblLiveDate.Margin = new Padding(4, 0, 4, 0);
             lblLiveDate.Name = "lblLiveDate";
-            lblLiveDate.Padding = new Padding(10, 0, 0, 0);
-            lblLiveDate.Size = new Size(145, 15);
+            lblLiveDate.Padding = new Padding(12, 0, 0, 0);
+            lblLiveDate.Size = new Size(155, 20);
             lblLiveDate.TabIndex = 0;
             lblLiveDate.Text = "January 01, 1753";
             lblLiveDate.TextAlign = ContentAlignment.MiddleLeft;
@@ -265,13 +276,13 @@
             btnVerifyId.Dock = DockStyle.Top;
             btnVerifyId.FlatAppearance.BorderSize = 0;
             btnVerifyId.FlatStyle = FlatStyle.Flat;
-            btnVerifyId.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnVerifyId.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnVerifyId.ForeColor = Color.White;
-            btnVerifyId.Location = new Point(0, 201);
-            btnVerifyId.Margin = new Padding(3, 2, 3, 2);
+            btnVerifyId.Location = new Point(0, 225);
+            btnVerifyId.Margin = new Padding(4, 2, 4, 2);
             btnVerifyId.Name = "btnVerifyId";
-            btnVerifyId.Padding = new Padding(10, 0, 0, 0);
-            btnVerifyId.Size = new Size(145, 45);
+            btnVerifyId.Padding = new Padding(12, 0, 0, 0);
+            btnVerifyId.Size = new Size(155, 48);
             btnVerifyId.TabIndex = 4;
             btnVerifyId.Text = "Verify ID";
             btnVerifyId.TextAlign = ContentAlignment.MiddleLeft;
@@ -284,13 +295,13 @@
             btnCheckId.Dock = DockStyle.Top;
             btnCheckId.FlatAppearance.BorderSize = 0;
             btnCheckId.FlatStyle = FlatStyle.Flat;
-            btnCheckId.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCheckId.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnCheckId.ForeColor = Color.White;
-            btnCheckId.Location = new Point(0, 156);
-            btnCheckId.Margin = new Padding(3, 2, 3, 2);
+            btnCheckId.Location = new Point(0, 177);
+            btnCheckId.Margin = new Padding(4, 2, 4, 2);
             btnCheckId.Name = "btnCheckId";
-            btnCheckId.Padding = new Padding(10, 0, 0, 0);
-            btnCheckId.Size = new Size(145, 45);
+            btnCheckId.Padding = new Padding(12, 0, 0, 0);
+            btnCheckId.Size = new Size(155, 48);
             btnCheckId.TabIndex = 3;
             btnCheckId.Text = "Check ID";
             btnCheckId.TextAlign = ContentAlignment.MiddleLeft;
@@ -303,13 +314,13 @@
             btnCreateId.Dock = DockStyle.Top;
             btnCreateId.FlatAppearance.BorderSize = 0;
             btnCreateId.FlatStyle = FlatStyle.Flat;
-            btnCreateId.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCreateId.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnCreateId.ForeColor = Color.White;
-            btnCreateId.Location = new Point(0, 111);
-            btnCreateId.Margin = new Padding(3, 2, 3, 2);
+            btnCreateId.Location = new Point(0, 129);
+            btnCreateId.Margin = new Padding(4, 2, 4, 2);
             btnCreateId.Name = "btnCreateId";
-            btnCreateId.Padding = new Padding(10, 0, 0, 0);
-            btnCreateId.Size = new Size(145, 45);
+            btnCreateId.Padding = new Padding(12, 0, 0, 0);
+            btnCreateId.Size = new Size(155, 48);
             btnCreateId.TabIndex = 2;
             btnCreateId.Text = "ID Application";
             btnCreateId.TextAlign = ContentAlignment.MiddleLeft;
@@ -320,22 +331,24 @@
             // 
             pnlTopSeparator.BackColor = Color.FromArgb(250, 201, 48);
             pnlTopSeparator.Dock = DockStyle.Top;
-            pnlTopSeparator.Location = new Point(0, 106);
+            pnlTopSeparator.Location = new Point(0, 124);
+            pnlTopSeparator.Margin = new Padding(4, 3, 4, 3);
             pnlTopSeparator.Name = "pnlTopSeparator";
-            pnlTopSeparator.Size = new Size(145, 5);
+            pnlTopSeparator.Size = new Size(155, 5);
             pnlTopSeparator.TabIndex = 12;
             // 
             // lblAppName
             // 
             lblAppName.Dock = DockStyle.Top;
             lblAppName.FlatStyle = FlatStyle.Flat;
-            lblAppName.Font = new Font("Corbel", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAppName.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblAppName.ForeColor = Color.FromArgb(250, 201, 48);
             lblAppName.ImageAlign = ContentAlignment.TopCenter;
             lblAppName.ImageKey = "(none)";
-            lblAppName.Location = new Point(0, 66);
+            lblAppName.Location = new Point(0, 81);
+            lblAppName.Margin = new Padding(4, 0, 4, 0);
             lblAppName.Name = "lblAppName";
-            lblAppName.Size = new Size(145, 40);
+            lblAppName.Size = new Size(155, 43);
             lblAppName.TabIndex = 0;
             lblAppName.Text = "SecureID";
             lblAppName.TextAlign = ContentAlignment.TopCenter;
@@ -347,10 +360,10 @@
             // 
             picBoxAppLogo.Dock = DockStyle.Top;
             picBoxAppLogo.Image = Properties.Resources.PIYU_SecureID;
-            picBoxAppLogo.Location = new Point(0, 10);
-            picBoxAppLogo.Margin = new Padding(3, 2, 3, 2);
+            picBoxAppLogo.Location = new Point(0, 11);
+            picBoxAppLogo.Margin = new Padding(4, 2, 4, 2);
             picBoxAppLogo.Name = "picBoxAppLogo";
-            picBoxAppLogo.Size = new Size(145, 56);
+            picBoxAppLogo.Size = new Size(155, 70);
             picBoxAppLogo.SizeMode = PictureBoxSizeMode.Zoom;
             picBoxAppLogo.TabIndex = 0;
             picBoxAppLogo.TabStop = false;
@@ -364,8 +377,9 @@
             panel1.BackColor = Color.FromArgb(53, 69, 93);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 3, 4, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(145, 10);
+            panel1.Size = new Size(155, 11);
             panel1.TabIndex = 10;
             panel1.MouseDown += lblAppName_MouseDown;
             panel1.MouseMove += lblAppName_MouseMove;
@@ -375,23 +389,23 @@
             // 
             pnlActiveTab.BackColor = Color.White;
             pnlActiveTab.Dock = DockStyle.Fill;
-            pnlActiveTab.Location = new Point(145, 30);
-            pnlActiveTab.Margin = new Padding(3, 2, 3, 2);
+            pnlActiveTab.Location = new Point(155, 32);
+            pnlActiveTab.Margin = new Padding(4, 2, 4, 2);
             pnlActiveTab.Name = "pnlActiveTab";
-            pnlActiveTab.Size = new Size(1121, 619);
+            pnlActiveTab.Size = new Size(1111, 617);
             pnlActiveTab.TabIndex = 0;
             // 
             // FormDashboard
             // 
-            AutoScaleDimensions = new SizeF(6F, 14F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1266, 649);
             Controls.Add(pnlActiveTab);
             Controls.Add(pnlTitleBar);
             Controls.Add(plnSideNavigation);
-            Font = new Font("Corbel", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
+            Margin = new Padding(4, 2, 4, 2);
             Name = "FormDashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "DASHBOARD";

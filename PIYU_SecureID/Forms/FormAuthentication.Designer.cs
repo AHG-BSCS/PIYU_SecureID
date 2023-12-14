@@ -46,11 +46,12 @@
             // lblAppName
             // 
             lblAppName.AutoSize = true;
-            lblAppName.Font = new Font("Corbel", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAppName.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
             lblAppName.ForeColor = Color.FromArgb(250, 201, 48);
-            lblAppName.Location = new Point(261, 20);
+            lblAppName.Location = new Point(282, 22);
+            lblAppName.Margin = new Padding(4, 0, 4, 0);
             lblAppName.Name = "lblAppName";
-            lblAppName.Size = new Size(163, 45);
+            lblAppName.Size = new Size(153, 45);
             lblAppName.TabIndex = 0;
             lblAppName.Text = "SecureID";
             lblAppName.TextAlign = ContentAlignment.MiddleCenter;
@@ -60,13 +61,13 @@
             txtBoxPasscode.Anchor = AnchorStyles.Bottom;
             txtBoxPasscode.BorderStyle = BorderStyle.None;
             txtBoxPasscode.Cursor = Cursors.IBeam;
-            txtBoxPasscode.Font = new Font("Corbel", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtBoxPasscode.Location = new Point(191, 179);
-            txtBoxPasscode.Margin = new Padding(3, 2, 3, 2);
+            txtBoxPasscode.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            txtBoxPasscode.Location = new Point(182, 171);
+            txtBoxPasscode.Margin = new Padding(4, 2, 4, 2);
             txtBoxPasscode.MaxLength = 6;
             txtBoxPasscode.Name = "txtBoxPasscode";
             txtBoxPasscode.PasswordChar = '⚫';
-            txtBoxPasscode.Size = new Size(202, 33);
+            txtBoxPasscode.Size = new Size(236, 32);
             txtBoxPasscode.TabIndex = 1;
             txtBoxPasscode.TextAlign = HorizontalAlignment.Center;
             txtBoxPasscode.TextChanged += txtBoxPasscode_TextChanged;
@@ -79,11 +80,11 @@
             btnLogin.Cursor = Cursors.Hand;
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Font = new Font("Corbel", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLogin.Location = new Point(252, 228);
-            btnLogin.Margin = new Padding(3, 2, 3, 2);
+            btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogin.Location = new Point(254, 224);
+            btnLogin.Margin = new Padding(4, 2, 4, 2);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(80, 35);
+            btnLogin.Size = new Size(93, 38);
             btnLogin.TabIndex = 2;
             btnLogin.Text = "LOGIN";
             btnLogin.UseVisualStyleBackColor = false;
@@ -96,11 +97,11 @@
             btnBypass.Cursor = Cursors.Hand;
             btnBypass.FlatAppearance.BorderSize = 0;
             btnBypass.FlatStyle = FlatStyle.Flat;
-            btnBypass.Font = new Font("Corbel", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnBypass.Location = new Point(237, 279);
-            btnBypass.Margin = new Padding(3, 2, 3, 2);
+            btnBypass.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBypass.Location = new Point(236, 278);
+            btnBypass.Margin = new Padding(4, 2, 4, 2);
             btnBypass.Name = "btnBypass";
-            btnBypass.Size = new Size(110, 25);
+            btnBypass.Size = new Size(128, 27);
             btnBypass.TabIndex = 3;
             btnBypass.Text = "★ Debug Bypass";
             btnBypass.UseVisualStyleBackColor = false;
@@ -111,10 +112,10 @@
             // 
             picBoxAppLogo.BackColor = Color.Transparent;
             picBoxAppLogo.Image = Properties.Resources.PIYU_SecureID;
-            picBoxAppLogo.Location = new Point(161, 0);
-            picBoxAppLogo.Margin = new Padding(3, 2, 3, 2);
+            picBoxAppLogo.Location = new Point(165, 1);
+            picBoxAppLogo.Margin = new Padding(4, 2, 4, 2);
             picBoxAppLogo.Name = "picBoxAppLogo";
-            picBoxAppLogo.Size = new Size(100, 100);
+            picBoxAppLogo.Size = new Size(117, 107);
             picBoxAppLogo.SizeMode = PictureBoxSizeMode.Zoom;
             picBoxAppLogo.TabIndex = 4;
             picBoxAppLogo.TabStop = false;
@@ -122,9 +123,10 @@
             // lblDeveloper
             // 
             lblDeveloper.AutoSize = true;
-            lblDeveloper.Font = new Font("Corbel", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDeveloper.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lblDeveloper.ForeColor = Color.FromArgb(250, 201, 48);
-            lblDeveloper.Location = new Point(268, 62);
+            lblDeveloper.Location = new Point(288, 67);
+            lblDeveloper.Margin = new Padding(4, 0, 4, 0);
             lblDeveloper.Name = "lblDeveloper";
             lblDeveloper.Size = new Size(93, 15);
             lblDeveloper.TabIndex = 0;
@@ -138,9 +140,10 @@
             pnlAppBanner.Controls.Add(lblAppName);
             pnlAppBanner.Controls.Add(picBoxAppLogo);
             pnlAppBanner.Dock = DockStyle.Top;
-            pnlAppBanner.Location = new Point(0, 29);
+            pnlAppBanner.Location = new Point(0, 25);
+            pnlAppBanner.Margin = new Padding(4, 3, 4, 3);
             pnlAppBanner.Name = "pnlAppBanner";
-            pnlAppBanner.Size = new Size(584, 115);
+            pnlAppBanner.Size = new Size(600, 123);
             pnlAppBanner.TabIndex = 0;
             // 
             // pnlTitleBar
@@ -149,8 +152,9 @@
             pnlTitleBar.Controls.Add(btnClose);
             pnlTitleBar.Dock = DockStyle.Top;
             pnlTitleBar.Location = new Point(0, 0);
+            pnlTitleBar.Margin = new Padding(4, 3, 4, 3);
             pnlTitleBar.Name = "pnlTitleBar";
-            pnlTitleBar.Size = new Size(584, 29);
+            pnlTitleBar.Size = new Size(600, 25);
             pnlTitleBar.TabIndex = 10;
             pnlTitleBar.MouseDown += pnlTitleBar_MouseDown;
             pnlTitleBar.MouseMove += pnlTitleBar_MouseMove;
@@ -165,9 +169,10 @@
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.ForeColor = Color.White;
             btnClose.Image = Properties.Resources.icons_close;
-            btnClose.Location = new Point(534, 0);
+            btnClose.Location = new Point(542, 0);
+            btnClose.Margin = new Padding(4, 3, 4, 3);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(50, 29);
+            btnClose.Size = new Size(58, 25);
             btnClose.TabIndex = 8;
             btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
@@ -176,18 +181,18 @@
             // 
             // FormAuthentication
             // 
-            AutoScaleDimensions = new SizeF(6F, 14F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(584, 346);
+            ClientSize = new Size(600, 350);
             Controls.Add(btnBypass);
             Controls.Add(btnLogin);
             Controls.Add(txtBoxPasscode);
             Controls.Add(pnlAppBanner);
             Controls.Add(pnlTitleBar);
-            Font = new Font("Corbel", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 2, 3, 2);
+            Margin = new Padding(4, 2, 4, 2);
             Name = "FormAuthentication";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LOGIN";
