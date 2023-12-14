@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace PIYU_SecureID
 {
-    public partial class Form1 : Form
+    public partial class FormGame : Form
     {
         int pipeSpeed = 5;
         int gravity = 10;
         int score = 0;
         bool isGameRunning = false;
-        public Form1()
+        public FormGame()
         {
             InitializeComponent();
         }

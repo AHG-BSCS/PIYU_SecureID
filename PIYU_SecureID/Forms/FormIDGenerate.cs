@@ -35,7 +35,6 @@ namespace PIYU_SecureID
         public string maritalStatus;
         public byte[] idPhoto;
         public byte[] sign;
-        public ControlCreateId createId;
         public FormIDGenerate(string lastName, string givenName, string middleName, string suffix, long? transactionNum,
                                     string sex, string bloodType, string dateOfBirth, string province, string city, string barangay, string maritalStatus,
                                     byte[] idPhoto)
@@ -233,14 +232,6 @@ namespace PIYU_SecureID
 
                 this.Close();
                 FormDashboard.lblVerifiedIdCounter.Text = data.LoadTotalId().ToString();
-            }
-        }
-        private byte[] ConvertPictureBoxImageToBase64(Image image)
-        {
-            using (MemoryStream ms = new MemoryStream())
-            {
-                image.Save(ms, ImageFormat.Png);
-                return ms.ToArray();
             }
         }
 
