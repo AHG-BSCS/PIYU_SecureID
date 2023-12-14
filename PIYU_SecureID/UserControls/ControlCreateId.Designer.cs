@@ -184,7 +184,6 @@
             comboBoxSex.Name = "comboBoxSex";
             comboBoxSex.Size = new Size(109, 29);
             comboBoxSex.TabIndex = 5;
-            comboBoxSex.SelectedIndexChanged += comboBoxSex_SelectedIndexChanged;
             comboBoxSex.DropDownClosed += comboBoxSex_DropDownClosed;
             comboBoxSex.Click += comboBoxSex_Click;
             // 
@@ -302,7 +301,6 @@
             comboBoxBloodType.Name = "comboBoxBloodType";
             comboBoxBloodType.Size = new Size(109, 29);
             comboBoxBloodType.TabIndex = 6;
-            comboBoxBloodType.SelectedIndexChanged += comboBoxSex_SelectedIndexChanged;
             comboBoxBloodType.DropDownClosed += comboBoxSex_DropDownClosed;
             comboBoxBloodType.Click += comboBoxSex_Click;
             // 
@@ -318,7 +316,6 @@
             comboBoxMaritalStatus.Name = "comboBoxMaritalStatus";
             comboBoxMaritalStatus.Size = new Size(104, 29);
             comboBoxMaritalStatus.TabIndex = 13;
-            comboBoxMaritalStatus.SelectedIndexChanged += comboBoxSex_SelectedIndexChanged;
             comboBoxMaritalStatus.DropDownClosed += comboBoxSex_DropDownClosed;
             comboBoxMaritalStatus.Click += comboBoxSex_Click;
             // 
@@ -327,13 +324,13 @@
             comboBoxProvince.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxProvince.FlatStyle = FlatStyle.Flat;
             comboBoxProvince.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxProvince.FormattingEnabled = true;
             comboBoxProvince.Location = new Point(54, 429);
             comboBoxProvince.Margin = new Padding(3, 2, 3, 2);
             comboBoxProvince.Name = "comboBoxProvince";
             comboBoxProvince.Size = new Size(224, 29);
+            comboBoxProvince.Sorted = true;
             comboBoxProvince.TabIndex = 10;
-            comboBoxProvince.SelectedIndexChanged += comboBoxSex_SelectedIndexChanged;
+            comboBoxProvince.SelectedIndexChanged += comboBoxProvince_SelectedIndexChanged;
             comboBoxProvince.DropDownClosed += comboBoxSex_DropDownClosed;
             comboBoxProvince.Click += comboBoxSex_Click;
             // 
@@ -353,13 +350,13 @@
             comboBoxCity.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxCity.FlatStyle = FlatStyle.Flat;
             comboBoxCity.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxCity.FormattingEnabled = true;
             comboBoxCity.Location = new Point(284, 429);
             comboBoxCity.Margin = new Padding(3, 2, 3, 2);
             comboBoxCity.Name = "comboBoxCity";
             comboBoxCity.Size = new Size(224, 29);
+            comboBoxCity.Sorted = true;
             comboBoxCity.TabIndex = 11;
-            comboBoxCity.SelectedIndexChanged += comboBoxSex_SelectedIndexChanged;
+            comboBoxCity.SelectedIndexChanged += comboBoxCity_SelectedIndexChanged;
             comboBoxCity.DropDownClosed += comboBoxSex_DropDownClosed;
             comboBoxCity.Click += comboBoxSex_Click;
             // 
@@ -379,13 +376,12 @@
             comboBoxBarangay.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxBarangay.FlatStyle = FlatStyle.Flat;
             comboBoxBarangay.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxBarangay.FormattingEnabled = true;
             comboBoxBarangay.Location = new Point(514, 429);
             comboBoxBarangay.Margin = new Padding(3, 2, 3, 2);
             comboBoxBarangay.Name = "comboBoxBarangay";
             comboBoxBarangay.Size = new Size(224, 29);
+            comboBoxBarangay.Sorted = true;
             comboBoxBarangay.TabIndex = 12;
-            comboBoxBarangay.SelectedIndexChanged += comboBoxSex_SelectedIndexChanged;
             comboBoxBarangay.DropDownClosed += comboBoxSex_DropDownClosed;
             comboBoxBarangay.Click += comboBoxSex_Click;
             // 
@@ -481,7 +477,6 @@
             comboBoxCameras.Name = "comboBoxCameras";
             comboBoxCameras.Size = new Size(109, 23);
             comboBoxCameras.TabIndex = 35;
-            comboBoxCameras.SelectedIndexChanged += comboBoxSex_SelectedIndexChanged;
             comboBoxCameras.DropDownClosed += comboBoxSex_DropDownClosed;
             comboBoxCameras.Click += comboBoxSex_Click;
             // 
@@ -497,7 +492,6 @@
             comboBoxDay.Name = "comboBoxDay";
             comboBoxDay.Size = new Size(68, 29);
             comboBoxDay.TabIndex = 7;
-            comboBoxDay.SelectedIndexChanged += comboBoxSex_SelectedIndexChanged;
             comboBoxDay.DropDownClosed += comboBoxSex_DropDownClosed;
             comboBoxDay.Click += comboBoxSex_Click;
             // 
@@ -513,7 +507,6 @@
             comboBoxMonth.Name = "comboBoxMonth";
             comboBoxMonth.Size = new Size(150, 29);
             comboBoxMonth.TabIndex = 8;
-            comboBoxMonth.SelectedIndexChanged += comboBoxSex_SelectedIndexChanged;
             comboBoxMonth.DropDownClosed += comboBoxSex_DropDownClosed;
             comboBoxMonth.Click += comboBoxSex_Click;
             // 

@@ -207,7 +207,7 @@ namespace PIYU_SecureID
                     {
                         foreach (var province in scenario.ProvinceList?.Keys ?? Enumerable.Empty<string>())
                         {
-                            comboBoxProvince.Items.Add(province);
+                            comboBoxProvince.Items.Add(province.Replace('�', 'Ñ'));
                         }
                     }
                 }
@@ -241,7 +241,7 @@ namespace PIYU_SecureID
                         var selectedProvinceData = scenario.ProvinceList?.GetValueOrDefault(selectedProvince);
                         foreach (var municipality in selectedProvinceData?.MunicipalityList?.Keys ?? Enumerable.Empty<string>())
                         {
-                            comboBoxCity.Items.Add(municipality);
+                            comboBoxCity.Items.Add(municipality.Replace('�', 'Ñ'));
                         }
                     }
                 }
@@ -273,7 +273,7 @@ namespace PIYU_SecureID
                         var selectedCityData = selectedProvinceData?.MunicipalityList?.GetValueOrDefault(selectedCity);
                         foreach (var barangay in selectedCityData?.BarangayList ?? Enumerable.Empty<string>())
                         {
-                            comboBoxBarangay.Items.Add(barangay);
+                            comboBoxBarangay.Items.Add(barangay.Replace('�', 'Ñ'));
                         }
                     }
                 }
@@ -296,11 +296,6 @@ namespace PIYU_SecureID
         }
 
         private void ControlCreateId_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxSex_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -358,7 +353,7 @@ namespace PIYU_SecureID
             }
             else if (char.IsLetter(e.KeyChar) || e.KeyChar == '\b')
             {
-                
+
             }
             else
             {
