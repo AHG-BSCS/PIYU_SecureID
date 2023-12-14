@@ -33,7 +33,7 @@ namespace PIYU_SecureID
             else
             {
                 this.Close();
-                savePhoto.pictureBoxIdPhoto.Image = picBoxCameraDisplay.Image;
+                savePhoto.picBoxPicture.Image = picBoxCameraDisplay.Image;
                 videoSource.SignalToStop();
                 videoSource.WaitForStop();
             }
@@ -54,9 +54,9 @@ namespace PIYU_SecureID
 
             if (videoDevices.Count > 0)
             {
-                if (savePhoto.comboBoxCameras.SelectedItem != null)
+                if (savePhoto.cmbBoxCameraList.SelectedItem != null)
                 {
-                    int selectedCameraIndex = savePhoto.comboBoxCameras.SelectedIndex;
+                    int selectedCameraIndex = savePhoto.cmbBoxCameraList.SelectedIndex;
                     videoSource = new VideoCaptureDevice(videoDevices[selectedCameraIndex].MonikerString);
                     videoSource.NewFrame += VideoSource_NewFrame;
                     videoSource.Start();

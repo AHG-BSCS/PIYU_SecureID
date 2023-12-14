@@ -108,7 +108,7 @@ namespace PIYU_SecureID
         private void SaveSignature()
         {
             Bitmap signature = GetSignature();
-            saveSign.pictureBoxSignature.Image = signature;
+            saveSign.picBoxSignature.Image = signature;
             ClearSignature();
         }
 

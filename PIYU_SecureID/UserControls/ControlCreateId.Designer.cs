@@ -28,533 +28,703 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            textBoxLastName = new TextBox();
-            textBoxGivenName = new TextBox();
-            label2 = new Label();
-            textBoxMiddleName = new TextBox();
-            label3 = new Label();
-            textBoxSuffix = new TextBox();
-            label4 = new Label();
-            label5 = new Label();
-            comboBoxSex = new ComboBox();
-            label6 = new Label();
-            label7 = new Label();
-            pictureBoxIdPhoto = new PictureBox();
-            buttonBrowse = new Button();
-            label8 = new Label();
-            label9 = new Label();
-            buttonCreate = new Button();
-            buttonClearAll = new Button();
-            comboBoxBloodType = new ComboBox();
-            comboBoxMaritalStatus = new ComboBox();
-            comboBoxProvince = new ComboBox();
-            label10 = new Label();
-            comboBoxCity = new ComboBox();
-            label11 = new Label();
-            comboBoxBarangay = new ComboBox();
-            label12 = new Label();
-            buttonCamera = new Button();
-            buttonClearPhoto = new Button();
-            buttonSignature = new Button();
-            pictureBoxSignature = new PictureBox();
-            buttonClearSign = new Button();
-            comboBoxCameras = new ComboBox();
-            comboBoxDay = new ComboBox();
-            comboBoxMonth = new ComboBox();
+            lblLastName = new Label();
+            txtBoxLastName = new TextBox();
+            txtBoxFirstName = new TextBox();
+            lblFirstName = new Label();
+            txtBoxMiddleName = new TextBox();
+            lblMiddleName = new Label();
+            txtBoxSuffix = new TextBox();
+            lblSuffix = new Label();
+            lblSex = new Label();
+            cmbBoxSex = new ComboBox();
+            lblDateOfBirth = new Label();
+            lblAddress = new Label();
+            lblBloodType = new Label();
+            lblMaritalStatus = new Label();
+            cmbBoxBloodType = new ComboBox();
+            cmbBoxMaritalStatus = new ComboBox();
+            cmbBoxProvince = new ComboBox();
+            lblProvince = new Label();
+            cmbBoxCity = new ComboBox();
+            lblCity = new Label();
+            cmbBoxBarangay = new ComboBox();
+            lblBarangay = new Label();
+            btnSignature = new Button();
+            picBoxSignature = new PictureBox();
+            btnClearSign = new Button();
+            cmbBoxDay = new ComboBox();
+            cmbBoxMonth = new ComboBox();
             textBoxYear = new TextBox();
-            label13 = new Label();
-            label14 = new Label();
-            label15 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxSignature).BeginInit();
+            lblDay = new Label();
+            lblMonth = new Label();
+            lblYear = new Label();
+            pnlInfoForm = new Panel();
+            lblFormTitle = new Label();
+            cmbBoxYears = new ComboBox();
+            pnlSeparator = new Panel();
+            tblPnlProof = new TableLayoutPanel();
+            pnlPictureProof = new Panel();
+            btnCamera = new Button();
+            picBoxPicture = new PictureBox();
+            btnClear = new Button();
+            cmbBoxCameraList = new ComboBox();
+            btnBrowse = new Button();
+            pnlSignatureProof = new Panel();
+            btnCreateId = new Button();
+            btnClearForm = new Button();
+            pnlControls = new Panel();
+            lblSignature = new Label();
+            lblPicture = new Label();
+            ((System.ComponentModel.ISupportInitialize)picBoxSignature).BeginInit();
+            pnlInfoForm.SuspendLayout();
+            tblPnlProof.SuspendLayout();
+            pnlPictureProof.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picBoxPicture).BeginInit();
+            pnlSignatureProof.SuspendLayout();
+            pnlControls.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(40, 33);
-            label1.Name = "label1";
-            label1.Size = new Size(86, 21);
-            label1.TabIndex = 0;
-            label1.Text = "Last Name";
-            label1.Click += ControlCreateId_Click;
-            // 
-            // textBoxLastName
-            // 
-            textBoxLastName.CharacterCasing = CharacterCasing.Upper;
-            textBoxLastName.Cursor = Cursors.IBeam;
-            textBoxLastName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxLastName.Location = new Point(54, 57);
-            textBoxLastName.MaxLength = 64;
-            textBoxLastName.Name = "textBoxLastName";
-            textBoxLastName.Size = new Size(404, 29);
-            textBoxLastName.TabIndex = 1;
-            textBoxLastName.KeyPress += textBoxLastName_KeyPress;
-            // 
-            // textBoxGivenName
-            // 
-            textBoxGivenName.CharacterCasing = CharacterCasing.Upper;
-            textBoxGivenName.Cursor = Cursors.IBeam;
-            textBoxGivenName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxGivenName.Location = new Point(54, 118);
-            textBoxGivenName.MaxLength = 64;
-            textBoxGivenName.Name = "textBoxGivenName";
-            textBoxGivenName.Size = new Size(404, 29);
-            textBoxGivenName.TabIndex = 2;
-            textBoxGivenName.KeyPress += textBoxLastName_KeyPress;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(40, 94);
-            label2.Name = "label2";
-            label2.Size = new Size(98, 21);
-            label2.TabIndex = 2;
-            label2.Text = "Given Name";
-            label2.Click += ControlCreateId_Click;
-            // 
-            // textBoxMiddleName
-            // 
-            textBoxMiddleName.CharacterCasing = CharacterCasing.Upper;
-            textBoxMiddleName.Cursor = Cursors.IBeam;
-            textBoxMiddleName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxMiddleName.Location = new Point(54, 179);
-            textBoxMiddleName.MaxLength = 64;
-            textBoxMiddleName.Name = "textBoxMiddleName";
-            textBoxMiddleName.Size = new Size(404, 29);
-            textBoxMiddleName.TabIndex = 3;
-            textBoxMiddleName.KeyPress += textBoxLastName_KeyPress;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(40, 155);
-            label3.Name = "label3";
-            label3.Size = new Size(109, 21);
-            label3.TabIndex = 4;
-            label3.Text = "Middle Name";
-            label3.Click += ControlCreateId_Click;
-            // 
-            // textBoxSuffix
-            // 
-            textBoxSuffix.CharacterCasing = CharacterCasing.Upper;
-            textBoxSuffix.Cursor = Cursors.IBeam;
-            textBoxSuffix.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxSuffix.Location = new Point(54, 240);
-            textBoxSuffix.MaxLength = 32;
-            textBoxSuffix.Name = "textBoxSuffix";
-            textBoxSuffix.Size = new Size(109, 29);
-            textBoxSuffix.TabIndex = 4;
-            textBoxSuffix.KeyPress += textBoxLastName_KeyPress;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(40, 216);
-            label4.Name = "label4";
-            label4.Size = new Size(52, 21);
-            label4.TabIndex = 6;
-            label4.Text = "Suffix";
-            label4.Click += ControlCreateId_Click;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(40, 277);
-            label5.Name = "label5";
-            label5.Size = new Size(36, 21);
-            label5.TabIndex = 8;
-            label5.Text = "Sex";
-            label5.Click += ControlCreateId_Click;
-            // 
-            // comboBoxSex
-            // 
-            comboBoxSex.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxSex.FlatStyle = FlatStyle.Flat;
-            comboBoxSex.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxSex.FormattingEnabled = true;
-            comboBoxSex.Items.AddRange(new object[] { "MALE", "FEMALE" });
-            comboBoxSex.Location = new Point(54, 296);
-            comboBoxSex.Name = "comboBoxSex";
-            comboBoxSex.Size = new Size(109, 29);
-            comboBoxSex.TabIndex = 5;
-            comboBoxSex.DropDownClosed += comboBoxSex_DropDownClosed;
-            comboBoxSex.Click += comboBoxSex_Click;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(40, 343);
-            label6.Name = "label6";
-            label6.Size = new Size(103, 21);
-            label6.TabIndex = 10;
-            label6.Text = "Date of Birth";
-            label6.Click += ControlCreateId_Click;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(40, 410);
-            label7.Name = "label7";
-            label7.Size = new Size(70, 21);
-            label7.TabIndex = 12;
-            label7.Text = "Address";
-            label7.Click += ControlCreateId_Click;
-            // 
-            // pictureBoxIdPhoto
-            // 
-            pictureBoxIdPhoto.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxIdPhoto.Location = new Point(839, 33);
-            pictureBoxIdPhoto.Name = "pictureBoxIdPhoto";
-            pictureBoxIdPhoto.Size = new Size(215, 215);
-            pictureBoxIdPhoto.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxIdPhoto.TabIndex = 14;
-            pictureBoxIdPhoto.TabStop = false;
-            pictureBoxIdPhoto.Click += ControlCreateId_Click;
-            // 
-            // buttonBrowse
-            // 
-            buttonBrowse.BackColor = Color.FromArgb(60, 95, 106);
-            buttonBrowse.FlatAppearance.BorderSize = 0;
-            buttonBrowse.FlatStyle = FlatStyle.Flat;
-            buttonBrowse.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonBrowse.ForeColor = Color.White;
-            buttonBrowse.Location = new Point(947, 254);
-            buttonBrowse.Name = "buttonBrowse";
-            buttonBrowse.Size = new Size(107, 38);
-            buttonBrowse.TabIndex = 15;
-            buttonBrowse.Text = "Browse";
-            buttonBrowse.UseVisualStyleBackColor = false;
-            buttonBrowse.Click += buttonBrowse_Click;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(207, 277);
-            label8.Name = "label8";
-            label8.Size = new Size(93, 21);
-            label8.TabIndex = 16;
-            label8.Text = "Blood Type";
-            label8.Click += ControlCreateId_Click;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(40, 476);
-            label9.Name = "label9";
-            label9.Size = new Size(110, 21);
-            label9.TabIndex = 18;
-            label9.Text = "Marital Status";
-            label9.Click += ControlCreateId_Click;
-            // 
-            // buttonCreate
-            // 
-            buttonCreate.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonCreate.BackColor = Color.FromArgb(29, 146, 61);
-            buttonCreate.FlatAppearance.BorderSize = 0;
-            buttonCreate.FlatStyle = FlatStyle.Flat;
-            buttonCreate.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCreate.ForeColor = Color.White;
-            buttonCreate.Location = new Point(970, 548);
-            buttonCreate.Name = "buttonCreate";
-            buttonCreate.Size = new Size(125, 56);
-            buttonCreate.TabIndex = 20;
-            buttonCreate.Text = "CREATE";
-            buttonCreate.UseVisualStyleBackColor = false;
-            buttonCreate.Click += buttonCreate_Click;
-            // 
-            // buttonClearAll
-            // 
-            buttonClearAll.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonClearAll.BackColor = Color.DarkRed;
-            buttonClearAll.FlatAppearance.BorderSize = 0;
-            buttonClearAll.FlatStyle = FlatStyle.Flat;
-            buttonClearAll.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonClearAll.ForeColor = Color.White;
-            buttonClearAll.Location = new Point(839, 548);
-            buttonClearAll.Name = "buttonClearAll";
-            buttonClearAll.Size = new Size(125, 56);
-            buttonClearAll.TabIndex = 21;
-            buttonClearAll.Text = "CLEAR";
-            buttonClearAll.UseVisualStyleBackColor = false;
-            buttonClearAll.Click += buttonClearAll_Click;
-            // 
-            // comboBoxBloodType
-            // 
-            comboBoxBloodType.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxBloodType.FlatStyle = FlatStyle.Flat;
-            comboBoxBloodType.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxBloodType.FormattingEnabled = true;
-            comboBoxBloodType.Items.AddRange(new object[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" });
-            comboBoxBloodType.Location = new Point(222, 296);
-            comboBoxBloodType.Margin = new Padding(3, 2, 3, 2);
-            comboBoxBloodType.Name = "comboBoxBloodType";
-            comboBoxBloodType.Size = new Size(109, 29);
-            comboBoxBloodType.TabIndex = 6;
-            comboBoxBloodType.DropDownClosed += comboBoxSex_DropDownClosed;
-            comboBoxBloodType.Click += comboBoxSex_Click;
-            // 
-            // comboBoxMaritalStatus
-            // 
-            comboBoxMaritalStatus.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxMaritalStatus.FlatStyle = FlatStyle.Flat;
-            comboBoxMaritalStatus.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxMaritalStatus.FormattingEnabled = true;
-            comboBoxMaritalStatus.Items.AddRange(new object[] { "SINGLE", "MARRIED", "ANNULLED", "SEPARATED", "WIDOWED" });
-            comboBoxMaritalStatus.Location = new Point(59, 499);
-            comboBoxMaritalStatus.Margin = new Padding(3, 2, 3, 2);
-            comboBoxMaritalStatus.Name = "comboBoxMaritalStatus";
-            comboBoxMaritalStatus.Size = new Size(104, 29);
-            comboBoxMaritalStatus.TabIndex = 13;
-            comboBoxMaritalStatus.DropDownClosed += comboBoxSex_DropDownClosed;
-            comboBoxMaritalStatus.Click += comboBoxSex_Click;
-            // 
-            // comboBoxProvince
-            // 
-            comboBoxProvince.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxProvince.FlatStyle = FlatStyle.Flat;
-            comboBoxProvince.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxProvince.Location = new Point(54, 429);
-            comboBoxProvince.Margin = new Padding(3, 2, 3, 2);
-            comboBoxProvince.Name = "comboBoxProvince";
-            comboBoxProvince.Size = new Size(224, 29);
-            comboBoxProvince.Sorted = true;
-            comboBoxProvince.TabIndex = 10;
-            comboBoxProvince.SelectedIndexChanged += comboBoxProvince_SelectedIndexChanged;
-            comboBoxProvince.DropDownClosed += comboBoxSex_DropDownClosed;
-            comboBoxProvince.Click += comboBoxSex_Click;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label10.Location = new Point(129, 460);
-            label10.Name = "label10";
-            label10.Size = new Size(61, 13);
-            label10.TabIndex = 25;
-            label10.Text = "PROVINCE";
-            label10.Click += ControlCreateId_Click;
-            // 
-            // comboBoxCity
-            // 
-            comboBoxCity.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxCity.FlatStyle = FlatStyle.Flat;
-            comboBoxCity.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxCity.Location = new Point(284, 429);
-            comboBoxCity.Margin = new Padding(3, 2, 3, 2);
-            comboBoxCity.Name = "comboBoxCity";
-            comboBoxCity.Size = new Size(224, 29);
-            comboBoxCity.Sorted = true;
-            comboBoxCity.TabIndex = 11;
-            comboBoxCity.SelectedIndexChanged += comboBoxCity_SelectedIndexChanged;
-            comboBoxCity.DropDownClosed += comboBoxSex_DropDownClosed;
-            comboBoxCity.Click += comboBoxSex_Click;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label11.Location = new Point(384, 460);
-            label11.Name = "label11";
-            label11.Size = new Size(29, 13);
-            label11.TabIndex = 27;
-            label11.Text = "CITY";
-            label11.Click += ControlCreateId_Click;
-            // 
-            // comboBoxBarangay
-            // 
-            comboBoxBarangay.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxBarangay.FlatStyle = FlatStyle.Flat;
-            comboBoxBarangay.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxBarangay.Location = new Point(514, 429);
-            comboBoxBarangay.Margin = new Padding(3, 2, 3, 2);
-            comboBoxBarangay.Name = "comboBoxBarangay";
-            comboBoxBarangay.Size = new Size(224, 29);
-            comboBoxBarangay.Sorted = true;
-            comboBoxBarangay.TabIndex = 12;
-            comboBoxBarangay.DropDownClosed += comboBoxSex_DropDownClosed;
-            comboBoxBarangay.Click += comboBoxSex_Click;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label12.Location = new Point(594, 460);
-            label12.Name = "label12";
-            label12.Size = new Size(65, 13);
-            label12.TabIndex = 29;
-            label12.Text = "BARANGAY";
-            label12.Click += ControlCreateId_Click;
-            // 
-            // buttonCamera
-            // 
-            buttonCamera.BackColor = Color.FromArgb(60, 95, 106);
-            buttonCamera.FlatAppearance.BorderSize = 0;
-            buttonCamera.FlatStyle = FlatStyle.Flat;
-            buttonCamera.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCamera.ForeColor = Color.White;
-            buttonCamera.Location = new Point(839, 254);
-            buttonCamera.Name = "buttonCamera";
-            buttonCamera.Size = new Size(107, 38);
-            buttonCamera.TabIndex = 30;
-            buttonCamera.Text = "Take a Photo";
-            buttonCamera.UseVisualStyleBackColor = false;
-            buttonCamera.Click += buttonCamera_Click;
-            // 
-            // buttonClearPhoto
-            // 
-            buttonClearPhoto.BackColor = Color.FromArgb(60, 95, 106);
-            buttonClearPhoto.FlatAppearance.BorderSize = 0;
-            buttonClearPhoto.FlatStyle = FlatStyle.Flat;
-            buttonClearPhoto.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonClearPhoto.ForeColor = Color.White;
-            buttonClearPhoto.Location = new Point(947, 293);
-            buttonClearPhoto.Name = "buttonClearPhoto";
-            buttonClearPhoto.Size = new Size(107, 38);
-            buttonClearPhoto.TabIndex = 31;
-            buttonClearPhoto.Text = "Clear";
-            buttonClearPhoto.UseVisualStyleBackColor = false;
-            buttonClearPhoto.Click += buttonClearPhoto_Click;
-            // 
-            // buttonSignature
-            // 
-            buttonSignature.BackColor = Color.FromArgb(60, 95, 106);
-            buttonSignature.FlatAppearance.BorderSize = 0;
-            buttonSignature.FlatStyle = FlatStyle.Flat;
-            buttonSignature.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonSignature.ForeColor = Color.White;
-            buttonSignature.Location = new Point(550, 254);
-            buttonSignature.Name = "buttonSignature";
-            buttonSignature.Size = new Size(107, 38);
-            buttonSignature.TabIndex = 32;
-            buttonSignature.Text = "Signature";
-            buttonSignature.UseVisualStyleBackColor = false;
-            buttonSignature.Click += buttonSignature_Click;
-            // 
-            // pictureBoxSignature
-            // 
-            pictureBoxSignature.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxSignature.Location = new Point(550, 33);
-            pictureBoxSignature.Name = "pictureBoxSignature";
-            pictureBoxSignature.Size = new Size(215, 215);
-            pictureBoxSignature.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxSignature.TabIndex = 33;
-            pictureBoxSignature.TabStop = false;
-            pictureBoxSignature.Click += ControlCreateId_Click;
-            // 
-            // buttonClearSign
-            // 
-            buttonClearSign.BackColor = Color.FromArgb(60, 95, 106);
-            buttonClearSign.FlatAppearance.BorderSize = 0;
-            buttonClearSign.FlatStyle = FlatStyle.Flat;
-            buttonClearSign.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonClearSign.ForeColor = Color.White;
-            buttonClearSign.Location = new Point(658, 254);
-            buttonClearSign.Name = "buttonClearSign";
-            buttonClearSign.Size = new Size(107, 38);
-            buttonClearSign.TabIndex = 34;
-            buttonClearSign.Text = "Clear";
-            buttonClearSign.UseVisualStyleBackColor = false;
-            buttonClearSign.Click += buttonClearSign_Click;
-            // 
-            // comboBoxCameras
-            // 
-            comboBoxCameras.BackColor = Color.White;
-            comboBoxCameras.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxCameras.FlatStyle = FlatStyle.Flat;
-            comboBoxCameras.FormattingEnabled = true;
-            comboBoxCameras.Location = new Point(838, 293);
-            comboBoxCameras.Name = "comboBoxCameras";
-            comboBoxCameras.Size = new Size(109, 23);
-            comboBoxCameras.TabIndex = 35;
-            comboBoxCameras.DropDownClosed += comboBoxSex_DropDownClosed;
-            comboBoxCameras.Click += comboBoxSex_Click;
-            // 
-            // comboBoxDay
-            // 
-            comboBoxDay.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxDay.FlatStyle = FlatStyle.Flat;
-            comboBoxDay.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxDay.FormattingEnabled = true;
-            comboBoxDay.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" });
-            comboBoxDay.Location = new Point(54, 366);
-            comboBoxDay.Margin = new Padding(3, 2, 3, 2);
-            comboBoxDay.Name = "comboBoxDay";
-            comboBoxDay.Size = new Size(68, 29);
-            comboBoxDay.TabIndex = 7;
-            comboBoxDay.DropDownClosed += comboBoxSex_DropDownClosed;
-            comboBoxDay.Click += comboBoxSex_Click;
-            // 
-            // comboBoxMonth
-            // 
-            comboBoxMonth.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxMonth.FlatStyle = FlatStyle.Flat;
-            comboBoxMonth.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxMonth.FormattingEnabled = true;
-            comboBoxMonth.Items.AddRange(new object[] { "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER" });
-            comboBoxMonth.Location = new Point(128, 365);
-            comboBoxMonth.Margin = new Padding(3, 2, 3, 2);
-            comboBoxMonth.Name = "comboBoxMonth";
-            comboBoxMonth.Size = new Size(150, 29);
-            comboBoxMonth.TabIndex = 8;
-            comboBoxMonth.DropDownClosed += comboBoxSex_DropDownClosed;
-            comboBoxMonth.Click += comboBoxSex_Click;
+            // lblLastName
+            // 
+            lblLastName.AutoSize = true;
+            lblLastName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblLastName.Location = new Point(23, 57);
+            lblLastName.Name = "lblLastName";
+            lblLastName.Size = new Size(86, 21);
+            lblLastName.TabIndex = 0;
+            lblLastName.Text = "Last Name";
+            lblLastName.Click += ControlCreateId_Click;
+            // 
+            // txtBoxLastName
+            // 
+            txtBoxLastName.CharacterCasing = CharacterCasing.Upper;
+            txtBoxLastName.Cursor = Cursors.IBeam;
+            txtBoxLastName.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBoxLastName.Location = new Point(23, 81);
+            txtBoxLastName.MaxLength = 64;
+            txtBoxLastName.Name = "txtBoxLastName";
+            txtBoxLastName.PlaceholderText = "Required";
+            txtBoxLastName.Size = new Size(404, 27);
+            txtBoxLastName.TabIndex = 1;
+            txtBoxLastName.KeyPress += textBoxLastName_KeyPress;
+            // 
+            // txtBoxFirstName
+            // 
+            txtBoxFirstName.CharacterCasing = CharacterCasing.Upper;
+            txtBoxFirstName.Cursor = Cursors.IBeam;
+            txtBoxFirstName.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBoxFirstName.Location = new Point(23, 137);
+            txtBoxFirstName.MaxLength = 64;
+            txtBoxFirstName.Name = "txtBoxFirstName";
+            txtBoxFirstName.PlaceholderText = "Required";
+            txtBoxFirstName.Size = new Size(265, 27);
+            txtBoxFirstName.TabIndex = 2;
+            txtBoxFirstName.KeyPress += textBoxLastName_KeyPress;
+            // 
+            // lblFirstName
+            // 
+            lblFirstName.AutoSize = true;
+            lblFirstName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblFirstName.Location = new Point(23, 113);
+            lblFirstName.Name = "lblFirstName";
+            lblFirstName.Size = new Size(88, 21);
+            lblFirstName.TabIndex = 2;
+            lblFirstName.Text = "First Name";
+            lblFirstName.Click += ControlCreateId_Click;
+            // 
+            // txtBoxMiddleName
+            // 
+            txtBoxMiddleName.CharacterCasing = CharacterCasing.Upper;
+            txtBoxMiddleName.Cursor = Cursors.IBeam;
+            txtBoxMiddleName.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBoxMiddleName.Location = new Point(23, 193);
+            txtBoxMiddleName.MaxLength = 64;
+            txtBoxMiddleName.Name = "txtBoxMiddleName";
+            txtBoxMiddleName.PlaceholderText = "Optional";
+            txtBoxMiddleName.Size = new Size(404, 27);
+            txtBoxMiddleName.TabIndex = 3;
+            txtBoxMiddleName.KeyPress += textBoxLastName_KeyPress;
+            // 
+            // lblMiddleName
+            // 
+            lblMiddleName.AutoSize = true;
+            lblMiddleName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMiddleName.Location = new Point(23, 169);
+            lblMiddleName.Name = "lblMiddleName";
+            lblMiddleName.Size = new Size(109, 21);
+            lblMiddleName.TabIndex = 4;
+            lblMiddleName.Text = "Middle Name";
+            lblMiddleName.Click += ControlCreateId_Click;
+            // 
+            // txtBoxSuffix
+            // 
+            txtBoxSuffix.CharacterCasing = CharacterCasing.Upper;
+            txtBoxSuffix.Cursor = Cursors.IBeam;
+            txtBoxSuffix.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBoxSuffix.Location = new Point(318, 137);
+            txtBoxSuffix.MaxLength = 32;
+            txtBoxSuffix.Name = "txtBoxSuffix";
+            txtBoxSuffix.PlaceholderText = "Optional";
+            txtBoxSuffix.Size = new Size(109, 27);
+            txtBoxSuffix.TabIndex = 4;
+            txtBoxSuffix.KeyPress += textBoxLastName_KeyPress;
+            // 
+            // lblSuffix
+            // 
+            lblSuffix.AutoSize = true;
+            lblSuffix.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSuffix.Location = new Point(318, 113);
+            lblSuffix.Name = "lblSuffix";
+            lblSuffix.Size = new Size(52, 21);
+            lblSuffix.TabIndex = 6;
+            lblSuffix.Text = "Suffix";
+            lblSuffix.Click += ControlCreateId_Click;
+            // 
+            // lblSex
+            // 
+            lblSex.AutoSize = true;
+            lblSex.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSex.Location = new Point(23, 249);
+            lblSex.Name = "lblSex";
+            lblSex.Size = new Size(36, 21);
+            lblSex.TabIndex = 8;
+            lblSex.Text = "Sex";
+            lblSex.Click += ControlCreateId_Click;
+            // 
+            // cmbBoxSex
+            // 
+            cmbBoxSex.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbBoxSex.FlatStyle = FlatStyle.Flat;
+            cmbBoxSex.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbBoxSex.FormattingEnabled = true;
+            cmbBoxSex.Items.AddRange(new object[] { "MALE", "FEMALE" });
+            cmbBoxSex.Location = new Point(23, 273);
+            cmbBoxSex.Name = "cmbBoxSex";
+            cmbBoxSex.Size = new Size(100, 28);
+            cmbBoxSex.TabIndex = 5;
+            cmbBoxSex.DropDownClosed += comboBoxSex_DropDownClosed;
+            // 
+            // lblDateOfBirth
+            // 
+            lblDateOfBirth.AutoSize = true;
+            lblDateOfBirth.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDateOfBirth.Location = new Point(23, 329);
+            lblDateOfBirth.Name = "lblDateOfBirth";
+            lblDateOfBirth.Size = new Size(103, 21);
+            lblDateOfBirth.TabIndex = 10;
+            lblDateOfBirth.Text = "Date of Birth";
+            lblDateOfBirth.Click += ControlCreateId_Click;
+            // 
+            // lblAddress
+            // 
+            lblAddress.AutoSize = true;
+            lblAddress.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAddress.Location = new Point(23, 422);
+            lblAddress.Name = "lblAddress";
+            lblAddress.Size = new Size(70, 21);
+            lblAddress.TabIndex = 12;
+            lblAddress.Text = "Address";
+            lblAddress.Click += ControlCreateId_Click;
+            // 
+            // lblBloodType
+            // 
+            lblBloodType.AutoSize = true;
+            lblBloodType.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblBloodType.Location = new Point(147, 249);
+            lblBloodType.Name = "lblBloodType";
+            lblBloodType.Size = new Size(93, 21);
+            lblBloodType.TabIndex = 16;
+            lblBloodType.Text = "Blood Type";
+            lblBloodType.Click += ControlCreateId_Click;
+            // 
+            // lblMaritalStatus
+            // 
+            lblMaritalStatus.AutoSize = true;
+            lblMaritalStatus.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMaritalStatus.Location = new Point(264, 249);
+            lblMaritalStatus.Name = "lblMaritalStatus";
+            lblMaritalStatus.Size = new Size(110, 21);
+            lblMaritalStatus.TabIndex = 18;
+            lblMaritalStatus.Text = "Marital Status";
+            lblMaritalStatus.Click += ControlCreateId_Click;
+            // 
+            // cmbBoxBloodType
+            // 
+            cmbBoxBloodType.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbBoxBloodType.FlatStyle = FlatStyle.Flat;
+            cmbBoxBloodType.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbBoxBloodType.FormattingEnabled = true;
+            cmbBoxBloodType.Items.AddRange(new object[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" });
+            cmbBoxBloodType.Location = new Point(147, 272);
+            cmbBoxBloodType.Margin = new Padding(3, 2, 3, 2);
+            cmbBoxBloodType.Name = "cmbBoxBloodType";
+            cmbBoxBloodType.Size = new Size(93, 28);
+            cmbBoxBloodType.TabIndex = 6;
+            cmbBoxBloodType.DropDownClosed += comboBoxSex_DropDownClosed;
+            // 
+            // cmbBoxMaritalStatus
+            // 
+            cmbBoxMaritalStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbBoxMaritalStatus.FlatStyle = FlatStyle.Flat;
+            cmbBoxMaritalStatus.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbBoxMaritalStatus.FormattingEnabled = true;
+            cmbBoxMaritalStatus.Items.AddRange(new object[] { "SINGLE", "MARRIED", "ANNULLED", "SEPARATED", "WIDOWED" });
+            cmbBoxMaritalStatus.Location = new Point(264, 272);
+            cmbBoxMaritalStatus.Margin = new Padding(3, 2, 3, 2);
+            cmbBoxMaritalStatus.Name = "cmbBoxMaritalStatus";
+            cmbBoxMaritalStatus.Size = new Size(134, 28);
+            cmbBoxMaritalStatus.TabIndex = 13;
+            cmbBoxMaritalStatus.DropDownClosed += comboBoxSex_DropDownClosed;
+            // 
+            // cmbBoxProvince
+            // 
+            cmbBoxProvince.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbBoxProvince.FlatStyle = FlatStyle.Flat;
+            cmbBoxProvince.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbBoxProvince.Location = new Point(23, 445);
+            cmbBoxProvince.Margin = new Padding(3, 2, 3, 2);
+            cmbBoxProvince.Name = "cmbBoxProvince";
+            cmbBoxProvince.Size = new Size(280, 28);
+            cmbBoxProvince.Sorted = true;
+            cmbBoxProvince.TabIndex = 10;
+            cmbBoxProvince.SelectedIndexChanged += comboBoxProvince_SelectedIndexChanged;
+            cmbBoxProvince.DropDownClosed += comboBoxSex_DropDownClosed;
+            // 
+            // lblProvince
+            // 
+            lblProvince.AutoSize = true;
+            lblProvince.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lblProvince.Location = new Point(128, 482);
+            lblProvince.Name = "lblProvince";
+            lblProvince.Size = new Size(61, 13);
+            lblProvince.TabIndex = 25;
+            lblProvince.Text = "PROVINCE";
+            lblProvince.Click += ControlCreateId_Click;
+            // 
+            // cmbBoxCity
+            // 
+            cmbBoxCity.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbBoxCity.FlatStyle = FlatStyle.Flat;
+            cmbBoxCity.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbBoxCity.Location = new Point(23, 503);
+            cmbBoxCity.Margin = new Padding(3, 2, 3, 2);
+            cmbBoxCity.Name = "cmbBoxCity";
+            cmbBoxCity.Size = new Size(280, 28);
+            cmbBoxCity.Sorted = true;
+            cmbBoxCity.TabIndex = 11;
+            cmbBoxCity.SelectedIndexChanged += comboBoxCity_SelectedIndexChanged;
+            cmbBoxCity.DropDownClosed += comboBoxSex_DropDownClosed;
+            // 
+            // lblCity
+            // 
+            lblCity.AutoSize = true;
+            lblCity.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lblCity.Location = new Point(144, 540);
+            lblCity.Name = "lblCity";
+            lblCity.Size = new Size(29, 13);
+            lblCity.TabIndex = 27;
+            lblCity.Text = "CITY";
+            lblCity.Click += ControlCreateId_Click;
+            // 
+            // cmbBoxBarangay
+            // 
+            cmbBoxBarangay.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbBoxBarangay.FlatStyle = FlatStyle.Flat;
+            cmbBoxBarangay.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbBoxBarangay.Location = new Point(23, 561);
+            cmbBoxBarangay.Margin = new Padding(3, 2, 3, 2);
+            cmbBoxBarangay.Name = "cmbBoxBarangay";
+            cmbBoxBarangay.Size = new Size(280, 28);
+            cmbBoxBarangay.Sorted = true;
+            cmbBoxBarangay.TabIndex = 12;
+            cmbBoxBarangay.DropDownClosed += comboBoxSex_DropDownClosed;
+            // 
+            // lblBarangay
+            // 
+            lblBarangay.AutoSize = true;
+            lblBarangay.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lblBarangay.Location = new Point(126, 598);
+            lblBarangay.Name = "lblBarangay";
+            lblBarangay.Size = new Size(65, 13);
+            lblBarangay.TabIndex = 29;
+            lblBarangay.Text = "BARANGAY";
+            lblBarangay.Click += ControlCreateId_Click;
+            // 
+            // btnSignature
+            // 
+            btnSignature.Anchor = AnchorStyles.None;
+            btnSignature.BackColor = Color.White;
+            btnSignature.FlatAppearance.BorderSize = 0;
+            btnSignature.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSignature.ForeColor = Color.FromArgb(53, 69, 93);
+            btnSignature.Location = new Point(103, 359);
+            btnSignature.Name = "btnSignature";
+            btnSignature.Size = new Size(90, 35);
+            btnSignature.TabIndex = 32;
+            btnSignature.Text = "SIGNATURE";
+            btnSignature.UseVisualStyleBackColor = false;
+            btnSignature.Click += buttonSignature_Click;
+            // 
+            // picBoxSignature
+            // 
+            picBoxSignature.Anchor = AnchorStyles.None;
+            picBoxSignature.BackColor = Color.White;
+            picBoxSignature.BorderStyle = BorderStyle.FixedSingle;
+            picBoxSignature.Location = new Point(46, 43);
+            picBoxSignature.Name = "picBoxSignature";
+            picBoxSignature.Size = new Size(300, 300);
+            picBoxSignature.SizeMode = PictureBoxSizeMode.Zoom;
+            picBoxSignature.TabIndex = 33;
+            picBoxSignature.TabStop = false;
+            picBoxSignature.Click += ControlCreateId_Click;
+            // 
+            // btnClearSign
+            // 
+            btnClearSign.Anchor = AnchorStyles.None;
+            btnClearSign.BackColor = Color.White;
+            btnClearSign.FlatAppearance.BorderSize = 0;
+            btnClearSign.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClearSign.ForeColor = Color.DarkRed;
+            btnClearSign.Location = new Point(199, 359);
+            btnClearSign.Name = "btnClearSign";
+            btnClearSign.Size = new Size(90, 35);
+            btnClearSign.TabIndex = 34;
+            btnClearSign.Text = "CLEAR";
+            btnClearSign.UseVisualStyleBackColor = false;
+            btnClearSign.Click += buttonClearSign_Click;
+            // 
+            // cmbBoxDay
+            // 
+            cmbBoxDay.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbBoxDay.FlatStyle = FlatStyle.Flat;
+            cmbBoxDay.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbBoxDay.FormattingEnabled = true;
+            cmbBoxDay.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" });
+            cmbBoxDay.Location = new Point(23, 354);
+            cmbBoxDay.Margin = new Padding(3, 2, 3, 2);
+            cmbBoxDay.Name = "cmbBoxDay";
+            cmbBoxDay.Size = new Size(65, 28);
+            cmbBoxDay.TabIndex = 7;
+            cmbBoxDay.DropDownClosed += comboBoxSex_DropDownClosed;
+            // 
+            // cmbBoxMonth
+            // 
+            cmbBoxMonth.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbBoxMonth.FlatStyle = FlatStyle.Flat;
+            cmbBoxMonth.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbBoxMonth.FormattingEnabled = true;
+            cmbBoxMonth.Items.AddRange(new object[] { "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER" });
+            cmbBoxMonth.Location = new Point(112, 352);
+            cmbBoxMonth.Margin = new Padding(3, 2, 3, 2);
+            cmbBoxMonth.Name = "cmbBoxMonth";
+            cmbBoxMonth.Size = new Size(128, 28);
+            cmbBoxMonth.TabIndex = 8;
+            cmbBoxMonth.DropDownClosed += comboBoxSex_DropDownClosed;
             // 
             // textBoxYear
             // 
             textBoxYear.Cursor = Cursors.IBeam;
             textBoxYear.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxYear.Location = new Point(284, 365);
+            textBoxYear.Location = new Point(264, 319);
             textBoxYear.Margin = new Padding(3, 2, 3, 2);
             textBoxYear.MaxLength = 4;
             textBoxYear.Name = "textBoxYear";
-            textBoxYear.Size = new Size(69, 29);
+            textBoxYear.Size = new Size(78, 29);
             textBoxYear.TabIndex = 9;
             textBoxYear.TextChanged += textBoxYear_TextChanged;
             textBoxYear.KeyPress += textBoxYear_KeyPress;
             // 
-            // label13
+            // lblDay
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label13.Location = new Point(74, 396);
-            label13.Name = "label13";
-            label13.Size = new Size(28, 13);
-            label13.TabIndex = 41;
-            label13.Text = "DAY";
-            label13.Click += ControlCreateId_Click;
+            lblDay.AutoSize = true;
+            lblDay.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lblDay.Location = new Point(36, 391);
+            lblDay.Name = "lblDay";
+            lblDay.Size = new Size(28, 13);
+            lblDay.TabIndex = 41;
+            lblDay.Text = "DAY";
+            lblDay.Click += ControlCreateId_Click;
             // 
-            // label14
+            // lblMonth
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label14.Location = new Point(180, 396);
-            label14.Name = "label14";
-            label14.Size = new Size(47, 13);
-            label14.TabIndex = 42;
-            label14.Text = "MONTH";
-            label14.Click += ControlCreateId_Click;
+            lblMonth.AutoSize = true;
+            lblMonth.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lblMonth.Location = new Point(148, 389);
+            lblMonth.Name = "lblMonth";
+            lblMonth.Size = new Size(47, 13);
+            lblMonth.TabIndex = 42;
+            lblMonth.Text = "MONTH";
+            lblMonth.Click += ControlCreateId_Click;
             // 
-            // label15
+            // lblYear
             // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label15.Location = new Point(298, 396);
-            label15.Name = "label15";
-            label15.Size = new Size(33, 13);
-            label15.TabIndex = 43;
-            label15.Text = "YEAR";
-            label15.Click += ControlCreateId_Click;
+            lblYear.AutoSize = true;
+            lblYear.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lblYear.Location = new Point(282, 389);
+            lblYear.Name = "lblYear";
+            lblYear.Size = new Size(33, 13);
+            lblYear.TabIndex = 43;
+            lblYear.Text = "YEAR";
+            lblYear.Click += ControlCreateId_Click;
+            // 
+            // pnlInfoForm
+            // 
+            pnlInfoForm.AutoScroll = true;
+            pnlInfoForm.BackColor = SystemColors.Control;
+            pnlInfoForm.Controls.Add(lblFormTitle);
+            pnlInfoForm.Controls.Add(lblLastName);
+            pnlInfoForm.Controls.Add(txtBoxLastName);
+            pnlInfoForm.Controls.Add(lblFirstName);
+            pnlInfoForm.Controls.Add(txtBoxFirstName);
+            pnlInfoForm.Controls.Add(lblSuffix);
+            pnlInfoForm.Controls.Add(txtBoxSuffix);
+            pnlInfoForm.Controls.Add(lblMiddleName);
+            pnlInfoForm.Controls.Add(txtBoxMiddleName);
+            pnlInfoForm.Controls.Add(lblSex);
+            pnlInfoForm.Controls.Add(cmbBoxSex);
+            pnlInfoForm.Controls.Add(lblBloodType);
+            pnlInfoForm.Controls.Add(cmbBoxBloodType);
+            pnlInfoForm.Controls.Add(lblMaritalStatus);
+            pnlInfoForm.Controls.Add(cmbBoxMaritalStatus);
+            pnlInfoForm.Controls.Add(lblDateOfBirth);
+            pnlInfoForm.Controls.Add(cmbBoxDay);
+            pnlInfoForm.Controls.Add(lblDay);
+            pnlInfoForm.Controls.Add(cmbBoxMonth);
+            pnlInfoForm.Controls.Add(lblMonth);
+            pnlInfoForm.Controls.Add(textBoxYear);
+            pnlInfoForm.Controls.Add(cmbBoxYears);
+            pnlInfoForm.Controls.Add(lblYear);
+            pnlInfoForm.Controls.Add(lblAddress);
+            pnlInfoForm.Controls.Add(cmbBoxProvince);
+            pnlInfoForm.Controls.Add(lblProvince);
+            pnlInfoForm.Controls.Add(cmbBoxCity);
+            pnlInfoForm.Controls.Add(lblCity);
+            pnlInfoForm.Controls.Add(cmbBoxBarangay);
+            pnlInfoForm.Controls.Add(lblBarangay);
+            pnlInfoForm.Dock = DockStyle.Left;
+            pnlInfoForm.Location = new Point(0, 0);
+            pnlInfoForm.Name = "pnlInfoForm";
+            pnlInfoForm.Padding = new Padding(20);
+            pnlInfoForm.Size = new Size(453, 637);
+            pnlInfoForm.TabIndex = 44;
+            // 
+            // lblFormTitle
+            // 
+            lblFormTitle.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lblFormTitle.AutoSize = true;
+            lblFormTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblFormTitle.Location = new Point(98, 20);
+            lblFormTitle.Name = "lblFormTitle";
+            lblFormTitle.Size = new Size(257, 21);
+            lblFormTitle.TabIndex = 44;
+            lblFormTitle.Text = "PERSONAL INFORMATION FORM";
+            // 
+            // cmbBoxYears
+            // 
+            cmbBoxYears.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbBoxYears.FlatStyle = FlatStyle.Flat;
+            cmbBoxYears.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbBoxYears.FormattingEnabled = true;
+            cmbBoxYears.Items.AddRange(new object[] { "1901", "", "1902", "", "1903", "", "1904", "", "1905", "", "1906", "", "1907", "", "1908", "", "1909", "", "1910", "", "1911", "", "1912", "", "1913", "", "1914", "", "1915", "", "1916", "", "1917", "", "1918", "", "1919", "", "1920", "", "1921", "", "1922", "", "1923", "", "1924", "", "1925", "", "1926", "", "1927", "", "1928", "", "1929", "", "1930", "", "1931", "", "1932", "", "1933", "", "1934", "", "1935", "", "1936", "", "1937", "", "1938", "", "1939", "", "1940", "", "1941", "", "1942", "", "1943", "", "1944", "", "1945", "", "1946", "", "1947", "", "1948", "", "1949", "", "1950", "", "1951", "", "1952", "", "1953", "", "1954", "", "1955", "", "1956", "", "1957", "", "1958", "", "1959", "", "1960", "", "1961", "", "1962", "", "1963", "", "1964", "", "1965", "", "1966", "", "1967", "", "1968", "", "1969", "", "1970", "", "1971", "", "1972", "", "1973", "", "1974", "", "1975", "", "1976", "", "1977", "", "1978", "", "1979", "", "1980", "", "1981", "", "1982", "", "1983", "", "1984", "", "1985", "", "1986", "", "1987", "", "1988", "", "1989", "", "1990", "", "1991", "", "1992", "", "1993", "", "1994", "", "1995", "", "1996", "", "1997", "", "1998", "", "1999", "", "2000", "", "2001", "", "2002", "", "2003", "", "2004", "", "2005", "", "2006", "", "2007", "", "2008", "", "2009", "", "2010", "", "2011", "", "2012", "", "2013", "", "2014", "", "2015", "", "2016", "", "2017", "", "2018", "", "2019", "", "2020", "", "2021", "", "2022", "", "2023", "", "2024" });
+            cmbBoxYears.Location = new Point(264, 352);
+            cmbBoxYears.Margin = new Padding(3, 2, 3, 2);
+            cmbBoxYears.Name = "cmbBoxYears";
+            cmbBoxYears.Size = new Size(78, 28);
+            cmbBoxYears.TabIndex = 45;
+            // 
+            // pnlSeparator
+            // 
+            pnlSeparator.BackColor = Color.FromArgb(53, 69, 93);
+            pnlSeparator.Dock = DockStyle.Left;
+            pnlSeparator.Location = new Point(453, 0);
+            pnlSeparator.Name = "pnlSeparator";
+            pnlSeparator.Size = new Size(5, 637);
+            pnlSeparator.TabIndex = 46;
+            // 
+            // tblPnlProof
+            // 
+            tblPnlProof.ColumnCount = 3;
+            tblPnlProof.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblPnlProof.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 0F));
+            tblPnlProof.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblPnlProof.Controls.Add(pnlPictureProof, 2, 0);
+            tblPnlProof.Controls.Add(pnlSignatureProof, 0, 0);
+            tblPnlProof.Dock = DockStyle.Top;
+            tblPnlProof.GrowStyle = TableLayoutPanelGrowStyle.FixedSize;
+            tblPnlProof.Location = new Point(458, 0);
+            tblPnlProof.Name = "tblPnlProof";
+            tblPnlProof.RowCount = 1;
+            tblPnlProof.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tblPnlProof.Size = new Size(798, 453);
+            tblPnlProof.TabIndex = 48;
+            // 
+            // pnlPictureProof
+            // 
+            pnlPictureProof.BackColor = Color.FromArgb(53, 69, 93);
+            pnlPictureProof.Controls.Add(lblPicture);
+            pnlPictureProof.Controls.Add(picBoxPicture);
+            pnlPictureProof.Controls.Add(btnCamera);
+            pnlPictureProof.Controls.Add(btnBrowse);
+            pnlPictureProof.Controls.Add(btnClear);
+            pnlPictureProof.Controls.Add(cmbBoxCameraList);
+            pnlPictureProof.Dock = DockStyle.Fill;
+            pnlPictureProof.Location = new Point(402, 3);
+            pnlPictureProof.Name = "pnlPictureProof";
+            pnlPictureProof.Padding = new Padding(20);
+            pnlPictureProof.Size = new Size(393, 447);
+            pnlPictureProof.TabIndex = 37;
+            // 
+            // btnCamera
+            // 
+            btnCamera.Anchor = AnchorStyles.None;
+            btnCamera.BackColor = Color.White;
+            btnCamera.FlatAppearance.BorderSize = 0;
+            btnCamera.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCamera.ForeColor = Color.FromArgb(53, 69, 93);
+            btnCamera.Location = new Point(70, 359);
+            btnCamera.Name = "btnCamera";
+            btnCamera.Size = new Size(80, 35);
+            btnCamera.TabIndex = 30;
+            btnCamera.Text = "CAMERA";
+            btnCamera.UseVisualStyleBackColor = false;
+            btnCamera.Click += buttonCamera_Click;
+            // 
+            // picBoxPicture
+            // 
+            picBoxPicture.Anchor = AnchorStyles.None;
+            picBoxPicture.BackColor = Color.White;
+            picBoxPicture.BorderStyle = BorderStyle.FixedSingle;
+            picBoxPicture.Location = new Point(46, 43);
+            picBoxPicture.Name = "picBoxPicture";
+            picBoxPicture.Size = new Size(300, 300);
+            picBoxPicture.SizeMode = PictureBoxSizeMode.Zoom;
+            picBoxPicture.TabIndex = 14;
+            picBoxPicture.TabStop = false;
+            picBoxPicture.Click += ControlCreateId_Click;
+            // 
+            // btnClear
+            // 
+            btnClear.Anchor = AnchorStyles.None;
+            btnClear.BackColor = Color.White;
+            btnClear.FlatAppearance.BorderSize = 0;
+            btnClear.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClear.ForeColor = Color.DarkRed;
+            btnClear.Location = new Point(242, 359);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(80, 35);
+            btnClear.TabIndex = 31;
+            btnClear.Text = "CLEAR";
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += buttonClearPhoto_Click;
+            // 
+            // cmbBoxCameraList
+            // 
+            cmbBoxCameraList.Anchor = AnchorStyles.None;
+            cmbBoxCameraList.BackColor = Color.White;
+            cmbBoxCameraList.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbBoxCameraList.FlatStyle = FlatStyle.Flat;
+            cmbBoxCameraList.FormattingEnabled = true;
+            cmbBoxCameraList.Location = new Point(70, 402);
+            cmbBoxCameraList.Name = "cmbBoxCameraList";
+            cmbBoxCameraList.Size = new Size(105, 23);
+            cmbBoxCameraList.TabIndex = 35;
+            cmbBoxCameraList.DropDownClosed += comboBoxSex_DropDownClosed;
+            // 
+            // btnBrowse
+            // 
+            btnBrowse.Anchor = AnchorStyles.None;
+            btnBrowse.BackColor = Color.White;
+            btnBrowse.FlatAppearance.BorderSize = 0;
+            btnBrowse.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBrowse.ForeColor = Color.FromArgb(53, 69, 93);
+            btnBrowse.Location = new Point(156, 359);
+            btnBrowse.Name = "btnBrowse";
+            btnBrowse.Size = new Size(80, 35);
+            btnBrowse.TabIndex = 15;
+            btnBrowse.Text = "BROWSE";
+            btnBrowse.UseVisualStyleBackColor = false;
+            btnBrowse.Click += buttonBrowse_Click;
+            // 
+            // pnlSignatureProof
+            // 
+            pnlSignatureProof.BackColor = Color.FromArgb(53, 69, 93);
+            pnlSignatureProof.Controls.Add(lblSignature);
+            pnlSignatureProof.Controls.Add(picBoxSignature);
+            pnlSignatureProof.Controls.Add(btnSignature);
+            pnlSignatureProof.Controls.Add(btnClearSign);
+            pnlSignatureProof.Dock = DockStyle.Fill;
+            pnlSignatureProof.Location = new Point(3, 3);
+            pnlSignatureProof.Name = "pnlSignatureProof";
+            pnlSignatureProof.Padding = new Padding(20);
+            pnlSignatureProof.Size = new Size(393, 447);
+            pnlSignatureProof.TabIndex = 36;
+            // 
+            // btnCreateId
+            // 
+            btnCreateId.Anchor = AnchorStyles.Top;
+            btnCreateId.BackColor = Color.FromArgb(29, 146, 61);
+            btnCreateId.FlatAppearance.BorderSize = 0;
+            btnCreateId.FlatStyle = FlatStyle.Flat;
+            btnCreateId.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCreateId.ForeColor = Color.White;
+            btnCreateId.Location = new Point(403, 30);
+            btnCreateId.Name = "btnCreateId";
+            btnCreateId.Size = new Size(120, 40);
+            btnCreateId.TabIndex = 20;
+            btnCreateId.Text = "CREATE ID";
+            btnCreateId.UseVisualStyleBackColor = false;
+            btnCreateId.Click += buttonCreate_Click;
+            // 
+            // btnClearForm
+            // 
+            btnClearForm.Anchor = AnchorStyles.Top;
+            btnClearForm.BackColor = Color.DarkRed;
+            btnClearForm.FlatAppearance.BorderSize = 0;
+            btnClearForm.FlatStyle = FlatStyle.Flat;
+            btnClearForm.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClearForm.ForeColor = Color.White;
+            btnClearForm.Location = new Point(275, 30);
+            btnClearForm.Name = "btnClearForm";
+            btnClearForm.Size = new Size(120, 40);
+            btnClearForm.TabIndex = 21;
+            btnClearForm.Text = "CLEAR FORM";
+            btnClearForm.UseVisualStyleBackColor = false;
+            btnClearForm.Click += buttonClearAll_Click;
+            // 
+            // pnlControls
+            // 
+            pnlControls.Controls.Add(btnClearForm);
+            pnlControls.Controls.Add(btnCreateId);
+            pnlControls.Dock = DockStyle.Top;
+            pnlControls.Location = new Point(458, 453);
+            pnlControls.Name = "pnlControls";
+            pnlControls.Size = new Size(798, 100);
+            pnlControls.TabIndex = 49;
+            // 
+            // lblSignature
+            // 
+            lblSignature.Anchor = AnchorStyles.None;
+            lblSignature.AutoSize = true;
+            lblSignature.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSignature.ForeColor = Color.White;
+            lblSignature.Location = new Point(138, 10);
+            lblSignature.Name = "lblSignature";
+            lblSignature.Size = new Size(117, 25);
+            lblSignature.TabIndex = 35;
+            lblSignature.Text = "SIGNATURE";
+            // 
+            // lblPicture
+            // 
+            lblPicture.Anchor = AnchorStyles.None;
+            lblPicture.AutoSize = true;
+            lblPicture.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblPicture.ForeColor = Color.White;
+            lblPicture.Location = new Point(152, 10);
+            lblPicture.Name = "lblPicture";
+            lblPicture.Size = new Size(89, 25);
+            lblPicture.TabIndex = 36;
+            lblPicture.Text = "PICTURE";
             // 
             // ControlCreateId
             // 
@@ -562,95 +732,76 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.White;
-            Controls.Add(label15);
-            Controls.Add(label14);
-            Controls.Add(label13);
-            Controls.Add(textBoxYear);
-            Controls.Add(comboBoxMonth);
-            Controls.Add(comboBoxDay);
-            Controls.Add(comboBoxCameras);
-            Controls.Add(buttonClearSign);
-            Controls.Add(pictureBoxSignature);
-            Controls.Add(buttonSignature);
-            Controls.Add(buttonClearPhoto);
-            Controls.Add(buttonCamera);
-            Controls.Add(label12);
-            Controls.Add(comboBoxBarangay);
-            Controls.Add(label11);
-            Controls.Add(comboBoxCity);
-            Controls.Add(label10);
-            Controls.Add(comboBoxProvince);
-            Controls.Add(comboBoxMaritalStatus);
-            Controls.Add(comboBoxBloodType);
-            Controls.Add(buttonClearAll);
-            Controls.Add(buttonCreate);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(buttonBrowse);
-            Controls.Add(pictureBoxIdPhoto);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(comboBoxSex);
-            Controls.Add(label5);
-            Controls.Add(textBoxSuffix);
-            Controls.Add(label4);
-            Controls.Add(textBoxMiddleName);
-            Controls.Add(label3);
-            Controls.Add(textBoxGivenName);
-            Controls.Add(label2);
-            Controls.Add(textBoxLastName);
-            Controls.Add(label1);
+            Controls.Add(pnlControls);
+            Controls.Add(tblPnlProof);
+            Controls.Add(pnlSeparator);
+            Controls.Add(pnlInfoForm);
             Name = "ControlCreateId";
-            Size = new Size(1116, 628);
+            Size = new Size(1256, 637);
             Click += ControlCreateId_Click;
-            Enter += ControlCreateId_Enter;
-            Leave += ControlCreateId_Leave;
-            ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxSignature).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picBoxSignature).EndInit();
+            pnlInfoForm.ResumeLayout(false);
+            pnlInfoForm.PerformLayout();
+            tblPnlProof.ResumeLayout(false);
+            pnlPictureProof.ResumeLayout(false);
+            pnlPictureProof.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picBoxPicture).EndInit();
+            pnlSignatureProof.ResumeLayout(false);
+            pnlSignatureProof.PerformLayout();
+            pnlControls.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private TextBox textBoxLastName;
-        private TextBox textBoxGivenName;
-        private Label label2;
-        private TextBox textBoxMiddleName;
-        private Label label3;
-        private TextBox textBoxSuffix;
-        private Label label4;
-        private Label label5;
-        private ComboBox comboBoxSex;
-        private Label label6;
-        private Label label7;
-        public PictureBox pictureBoxIdPhoto;
-        private Button buttonBrowse;
-        private Label label8;
-        private Label label9;
-        private Button buttonCreate;
-        private Button buttonClearAll;
-        private ComboBox comboBoxBloodType;
-        private ComboBox comboBoxMaritalStatus;
-        private ComboBox comboBoxProvince;
-        private Label label10;
-        private ComboBox comboBoxCity;
-        private Label label11;
-        private ComboBox comboBoxBarangay;
-        private Label label12;
-        private Button buttonCamera;
-        private Button buttonClearPhoto;
-        private Button buttonSignature;
-        public PictureBox pictureBoxSignature;
-        private Button buttonClearSign;
-        public ComboBox comboBoxCameras;
-        private ComboBox comboBoxDay;
-        private ComboBox comboBoxMonth;
+        private Label lblLastName;
+        private TextBox txtBoxLastName;
+        private TextBox txtBoxFirstName;
+        private Label lblFirstName;
+        private TextBox txtBoxMiddleName;
+        private Label lblMiddleName;
+        private TextBox txtBoxSuffix;
+        private Label lblSuffix;
+        private Label lblSex;
+        private ComboBox cmbBoxSex;
+        private Label lblDateOfBirth;
+        private Label lblAddress;
+        private Label lblBloodType;
+        private Label lblMaritalStatus;
+        private ComboBox cmbBoxBloodType;
+        private ComboBox cmbBoxMaritalStatus;
+        private ComboBox cmbBoxProvince;
+        private Label lblProvince;
+        private ComboBox cmbBoxCity;
+        private Label lblCity;
+        private ComboBox cmbBoxBarangay;
+        private Label lblBarangay;
+        private Button btnSignature;
+        public PictureBox picBoxSignature;
+        private Button btnClearSign;
+        private ComboBox cmbBoxDay;
+        private ComboBox cmbBoxMonth;
         private TextBox textBoxYear;
-        private Label label13;
-        private Label label14;
-        private Label label15;
+        private Label lblDay;
+        private Label lblMonth;
+        private Label lblYear;
         private System.Windows.Forms.Timer timer1;
+        private Panel pnlInfoForm;
+        private Panel pnlSeparator;
+        private Label lblFormTitle;
+        private ComboBox cmbBoxYears;
+        private TableLayoutPanel tblPnlProof;
+        private Panel pnlSignatureProof;
+        private Panel pnlPictureProof;
+        private Button btnCamera;
+        public PictureBox picBoxPicture;
+        private Button btnClear;
+        public ComboBox cmbBoxCameraList;
+        private Button btnBrowse;
+        private Button btnCreateId;
+        private Button btnClearForm;
+        private Panel pnlControls;
+        private Label lblPicture;
+        private Label lblSignature;
     }
 }

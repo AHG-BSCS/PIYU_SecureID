@@ -1,19 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Drawing.Imaging;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Security.Claims;
 using AForge.Video.DirectShow;
 using Newtonsoft.Json;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.Drawing.Drawing2D;
 
 namespace PIYU_SecureID
 {
@@ -27,8 +15,8 @@ namespace PIYU_SecureID
 
             FilterInfoCollection filter = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo Device in filter)
-                comboBoxCameras.Items.Add(Device.Name);
-            comboBoxCameras.SelectedIndex = 0;
+                cmbBoxCameraList.Items.Add(Device.Name);
+            cmbBoxCameraList.SelectedIndex = 0;
             VideoCaptureDevice captureDevice = new VideoCaptureDevice();
 
             GenerateTransactionNum();
@@ -54,7 +42,7 @@ namespace PIYU_SecureID
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string selectedImagePath = openFileDialog.FileName;
-                    pictureBoxIdPhoto.Image = Image.FromFile(selectedImagePath);
+                    picBoxPicture.Image = Image.FromFile(selectedImagePath);
                 }
             }
         }
@@ -67,12 +55,12 @@ namespace PIYU_SecureID
 
         private void buttonClearPhoto_Click(object sender, EventArgs e)
         {
-            pictureBoxIdPhoto.Image = null;
+            picBoxPicture.Image = null;
         }
 
         private void buttonSignature_Click(object sender, EventArgs e)
         {
-            if (comboBoxCameras.Text != null)
+            if (cmbBoxCameraList.Text != null)
             {
                 FormSignature sign = new FormSignature(this);
                 sign.ShowDialog();
@@ -81,7 +69,7 @@ namespace PIYU_SecureID
 
         private void buttonClearSign_Click(object sender, EventArgs e)
         {
-            pictureBoxSignature.Image = null;
+            picBoxSignature.Image = null;
         }
 
         private void comboBoxCameras_KeyPress(object sender, KeyPressEventArgs e)
@@ -91,7 +79,7 @@ namespace PIYU_SecureID
 
         private void comboBoxCameras_TextChanged(object sender, EventArgs e)
         {
-            pictureBoxIdPhoto.Image = null;
+            picBoxPicture.Image = null;
         }
 
         private void buttonClearAll_Click(object sender, EventArgs e)
@@ -102,47 +90,47 @@ namespace PIYU_SecureID
         public void RefreshData()
         {
             GenerateTransactionNum();
-            textBoxLastName.Text = "";
-            textBoxGivenName.Text = "";
-            textBoxMiddleName.Text = "";
-            textBoxSuffix.Text = "";
-            comboBoxSex.SelectedIndex = -1;
-            comboBoxBloodType.SelectedIndex = -1;
-            comboBoxMonth.SelectedIndex = -1;
-            comboBoxDay.SelectedIndex = -1;
+            txtBoxLastName.Text = "";
+            txtBoxFirstName.Text = "";
+            txtBoxMiddleName.Text = "";
+            txtBoxSuffix.Text = "";
+            cmbBoxSex.SelectedIndex = -1;
+            cmbBoxBloodType.SelectedIndex = -1;
+            cmbBoxMonth.SelectedIndex = -1;
+            cmbBoxDay.SelectedIndex = -1;
             textBoxYear.Text = "";
-            comboBoxProvince.SelectedIndex = -1;
-            comboBoxBarangay.SelectedIndex = -1;
-            comboBoxCity.SelectedIndex = -1;
-            comboBoxMaritalStatus.SelectedIndex = -1;
-            pictureBoxSignature.Image = null;
-            pictureBoxIdPhoto.Image = null;
+            cmbBoxProvince.SelectedIndex = -1;
+            cmbBoxBarangay.SelectedIndex = -1;
+            cmbBoxCity.SelectedIndex = -1;
+            cmbBoxMaritalStatus.SelectedIndex = -1;
+            picBoxSignature.Image = null;
+            picBoxPicture.Image = null;
         }
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            if (textBoxLastName.Text == "" || textBoxGivenName.Text == "" || comboBoxSex.SelectedIndex == -1 ||
-                comboBoxBloodType.SelectedIndex == -1 || comboBoxProvince.SelectedIndex == -1 || comboBoxBarangay.SelectedIndex == -1 ||
-                comboBoxCity.SelectedIndex == -1 || comboBoxMaritalStatus.SelectedIndex == -1 ||
-                pictureBoxSignature.Image == null || pictureBoxIdPhoto.Image == null)
+            if (txtBoxLastName.Text == "" || txtBoxFirstName.Text == "" || cmbBoxSex.SelectedIndex == -1 ||
+                cmbBoxBloodType.SelectedIndex == -1 || cmbBoxProvince.SelectedIndex == -1 || cmbBoxBarangay.SelectedIndex == -1 ||
+                cmbBoxCity.SelectedIndex == -1 || cmbBoxMaritalStatus.SelectedIndex == -1 ||
+                picBoxSignature.Image == null || picBoxPicture.Image == null)
             {
                 MessageBox.Show("Fill All Information.");
             }
             else
             {
-                string lastName = textBoxLastName.Text;
-                string givenName = textBoxGivenName.Text;
-                string middleName = textBoxMiddleName.Text;
-                string suffix = textBoxSuffix.Text;
-                string sex = comboBoxSex.Text;
-                string bloodType = comboBoxBloodType.Text;
-                string dateOfBirth = comboBoxDay.Text + " " + comboBoxMonth.Text + " " + textBoxYear.Text;
-                string province = comboBoxProvince.Text;
-                string city = comboBoxCity.Text;
-                string barangay = comboBoxBarangay.Text;
-                string maritalStatus = comboBoxMaritalStatus.Text;
-                byte[] idPhoto = ConvertPictureBoxImageToBase64(pictureBoxIdPhoto.Image);
-                byte[] sign = ConvertPictureBoxImageToBase64(pictureBoxSignature.Image);
+                string lastName = txtBoxLastName.Text;
+                string givenName = txtBoxFirstName.Text;
+                string middleName = txtBoxMiddleName.Text;
+                string suffix = txtBoxSuffix.Text;
+                string sex = cmbBoxSex.Text;
+                string bloodType = cmbBoxBloodType.Text;
+                string dateOfBirth = cmbBoxDay.Text + " " + cmbBoxMonth.Text + " " + textBoxYear.Text;
+                string province = cmbBoxProvince.Text;
+                string city = cmbBoxCity.Text;
+                string barangay = cmbBoxBarangay.Text;
+                string maritalStatus = cmbBoxMaritalStatus.Text;
+                byte[] idPhoto = ConvertPictureBoxImageToBase64(picBoxPicture.Image);
+                byte[] sign = ConvertPictureBoxImageToBase64(picBoxSignature.Image);
                 FormVerificationInfo verify = new FormVerificationInfo(lastName, givenName, middleName, suffix, transactionNum,
                                                                         sex, bloodType, dateOfBirth, province, city, barangay, maritalStatus,
                                                                         idPhoto, sign, this);
@@ -163,7 +151,7 @@ namespace PIYU_SecureID
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBoxGivenName.Focus();
+                txtBoxFirstName.Focus();
                 e.Handled = true;
             }
         }
@@ -172,7 +160,7 @@ namespace PIYU_SecureID
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBoxMiddleName.Focus();
+                txtBoxMiddleName.Focus();
                 e.Handled = true;
             }
         }
@@ -181,14 +169,14 @@ namespace PIYU_SecureID
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBoxSuffix.Focus();
+                txtBoxSuffix.Focus();
                 e.Handled = true;
             }
         }
 
         private void comboBoxProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadCities(comboBoxProvince.Text.Replace('Ñ', '�'));
+            LoadCities(cmbBoxProvince.Text.Replace('Ñ', '�'));
         }
         private void LoadProvinces()
         {
@@ -207,12 +195,12 @@ namespace PIYU_SecureID
                     {
                         foreach (var province in scenario.ProvinceList?.Keys ?? Enumerable.Empty<string>())
                         {
-                            comboBoxProvince.Items.Add(province.Replace('�', 'Ñ'));
+                            cmbBoxProvince.Items.Add(province.Replace('�', 'Ñ'));
                         }
                     }
                 }
 
-                comboBoxProvince.Sorted = true;
+                cmbBoxProvince.Sorted = true;
             }
             catch (Exception ex)
             {
@@ -224,8 +212,8 @@ namespace PIYU_SecureID
         {
             try
             {
-                comboBoxCity.Items.Clear();
-                comboBoxBarangay.Items.Clear();
+                cmbBoxCity.Items.Clear();
+                cmbBoxBarangay.Items.Clear();
 
                 string file;
                 using (System.IO.StreamReader f = System.IO.File.OpenText("Resources/Address.txt"))
@@ -241,7 +229,7 @@ namespace PIYU_SecureID
                         var selectedProvinceData = scenario.ProvinceList?.GetValueOrDefault(selectedProvince);
                         foreach (var municipality in selectedProvinceData?.MunicipalityList?.Keys ?? Enumerable.Empty<string>())
                         {
-                            comboBoxCity.Items.Add(municipality.Replace('�', 'Ñ'));
+                            cmbBoxCity.Items.Add(municipality.Replace('�', 'Ñ'));
                         }
                     }
                 }
@@ -256,7 +244,7 @@ namespace PIYU_SecureID
         {
             try
             {
-                comboBoxBarangay.Items.Clear();
+                cmbBoxBarangay.Items.Clear();
 
                 string file;
                 using (System.IO.StreamReader f = System.IO.File.OpenText("Resources/Address.txt"))
@@ -273,7 +261,7 @@ namespace PIYU_SecureID
                         var selectedCityData = selectedProvinceData?.MunicipalityList?.GetValueOrDefault(selectedCity);
                         foreach (var barangay in selectedCityData?.BarangayList ?? Enumerable.Empty<string>())
                         {
-                            comboBoxBarangay.Items.Add(barangay.Replace('�', 'Ñ'));
+                            cmbBoxBarangay.Items.Add(barangay.Replace('�', 'Ñ'));
                         }
                     }
                 }
@@ -287,32 +275,17 @@ namespace PIYU_SecureID
 
         private void comboBoxCity_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadBarangay(comboBoxProvince.Text.Replace('Ñ', '�'), comboBoxCity.Text.Replace('Ñ', '�'));
-        }
-
-        private void ControlCreateId_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ControlCreateId_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxSex_Click(object sender, EventArgs e)
-        {
-
+            LoadBarangay(cmbBoxProvince.Text.Replace('Ñ', '�'), cmbBoxCity.Text.Replace('Ñ', '�'));
         }
 
         private void comboBoxSex_DropDownClosed(object sender, EventArgs e)
         {
-            label1.Focus();
+            lblLastName.Focus();
         }
 
         private void ControlCreateId_Click(object sender, EventArgs e)
         {
-            label1.Focus();
+            lblLastName.Focus();
         }
 
         private void textBoxYear_TextChanged(object sender, EventArgs e)
