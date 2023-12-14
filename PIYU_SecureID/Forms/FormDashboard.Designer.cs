@@ -75,7 +75,7 @@
             btnMinimize.Location = new Point(988, 0);
             btnMinimize.Margin = new Padding(4, 3, 4, 3);
             btnMinimize.Name = "btnMinimize";
-            btnMinimize.Size = new Size(41, 32);
+            btnMinimize.Size = new Size(41, 25);
             btnMinimize.TabIndex = 7;
             btnMinimize.UseVisualStyleBackColor = false;
             btnMinimize.Click += btnMinimize_Click;
@@ -92,7 +92,7 @@
             btnMinimizeMaximize.Location = new Point(1029, 0);
             btnMinimizeMaximize.Margin = new Padding(4, 3, 4, 3);
             btnMinimizeMaximize.Name = "btnMinimizeMaximize";
-            btnMinimizeMaximize.Size = new Size(41, 32);
+            btnMinimizeMaximize.Size = new Size(41, 25);
             btnMinimizeMaximize.TabIndex = 8;
             btnMinimizeMaximize.UseVisualStyleBackColor = false;
             btnMinimizeMaximize.Click += btnMinimizeMaximize_Click;
@@ -109,7 +109,7 @@
             btnClose.Location = new Point(1070, 0);
             btnClose.Margin = new Padding(4, 3, 4, 3);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(41, 32);
+            btnClose.Size = new Size(41, 25);
             btnClose.TabIndex = 9;
             btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
@@ -126,7 +126,7 @@
             pnlTitleBar.Location = new Point(155, 0);
             pnlTitleBar.Margin = new Padding(4, 3, 4, 3);
             pnlTitleBar.Name = "pnlTitleBar";
-            pnlTitleBar.Size = new Size(1111, 32);
+            pnlTitleBar.Size = new Size(1111, 25);
             pnlTitleBar.TabIndex = 0;
             pnlTitleBar.MouseDown += lblAppName_MouseDown;
             pnlTitleBar.MouseMove += lblAppName_MouseMove;
@@ -389,10 +389,10 @@
             // 
             pnlActiveTab.BackColor = Color.White;
             pnlActiveTab.Dock = DockStyle.Fill;
-            pnlActiveTab.Location = new Point(155, 32);
+            pnlActiveTab.Location = new Point(155, 25);
             pnlActiveTab.Margin = new Padding(4, 2, 4, 2);
             pnlActiveTab.Name = "pnlActiveTab";
-            pnlActiveTab.Size = new Size(1111, 617);
+            pnlActiveTab.Size = new Size(1111, 624);
             pnlActiveTab.TabIndex = 0;
             // 
             // FormDashboard

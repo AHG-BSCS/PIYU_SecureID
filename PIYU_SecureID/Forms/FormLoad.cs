@@ -1,5 +1,6 @@
-﻿using PIYU_SecureID.Classes;
-using System;
+﻿using System;
+
+using PIYU_SecureID.Classes;
 
 namespace PIYU_SecureID
 {
