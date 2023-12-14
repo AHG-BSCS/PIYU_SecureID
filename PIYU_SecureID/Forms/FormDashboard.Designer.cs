@@ -47,6 +47,7 @@
             lblAppName = new Label();
             picBoxAppLogo = new PictureBox();
             pnlActiveTab = new Panel();
+            panel1 = new Panel();
             pnlTitleBar.SuspendLayout();
             plnSideNavigation.SuspendLayout();
             pnlLiveDateTime.SuspendLayout();
@@ -136,15 +137,13 @@
             plnSideNavigation.Controls.Add(btnDashboard);
             plnSideNavigation.Controls.Add(lblAppName);
             plnSideNavigation.Controls.Add(picBoxAppLogo);
+            plnSideNavigation.Controls.Add(panel1);
             plnSideNavigation.Dock = DockStyle.Left;
             plnSideNavigation.Location = new Point(0, 0);
             plnSideNavigation.Name = "plnSideNavigation";
-            plnSideNavigation.Padding = new Padding(0, 10, 0, 10);
+            plnSideNavigation.Padding = new Padding(0, 0, 0, 10);
             plnSideNavigation.Size = new Size(145, 649);
             plnSideNavigation.TabIndex = 0;
-            plnSideNavigation.MouseDown += lblAppName_MouseDown;
-            plnSideNavigation.MouseMove += lblAppName_MouseMove;
-            plnSideNavigation.MouseUp += lblAppName_MouseUp;
             // 
             // btnSettings
             // 
@@ -339,6 +338,18 @@
             pnlActiveTab.Size = new Size(1121, 619);
             pnlActiveTab.TabIndex = 0;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(53, 69, 93);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(145, 10);
+            panel1.TabIndex = 10;
+            panel1.MouseDown += lblAppName_MouseDown;
+            panel1.MouseMove += lblAppName_MouseMove;
+            panel1.MouseUp += lblAppName_MouseUp;
+            // 
             // FormDashboard
             // 
             AutoScaleDimensions = new SizeF(6F, 14F);
@@ -381,5 +392,6 @@
         private Button btnSettings;
         private Panel pnlLiveDateTime;
         private Label lblLiveTime;
+        private Panel panel1;
     }
 }
