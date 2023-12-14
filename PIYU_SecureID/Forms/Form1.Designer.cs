@@ -1,6 +1,6 @@
 ﻿namespace PIYU_SecureID
 {
-    partial class FormGame
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGame));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             pipeTop = new PictureBox();
             ground = new PictureBox();
             pipeBottom = new PictureBox();

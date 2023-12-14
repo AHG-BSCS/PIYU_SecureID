@@ -166,7 +166,7 @@ namespace PIYU_SecureID
             count++;
             if (count == 10)
             {
-                FormGame f = new FormGame();
+                Form1 f = new Form1();
                 f.ShowDialog();
                 count = 0;
             }
