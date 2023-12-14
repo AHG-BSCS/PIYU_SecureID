@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace PIYU_SecureID
 {
@@ -15,6 +7,7 @@ namespace PIYU_SecureID
         private Point previousPoint;
         private bool isDrawing;
         private ControlCreateId saveSign;
+
         public FormSignature(ControlCreateId saveSign)
         {
             InitializeComponent();
@@ -32,11 +25,6 @@ namespace PIYU_SecureID
             ClearSignature();
         }
 
-        private void buttonCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void pictureBoxSignature_MouseDown(object sender, MouseEventArgs e)
         {
             previousPoint = e.Location;
@@ -47,7 +35,7 @@ namespace PIYU_SecureID
         {
             if (isDrawing)
             {
-                using (Graphics g = pictureBoxSignature.CreateGraphics())
+                using (Graphics g = picBoxSignatureDrawing.CreateGraphics())
                 {
                     g.DrawLine(Pens.Black, previousPoint, e.Location);
                 }
@@ -62,10 +50,10 @@ namespace PIYU_SecureID
 
         public Bitmap GetSignature()
         {
-            Bitmap signature = new Bitmap(pictureBoxSignature.Width, pictureBoxSignature.Height);
+            Bitmap signature = new Bitmap(picBoxSignatureDrawing.Width, picBoxSignatureDrawing.Height);
             using (Graphics g = Graphics.FromImage(signature))
             {
-                g.CopyFromScreen(pictureBoxSignature.PointToScreen(Point.Empty), Point.Empty, pictureBoxSignature.Size);
+                g.CopyFromScreen(picBoxSignatureDrawing.PointToScreen(Point.Empty), Point.Empty, picBoxSignatureDrawing.Size);
             }
 
             Rectangle boundingBox = FindBoundingBox(signature);
@@ -126,7 +114,22 @@ namespace PIYU_SecureID
 
         public void ClearSignature()
         {
-            pictureBoxSignature.Image = null;
+            picBoxSignatureDrawing.Image = null;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Transparent;
+        }
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Red;
         }
     }
 }

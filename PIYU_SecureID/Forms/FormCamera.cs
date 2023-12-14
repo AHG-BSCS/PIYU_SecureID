@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using AForge.Video.DirectShow;
 using AForge.Video;
+using PIYU_SecureID.Classes;
 
 namespace PIYU_SecureID
 {
@@ -17,20 +10,22 @@ namespace PIYU_SecureID
         private ControlCreateId savePhoto;
         private FilterInfoCollection videoDevices;
         private VideoCaptureDevice videoSource;
+
         public FormCamera(ControlCreateId savePhoto)
         {
             InitializeComponent();
+            DesignHelper.PaintRoundBorder(this);
             this.savePhoto = savePhoto;
-            pictureBoxIdPhoto.SizeMode = PictureBoxSizeMode.Zoom;
+            picBoxCameraDisplay.SizeMode = PictureBoxSizeMode.Zoom;
             InitializeWebCam();
             Thread.Sleep(1000);
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            if (buttonSave.Text == "CAPTURE")
+            if (btnSave.Text == "CAPTURE")
             {
-                buttonSave.Text = "SAVE";
+                btnSave.Text = "SAVE";
                 CaptureImageFromWebcam();
                 videoSource.SignalToStop();
                 videoSource.WaitForStop();
@@ -38,7 +33,7 @@ namespace PIYU_SecureID
             else
             {
                 this.Close();
-                savePhoto.pictureBoxIdPhoto.Image = pictureBoxIdPhoto.Image;
+                savePhoto.pictureBoxIdPhoto.Image = picBoxCameraDisplay.Image;
                 videoSource.SignalToStop();
                 videoSource.WaitForStop();
             }
@@ -46,18 +41,11 @@ namespace PIYU_SecureID
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            if (buttonSave.Text == "SAVE")
+            if (btnSave.Text == "SAVE")
             {
                 InitializeWebCam();
-                buttonSave.Text = "CAPTURE";
+                btnSave.Text = "CAPTURE";
             }
-        }
-
-        private void buttonCancel_Click(object sender, EventArgs e)
-        {
-            videoSource.SignalToStop();
-            videoSource.WaitForStop();
-            this.Close();
         }
 
         private void InitializeWebCam()
@@ -92,16 +80,16 @@ namespace PIYU_SecureID
             Rectangle cropArea = new Rectangle((originalFrame.Width - size) / 2, (originalFrame.Height - size) / 2, size, size);
             Bitmap squareFrame = originalFrame.Clone(cropArea, originalFrame.PixelFormat);
 
-            pictureBoxIdPhoto.Image = squareFrame;
+            picBoxCameraDisplay.Image = squareFrame;
         }
 
         private void CaptureImageFromWebcam()
         {
             if (videoSource != null && videoSource.IsRunning)
             {
-                Bitmap capturedImage = (Bitmap)pictureBoxIdPhoto.Image.Clone();
+                Bitmap capturedImage = (Bitmap)picBoxCameraDisplay.Image.Clone();
 
-                pictureBoxIdPhoto.Image = capturedImage;
+                picBoxCameraDisplay.Image = capturedImage;
             }
             else
             {
@@ -113,6 +101,23 @@ namespace PIYU_SecureID
         {
             videoSource.SignalToStop();
             videoSource.WaitForStop();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            videoSource.SignalToStop();
+            videoSource.WaitForStop();
+            this.Close();
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Transparent;
+        }
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Red;
         }
     }
 }

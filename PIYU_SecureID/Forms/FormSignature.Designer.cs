@@ -28,90 +28,148 @@
         /// </summary>
         private void InitializeComponent()
         {
-            buttonSave = new Button();
-            pictureBoxSignature = new PictureBox();
-            buttonClear = new Button();
-            buttonCancel = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxSignature).BeginInit();
+            btnSave = new Button();
+            picBoxSignatureDrawing = new PictureBox();
+            btnClear = new Button();
+            pnlTitleBar = new Panel();
+            btnClose = new Button();
+            pnlCameraDisplay = new Panel();
+            tblPnlControls = new TableLayoutPanel();
+            ((System.ComponentModel.ISupportInitialize)picBoxSignatureDrawing).BeginInit();
+            pnlTitleBar.SuspendLayout();
+            pnlCameraDisplay.SuspendLayout();
+            tblPnlControls.SuspendLayout();
             SuspendLayout();
             // 
-            // buttonSave
+            // btnSave
             // 
-            buttonSave.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonSave.FlatAppearance.BorderSize = 0;
-            buttonSave.FlatStyle = FlatStyle.Flat;
-            buttonSave.ForeColor = Color.White;
-            buttonSave.Location = new Point(311, 162);
-            buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(97, 48);
-            buttonSave.TabIndex = 0;
-            buttonSave.Text = "SAVE";
-            buttonSave.UseVisualStyleBackColor = true;
-            buttonSave.Click += buttonSave_Click;
+            btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSave.BackColor = SystemColors.Control;
+            btnSave.Cursor = Cursors.Hand;
+            btnSave.FlatAppearance.BorderSize = 0;
+            btnSave.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSave.ForeColor = Color.FromArgb(53, 69, 93);
+            btnSave.Location = new Point(55, 10);
+            btnSave.Margin = new Padding(45, 0, 25, 0);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(80, 40);
+            btnSave.TabIndex = 0;
+            btnSave.Text = "SAVE";
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += buttonSave_Click;
             // 
-            // pictureBoxSignature
+            // picBoxSignatureDrawing
             // 
-            pictureBoxSignature.BackColor = Color.White;
-            pictureBoxSignature.Location = new Point(12, 12);
-            pictureBoxSignature.Name = "pictureBoxSignature";
-            pictureBoxSignature.Size = new Size(295, 295);
-            pictureBoxSignature.TabIndex = 1;
-            pictureBoxSignature.TabStop = false;
-            pictureBoxSignature.MouseDown += pictureBoxSignature_MouseDown;
-            pictureBoxSignature.MouseMove += pictureBoxSignature_MouseMove;
-            pictureBoxSignature.MouseUp += pictureBoxSignature_MouseUp;
+            picBoxSignatureDrawing.BackColor = Color.White;
+            picBoxSignatureDrawing.Dock = DockStyle.Fill;
+            picBoxSignatureDrawing.Location = new Point(10, 0);
+            picBoxSignatureDrawing.Name = "picBoxSignatureDrawing";
+            picBoxSignatureDrawing.Size = new Size(300, 300);
+            picBoxSignatureDrawing.TabIndex = 1;
+            picBoxSignatureDrawing.TabStop = false;
+            picBoxSignatureDrawing.MouseDown += pictureBoxSignature_MouseDown;
+            picBoxSignatureDrawing.MouseMove += pictureBoxSignature_MouseMove;
+            picBoxSignatureDrawing.MouseUp += pictureBoxSignature_MouseUp;
             // 
-            // buttonClear
+            // btnClear
             // 
-            buttonClear.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonClear.FlatAppearance.BorderSize = 0;
-            buttonClear.FlatStyle = FlatStyle.Flat;
-            buttonClear.ForeColor = Color.White;
-            buttonClear.Location = new Point(311, 210);
-            buttonClear.Name = "buttonClear";
-            buttonClear.Size = new Size(97, 48);
-            buttonClear.TabIndex = 2;
-            buttonClear.Text = "CLEAR";
-            buttonClear.UseVisualStyleBackColor = true;
-            buttonClear.Click += buttonClear_Click;
+            btnClear.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnClear.BackColor = SystemColors.Control;
+            btnClear.Cursor = Cursors.Hand;
+            btnClear.FlatAppearance.BorderSize = 0;
+            btnClear.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClear.ForeColor = Color.FromArgb(53, 69, 93);
+            btnClear.Location = new Point(185, 10);
+            btnClear.Margin = new Padding(25, 0, 45, 0);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(80, 40);
+            btnClear.TabIndex = 2;
+            btnClear.Text = "CLEAR";
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += buttonClear_Click;
             // 
-            // buttonCancel
+            // pnlTitleBar
             // 
-            buttonCancel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonCancel.FlatAppearance.BorderSize = 0;
-            buttonCancel.FlatStyle = FlatStyle.Flat;
-            buttonCancel.ForeColor = Color.White;
-            buttonCancel.Location = new Point(311, 258);
-            buttonCancel.Name = "buttonCancel";
-            buttonCancel.Size = new Size(97, 48);
-            buttonCancel.TabIndex = 3;
-            buttonCancel.Text = "CANCEL";
-            buttonCancel.UseVisualStyleBackColor = true;
-            buttonCancel.Click += buttonCancel_Click;
+            pnlTitleBar.BackColor = Color.FromArgb(53, 69, 93);
+            pnlTitleBar.Controls.Add(btnClose);
+            pnlTitleBar.Dock = DockStyle.Top;
+            pnlTitleBar.Location = new Point(0, 0);
+            pnlTitleBar.Name = "pnlTitleBar";
+            pnlTitleBar.Size = new Size(320, 20);
+            pnlTitleBar.TabIndex = 12;
+            // 
+            // btnClose
+            // 
+            btnClose.BackColor = Color.Transparent;
+            btnClose.Cursor = Cursors.Hand;
+            btnClose.Dock = DockStyle.Right;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.ForeColor = Color.White;
+            btnClose.Image = Properties.Resources.icons_close;
+            btnClose.Location = new Point(300, 0);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(20, 20);
+            btnClose.TabIndex = 8;
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
+            btnClose.MouseEnter += btnClose_MouseEnter;
+            btnClose.MouseLeave += btnClose_MouseLeave;
+            // 
+            // pnlCameraDisplay
+            // 
+            pnlCameraDisplay.Controls.Add(picBoxSignatureDrawing);
+            pnlCameraDisplay.Dock = DockStyle.Top;
+            pnlCameraDisplay.Location = new Point(0, 20);
+            pnlCameraDisplay.Name = "pnlCameraDisplay";
+            pnlCameraDisplay.Padding = new Padding(10, 0, 10, 0);
+            pnlCameraDisplay.Size = new Size(320, 300);
+            pnlCameraDisplay.TabIndex = 13;
+            // 
+            // tblPnlControls
+            // 
+            tblPnlControls.ColumnCount = 2;
+            tblPnlControls.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblPnlControls.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblPnlControls.Controls.Add(btnSave, 0, 0);
+            tblPnlControls.Controls.Add(btnClear, 1, 0);
+            tblPnlControls.Dock = DockStyle.Top;
+            tblPnlControls.Location = new Point(0, 320);
+            tblPnlControls.Name = "tblPnlControls";
+            tblPnlControls.Padding = new Padding(10);
+            tblPnlControls.RowCount = 1;
+            tblPnlControls.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tblPnlControls.Size = new Size(320, 60);
+            tblPnlControls.TabIndex = 14;
             // 
             // FormSignature
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(53, 69, 93);
-            ClientSize = new Size(410, 318);
-            Controls.Add(buttonCancel);
-            Controls.Add(buttonClear);
-            Controls.Add(pictureBoxSignature);
-            Controls.Add(buttonSave);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            ClientSize = new Size(320, 380);
+            Controls.Add(tblPnlControls);
+            Controls.Add(pnlCameraDisplay);
+            Controls.Add(pnlTitleBar);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormSignature";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormSignature";
-            ((System.ComponentModel.ISupportInitialize)pictureBoxSignature).EndInit();
+            Text = "Signature";
+            ((System.ComponentModel.ISupportInitialize)picBoxSignatureDrawing).EndInit();
+            pnlTitleBar.ResumeLayout(false);
+            pnlCameraDisplay.ResumeLayout(false);
+            tblPnlControls.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button buttonSave;
-        private PictureBox pictureBoxSignature;
-        private Button buttonClear;
-        private Button buttonCancel;
+        private Button btnSave;
+        private PictureBox picBoxSignatureDrawing;
+        private Button btnClear;
+        private Panel pnlTitleBar;
+        private Button btnClose;
+        private Panel pnlCameraDisplay;
+        private TableLayoutPanel tblPnlControls;
     }
 }
