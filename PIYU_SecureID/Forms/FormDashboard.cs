@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing.Drawing2D;
 using PIYU_SecureID.Classes;
 
 namespace PIYU_SecureID
@@ -31,13 +32,18 @@ namespace PIYU_SecureID
             this.settings = new ControlSettings();
             this.info = new ClassInformation();
             this.previousActiveBtn = new Button();
+        }
 
-            btnDashboard_Click(btnDashboard, EventArgs.Empty);
+        private void FormDashboard_Load(object sender, EventArgs e)
+        {
+            DesignHelper.PaintRoundBorder(this);
+            btnDashboard.PerformClick();
+            timerDateTime.Start();
         }
 
         private void ShowTab(UserControl newForm)
         {
-            // Check first to prevent spam
+            // Check first to prevent spamming
             if (!newForm.Equals(activeTab))
             {
                 activeTab.Hide();
@@ -57,7 +63,7 @@ namespace PIYU_SecureID
             {
                 button.BackColor = DesignHelper.COLOR_WHITE;
                 button.ForeColor = DesignHelper.COLOR_BLUE;
-                previousActiveBtn.BackColor = DesignHelper.COLOR_TEAL;
+                previousActiveBtn.BackColor = DesignHelper.COLOR_BLUE;
                 previousActiveBtn.ForeColor = DesignHelper.COLOR_WHITE;
                 previousActiveBtn = button;
             }
@@ -67,6 +73,7 @@ namespace PIYU_SecureID
         {
             ShowTab(dashboard);
             HighlightTab(btnDashboard);
+            // TODO: Move this to dashboard
             dashboard.labelTotalTransaction.Text = "Total Transactions: " + info.LoadTotalTransaction().ToString();
         }
 
@@ -123,7 +130,8 @@ namespace PIYU_SecureID
 
         private void timerDateTime_Tick(object sender, EventArgs e)
         {
-            UpdateDateTime();
+            lblLiveDate.Text = DateTime.Now.ToString("MMMM dd, yyyy");
+            lblLiveTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
@@ -158,11 +166,6 @@ namespace PIYU_SecureID
         private void btnClose_MouseEnter(object sender, EventArgs e)
         {
             btnClose.BackColor = Color.Red;
-        }
-
-        private void UpdateDateTime()
-        {
-            lblLiveDateTime.Text = DateTime.Now.ToString();
         }
     }
 }

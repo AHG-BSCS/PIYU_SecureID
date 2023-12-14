@@ -1,4 +1,5 @@
 using OtpNet;
+using PIYU_SecureID.Classes;
 
 namespace PIYU_SecureID
 {
@@ -9,6 +10,7 @@ namespace PIYU_SecureID
         public FormAuthentication()
         {
             InitializeComponent();
+            DesignHelper.PaintRoundBorder(this);
         }
 
         private bool ValidateCode(string secretKey, string userCode)

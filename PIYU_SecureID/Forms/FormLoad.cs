@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PIYU_SecureID.Classes;
+using System;
 
 namespace PIYU_SecureID
 {
@@ -7,6 +8,7 @@ namespace PIYU_SecureID
         public FormLoad()
         {
             InitializeComponent();
+            DesignHelper.PaintRoundBorder(this);
             StartupAnimation();
         }
 
