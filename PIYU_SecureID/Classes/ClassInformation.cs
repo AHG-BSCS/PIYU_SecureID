@@ -190,5 +190,34 @@ namespace PIYU_SecureID
                 return 0;
             }
         }
+
+        public int LoadTotalId()
+        {
+            try
+            {
+                if (File.Exists("Resources/idQr.txt"))
+                {
+                    string[] lines = File.ReadAllLines("Resources/info.txt");
+
+                    int i = 0;
+                    foreach (string line in lines)
+                    {
+                        i++;
+                    }
+                    return i;
+                }
+                else
+                {
+                    MessageBox.Show($"File not found. Creating a new data structure.");
+                }
+
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading data: {ex.Message}");
+                return 0;
+            }
+        }
     }
 }

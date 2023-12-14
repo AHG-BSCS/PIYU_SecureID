@@ -232,6 +232,7 @@ namespace PIYU_SecureID
                 SaveToFile("Resources/idQr.txt", data);
 
                 this.Close();
+                FormDashboard.lblVerifiedIdCounter.Text = data.LoadTotalId().ToString();
             }
         }
         private byte[] ConvertPictureBoxImageToBase64(Image image)
@@ -252,6 +253,8 @@ namespace PIYU_SecureID
             SaveToFile("Resources/idQr.txt", data);
 
             this.Close();
+            FormDashboard.lblTransactionCounter.Text = data.LoadTotalTransaction().ToString();
+            FormDashboard.lblVerifiedIdCounter.Text = data.LoadTotalId().ToString();
         }
 
         private void SaveToFile(string filename, ClassInformation data)

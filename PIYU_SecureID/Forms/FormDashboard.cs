@@ -37,6 +37,7 @@ namespace PIYU_SecureID
             DesignHelper.PaintRoundBorder(this);
             btnCreateId.PerformClick();
             lblTransactionCounter.Text = info.LoadTotalTransaction().ToString();
+            lblVerifiedIdCounter.Text = info.LoadTotalId().ToString();
         }
 
         private void ShowTab(UserControl newForm)

@@ -35,6 +35,8 @@
             btnClose = new Button();
             pnlTitleBar = new Panel();
             plnSideNavigation = new Panel();
+            lblVerifiedIdCounter = new Label();
+            labelVerifiedId = new Label();
             lblTransactionCounter = new Label();
             lblTransactions = new Label();
             pnlMiddleSeparator = new Panel();
@@ -131,6 +133,8 @@
             // plnSideNavigation
             // 
             plnSideNavigation.BackColor = Color.FromArgb(53, 69, 93);
+            plnSideNavigation.Controls.Add(lblVerifiedIdCounter);
+            plnSideNavigation.Controls.Add(labelVerifiedId);
             plnSideNavigation.Controls.Add(lblTransactionCounter);
             plnSideNavigation.Controls.Add(lblTransactions);
             plnSideNavigation.Controls.Add(pnlMiddleSeparator);
@@ -150,6 +154,30 @@
             plnSideNavigation.Padding = new Padding(0, 0, 0, 10);
             plnSideNavigation.Size = new Size(145, 649);
             plnSideNavigation.TabIndex = 0;
+            // 
+            // lblVerifiedIdCounter
+            // 
+            lblVerifiedIdCounter.Dock = DockStyle.Top;
+            lblVerifiedIdCounter.Font = new Font("Segoe UI Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblVerifiedIdCounter.ForeColor = Color.FromArgb(92, 176, 21);
+            lblVerifiedIdCounter.Location = new Point(0, 351);
+            lblVerifiedIdCounter.Name = "lblVerifiedIdCounter";
+            lblVerifiedIdCounter.Size = new Size(145, 40);
+            lblVerifiedIdCounter.TabIndex = 16;
+            lblVerifiedIdCounter.Text = "0";
+            lblVerifiedIdCounter.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // labelVerifiedId
+            // 
+            labelVerifiedId.Dock = DockStyle.Top;
+            labelVerifiedId.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            labelVerifiedId.ForeColor = Color.FromArgb(92, 176, 21);
+            labelVerifiedId.Location = new Point(0, 321);
+            labelVerifiedId.Name = "labelVerifiedId";
+            labelVerifiedId.Size = new Size(145, 30);
+            labelVerifiedId.TabIndex = 14;
+            labelVerifiedId.Text = "Verified Id";
+            labelVerifiedId.TextAlign = ContentAlignment.BottomCenter;
             // 
             // lblTransactionCounter
             // 
@@ -426,6 +454,8 @@
         private Label lblTransactions;
         private Panel pnlMiddleSeparator;
         private Panel pnlTopSeparator;
-        private Label lblTransactionCounter;
+        private Label labelVerifiedId;
+        public Label lblTransactionCounter;
+        public Label lblVerifiedIdCounter;
     }
 }
