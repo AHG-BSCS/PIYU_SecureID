@@ -6,10 +6,11 @@ namespace PIYU_SecureID
 {
     public partial class FormDashboard : Form
     {
+        private int count;
         private Point mouseDownLocation;
         private Button previousActiveBtn;
         private UserControl activeTab;
-        private int count;
+
         private FormAuthentication authentication;
         private ControlCreateId createId;
         private ControlCheckId checkId;
@@ -170,9 +171,10 @@ namespace PIYU_SecureID
         private void picBoxAppLogo_Click(object sender, EventArgs e)
         {
             count++;
+
             if (count == 10)
             {
-                Form1 f = new Form1();
+                FlaffyBird f = new FlaffyBird();
                 f.ShowDialog();
                 count = 0;
             }

@@ -1,25 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace PIYU_SecureID
 {
-    public partial class Form1 : Form
+    public partial class FlaffyBird : Form
     {
         int pipeSpeed = 5;
         int gravity = 10;
         int score = 0;
         bool isGameRunning = false;
-        public Form1()
+
+        public FlaffyBird()
         {
             InitializeComponent();
         }
+
         private void endGame()
         {
             gameTimer.Stop();
@@ -27,17 +21,20 @@ namespace PIYU_SecureID
             scoreText.Text += " Game over!!!";
             Thread.Sleep(1000);
         }
+
         private void gameTimerEvent(object sender, EventArgs e)
         {
-            flappyBird.Top += gravity;
+            flappyBird.Top += 4;
             pipeBottom.Left -= pipeSpeed; 
             pipeTop.Left -= pipeSpeed; 
             scoreText.Text = "Score: " + score; 
+
             if (pipeBottom.Left < -150)
             {
                 pipeBottom.Left = 800;
                 score++;
             }
+
             if (pipeTop.Left < -180)
             {
                 pipeTop.Left = 950;
@@ -51,10 +48,12 @@ namespace PIYU_SecureID
             {
                 endGame();
             }
+
             if (score > 25)
             {
                 pipeSpeed = 15;
             }
+
             if (score == 50)
             {
                 pipeSpeed = 25;
@@ -75,11 +74,15 @@ namespace PIYU_SecureID
                 isGameRunning = true;
                 gameTimer.Start();
             }
+            else
+            {
+                flappyBird.Top -= 50;
+            }
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
-            gravity = -10;
+            gravity = -5;
         }
 
         private void Form1_MouseUp(object sender, MouseEventArgs e)
