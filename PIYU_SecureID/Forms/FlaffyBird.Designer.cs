@@ -1,6 +1,6 @@
 ﻿namespace PIYU_SecureID
 {
-    partial class Form1
+    partial class FlaffyBird
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FlaffyBird));
             pipeTop = new PictureBox();
             ground = new PictureBox();
             pipeBottom = new PictureBox();
@@ -88,7 +88,7 @@
             flappyBird.Location = new Point(41, 127);
             flappyBird.Name = "flappyBird";
             flappyBird.Size = new Size(28, 31);
-            flappyBird.SizeMode = PictureBoxSizeMode.StretchImage;
+            flappyBird.SizeMode = PictureBoxSizeMode.Zoom;
             flappyBird.TabIndex = 3;
             flappyBird.TabStop = false;
             flappyBird.Click += Form1_Click_1;
@@ -97,7 +97,7 @@
             // 
             // gameTimer
             // 
-            gameTimer.Interval = 20;
+            gameTimer.Interval = 33;
             gameTimer.Tick += gameTimerEvent;
             // 
             // scoreText
@@ -129,8 +129,6 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MiniGame";
             Click += Form1_Click_1;
-            MouseDown += Form1_MouseDown;
-            MouseUp += Form1_MouseUp;
             ((System.ComponentModel.ISupportInitialize)pipeTop).EndInit();
             ((System.ComponentModel.ISupportInitialize)ground).EndInit();
             ((System.ComponentModel.ISupportInitialize)pipeBottom).EndInit();

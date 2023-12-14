@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PIYU_SecureID.Classes;
 
@@ -26,22 +22,5 @@ internal static class DesignHelper
 
             form.Region = new Region(path);
         }
-    }
-
-    static internal float GetSystemDisplayScale()
-    {
-        return Graphics.FromHwnd(IntPtr.Zero).DpiX / 96f;
-    }
-
-    static internal float BaseWidthFactor()
-    {
-        return (Screen.PrimaryScreen.Bounds.Width / 1366f) * GetSystemDisplayScale();
-        //return (1920f / 1366f);
-    }
-
-    static internal float BaseHeightFactor()
-    {
-        return (Screen.PrimaryScreen.Bounds.Height / 768f) * GetSystemDisplayScale();
-        //return (1080f / 768f);
     }
 }

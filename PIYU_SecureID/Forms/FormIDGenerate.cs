@@ -231,7 +231,6 @@ namespace PIYU_SecureID
                 SaveToFile("Resources/idQr.txt", data);
 
                 this.Close();
-                FormDashboard.lblVerifiedIdCounter.Text = data.LoadTotalId().ToString();
             }
         }
 
@@ -244,7 +243,6 @@ namespace PIYU_SecureID
             SaveToFile("Resources/idQr.txt", data);
 
             this.Close();
-            FormDashboard.lblVerifiedIdCounter.Text = data.LoadTotalId().ToString();
         }
 
         private void SaveToFile(string filename, ClassInformation data)

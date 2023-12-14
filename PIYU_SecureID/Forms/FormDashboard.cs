@@ -6,10 +6,11 @@ namespace PIYU_SecureID
 {
     public partial class FormDashboard : Form
     {
+        private int count;
         private Point mouseDownLocation;
         private Button previousActiveBtn;
         private UserControl activeTab;
-        private int count;
+
         private FormAuthentication authentication;
         private ControlCreateId createId;
         private ControlCheckId checkId;
@@ -30,14 +31,15 @@ namespace PIYU_SecureID
             this.settings = new ControlSettings();
             this.info = new ClassInformation();
             this.previousActiveBtn = new Button();
+
         }
 
         private void FormDashboard_Load(object sender, EventArgs e)
         {
             DesignHelper.PaintRoundBorder(this);
             btnCreateId.PerformClick();
-            lblTransactionCounter.Text = info.LoadTotalTransaction().ToString();
-            lblVerifiedIdCounter.Text = info.LoadTotalId().ToString();
+            UpdateTrasactionsCount();
+            createId.OnCreateIDClicked += UpdateTrasactionsCount;
         }
 
         private void ShowTab(UserControl newForm)
@@ -66,6 +68,12 @@ namespace PIYU_SecureID
                 previousActiveBtn.ForeColor = DesignHelper.COLOR_WHITE;
                 previousActiveBtn = button;
             }
+        }
+
+        public void UpdateTrasactionsCount()
+        {
+            lblTransactionCounter.Text = info.LoadTotalTransaction().ToString();
+            lblVerifiedIdCounter.Text = info.LoadTotalId().ToString();
         }
 
         private void btnCreateId_Click(object sender, EventArgs e)
@@ -164,9 +172,10 @@ namespace PIYU_SecureID
         private void picBoxAppLogo_Click(object sender, EventArgs e)
         {
             count++;
+
             if (count == 10)
             {
-                Form1 f = new Form1();
+                FlaffyBird f = new FlaffyBird();
                 f.ShowDialog();
                 count = 0;
             }
