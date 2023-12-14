@@ -455,7 +455,7 @@
         private Panel pnlMiddleSeparator;
         private Panel pnlTopSeparator;
         private Label labelVerifiedId;
-        public Label lblTransactionCounter;
-        public Label lblVerifiedIdCounter;
+        public static Label lblTransactionCounter;
+        public static Label lblVerifiedIdCounter;
     }
 }
