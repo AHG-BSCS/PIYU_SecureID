@@ -48,18 +48,20 @@
             lblAppName.AutoSize = true;
             lblAppName.Font = new Font("Corbel", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblAppName.ForeColor = Color.FromArgb(250, 201, 48);
-            lblAppName.Location = new Point(261, 34);
+            lblAppName.Location = new Point(261, 20);
             lblAppName.Name = "lblAppName";
             lblAppName.Size = new Size(163, 45);
             lblAppName.TabIndex = 0;
             lblAppName.Text = "SecureID";
+            lblAppName.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txtBoxPasscode
             // 
             txtBoxPasscode.Anchor = AnchorStyles.Bottom;
             txtBoxPasscode.BorderStyle = BorderStyle.None;
+            txtBoxPasscode.Cursor = Cursors.IBeam;
             txtBoxPasscode.Font = new Font("Corbel", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtBoxPasscode.Location = new Point(191, 193);
+            txtBoxPasscode.Location = new Point(191, 179);
             txtBoxPasscode.Margin = new Padding(3, 2, 3, 2);
             txtBoxPasscode.MaxLength = 6;
             txtBoxPasscode.Name = "txtBoxPasscode";
@@ -74,10 +76,11 @@
             // 
             btnLogin.Anchor = AnchorStyles.Bottom;
             btnLogin.BackColor = Color.FromArgb(29, 146, 61);
+            btnLogin.Cursor = Cursors.Hand;
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Corbel", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLogin.Location = new Point(252, 242);
+            btnLogin.Location = new Point(252, 228);
             btnLogin.Margin = new Padding(3, 2, 3, 2);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(80, 35);
@@ -90,10 +93,11 @@
             // 
             btnBypass.Anchor = AnchorStyles.Bottom;
             btnBypass.BackColor = Color.FromArgb(250, 201, 48);
+            btnBypass.Cursor = Cursors.Hand;
             btnBypass.FlatAppearance.BorderSize = 0;
             btnBypass.FlatStyle = FlatStyle.Flat;
             btnBypass.Font = new Font("Corbel", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnBypass.Location = new Point(237, 293);
+            btnBypass.Location = new Point(237, 279);
             btnBypass.Margin = new Padding(3, 2, 3, 2);
             btnBypass.Name = "btnBypass";
             btnBypass.Size = new Size(110, 25);
@@ -107,7 +111,7 @@
             // 
             picBoxAppLogo.BackColor = Color.Transparent;
             picBoxAppLogo.Image = Properties.Resources.PIYU_SecureID;
-            picBoxAppLogo.Location = new Point(161, 17);
+            picBoxAppLogo.Location = new Point(161, 0);
             picBoxAppLogo.Margin = new Padding(3, 2, 3, 2);
             picBoxAppLogo.Name = "picBoxAppLogo";
             picBoxAppLogo.Size = new Size(100, 100);
@@ -120,23 +124,24 @@
             lblDeveloper.AutoSize = true;
             lblDeveloper.Font = new Font("Corbel", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             lblDeveloper.ForeColor = Color.FromArgb(250, 201, 48);
-            lblDeveloper.Location = new Point(268, 76);
+            lblDeveloper.Location = new Point(268, 62);
             lblDeveloper.Name = "lblDeveloper";
             lblDeveloper.Size = new Size(93, 15);
-            lblDeveloper.TabIndex = 5;
+            lblDeveloper.TabIndex = 0;
             lblDeveloper.Text = "Al Hans Gaming";
+            lblDeveloper.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pnlAppBanner
             // 
             pnlAppBanner.BackColor = Color.FromArgb(53, 69, 93);
-            pnlAppBanner.Controls.Add(picBoxAppLogo);
-            pnlAppBanner.Controls.Add(lblAppName);
             pnlAppBanner.Controls.Add(lblDeveloper);
+            pnlAppBanner.Controls.Add(lblAppName);
+            pnlAppBanner.Controls.Add(picBoxAppLogo);
             pnlAppBanner.Dock = DockStyle.Top;
             pnlAppBanner.Location = new Point(0, 29);
             pnlAppBanner.Name = "pnlAppBanner";
-            pnlAppBanner.Size = new Size(584, 134);
-            pnlAppBanner.TabIndex = 6;
+            pnlAppBanner.Size = new Size(584, 115);
+            pnlAppBanner.TabIndex = 0;
             // 
             // pnlTitleBar
             // 
@@ -154,6 +159,7 @@
             // btnClose
             // 
             btnClose.BackColor = Color.Transparent;
+            btnClose.Cursor = Cursors.Hand;
             btnClose.Dock = DockStyle.Right;
             btnClose.FlatAppearance.BorderSize = 0;
             btnClose.FlatStyle = FlatStyle.Flat;
@@ -173,10 +179,10 @@
             AutoScaleDimensions = new SizeF(6F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(584, 346);
-            Controls.Add(pnlAppBanner);
-            Controls.Add(txtBoxPasscode);
-            Controls.Add(btnLogin);
             Controls.Add(btnBypass);
+            Controls.Add(btnLogin);
+            Controls.Add(txtBoxPasscode);
+            Controls.Add(pnlAppBanner);
             Controls.Add(pnlTitleBar);
             Font = new Font("Corbel", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
