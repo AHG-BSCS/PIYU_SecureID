@@ -65,17 +65,17 @@
             pnlSeparator = new Panel();
             tblPnlProof = new TableLayoutPanel();
             pnlPictureProof = new Panel();
-            btnCamera = new Button();
+            lblPicture = new Label();
             picBoxPicture = new PictureBox();
+            btnCamera = new Button();
+            btnBrowse = new Button();
             btnClear = new Button();
             cmbBoxCameraList = new ComboBox();
-            btnBrowse = new Button();
             pnlSignatureProof = new Panel();
+            lblSignature = new Label();
             btnCreateId = new Button();
             btnClearForm = new Button();
             pnlControls = new Panel();
-            lblSignature = new Label();
-            lblPicture = new Label();
             ((System.ComponentModel.ISupportInitialize)picBoxSignature).BeginInit();
             pnlInfoForm.SuspendLayout();
             tblPnlProof.SuspendLayout();
@@ -129,7 +129,7 @@
             lblFirstName.Location = new Point(23, 113);
             lblFirstName.Name = "lblFirstName";
             lblFirstName.Size = new Size(88, 21);
-            lblFirstName.TabIndex = 2;
+            lblFirstName.TabIndex = 0;
             lblFirstName.Text = "First Name";
             lblFirstName.Click += ControlCreateId_Click;
             // 
@@ -143,7 +143,7 @@
             txtBoxMiddleName.Name = "txtBoxMiddleName";
             txtBoxMiddleName.PlaceholderText = "Optional";
             txtBoxMiddleName.Size = new Size(404, 27);
-            txtBoxMiddleName.TabIndex = 3;
+            txtBoxMiddleName.TabIndex = 4;
             txtBoxMiddleName.KeyPress += textBoxLastName_KeyPress;
             // 
             // lblMiddleName
@@ -153,7 +153,7 @@
             lblMiddleName.Location = new Point(23, 169);
             lblMiddleName.Name = "lblMiddleName";
             lblMiddleName.Size = new Size(109, 21);
-            lblMiddleName.TabIndex = 4;
+            lblMiddleName.TabIndex = 0;
             lblMiddleName.Text = "Middle Name";
             lblMiddleName.Click += ControlCreateId_Click;
             // 
@@ -167,7 +167,7 @@
             txtBoxSuffix.Name = "txtBoxSuffix";
             txtBoxSuffix.PlaceholderText = "Optional";
             txtBoxSuffix.Size = new Size(109, 27);
-            txtBoxSuffix.TabIndex = 4;
+            txtBoxSuffix.TabIndex = 3;
             txtBoxSuffix.KeyPress += textBoxLastName_KeyPress;
             // 
             // lblSuffix
@@ -177,7 +177,7 @@
             lblSuffix.Location = new Point(318, 113);
             lblSuffix.Name = "lblSuffix";
             lblSuffix.Size = new Size(52, 21);
-            lblSuffix.TabIndex = 6;
+            lblSuffix.TabIndex = 0;
             lblSuffix.Text = "Suffix";
             lblSuffix.Click += ControlCreateId_Click;
             // 
@@ -188,7 +188,7 @@
             lblSex.Location = new Point(23, 249);
             lblSex.Name = "lblSex";
             lblSex.Size = new Size(36, 21);
-            lblSex.TabIndex = 8;
+            lblSex.TabIndex = 0;
             lblSex.Text = "Sex";
             lblSex.Click += ControlCreateId_Click;
             // 
@@ -212,7 +212,7 @@
             lblDateOfBirth.Location = new Point(23, 329);
             lblDateOfBirth.Name = "lblDateOfBirth";
             lblDateOfBirth.Size = new Size(103, 21);
-            lblDateOfBirth.TabIndex = 10;
+            lblDateOfBirth.TabIndex = 0;
             lblDateOfBirth.Text = "Date of Birth";
             lblDateOfBirth.Click += ControlCreateId_Click;
             // 
@@ -223,7 +223,7 @@
             lblAddress.Location = new Point(23, 422);
             lblAddress.Name = "lblAddress";
             lblAddress.Size = new Size(70, 21);
-            lblAddress.TabIndex = 12;
+            lblAddress.TabIndex = 0;
             lblAddress.Text = "Address";
             lblAddress.Click += ControlCreateId_Click;
             // 
@@ -234,7 +234,7 @@
             lblBloodType.Location = new Point(147, 249);
             lblBloodType.Name = "lblBloodType";
             lblBloodType.Size = new Size(93, 21);
-            lblBloodType.TabIndex = 16;
+            lblBloodType.TabIndex = 0;
             lblBloodType.Text = "Blood Type";
             lblBloodType.Click += ControlCreateId_Click;
             // 
@@ -245,7 +245,7 @@
             lblMaritalStatus.Location = new Point(264, 249);
             lblMaritalStatus.Name = "lblMaritalStatus";
             lblMaritalStatus.Size = new Size(110, 21);
-            lblMaritalStatus.TabIndex = 18;
+            lblMaritalStatus.TabIndex = 0;
             lblMaritalStatus.Text = "Marital Status";
             lblMaritalStatus.Click += ControlCreateId_Click;
             // 
@@ -274,7 +274,7 @@
             cmbBoxMaritalStatus.Margin = new Padding(3, 2, 3, 2);
             cmbBoxMaritalStatus.Name = "cmbBoxMaritalStatus";
             cmbBoxMaritalStatus.Size = new Size(134, 28);
-            cmbBoxMaritalStatus.TabIndex = 13;
+            cmbBoxMaritalStatus.TabIndex = 7;
             cmbBoxMaritalStatus.DropDownClosed += comboBoxSex_DropDownClosed;
             // 
             // cmbBoxProvince
@@ -287,7 +287,7 @@
             cmbBoxProvince.Name = "cmbBoxProvince";
             cmbBoxProvince.Size = new Size(280, 28);
             cmbBoxProvince.Sorted = true;
-            cmbBoxProvince.TabIndex = 10;
+            cmbBoxProvince.TabIndex = 11;
             cmbBoxProvince.SelectedIndexChanged += comboBoxProvince_SelectedIndexChanged;
             cmbBoxProvince.DropDownClosed += comboBoxSex_DropDownClosed;
             // 
@@ -298,7 +298,7 @@
             lblProvince.Location = new Point(128, 482);
             lblProvince.Name = "lblProvince";
             lblProvince.Size = new Size(61, 13);
-            lblProvince.TabIndex = 25;
+            lblProvince.TabIndex = 0;
             lblProvince.Text = "PROVINCE";
             lblProvince.Click += ControlCreateId_Click;
             // 
@@ -312,7 +312,7 @@
             cmbBoxCity.Name = "cmbBoxCity";
             cmbBoxCity.Size = new Size(280, 28);
             cmbBoxCity.Sorted = true;
-            cmbBoxCity.TabIndex = 11;
+            cmbBoxCity.TabIndex = 12;
             cmbBoxCity.SelectedIndexChanged += comboBoxCity_SelectedIndexChanged;
             cmbBoxCity.DropDownClosed += comboBoxSex_DropDownClosed;
             // 
@@ -323,7 +323,7 @@
             lblCity.Location = new Point(144, 540);
             lblCity.Name = "lblCity";
             lblCity.Size = new Size(29, 13);
-            lblCity.TabIndex = 27;
+            lblCity.TabIndex = 0;
             lblCity.Text = "CITY";
             lblCity.Click += ControlCreateId_Click;
             // 
@@ -337,7 +337,7 @@
             cmbBoxBarangay.Name = "cmbBoxBarangay";
             cmbBoxBarangay.Size = new Size(280, 28);
             cmbBoxBarangay.Sorted = true;
-            cmbBoxBarangay.TabIndex = 12;
+            cmbBoxBarangay.TabIndex = 13;
             cmbBoxBarangay.DropDownClosed += comboBoxSex_DropDownClosed;
             // 
             // lblBarangay
@@ -347,7 +347,7 @@
             lblBarangay.Location = new Point(126, 598);
             lblBarangay.Name = "lblBarangay";
             lblBarangay.Size = new Size(65, 13);
-            lblBarangay.TabIndex = 29;
+            lblBarangay.TabIndex = 0;
             lblBarangay.Text = "BARANGAY";
             lblBarangay.Click += ControlCreateId_Click;
             // 
@@ -361,7 +361,7 @@
             btnSignature.Location = new Point(103, 359);
             btnSignature.Name = "btnSignature";
             btnSignature.Size = new Size(90, 35);
-            btnSignature.TabIndex = 32;
+            btnSignature.TabIndex = 14;
             btnSignature.Text = "SIGNATURE";
             btnSignature.UseVisualStyleBackColor = false;
             btnSignature.Click += buttonSignature_Click;
@@ -389,7 +389,7 @@
             btnClearSign.Location = new Point(199, 359);
             btnClearSign.Name = "btnClearSign";
             btnClearSign.Size = new Size(90, 35);
-            btnClearSign.TabIndex = 34;
+            btnClearSign.TabIndex = 15;
             btnClearSign.Text = "CLEAR";
             btnClearSign.UseVisualStyleBackColor = false;
             btnClearSign.Click += buttonClearSign_Click;
@@ -405,7 +405,7 @@
             cmbBoxDay.Margin = new Padding(3, 2, 3, 2);
             cmbBoxDay.Name = "cmbBoxDay";
             cmbBoxDay.Size = new Size(65, 28);
-            cmbBoxDay.TabIndex = 7;
+            cmbBoxDay.TabIndex = 8;
             cmbBoxDay.DropDownClosed += comboBoxSex_DropDownClosed;
             // 
             // cmbBoxMonth
@@ -419,7 +419,7 @@
             cmbBoxMonth.Margin = new Padding(3, 2, 3, 2);
             cmbBoxMonth.Name = "cmbBoxMonth";
             cmbBoxMonth.Size = new Size(128, 28);
-            cmbBoxMonth.TabIndex = 8;
+            cmbBoxMonth.TabIndex = 9;
             cmbBoxMonth.DropDownClosed += comboBoxSex_DropDownClosed;
             // 
             // textBoxYear
@@ -431,7 +431,7 @@
             textBoxYear.MaxLength = 4;
             textBoxYear.Name = "textBoxYear";
             textBoxYear.Size = new Size(78, 29);
-            textBoxYear.TabIndex = 9;
+            textBoxYear.TabIndex = 10;
             textBoxYear.TextChanged += textBoxYear_TextChanged;
             textBoxYear.KeyPress += textBoxYear_KeyPress;
             // 
@@ -442,7 +442,7 @@
             lblDay.Location = new Point(36, 391);
             lblDay.Name = "lblDay";
             lblDay.Size = new Size(28, 13);
-            lblDay.TabIndex = 41;
+            lblDay.TabIndex = 0;
             lblDay.Text = "DAY";
             lblDay.Click += ControlCreateId_Click;
             // 
@@ -453,7 +453,7 @@
             lblMonth.Location = new Point(148, 389);
             lblMonth.Name = "lblMonth";
             lblMonth.Size = new Size(47, 13);
-            lblMonth.TabIndex = 42;
+            lblMonth.TabIndex = 0;
             lblMonth.Text = "MONTH";
             lblMonth.Click += ControlCreateId_Click;
             // 
@@ -464,7 +464,7 @@
             lblYear.Location = new Point(282, 389);
             lblYear.Name = "lblYear";
             lblYear.Size = new Size(33, 13);
-            lblYear.TabIndex = 43;
+            lblYear.TabIndex = 0;
             lblYear.Text = "YEAR";
             lblYear.Click += ControlCreateId_Click;
             // 
@@ -507,7 +507,7 @@
             pnlInfoForm.Name = "pnlInfoForm";
             pnlInfoForm.Padding = new Padding(20);
             pnlInfoForm.Size = new Size(453, 637);
-            pnlInfoForm.TabIndex = 44;
+            pnlInfoForm.TabIndex = 0;
             // 
             // lblFormTitle
             // 
@@ -517,7 +517,7 @@
             lblFormTitle.Location = new Point(98, 20);
             lblFormTitle.Name = "lblFormTitle";
             lblFormTitle.Size = new Size(257, 21);
-            lblFormTitle.TabIndex = 44;
+            lblFormTitle.TabIndex = 0;
             lblFormTitle.Text = "PERSONAL INFORMATION FORM";
             // 
             // cmbBoxYears
@@ -531,7 +531,7 @@
             cmbBoxYears.Margin = new Padding(3, 2, 3, 2);
             cmbBoxYears.Name = "cmbBoxYears";
             cmbBoxYears.Size = new Size(78, 28);
-            cmbBoxYears.TabIndex = 45;
+            cmbBoxYears.TabIndex = 10;
             // 
             // pnlSeparator
             // 
@@ -540,7 +540,7 @@
             pnlSeparator.Location = new Point(453, 0);
             pnlSeparator.Name = "pnlSeparator";
             pnlSeparator.Size = new Size(5, 637);
-            pnlSeparator.TabIndex = 46;
+            pnlSeparator.TabIndex = 0;
             // 
             // tblPnlProof
             // 
@@ -573,22 +573,19 @@
             pnlPictureProof.Name = "pnlPictureProof";
             pnlPictureProof.Padding = new Padding(20);
             pnlPictureProof.Size = new Size(393, 447);
-            pnlPictureProof.TabIndex = 37;
+            pnlPictureProof.TabIndex = 0;
             // 
-            // btnCamera
+            // lblPicture
             // 
-            btnCamera.Anchor = AnchorStyles.None;
-            btnCamera.BackColor = Color.White;
-            btnCamera.FlatAppearance.BorderSize = 0;
-            btnCamera.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCamera.ForeColor = Color.FromArgb(53, 69, 93);
-            btnCamera.Location = new Point(70, 359);
-            btnCamera.Name = "btnCamera";
-            btnCamera.Size = new Size(80, 35);
-            btnCamera.TabIndex = 30;
-            btnCamera.Text = "CAMERA";
-            btnCamera.UseVisualStyleBackColor = false;
-            btnCamera.Click += buttonCamera_Click;
+            lblPicture.Anchor = AnchorStyles.None;
+            lblPicture.AutoSize = true;
+            lblPicture.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblPicture.ForeColor = Color.White;
+            lblPicture.Location = new Point(152, 10);
+            lblPicture.Name = "lblPicture";
+            lblPicture.Size = new Size(89, 25);
+            lblPicture.TabIndex = 0;
+            lblPicture.Text = "PICTURE";
             // 
             // picBoxPicture
             // 
@@ -603,6 +600,36 @@
             picBoxPicture.TabStop = false;
             picBoxPicture.Click += ControlCreateId_Click;
             // 
+            // btnCamera
+            // 
+            btnCamera.Anchor = AnchorStyles.None;
+            btnCamera.BackColor = Color.White;
+            btnCamera.FlatAppearance.BorderSize = 0;
+            btnCamera.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCamera.ForeColor = Color.FromArgb(53, 69, 93);
+            btnCamera.Location = new Point(70, 359);
+            btnCamera.Name = "btnCamera";
+            btnCamera.Size = new Size(80, 35);
+            btnCamera.TabIndex = 17;
+            btnCamera.Text = "CAMERA";
+            btnCamera.UseVisualStyleBackColor = false;
+            btnCamera.Click += buttonCamera_Click;
+            // 
+            // btnBrowse
+            // 
+            btnBrowse.Anchor = AnchorStyles.None;
+            btnBrowse.BackColor = Color.White;
+            btnBrowse.FlatAppearance.BorderSize = 0;
+            btnBrowse.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBrowse.ForeColor = Color.FromArgb(53, 69, 93);
+            btnBrowse.Location = new Point(156, 359);
+            btnBrowse.Name = "btnBrowse";
+            btnBrowse.Size = new Size(80, 35);
+            btnBrowse.TabIndex = 18;
+            btnBrowse.Text = "BROWSE";
+            btnBrowse.UseVisualStyleBackColor = false;
+            btnBrowse.Click += buttonBrowse_Click;
+            // 
             // btnClear
             // 
             btnClear.Anchor = AnchorStyles.None;
@@ -613,7 +640,7 @@
             btnClear.Location = new Point(242, 359);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(80, 35);
-            btnClear.TabIndex = 31;
+            btnClear.TabIndex = 19;
             btnClear.Text = "CLEAR";
             btnClear.UseVisualStyleBackColor = false;
             btnClear.Click += buttonClearPhoto_Click;
@@ -628,23 +655,8 @@
             cmbBoxCameraList.Location = new Point(70, 402);
             cmbBoxCameraList.Name = "cmbBoxCameraList";
             cmbBoxCameraList.Size = new Size(105, 23);
-            cmbBoxCameraList.TabIndex = 35;
+            cmbBoxCameraList.TabIndex = 16;
             cmbBoxCameraList.DropDownClosed += comboBoxSex_DropDownClosed;
-            // 
-            // btnBrowse
-            // 
-            btnBrowse.Anchor = AnchorStyles.None;
-            btnBrowse.BackColor = Color.White;
-            btnBrowse.FlatAppearance.BorderSize = 0;
-            btnBrowse.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnBrowse.ForeColor = Color.FromArgb(53, 69, 93);
-            btnBrowse.Location = new Point(156, 359);
-            btnBrowse.Name = "btnBrowse";
-            btnBrowse.Size = new Size(80, 35);
-            btnBrowse.TabIndex = 15;
-            btnBrowse.Text = "BROWSE";
-            btnBrowse.UseVisualStyleBackColor = false;
-            btnBrowse.Click += buttonBrowse_Click;
             // 
             // pnlSignatureProof
             // 
@@ -658,7 +670,19 @@
             pnlSignatureProof.Name = "pnlSignatureProof";
             pnlSignatureProof.Padding = new Padding(20);
             pnlSignatureProof.Size = new Size(393, 447);
-            pnlSignatureProof.TabIndex = 36;
+            pnlSignatureProof.TabIndex = 0;
+            // 
+            // lblSignature
+            // 
+            lblSignature.Anchor = AnchorStyles.None;
+            lblSignature.AutoSize = true;
+            lblSignature.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSignature.ForeColor = Color.White;
+            lblSignature.Location = new Point(138, 10);
+            lblSignature.Name = "lblSignature";
+            lblSignature.Size = new Size(117, 25);
+            lblSignature.TabIndex = 0;
+            lblSignature.Text = "SIGNATURE";
             // 
             // btnCreateId
             // 
@@ -671,7 +695,7 @@
             btnCreateId.Location = new Point(403, 30);
             btnCreateId.Name = "btnCreateId";
             btnCreateId.Size = new Size(120, 40);
-            btnCreateId.TabIndex = 20;
+            btnCreateId.TabIndex = 21;
             btnCreateId.Text = "CREATE ID";
             btnCreateId.UseVisualStyleBackColor = false;
             btnCreateId.Click += buttonCreate_Click;
@@ -687,7 +711,7 @@
             btnClearForm.Location = new Point(275, 30);
             btnClearForm.Name = "btnClearForm";
             btnClearForm.Size = new Size(120, 40);
-            btnClearForm.TabIndex = 21;
+            btnClearForm.TabIndex = 20;
             btnClearForm.Text = "CLEAR FORM";
             btnClearForm.UseVisualStyleBackColor = false;
             btnClearForm.Click += buttonClearAll_Click;
@@ -700,31 +724,7 @@
             pnlControls.Location = new Point(458, 453);
             pnlControls.Name = "pnlControls";
             pnlControls.Size = new Size(798, 100);
-            pnlControls.TabIndex = 49;
-            // 
-            // lblSignature
-            // 
-            lblSignature.Anchor = AnchorStyles.None;
-            lblSignature.AutoSize = true;
-            lblSignature.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lblSignature.ForeColor = Color.White;
-            lblSignature.Location = new Point(138, 10);
-            lblSignature.Name = "lblSignature";
-            lblSignature.Size = new Size(117, 25);
-            lblSignature.TabIndex = 35;
-            lblSignature.Text = "SIGNATURE";
-            // 
-            // lblPicture
-            // 
-            lblPicture.Anchor = AnchorStyles.None;
-            lblPicture.AutoSize = true;
-            lblPicture.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lblPicture.ForeColor = Color.White;
-            lblPicture.Location = new Point(152, 10);
-            lblPicture.Name = "lblPicture";
-            lblPicture.Size = new Size(89, 25);
-            lblPicture.TabIndex = 36;
-            lblPicture.Text = "PICTURE";
+            pnlControls.TabIndex = 0;
             // 
             // ControlCreateId
             // 
