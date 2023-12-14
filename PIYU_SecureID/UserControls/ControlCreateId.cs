@@ -188,7 +188,7 @@ namespace PIYU_SecureID
 
         private void comboBoxProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadCities(comboBoxProvince.Text);
+            LoadCities(comboBoxProvince.Text.Replace('Ñ', '�'));
         }
         private void LoadProvinces()
         {
@@ -287,7 +287,7 @@ namespace PIYU_SecureID
 
         private void comboBoxCity_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadBarangay(comboBoxProvince.Text, comboBoxCity.Text);
+            LoadBarangay(comboBoxProvince.Text.Replace('Ñ', '�'), comboBoxCity.Text.Replace('Ñ', '�'));
         }
 
         private void ControlCreateId_Leave(object sender, EventArgs e)
