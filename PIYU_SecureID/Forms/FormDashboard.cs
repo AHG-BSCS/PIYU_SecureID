@@ -11,7 +11,6 @@ namespace PIYU_SecureID
         private UserControl activeTab;
         private int count;
         private FormAuthentication authentication;
-        private ControlDashboard dashboard;
         private ControlCreateId createId;
         private ControlCheckId checkId;
         private ControlVerifyId verifyId;
@@ -25,7 +24,6 @@ namespace PIYU_SecureID
 
             this.authentication = auth;
             this.activeTab = new UserControl();
-            this.dashboard = new ControlDashboard();
             this.createId = new ControlCreateId();
             this.checkId = new ControlCheckId();
             this.verifyId = new ControlVerifyId();
@@ -37,8 +35,8 @@ namespace PIYU_SecureID
         private void FormDashboard_Load(object sender, EventArgs e)
         {
             DesignHelper.PaintRoundBorder(this);
-            btnDashboard.PerformClick();
-            timerDateTime.Start();
+            btnCreateId.PerformClick();
+            lblTransactionCounter.Text = info.LoadTotalTransaction().ToString();
         }
 
         private void ShowTab(UserControl newForm)
@@ -67,14 +65,6 @@ namespace PIYU_SecureID
                 previousActiveBtn.ForeColor = DesignHelper.COLOR_WHITE;
                 previousActiveBtn = button;
             }
-        }
-
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            ShowTab(dashboard);
-            HighlightTab(btnDashboard);
-            // TODO: Move this to dashboard
-            dashboard.labelTotalTransaction.Text = "Total Transactions: " + info.LoadTotalTransaction().ToString();
         }
 
         private void btnCreateId_Click(object sender, EventArgs e)
