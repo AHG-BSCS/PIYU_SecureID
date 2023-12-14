@@ -13,23 +13,9 @@ namespace PIYU_SecureID
         {
             InitializeComponent();
 
-            FilterInfoCollection filter = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            foreach (FilterInfo Device in filter)
-                cmbBoxCameraList.Items.Add(Device.Name);
-            cmbBoxCameraList.SelectedIndex = 0;
-            VideoCaptureDevice captureDevice = new VideoCaptureDevice();
-
             GenerateTransactionNum();
+            LoadCameraSource();
             LoadProvinces();
-        }
-
-        private void GenerateTransactionNum()
-        {
-            Random random = new Random();
-
-            long randomValue = (long)(random.NextDouble() * (9999999999999L - 1000000000000L) + 1000000000000L);
-
-            this.transactionNum = randomValue;
         }
 
         private void buttonBrowse_Click(object sender, EventArgs e)
@@ -70,16 +56,6 @@ namespace PIYU_SecureID
         private void buttonClearSign_Click(object sender, EventArgs e)
         {
             picBoxSignature.Image = null;
-        }
-
-        private void comboBoxCameras_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void comboBoxCameras_TextChanged(object sender, EventArgs e)
-        {
-            picBoxPicture.Image = null;
         }
 
         private void buttonClearAll_Click(object sender, EventArgs e)
@@ -139,15 +115,6 @@ namespace PIYU_SecureID
             }
         }
 
-        private byte[] ConvertPictureBoxImageToBase64(Image image)
-        {
-            using (MemoryStream ms = new MemoryStream())
-            {
-                image.Save(ms, ImageFormat.Png);
-                return ms.ToArray();
-            }
-        }
-
         private void textBoxLastName_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -179,6 +146,56 @@ namespace PIYU_SecureID
         {
             LoadCities(cmbBoxProvince.Text.Replace('Ñ', '�'));
         }
+
+        private void comboBoxCity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadBarangay(cmbBoxProvince.Text.Replace('Ñ', '�'), cmbBoxCity.Text.Replace('Ñ', '�'));
+        }
+
+        private void comboBoxSex_DropDownClosed(object sender, EventArgs e)
+        {
+            lblLastName.Focus();
+        }
+
+        private void ControlCreateId_Click(object sender, EventArgs e)
+        {
+            lblLastName.Focus();
+        }
+
+        private void textBoxLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (char.IsLetter(e.KeyChar) || e.KeyChar == '\b' ||
+                    e.KeyChar == ' ' || e.KeyChar == (char)Keys.Enter)
+            {
+
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+        private void GenerateTransactionNum()
+        {
+            Random random = new Random();
+
+            long randomValue = (long)(random.NextDouble() * (9999999999999L - 1000000000000L) + 1000000000000L);
+
+            this.transactionNum = randomValue;
+        }
+
+        private void LoadCameraSource()
+        {
+            FilterInfoCollection filter = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo Device in filter)
+                cmbBoxCameraList.Items.Add(Device.Name);
+            cmbBoxCameraList.SelectedIndex = 0;
+            VideoCaptureDevice captureDevice = new VideoCaptureDevice();
+        }
+
         private void LoadProvinces()
         {
             try
@@ -273,34 +290,12 @@ namespace PIYU_SecureID
             }
         }
 
-        private void comboBoxCity_SelectedIndexChanged(object sender, EventArgs e)
+        private byte[] ConvertPictureBoxImageToBase64(Image image)
         {
-            LoadBarangay(cmbBoxProvince.Text.Replace('Ñ', '�'), cmbBoxCity.Text.Replace('Ñ', '�'));
-        }
-
-        private void comboBoxSex_DropDownClosed(object sender, EventArgs e)
-        {
-            lblLastName.Focus();
-        }
-
-        private void ControlCreateId_Click(object sender, EventArgs e)
-        {
-            lblLastName.Focus();
-        }
-
-        private void textBoxLastName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsDigit(e.KeyChar))
+            using (MemoryStream ms = new MemoryStream())
             {
-                e.Handled = true;
-            }
-            else if (char.IsLetter(e.KeyChar) || e.KeyChar == '\b' || e.KeyChar == ' ')
-            {
-
-            }
-            else
-            {
-                e.Handled = true;
+                image.Save(ms, ImageFormat.Png);
+                return ms.ToArray();
             }
         }
     }

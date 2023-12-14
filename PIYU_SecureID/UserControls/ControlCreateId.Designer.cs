@@ -106,6 +106,7 @@
             txtBoxLastName.PlaceholderText = "Required";
             txtBoxLastName.Size = new Size(404, 27);
             txtBoxLastName.TabIndex = 1;
+            txtBoxLastName.KeyDown += textBoxLastName_KeyDown;
             txtBoxLastName.KeyPress += textBoxLastName_KeyPress;
             // 
             // txtBoxFirstName
@@ -119,6 +120,7 @@
             txtBoxFirstName.PlaceholderText = "Required";
             txtBoxFirstName.Size = new Size(265, 27);
             txtBoxFirstName.TabIndex = 2;
+            txtBoxFirstName.KeyDown += textBoxGivenName_KeyDown;
             txtBoxFirstName.KeyPress += textBoxLastName_KeyPress;
             // 
             // lblFirstName
@@ -127,9 +129,9 @@
             lblFirstName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblFirstName.Location = new Point(23, 113);
             lblFirstName.Name = "lblFirstName";
-            lblFirstName.Size = new Size(88, 21);
+            lblFirstName.Size = new Size(98, 21);
             lblFirstName.TabIndex = 0;
-            lblFirstName.Text = "First Name";
+            lblFirstName.Text = "Given Name";
             lblFirstName.Click += ControlCreateId_Click;
             // 
             // txtBoxMiddleName
@@ -143,6 +145,7 @@
             txtBoxMiddleName.PlaceholderText = "Optional";
             txtBoxMiddleName.Size = new Size(404, 27);
             txtBoxMiddleName.TabIndex = 3;
+            txtBoxMiddleName.KeyDown += textBoxMiddleName_KeyDown;
             txtBoxMiddleName.KeyPress += textBoxLastName_KeyPress;
             // 
             // lblMiddleName
@@ -400,7 +403,7 @@
             cmbBoxDay.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             cmbBoxDay.FormattingEnabled = true;
             cmbBoxDay.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" });
-            cmbBoxDay.Location = new Point(23, 354);
+            cmbBoxDay.Location = new Point(175, 352);
             cmbBoxDay.Margin = new Padding(3, 2, 3, 2);
             cmbBoxDay.Name = "cmbBoxDay";
             cmbBoxDay.Size = new Size(65, 28);
@@ -414,7 +417,7 @@
             cmbBoxMonth.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             cmbBoxMonth.FormattingEnabled = true;
             cmbBoxMonth.Items.AddRange(new object[] { "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER" });
-            cmbBoxMonth.Location = new Point(112, 352);
+            cmbBoxMonth.Location = new Point(23, 352);
             cmbBoxMonth.Margin = new Padding(3, 2, 3, 2);
             cmbBoxMonth.Name = "cmbBoxMonth";
             cmbBoxMonth.Size = new Size(128, 28);
@@ -425,7 +428,7 @@
             // 
             lblDay.AutoSize = true;
             lblDay.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            lblDay.Location = new Point(36, 391);
+            lblDay.Location = new Point(188, 389);
             lblDay.Name = "lblDay";
             lblDay.Size = new Size(28, 13);
             lblDay.TabIndex = 0;
@@ -436,7 +439,7 @@
             // 
             lblMonth.AutoSize = true;
             lblMonth.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            lblMonth.Location = new Point(148, 389);
+            lblMonth.Location = new Point(62, 389);
             lblMonth.Name = "lblMonth";
             lblMonth.Size = new Size(47, 13);
             lblMonth.TabIndex = 0;
