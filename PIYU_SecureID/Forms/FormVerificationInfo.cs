@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using PIYU_SecureID.Classes;
 using QRCoder;
 
 namespace PIYU_SecureID
@@ -31,11 +24,13 @@ namespace PIYU_SecureID
         public byte[] idPhoto;
         public byte[] sign;
         public ControlCreateId createId;
+
         public FormVerificationInfo(string lastName, string givenName, string middleName, string suffix, long transactionNum,
                                     string sex, string bloodType, string dateOfBirth, string province, string city, string barangay, string maritalStatus,
                                     byte[] idPhoto, byte[] sign, ControlCreateId createId)
         {
             InitializeComponent();
+            DesignHelper.PaintRoundBorder(this);
 
             this.transactionNum = transactionNum;
             this.lastName = lastName;
@@ -55,10 +50,10 @@ namespace PIYU_SecureID
 
             GenerateAndDisplayQRCode();
 
-            labelName.Text += givenName + " " + middleName + " " + lastName + " " + suffix;
-            labelTransactionNum.Text += transactionNum.ToString();
+            lblName.Text += givenName + " " + middleName + " " + lastName + " " + suffix;
+            lblTransactionNumber.Text += transactionNum.ToString();
 
-            panelToPrint = panelMain;
+            panelToPrint = pnlTransactionSlip;
 
             printDocument = new PrintDocument();
             printDocument.PrintPage += PrintDocument_PrintPage;
@@ -104,7 +99,6 @@ namespace PIYU_SecureID
             panelToPrint.DrawToBitmap(bitmap, new Rectangle(0, 0, panelToPrint.Width, panelToPrint.Height));
 
             e.Graphics.DrawImage(bitmap, e.MarginBounds);
-
             e.HasMorePages = false;
 
             bitmap.Dispose();
@@ -120,12 +114,7 @@ namespace PIYU_SecureID
 
             Bitmap qrCodeImage = qrCode.GetGraphic(20);
 
-            pictureBoxQRCode.Image = qrCodeImage;
-        }
-
-        private void buttonCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            picBoxQRCode.Image = qrCodeImage;
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
@@ -164,6 +153,21 @@ namespace PIYU_SecureID
             {
                 MessageBox.Show($"Error saving data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Transparent;
+        }
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Red;
         }
     }
 }

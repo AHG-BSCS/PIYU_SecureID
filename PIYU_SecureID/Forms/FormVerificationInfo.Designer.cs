@@ -29,235 +29,273 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVerificationInfo));
-            pictureBox1 = new PictureBox();
-            panelMain = new Panel();
-            label9 = new Label();
-            label8 = new Label();
-            pictureBoxQRCode = new PictureBox();
-            label7 = new Label();
-            label6 = new Label();
-            labelTransactionNum = new Label();
-            labelName = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            buttonSave = new Button();
-            buttonPrint = new Button();
-            buttonCancel = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panelMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxQRCode).BeginInit();
+            picBoxAppLogo = new PictureBox();
+            pnlTransactionSlip = new Panel();
+            picBoxQRCode = new PictureBox();
+            lblInformationText = new Label();
+            lblInformation = new Label();
+            lblNoteText = new Label();
+            lblNote = new Label();
+            lblTransactionNumber = new Label();
+            lblName = new Label();
+            lblBrand = new Label();
+            lblRepublic = new Label();
+            lblDocumentTitle = new Label();
+            btnSave = new Button();
+            btnPrint = new Button();
+            pnlControls = new Panel();
+            pnlTitleBar = new Panel();
+            btnClose = new Button();
+            ((System.ComponentModel.ISupportInitialize)picBoxAppLogo).BeginInit();
+            pnlTransactionSlip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picBoxQRCode).BeginInit();
+            pnlControls.SuspendLayout();
+            pnlTitleBar.SuspendLayout();
             SuspendLayout();
             // 
-            // pictureBox1
+            // picBoxAppLogo
             // 
-            pictureBox1.Image = Properties.Resources.PIYU_SecureID;
-            pictureBox1.InitialImage = Properties.Resources.PIYU_SecureID;
-            pictureBox1.Location = new Point(29, 30);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 95);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            picBoxAppLogo.Image = Properties.Resources.PIYU_SecureID;
+            picBoxAppLogo.InitialImage = Properties.Resources.PIYU_SecureID;
+            picBoxAppLogo.Location = new Point(30, 30);
+            picBoxAppLogo.Name = "picBoxAppLogo";
+            picBoxAppLogo.Size = new Size(90, 90);
+            picBoxAppLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            picBoxAppLogo.TabIndex = 0;
+            picBoxAppLogo.TabStop = false;
             // 
-            // panelMain
+            // pnlTransactionSlip
             // 
-            panelMain.BackColor = Color.White;
-            panelMain.Controls.Add(label9);
-            panelMain.Controls.Add(label8);
-            panelMain.Controls.Add(pictureBoxQRCode);
-            panelMain.Controls.Add(label7);
-            panelMain.Controls.Add(label6);
-            panelMain.Controls.Add(labelTransactionNum);
-            panelMain.Controls.Add(labelName);
-            panelMain.Controls.Add(label3);
-            panelMain.Controls.Add(label2);
-            panelMain.Controls.Add(label1);
-            panelMain.Controls.Add(pictureBox1);
-            panelMain.Location = new Point(12, 12);
-            panelMain.Name = "panelMain";
-            panelMain.Size = new Size(776, 459);
-            panelMain.TabIndex = 1;
+            pnlTransactionSlip.BackColor = Color.White;
+            pnlTransactionSlip.Controls.Add(picBoxAppLogo);
+            pnlTransactionSlip.Controls.Add(picBoxQRCode);
+            pnlTransactionSlip.Controls.Add(lblNoteText);
+            pnlTransactionSlip.Controls.Add(lblNote);
+            pnlTransactionSlip.Controls.Add(lblInformationText);
+            pnlTransactionSlip.Controls.Add(lblInformation);
+            pnlTransactionSlip.Controls.Add(lblTransactionNumber);
+            pnlTransactionSlip.Controls.Add(lblName);
+            pnlTransactionSlip.Controls.Add(lblBrand);
+            pnlTransactionSlip.Controls.Add(lblRepublic);
+            pnlTransactionSlip.Controls.Add(lblDocumentTitle);
+            pnlTransactionSlip.Dock = DockStyle.Left;
+            pnlTransactionSlip.Location = new Point(20, 20);
+            pnlTransactionSlip.Name = "pnlTransactionSlip";
+            pnlTransactionSlip.Size = new Size(750, 410);
+            pnlTransactionSlip.TabIndex = 1;
             // 
-            // label9
+            // picBoxQRCode
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(55, 326);
-            label9.Name = "label9";
-            label9.Size = new Size(680, 84);
-            label9.TabIndex = 10;
-            label9.Text = resources.GetString("label9.Text");
+            picBoxQRCode.InitialImage = Properties.Resources.PIYU_SecureID;
+            picBoxQRCode.Location = new Point(554, 6);
+            picBoxQRCode.Name = "picBoxQRCode";
+            picBoxQRCode.Size = new Size(190, 190);
+            picBoxQRCode.SizeMode = PictureBoxSizeMode.Zoom;
+            picBoxQRCode.TabIndex = 8;
+            picBoxQRCode.TabStop = false;
             // 
-            // label8
+            // lblInformationText
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(29, 303);
-            label8.Name = "label8";
-            label8.Size = new Size(124, 21);
-            label8.TabIndex = 9;
-            label8.Text = "INFORMATION:";
+            lblInformationText.AutoSize = true;
+            lblInformationText.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblInformationText.Location = new Point(54, 230);
+            lblInformationText.Name = "lblInformationText";
+            lblInformationText.Size = new Size(655, 84);
+            lblInformationText.TabIndex = 0;
+            lblInformationText.Text = resources.GetString("lblInformationText.Text");
             // 
-            // pictureBoxQRCode
+            // lblInformation
             // 
-            pictureBoxQRCode.InitialImage = Properties.Resources.PIYU_SecureID;
-            pictureBoxQRCode.Location = new Point(582, 3);
-            pictureBoxQRCode.Name = "pictureBoxQRCode";
-            pictureBoxQRCode.Size = new Size(191, 188);
-            pictureBoxQRCode.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxQRCode.TabIndex = 8;
-            pictureBoxQRCode.TabStop = false;
+            lblInformation.AutoSize = true;
+            lblInformation.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblInformation.Location = new Point(30, 209);
+            lblInformation.Name = "lblInformation";
+            lblInformation.Size = new Size(124, 21);
+            lblInformation.TabIndex = 0;
+            lblInformation.Text = "INFORMATION:";
             // 
-            // label7
+            // lblNoteText
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(83, 255);
-            label7.Name = "label7";
-            label7.Size = new Size(597, 21);
-            label7.TabIndex = 7;
-            label7.Text = "Please keep your transaction number and QR code safe, secure, and confidential.";
+            lblNoteText.AutoSize = true;
+            lblNoteText.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNoteText.Location = new Point(77, 359);
+            lblNoteText.Name = "lblNoteText";
+            lblNoteText.Size = new Size(597, 21);
+            lblNoteText.TabIndex = 0;
+            lblNoteText.Text = "Please keep your transaction number and QR code safe, secure, and confidential.";
             // 
-            // label6
+            // lblNote
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(55, 234);
-            label6.Name = "label6";
-            label6.Size = new Size(668, 21);
-            label6.TabIndex = 6;
-            label6.Text = "NOTE: DO NOT SHARE YOUR TRANSACTION SLIP TO ANYONE OR POST ON SOCIAL MEDIA";
+            lblNote.AutoSize = true;
+            lblNote.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNote.Location = new Point(41, 338);
+            lblNote.Name = "lblNote";
+            lblNote.Size = new Size(668, 21);
+            lblNote.TabIndex = 0;
+            lblNote.Text = "NOTE: DO NOT SHARE YOUR TRANSACTION SLIP TO ANYONE OR POST ON SOCIAL MEDIA";
             // 
-            // labelTransactionNum
+            // lblTransactionNumber
             // 
-            labelTransactionNum.AutoSize = true;
-            labelTransactionNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelTransactionNum.Location = new Point(29, 194);
-            labelTransactionNum.Name = "labelTransactionNum";
-            labelTransactionNum.Size = new Size(158, 21);
-            labelTransactionNum.TabIndex = 5;
-            labelTransactionNum.Text = "Transaction Number: ";
+            lblTransactionNumber.AutoSize = true;
+            lblTransactionNumber.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTransactionNumber.Location = new Point(30, 170);
+            lblTransactionNumber.Name = "lblTransactionNumber";
+            lblTransactionNumber.Size = new Size(158, 21);
+            lblTransactionNumber.TabIndex = 0;
+            lblTransactionNumber.Text = "Transaction Number: ";
             // 
-            // labelName
+            // lblName
             // 
-            labelName.AutoSize = true;
-            labelName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelName.Location = new Point(29, 158);
-            labelName.Name = "labelName";
-            labelName.Size = new Size(59, 21);
-            labelName.TabIndex = 4;
-            labelName.Text = "Name: ";
+            lblName.AutoSize = true;
+            lblName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblName.Location = new Point(30, 142);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(59, 21);
+            lblName.TabIndex = 0;
+            lblName.Text = "Name: ";
             // 
-            // label3
+            // lblBrand
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(137, 63);
-            label3.Name = "label3";
-            label3.Size = new Size(85, 21);
-            label3.TabIndex = 3;
-            label3.Text = "SECURE ID";
+            lblBrand.AutoSize = true;
+            lblBrand.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblBrand.Location = new Point(333, 72);
+            lblBrand.Name = "lblBrand";
+            lblBrand.Size = new Size(76, 21);
+            lblBrand.TabIndex = 0;
+            lblBrand.Text = "Secure ID";
             // 
-            // label2
+            // lblRepublic
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(135, 42);
-            label2.Name = "label2";
-            label2.Size = new Size(194, 21);
-            label2.TabIndex = 2;
-            label2.Text = "Republic of the Philippines";
+            lblRepublic.AutoSize = true;
+            lblRepublic.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblRepublic.Location = new Point(278, 51);
+            lblRepublic.Name = "lblRepublic";
+            lblRepublic.Size = new Size(194, 21);
+            lblRepublic.TabIndex = 0;
+            lblRepublic.Text = "Republic of the Philippines";
             // 
-            // label1
+            // lblDocumentTitle
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(135, 97);
-            label1.Name = "label1";
-            label1.Size = new Size(242, 21);
-            label1.TabIndex = 1;
-            label1.Text = "SECURE ID TRANSACTION SLIP";
+            lblDocumentTitle.AutoSize = true;
+            lblDocumentTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDocumentTitle.Location = new Point(254, 30);
+            lblDocumentTitle.Name = "lblDocumentTitle";
+            lblDocumentTitle.Size = new Size(242, 21);
+            lblDocumentTitle.TabIndex = 0;
+            lblDocumentTitle.Text = "SECURE ID TRANSACTION SLIP";
             // 
-            // buttonSave
+            // btnSave
             // 
-            buttonSave.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonSave.FlatAppearance.BorderSize = 0;
-            buttonSave.FlatStyle = FlatStyle.Flat;
-            buttonSave.ForeColor = Color.White;
-            buttonSave.Location = new Point(794, 326);
-            buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(97, 48);
-            buttonSave.TabIndex = 2;
-            buttonSave.Text = "SAVE";
-            buttonSave.UseVisualStyleBackColor = true;
-            buttonSave.Click += buttonSave_Click;
+            btnSave.BackColor = Color.White;
+            btnSave.Cursor = Cursors.Hand;
+            btnSave.FlatAppearance.BorderSize = 0;
+            btnSave.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSave.ForeColor = Color.FromArgb(53, 69, 93);
+            btnSave.Location = new Point(10, 319);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(76, 40);
+            btnSave.TabIndex = 1;
+            btnSave.Text = "SAVE";
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += buttonSave_Click;
             // 
-            // buttonPrint
+            // btnPrint
             // 
-            buttonPrint.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonPrint.FlatAppearance.BorderSize = 0;
-            buttonPrint.FlatStyle = FlatStyle.Flat;
-            buttonPrint.ForeColor = Color.White;
-            buttonPrint.Location = new Point(794, 379);
-            buttonPrint.Name = "buttonPrint";
-            buttonPrint.Size = new Size(97, 48);
-            buttonPrint.TabIndex = 3;
-            buttonPrint.Text = "PRINT";
-            buttonPrint.UseVisualStyleBackColor = true;
-            buttonPrint.Click += buttonPrint_Click;
+            btnPrint.BackColor = Color.White;
+            btnPrint.Cursor = Cursors.Hand;
+            btnPrint.Dock = DockStyle.Bottom;
+            btnPrint.FlatAppearance.BorderSize = 0;
+            btnPrint.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPrint.ForeColor = Color.FromArgb(53, 69, 93);
+            btnPrint.Location = new Point(10, 370);
+            btnPrint.Name = "btnPrint";
+            btnPrint.Size = new Size(76, 40);
+            btnPrint.TabIndex = 2;
+            btnPrint.Text = "PRINT";
+            btnPrint.UseVisualStyleBackColor = false;
+            btnPrint.Click += buttonPrint_Click;
             // 
-            // buttonCancel
+            // pnlControls
             // 
-            buttonCancel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonCancel.FlatAppearance.BorderSize = 0;
-            buttonCancel.FlatStyle = FlatStyle.Flat;
-            buttonCancel.ForeColor = Color.White;
-            buttonCancel.Location = new Point(794, 431);
-            buttonCancel.Name = "buttonCancel";
-            buttonCancel.Size = new Size(97, 48);
-            buttonCancel.TabIndex = 4;
-            buttonCancel.Text = "CANCEL";
-            buttonCancel.UseVisualStyleBackColor = true;
-            buttonCancel.Click += buttonCancel_Click;
+            pnlControls.Controls.Add(btnSave);
+            pnlControls.Controls.Add(btnPrint);
+            pnlControls.Dock = DockStyle.Left;
+            pnlControls.Location = new Point(770, 20);
+            pnlControls.Name = "pnlControls";
+            pnlControls.Padding = new Padding(10, 0, 10, 0);
+            pnlControls.Size = new Size(96, 410);
+            pnlControls.TabIndex = 0;
+            // 
+            // pnlTitleBar
+            // 
+            pnlTitleBar.BackColor = Color.FromArgb(53, 69, 93);
+            pnlTitleBar.Controls.Add(btnClose);
+            pnlTitleBar.Dock = DockStyle.Top;
+            pnlTitleBar.Location = new Point(20, 0);
+            pnlTitleBar.Name = "pnlTitleBar";
+            pnlTitleBar.Size = new Size(845, 20);
+            pnlTitleBar.TabIndex = 0;
+            // 
+            // btnClose
+            // 
+            btnClose.BackColor = Color.Transparent;
+            btnClose.Cursor = Cursors.Hand;
+            btnClose.Dock = DockStyle.Right;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.ForeColor = Color.White;
+            btnClose.Image = Properties.Resources.icons_close;
+            btnClose.Location = new Point(825, 0);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(20, 20);
+            btnClose.TabIndex = 8;
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
+            btnClose.MouseEnter += btnClose_MouseEnter;
+            btnClose.MouseLeave += btnClose_MouseLeave;
             // 
             // FormVerificationInfo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(53, 69, 93);
-            ClientSize = new Size(894, 483);
-            Controls.Add(buttonCancel);
-            Controls.Add(buttonPrint);
-            Controls.Add(buttonSave);
-            Controls.Add(panelMain);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            ClientSize = new Size(865, 450);
+            Controls.Add(pnlControls);
+            Controls.Add(pnlTransactionSlip);
+            Controls.Add(pnlTitleBar);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormVerificationInfo";
+            Padding = new Padding(20, 0, 0, 20);
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormVerificationInfo";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panelMain.ResumeLayout(false);
-            panelMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxQRCode).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picBoxAppLogo).EndInit();
+            pnlTransactionSlip.ResumeLayout(false);
+            pnlTransactionSlip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picBoxQRCode).EndInit();
+            pnlControls.ResumeLayout(false);
+            pnlTitleBar.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private Panel panelMain;
-        private Button buttonSave;
-        private Button buttonPrint;
-        private Label label7;
-        private Label label6;
-        private Label labelTransactionNum;
-        private Label labelName;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private Button buttonCancel;
-        private Label label9;
-        private Label label8;
-        private PictureBox pictureBoxQRCode;
+        private PictureBox picBoxAppLogo;
+        private Panel pnlTransactionSlip;
+        private Button btnSave;
+        private Button btnPrint;
+        private Label lblNoteText;
+        private Label lblNote;
+        private Label lblTransactionNumber;
+        private Label lblName;
+        private Label lblBrand;
+        private Label lblRepublic;
+        private Label lblDocumentTitle;
+        private Label lblInformationText;
+        private Label lblInformation;
+        private PictureBox picBoxQRCode;
+        private Panel pnlControls;
+        private Panel pnlTitleBar;
+        private Button btnClose;
     }
 }
