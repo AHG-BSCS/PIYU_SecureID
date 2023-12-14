@@ -73,6 +73,7 @@ namespace PIYU_SecureID
         public void UpdateTrasactionsCount()
         {
             lblTransactionCounter.Text = info.LoadTotalTransaction().ToString();
+            lblVerifiedIdCounter.Text = info.LoadTotalId().ToString();
         }
 
         private void btnCreateId_Click(object sender, EventArgs e)
