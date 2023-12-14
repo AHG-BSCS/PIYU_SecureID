@@ -35,6 +35,9 @@
             btnClose = new Button();
             pnlTitleBar = new Panel();
             plnSideNavigation = new Panel();
+            lblTransactionCounter = new Label();
+            lblTransactions = new Label();
+            pnlMiddleSeparator = new Panel();
             btnSettings = new Button();
             btnLogout = new Button();
             pnlLiveDateTime = new Panel();
@@ -43,7 +46,7 @@
             btnVerifyId = new Button();
             btnCheckId = new Button();
             btnCreateId = new Button();
-            btnDashboard = new Button();
+            pnlTopSeparator = new Panel();
             lblAppName = new Label();
             picBoxAppLogo = new PictureBox();
             panel1 = new Panel();
@@ -128,13 +131,16 @@
             // plnSideNavigation
             // 
             plnSideNavigation.BackColor = Color.FromArgb(53, 69, 93);
+            plnSideNavigation.Controls.Add(lblTransactionCounter);
+            plnSideNavigation.Controls.Add(lblTransactions);
+            plnSideNavigation.Controls.Add(pnlMiddleSeparator);
             plnSideNavigation.Controls.Add(btnSettings);
             plnSideNavigation.Controls.Add(btnLogout);
             plnSideNavigation.Controls.Add(pnlLiveDateTime);
             plnSideNavigation.Controls.Add(btnVerifyId);
             plnSideNavigation.Controls.Add(btnCheckId);
             plnSideNavigation.Controls.Add(btnCreateId);
-            plnSideNavigation.Controls.Add(btnDashboard);
+            plnSideNavigation.Controls.Add(pnlTopSeparator);
             plnSideNavigation.Controls.Add(lblAppName);
             plnSideNavigation.Controls.Add(picBoxAppLogo);
             plnSideNavigation.Controls.Add(panel1);
@@ -145,6 +151,39 @@
             plnSideNavigation.Size = new Size(145, 649);
             plnSideNavigation.TabIndex = 0;
             // 
+            // lblTransactionCounter
+            // 
+            lblTransactionCounter.Dock = DockStyle.Top;
+            lblTransactionCounter.Font = new Font("Segoe UI Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTransactionCounter.ForeColor = Color.FromArgb(92, 176, 21);
+            lblTransactionCounter.Location = new Point(0, 281);
+            lblTransactionCounter.Name = "lblTransactionCounter";
+            lblTransactionCounter.Size = new Size(145, 40);
+            lblTransactionCounter.TabIndex = 13;
+            lblTransactionCounter.Text = "0";
+            lblTransactionCounter.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // lblTransactions
+            // 
+            lblTransactions.Dock = DockStyle.Top;
+            lblTransactions.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTransactions.ForeColor = Color.FromArgb(92, 176, 21);
+            lblTransactions.Location = new Point(0, 251);
+            lblTransactions.Name = "lblTransactions";
+            lblTransactions.Size = new Size(145, 30);
+            lblTransactions.TabIndex = 0;
+            lblTransactions.Text = "Transactions";
+            lblTransactions.TextAlign = ContentAlignment.BottomCenter;
+            // 
+            // pnlMiddleSeparator
+            // 
+            pnlMiddleSeparator.BackColor = Color.FromArgb(92, 176, 21);
+            pnlMiddleSeparator.Dock = DockStyle.Top;
+            pnlMiddleSeparator.Location = new Point(0, 246);
+            pnlMiddleSeparator.Name = "pnlMiddleSeparator";
+            pnlMiddleSeparator.Size = new Size(145, 5);
+            pnlMiddleSeparator.TabIndex = 11;
+            // 
             // btnSettings
             // 
             btnSettings.Cursor = Cursors.Hand;
@@ -152,7 +191,7 @@
             btnSettings.FlatAppearance.BorderSize = 0;
             btnSettings.FlatStyle = FlatStyle.Flat;
             btnSettings.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSettings.ForeColor = SystemColors.Control;
+            btnSettings.ForeColor = Color.White;
             btnSettings.Location = new Point(0, 524);
             btnSettings.Margin = new Padding(3, 2, 3, 2);
             btnSettings.Name = "btnSettings";
@@ -171,7 +210,7 @@
             btnLogout.FlatAppearance.BorderSize = 0;
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLogout.ForeColor = SystemColors.Control;
+            btnLogout.ForeColor = Color.White;
             btnLogout.Location = new Point(0, 564);
             btnLogout.Margin = new Padding(3, 2, 3, 2);
             btnLogout.Name = "btnLogout";
@@ -198,7 +237,7 @@
             // 
             lblLiveTime.Dock = DockStyle.Top;
             lblLiveTime.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblLiveTime.ForeColor = SystemColors.Control;
+            lblLiveTime.ForeColor = Color.White;
             lblLiveTime.Location = new Point(0, 15);
             lblLiveTime.Name = "lblLiveTime";
             lblLiveTime.Padding = new Padding(10, 0, 0, 0);
@@ -227,8 +266,8 @@
             btnVerifyId.FlatAppearance.BorderSize = 0;
             btnVerifyId.FlatStyle = FlatStyle.Flat;
             btnVerifyId.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnVerifyId.ForeColor = SystemColors.Control;
-            btnVerifyId.Location = new Point(0, 246);
+            btnVerifyId.ForeColor = Color.White;
+            btnVerifyId.Location = new Point(0, 201);
             btnVerifyId.Margin = new Padding(3, 2, 3, 2);
             btnVerifyId.Name = "btnVerifyId";
             btnVerifyId.Padding = new Padding(10, 0, 0, 0);
@@ -246,8 +285,8 @@
             btnCheckId.FlatAppearance.BorderSize = 0;
             btnCheckId.FlatStyle = FlatStyle.Flat;
             btnCheckId.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCheckId.ForeColor = SystemColors.Control;
-            btnCheckId.Location = new Point(0, 201);
+            btnCheckId.ForeColor = Color.White;
+            btnCheckId.Location = new Point(0, 156);
             btnCheckId.Margin = new Padding(3, 2, 3, 2);
             btnCheckId.Name = "btnCheckId";
             btnCheckId.Padding = new Padding(10, 0, 0, 0);
@@ -265,8 +304,8 @@
             btnCreateId.FlatAppearance.BorderSize = 0;
             btnCreateId.FlatStyle = FlatStyle.Flat;
             btnCreateId.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCreateId.ForeColor = SystemColors.Control;
-            btnCreateId.Location = new Point(0, 156);
+            btnCreateId.ForeColor = Color.White;
+            btnCreateId.Location = new Point(0, 111);
             btnCreateId.Margin = new Padding(3, 2, 3, 2);
             btnCreateId.Name = "btnCreateId";
             btnCreateId.Padding = new Padding(10, 0, 0, 0);
@@ -277,24 +316,14 @@
             btnCreateId.UseVisualStyleBackColor = true;
             btnCreateId.Click += btnCreateId_Click;
             // 
-            // btnDashboard
+            // pnlTopSeparator
             // 
-            btnDashboard.Cursor = Cursors.Hand;
-            btnDashboard.Dock = DockStyle.Top;
-            btnDashboard.FlatAppearance.BorderSize = 0;
-            btnDashboard.FlatStyle = FlatStyle.Flat;
-            btnDashboard.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDashboard.ForeColor = SystemColors.Control;
-            btnDashboard.Location = new Point(0, 111);
-            btnDashboard.Margin = new Padding(3, 2, 3, 2);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Padding = new Padding(10, 0, 0, 0);
-            btnDashboard.Size = new Size(145, 45);
-            btnDashboard.TabIndex = 1;
-            btnDashboard.Text = "Dashboard";
-            btnDashboard.TextAlign = ContentAlignment.MiddleLeft;
-            btnDashboard.UseVisualStyleBackColor = true;
-            btnDashboard.Click += btnDashboard_Click;
+            pnlTopSeparator.BackColor = Color.FromArgb(250, 201, 48);
+            pnlTopSeparator.Dock = DockStyle.Top;
+            pnlTopSeparator.Location = new Point(0, 106);
+            pnlTopSeparator.Name = "pnlTopSeparator";
+            pnlTopSeparator.Size = new Size(145, 5);
+            pnlTopSeparator.TabIndex = 12;
             // 
             // lblAppName
             // 
@@ -306,7 +335,7 @@
             lblAppName.ImageKey = "(none)";
             lblAppName.Location = new Point(0, 66);
             lblAppName.Name = "lblAppName";
-            lblAppName.Size = new Size(145, 45);
+            lblAppName.Size = new Size(145, 40);
             lblAppName.TabIndex = 0;
             lblAppName.Text = "SecureID";
             lblAppName.TextAlign = ContentAlignment.TopCenter;
@@ -344,6 +373,7 @@
             // 
             // pnlActiveTab
             // 
+            pnlActiveTab.BackColor = Color.White;
             pnlActiveTab.Dock = DockStyle.Fill;
             pnlActiveTab.Location = new Point(145, 30);
             pnlActiveTab.Margin = new Padding(3, 2, 3, 2);
@@ -387,12 +417,15 @@
         private Label lblLiveDate;
         private Label lblAppName;
         private PictureBox picBoxAppLogo;
-        private Button btnDashboard;
         private Button btnLogout;
         public Panel pnlActiveTab;
         private Button btnSettings;
         private Panel pnlLiveDateTime;
         private Label lblLiveTime;
         private Panel panel1;
+        private Label lblTransactions;
+        private Panel pnlMiddleSeparator;
+        private Panel pnlTopSeparator;
+        private Label lblTransactionCounter;
     }
 }
