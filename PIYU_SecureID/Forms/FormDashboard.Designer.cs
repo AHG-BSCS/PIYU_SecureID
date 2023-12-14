@@ -142,6 +142,9 @@
             plnSideNavigation.Padding = new Padding(0, 10, 0, 10);
             plnSideNavigation.Size = new Size(145, 649);
             plnSideNavigation.TabIndex = 0;
+            plnSideNavigation.MouseDown += lblAppName_MouseDown;
+            plnSideNavigation.MouseMove += lblAppName_MouseMove;
+            plnSideNavigation.MouseUp += lblAppName_MouseUp;
             // 
             // btnSettings
             // 
@@ -195,7 +198,7 @@
             // lblLiveTime
             // 
             lblLiveTime.Dock = DockStyle.Top;
-            lblLiveTime.Font = new Font("Ubuntu Mono", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLiveTime.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lblLiveTime.ForeColor = SystemColors.Control;
             lblLiveTime.Location = new Point(0, 15);
             lblLiveTime.Name = "lblLiveTime";
@@ -208,7 +211,7 @@
             // lblLiveDate
             // 
             lblLiveDate.Dock = DockStyle.Top;
-            lblLiveDate.Font = new Font("Ubuntu Mono", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLiveDate.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lblLiveDate.ForeColor = SystemColors.Control;
             lblLiveDate.Location = new Point(0, 0);
             lblLiveDate.Name = "lblLiveDate";
