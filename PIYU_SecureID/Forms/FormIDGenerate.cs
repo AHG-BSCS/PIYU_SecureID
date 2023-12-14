@@ -171,7 +171,7 @@ namespace PIYU_SecureID
             MessageBox.Show(idStr);
             string fullData = lastName + "~" + givenName + "~" + middleName + "~" + suffix + "~" + sex + "~"
                 + maritalStatus + "~" + bloodType + "~" + dateOfBirth + "~" + province + "~" + city + "~"
-                + barangay + "~" + DateTime.Now.ToString("MM/dd/yyyy");
+                + barangay + "~" + DateTime.Now.ToString("MM/dd/yyyy") + "~" + transactionNum;
             string titan;
             string hash = "}1!v5(eQf5iOYw3I#%;6XtFO=$V5eD6c%v3h}Z('Eev'Xx^S~9";
 
@@ -227,7 +227,7 @@ namespace PIYU_SecureID
 
                 ClassInformation data = new ClassInformation();
 
-                data.ImageIdQr = ConvertPictureBoxImageToBase64(pictureBoxQREncrypted.Image);
+                data.TransactionNum = transactionNum;
 
                 SaveToFile("Resources/idQr.txt", data);
 
@@ -246,8 +246,8 @@ namespace PIYU_SecureID
         private void buttonSave_Click(object sender, EventArgs e)
         {
             ClassInformation data = new ClassInformation();
-            
-            data.ImageIdQr = ConvertPictureBoxImageToBase64(pictureBoxQREncrypted.Image);
+
+            data.TransactionNum = transactionNum;
 
             SaveToFile("Resources/idQr.txt", data);
 

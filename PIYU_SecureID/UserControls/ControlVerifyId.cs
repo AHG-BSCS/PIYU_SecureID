@@ -95,10 +95,6 @@ namespace PIYU_SecureID
                         lastDecodedResult = decodedResult;
                         HandleResult(decodedResult);
                     }
-                    else
-                    {
-                        HandleResult(lastDecodedResult);
-                    }
                 }
             }
         }
@@ -137,28 +133,31 @@ namespace PIYU_SecureID
 
         private void UpdateLabels(string decryptedData)
         {
-            string[] pieces = decryptedData.Split('~');
-            RefreshData();
-
             try
             {
-                labelLastName.Text = pieces[0];
-                labelGivenName.Text = pieces[1];
-                labelMiddleName.Text = pieces[2];
-                labelSuffix.Text = pieces[3];
-                labelSex.Text = pieces[4];
-                labelMaritalStatus.Text = pieces[5];
-                labelBloodType.Text = pieces[6];
-                labelDateOfBirth.Text = pieces[7];
-                labelProvince.Text = pieces[8];
-                labelCity.Text = pieces[9];
-                labelBarangay.Text = pieces[10];
-                labelDateIssued.Text = pieces[11];
-                panelInfo.Visible = true;
+                var pieces = decryptedData.Split('~');
+                RefreshData();
+                info = info.LoadIdQrFromFile("Resources/idQr.txt", long.Parse(pieces[12]));
+                if (info.TransactionNum == long.Parse(pieces[12]))
+                {
+                    labelLastName.Text = pieces[0];
+                    labelGivenName.Text = pieces[1];
+                    labelMiddleName.Text = pieces[2];
+                    labelSuffix.Text = pieces[3];
+                    labelSex.Text = pieces[4];
+                    labelMaritalStatus.Text = pieces[5];
+                    labelBloodType.Text = pieces[6];
+                    labelDateOfBirth.Text = pieces[7];
+                    labelProvince.Text = pieces[8];
+                    labelCity.Text = pieces[9];
+                    labelBarangay.Text = pieces[10];
+                    labelDateIssued.Text = pieces[11];
+                    panelInfo.Visible = true;
+                }
             }
             catch
             {
-                MessageBox.Show("Invalid QR code data format.");
+                MessageBox.Show("Invalid QR.");
             }
         }
 
@@ -179,6 +178,7 @@ namespace PIYU_SecureID
                 videoSource.WaitForStop();
             }
             buttonStartStop.Text = "START";
+            lastDecodedResult = "";
             pictureBoxQrScanner.Image = null;
             panelInfo.Visible = false;
             RefreshData();

@@ -99,8 +99,7 @@ namespace PIYU_SecureID
 
         public string ToQrIdCsvString()
         {
-            string imageQrBase64 = ImageIdQr != null ? Convert.ToBase64String(ImageIdQr) : string.Empty;
-            return $"{imageQrBase64}~";
+            return $"{TransactionNum}~";
         }
 
         public static ClassInformation FromIdQrCsvString(string csv)
@@ -108,24 +107,11 @@ namespace PIYU_SecureID
             var values = csv.Split('~');
             return new ClassInformation
             {
-                LastName = values[0],
-                GivenName = values[1],
-                MiddleName = values[2],
-                Suffix = values[3],
-                Sex = values[4],
-                MaritalStatus = values[5],
-                BloodType = values[6],
-                DateOfBirth = values[7],
-                Province = values[8],
-                City = values[9],
-                Barangay = values[10],
-                DateIssued = values[11],
-                ImageIdPhoto = Convert.FromBase64String(values[12]),
-                ImageSign = Convert.FromBase64String(values[13])
+                TransactionNum = long.Parse(values[0])
             };
         }
 
-        public ClassInformation LoadIdQrFromFile(string filename, string targetKey)
+        public ClassInformation LoadIdQrFromFile(string filename, long targetKey)
         {
             try
             {
@@ -139,7 +125,7 @@ namespace PIYU_SecureID
                         {
                             ClassInformation userData = ClassInformation.FromIdQrCsvString(line);
 
-                            if (userData != null && userData.StrIdQr == targetKey)
+                            if (userData != null && userData.TransactionNum == targetKey)
                             {
                                 return userData;
                             }
@@ -197,7 +183,7 @@ namespace PIYU_SecureID
             {
                 if (File.Exists("Resources/idQr.txt"))
                 {
-                    string[] lines = File.ReadAllLines("Resources/info.txt");
+                    string[] lines = File.ReadAllLines("Resources/idQr.txt");
 
                     int i = 0;
                     foreach (string line in lines)
