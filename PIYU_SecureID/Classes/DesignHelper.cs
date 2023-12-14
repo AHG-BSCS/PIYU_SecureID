@@ -10,6 +10,7 @@ internal static class DesignHelper
 {
     static internal readonly Color COLOR_BLUE = Color.FromArgb(53, 69, 93);
     static internal readonly Color COLOR_TEAL = Color.FromArgb(60, 95, 106);
+    static internal readonly Color COLOR_WHITE = Color.White;
 
     static internal float GetSystemDisplayScale()
     {

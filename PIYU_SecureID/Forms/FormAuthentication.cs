@@ -4,13 +4,11 @@ namespace PIYU_SecureID
 {
     public partial class FormAuthentication : Form
     {
-        private FormDashboard dashboard;
         private Point mouseDownLocation;
 
         public FormAuthentication()
         {
             InitializeComponent();
-            dashboard = new FormDashboard(this);
         }
 
         private bool ValidateCode(string secretKey, string userCode)
@@ -23,6 +21,7 @@ namespace PIYU_SecureID
         {
             txtBoxPasscode.Text = "";
             btnBypass.Visible = false;
+            FormDashboard dashboard = new FormDashboard(this);
             dashboard.Show();
             this.Hide();
         }
@@ -91,6 +90,27 @@ namespace PIYU_SecureID
         private void btnClose_MouseEnter(object sender, EventArgs e)
         {
             btnClose.BackColor = Color.Red;
+        }
+
+        private void pnlTitleBar_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                int deltaX = e.X - mouseDownLocation.X;
+                int deltaY = e.Y - mouseDownLocation.Y;
+
+                this.Location = new Point(this.Location.X + deltaX, this.Location.Y + deltaY);
+            }
+        }
+
+        private void pnlTitleBar_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDownLocation = Point.Empty;
+        }
+
+        private void pnlTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownLocation = e.Location;
         }
     }
 }

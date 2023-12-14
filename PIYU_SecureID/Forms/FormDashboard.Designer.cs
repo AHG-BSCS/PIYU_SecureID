@@ -64,7 +64,7 @@
             btnMinimize.FlatStyle = FlatStyle.Flat;
             btnMinimize.ForeColor = Color.White;
             btnMinimize.Image = Properties.Resources.icons_minimize;
-            btnMinimize.Location = new Point(1116, 0);
+            btnMinimize.Location = new Point(966, 0);
             btnMinimize.Name = "btnMinimize";
             btnMinimize.Size = new Size(50, 35);
             btnMinimize.TabIndex = 6;
@@ -79,7 +79,7 @@
             btnMinimizeMaximize.FlatStyle = FlatStyle.Flat;
             btnMinimizeMaximize.ForeColor = Color.White;
             btnMinimizeMaximize.Image = Properties.Resources.icons_square;
-            btnMinimizeMaximize.Location = new Point(1166, 0);
+            btnMinimizeMaximize.Location = new Point(1016, 0);
             btnMinimizeMaximize.Name = "btnMinimizeMaximize";
             btnMinimizeMaximize.Size = new Size(50, 35);
             btnMinimizeMaximize.TabIndex = 7;
@@ -94,7 +94,7 @@
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.ForeColor = Color.White;
             btnClose.Image = Properties.Resources.icons_close;
-            btnClose.Location = new Point(1216, 0);
+            btnClose.Location = new Point(1066, 0);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(50, 35);
             btnClose.TabIndex = 8;
@@ -110,9 +110,9 @@
             pnlTitleBar.Controls.Add(btnMinimizeMaximize);
             pnlTitleBar.Controls.Add(btnClose);
             pnlTitleBar.Dock = DockStyle.Top;
-            pnlTitleBar.Location = new Point(0, 0);
+            pnlTitleBar.Location = new Point(150, 0);
             pnlTitleBar.Name = "pnlTitleBar";
-            pnlTitleBar.Size = new Size(1266, 35);
+            pnlTitleBar.Size = new Size(1116, 35);
             pnlTitleBar.TabIndex = 9;
             pnlTitleBar.MouseDown += lblAppName_MouseDown;
             pnlTitleBar.MouseMove += lblAppName_MouseMove;
@@ -131,9 +131,9 @@
             plnSideNavigation.Controls.Add(lblAppName);
             plnSideNavigation.Controls.Add(picBoxAppLogo);
             plnSideNavigation.Dock = DockStyle.Left;
-            plnSideNavigation.Location = new Point(0, 35);
+            plnSideNavigation.Location = new Point(0, 0);
             plnSideNavigation.Name = "plnSideNavigation";
-            plnSideNavigation.Size = new Size(150, 628);
+            plnSideNavigation.Size = new Size(150, 663);
             plnSideNavigation.TabIndex = 0;
             // 
             // btnSettings
@@ -143,7 +143,7 @@
             btnSettings.FlatStyle = FlatStyle.Flat;
             btnSettings.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnSettings.ForeColor = Color.White;
-            btnSettings.Location = new Point(0, 499);
+            btnSettings.Location = new Point(0, 534);
             btnSettings.Margin = new Padding(3, 2, 3, 2);
             btnSettings.Name = "btnSettings";
             btnSettings.Size = new Size(150, 50);
@@ -159,7 +159,7 @@
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnLogout.ForeColor = Color.White;
-            btnLogout.Location = new Point(0, 549);
+            btnLogout.Location = new Point(0, 584);
             btnLogout.Margin = new Padding(3, 2, 3, 2);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(150, 50);
@@ -172,7 +172,7 @@
             // 
             lblLiveDateTime.Dock = DockStyle.Bottom;
             lblLiveDateTime.ForeColor = Color.White;
-            lblLiveDateTime.Location = new Point(0, 599);
+            lblLiveDateTime.Location = new Point(0, 634);
             lblLiveDateTime.Name = "lblLiveDateTime";
             lblLiveDateTime.Size = new Size(150, 29);
             lblLiveDateTime.TabIndex = 4;
@@ -278,10 +278,10 @@
             // pnlActiveTab
             // 
             pnlActiveTab.Dock = DockStyle.Fill;
-            pnlActiveTab.Location = new Point(150, 35);
+            pnlActiveTab.Location = new Point(150, 0);
             pnlActiveTab.Margin = new Padding(3, 2, 3, 2);
             pnlActiveTab.Name = "pnlActiveTab";
-            pnlActiveTab.Size = new Size(1116, 628);
+            pnlActiveTab.Size = new Size(1116, 663);
             pnlActiveTab.TabIndex = 5;
             // 
             // FormDashboard
@@ -289,9 +289,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1266, 663);
+            Controls.Add(pnlTitleBar);
             Controls.Add(pnlActiveTab);
             Controls.Add(plnSideNavigation);
-            Controls.Add(pnlTitleBar);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormDashboard";

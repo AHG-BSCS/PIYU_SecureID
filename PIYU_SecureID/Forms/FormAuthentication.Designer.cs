@@ -147,6 +147,9 @@
             pnlTitleBar.Name = "pnlTitleBar";
             pnlTitleBar.Size = new Size(584, 29);
             pnlTitleBar.TabIndex = 10;
+            pnlTitleBar.MouseDown += pnlTitleBar_MouseDown;
+            pnlTitleBar.MouseMove += pnlTitleBar_MouseMove;
+            pnlTitleBar.MouseUp += pnlTitleBar_MouseUp;
             // 
             // btnClose
             // 

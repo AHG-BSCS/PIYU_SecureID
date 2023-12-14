@@ -55,8 +55,10 @@ namespace PIYU_SecureID
         {
             if (!previousActiveBtn.Equals(button))
             {
-                button.BackColor = DesignHelper.COLOR_BLUE;
+                button.BackColor = DesignHelper.COLOR_WHITE;
+                button.ForeColor = DesignHelper.COLOR_TEAL;
                 previousActiveBtn.BackColor = DesignHelper.COLOR_TEAL;
+                previousActiveBtn.ForeColor = DesignHelper.COLOR_WHITE;
                 previousActiveBtn = button;
             }
         }
@@ -121,7 +123,7 @@ namespace PIYU_SecureID
 
         private void timerDateTime_Tick(object sender, EventArgs e)
         {
-            lblLiveDateTime.Text = DateTime.Now.ToString();
+            UpdateDateTime();
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
