@@ -24,7 +24,7 @@ namespace PIYU_SecureID
 
         private void gameTimerEvent(object sender, EventArgs e)
         {
-            flappyBird.Top += 4;
+            flappyBird.Top += gravity;
             pipeBottom.Left -= pipeSpeed; 
             pipeTop.Left -= pipeSpeed; 
             scoreText.Text = "Score: " + score; 
@@ -82,7 +82,7 @@ namespace PIYU_SecureID
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
-            gravity = -5;
+            gravity = -10;
         }
 
         private void Form1_MouseUp(object sender, MouseEventArgs e)

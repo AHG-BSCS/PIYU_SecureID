@@ -21,6 +21,8 @@ namespace PIYU_SecureID
         private long? key;
         private FilterInfoCollection videoDevices;
         private VideoCaptureDevice videoSource;
+        public delegate void btnCheckIDClickedEventHandler();
+        public event btnCheckIDClickedEventHandler OnCheckIDClicked;
         public ControlCheckId()
         {
             InitializeComponent();
@@ -58,6 +60,7 @@ namespace PIYU_SecureID
                                                         sex, bloodType, dateOfBirth, province, city, barangay, maritalStatus,
                                                         ConvertPictureBoxImageToBase64(pictureBoxIdPhoto.Image));
             generate.ShowDialog();
+            OnCheckIDClicked?.Invoke();
         }
 
         private byte[] ConvertPictureBoxImageToBase64(Image image)

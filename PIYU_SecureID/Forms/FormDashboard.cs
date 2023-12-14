@@ -40,6 +40,7 @@ namespace PIYU_SecureID
             btnCreateId.PerformClick();
             UpdateTrasactionsCount();
             createId.OnCreateIDClicked += UpdateTrasactionsCount;
+            checkId.OnCheckIDClicked += UpdateTrasactionsCount;
         }
 
         private void ShowTab(UserControl newForm)
