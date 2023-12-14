@@ -144,11 +144,13 @@ namespace PIYU_SecureID
             if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
+                DesignHelper.PaintRoundBorder(this);
                 btnMinimizeMaximize.Image = Properties.Resources.icons_square;
             }
             else
             {
                 this.WindowState = FormWindowState.Maximized;
+                this.Region = null;
                 btnMinimizeMaximize.Image = Properties.Resources.icons_restore_down;
             }
         }
