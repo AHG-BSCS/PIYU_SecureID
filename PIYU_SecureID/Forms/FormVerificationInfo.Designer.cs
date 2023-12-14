@@ -32,10 +32,10 @@
             picBoxAppLogo = new PictureBox();
             pnlTransactionSlip = new Panel();
             picBoxQRCode = new PictureBox();
-            lblInformationText = new Label();
-            lblInformation = new Label();
             lblNoteText = new Label();
             lblNote = new Label();
+            lblInformationText = new Label();
+            lblInformation = new Label();
             lblTransactionNumber = new Label();
             lblName = new Label();
             lblBrand = new Label();
@@ -94,26 +94,6 @@
             picBoxQRCode.TabIndex = 8;
             picBoxQRCode.TabStop = false;
             // 
-            // lblInformationText
-            // 
-            lblInformationText.AutoSize = true;
-            lblInformationText.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblInformationText.Location = new Point(54, 230);
-            lblInformationText.Name = "lblInformationText";
-            lblInformationText.Size = new Size(655, 84);
-            lblInformationText.TabIndex = 0;
-            lblInformationText.Text = resources.GetString("lblInformationText.Text");
-            // 
-            // lblInformation
-            // 
-            lblInformation.AutoSize = true;
-            lblInformation.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblInformation.Location = new Point(30, 209);
-            lblInformation.Name = "lblInformation";
-            lblInformation.Size = new Size(124, 21);
-            lblInformation.TabIndex = 0;
-            lblInformation.Text = "INFORMATION:";
-            // 
             // lblNoteText
             // 
             lblNoteText.AutoSize = true;
@@ -133,6 +113,26 @@
             lblNote.Size = new Size(668, 21);
             lblNote.TabIndex = 0;
             lblNote.Text = "NOTE: DO NOT SHARE YOUR TRANSACTION SLIP TO ANYONE OR POST ON SOCIAL MEDIA";
+            // 
+            // lblInformationText
+            // 
+            lblInformationText.AutoSize = true;
+            lblInformationText.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblInformationText.Location = new Point(54, 230);
+            lblInformationText.Name = "lblInformationText";
+            lblInformationText.Size = new Size(655, 84);
+            lblInformationText.TabIndex = 0;
+            lblInformationText.Text = resources.GetString("lblInformationText.Text");
+            // 
+            // lblInformation
+            // 
+            lblInformation.AutoSize = true;
+            lblInformation.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblInformation.Location = new Point(30, 209);
+            lblInformation.Name = "lblInformation";
+            lblInformation.Size = new Size(124, 21);
+            lblInformation.TabIndex = 0;
+            lblInformation.Text = "INFORMATION:";
             // 
             // lblTransactionNumber
             // 

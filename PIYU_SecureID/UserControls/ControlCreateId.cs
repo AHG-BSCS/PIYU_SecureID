@@ -8,6 +8,9 @@ namespace PIYU_SecureID
     public partial class ControlCreateId : UserControl
     {
         private long transactionNum;
+        // Event subsciption handler
+        public delegate void btnCreateIDClickedEventHandler();
+        public event btnCreateIDClickedEventHandler OnCreateIDClicked;
 
         public ControlCreateId()
         {
@@ -136,6 +139,7 @@ namespace PIYU_SecureID
                                                                         sex, bloodType, dateOfBirth, province, city, barangay, maritalStatus,
                                                                         idPhoto, sign, this);
                 verify.ShowDialog();
+                OnCreateIDClicked?.Invoke();
             }
         }
 
