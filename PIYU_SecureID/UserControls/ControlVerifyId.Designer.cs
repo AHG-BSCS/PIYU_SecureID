@@ -552,7 +552,7 @@
             Controls.Add(comboBoxCameras);
             Controls.Add(pictureBoxQrScanner);
             Name = "ControlVerifyId";
-            Size = new Size(1116, 633);
+            Size = new Size(1116, 628);
             Leave += ControlVerifyId_Leave;
             ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).EndInit();
             panelInfo.ResumeLayout(false);

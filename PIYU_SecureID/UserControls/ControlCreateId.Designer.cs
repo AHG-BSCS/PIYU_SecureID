@@ -266,7 +266,7 @@
             buttonCreate.FlatStyle = FlatStyle.Flat;
             buttonCreate.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonCreate.ForeColor = Color.White;
-            buttonCreate.Location = new Point(970, 553);
+            buttonCreate.Location = new Point(970, 548);
             buttonCreate.Name = "buttonCreate";
             buttonCreate.Size = new Size(125, 56);
             buttonCreate.TabIndex = 20;
@@ -282,7 +282,7 @@
             buttonClearAll.FlatStyle = FlatStyle.Flat;
             buttonClearAll.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonClearAll.ForeColor = Color.White;
-            buttonClearAll.Location = new Point(839, 553);
+            buttonClearAll.Location = new Point(839, 548);
             buttonClearAll.Name = "buttonClearAll";
             buttonClearAll.Size = new Size(125, 56);
             buttonClearAll.TabIndex = 21;
@@ -608,7 +608,7 @@
             Controls.Add(textBoxLastName);
             Controls.Add(label1);
             Name = "ControlCreateId";
-            Size = new Size(1116, 633);
+            Size = new Size(1116, 628);
             Click += ControlCreateId_Click;
             Enter += ControlCreateId_Enter;
             Leave += ControlCreateId_Leave;

@@ -278,10 +278,10 @@
             // pnlActiveTab
             // 
             pnlActiveTab.Dock = DockStyle.Fill;
-            pnlActiveTab.Location = new Point(150, 0);
+            pnlActiveTab.Location = new Point(150, 35);
             pnlActiveTab.Margin = new Padding(3, 2, 3, 2);
             pnlActiveTab.Name = "pnlActiveTab";
-            pnlActiveTab.Size = new Size(1116, 663);
+            pnlActiveTab.Size = new Size(1116, 628);
             pnlActiveTab.TabIndex = 5;
             // 
             // FormDashboard
@@ -289,8 +289,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1266, 663);
-            Controls.Add(pnlTitleBar);
             Controls.Add(pnlActiveTab);
+            Controls.Add(pnlTitleBar);
             Controls.Add(plnSideNavigation);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);

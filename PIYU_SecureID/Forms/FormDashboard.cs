@@ -56,7 +56,7 @@ namespace PIYU_SecureID
             if (!previousActiveBtn.Equals(button))
             {
                 button.BackColor = DesignHelper.COLOR_WHITE;
-                button.ForeColor = DesignHelper.COLOR_TEAL;
+                button.ForeColor = DesignHelper.COLOR_BLUE;
                 previousActiveBtn.BackColor = DesignHelper.COLOR_TEAL;
                 previousActiveBtn.ForeColor = DesignHelper.COLOR_WHITE;
                 previousActiveBtn = button;

@@ -59,7 +59,7 @@
             Controls.Add(label1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "ControlSettings";
-            Size = new Size(1011, 410);
+            Size = new Size(1116, 628);
             ResumeLayout(false);
             PerformLayout();
         }

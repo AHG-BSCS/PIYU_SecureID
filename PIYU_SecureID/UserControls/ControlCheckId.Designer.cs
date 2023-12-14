@@ -528,7 +528,7 @@
             Controls.Add(comboBoxCameras);
             Controls.Add(panelInfo);
             Name = "ControlCheckId";
-            Size = new Size(1116, 633);
+            Size = new Size(1116, 628);
             Leave += ControlCheckId_Leave;
             ((System.ComponentModel.ISupportInitialize)pictureBoxSign).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).EndInit();

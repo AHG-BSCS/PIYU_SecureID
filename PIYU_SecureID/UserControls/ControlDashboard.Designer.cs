@@ -47,7 +47,7 @@
             BackColor = Color.White;
             Controls.Add(labelTotalTransaction);
             Name = "ControlDashboard";
-            Size = new Size(799, 354);
+            Size = new Size(1116, 628);
             Load += ControlDashboard_Load;
             ResumeLayout(false);
             PerformLayout();
