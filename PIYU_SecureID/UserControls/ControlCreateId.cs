@@ -98,7 +98,7 @@ namespace PIYU_SecureID
             cmbBoxBloodType.SelectedIndex = -1;
             cmbBoxMonth.SelectedIndex = -1;
             cmbBoxDay.SelectedIndex = -1;
-            textBoxYear.Text = "";
+            cmbBoxYears.SelectedIndex = -1;
             cmbBoxProvince.SelectedIndex = -1;
             cmbBoxBarangay.SelectedIndex = -1;
             cmbBoxCity.SelectedIndex = -1;
@@ -111,7 +111,8 @@ namespace PIYU_SecureID
         {
             if (txtBoxLastName.Text == "" || txtBoxFirstName.Text == "" || cmbBoxSex.SelectedIndex == -1 ||
                 cmbBoxBloodType.SelectedIndex == -1 || cmbBoxProvince.SelectedIndex == -1 || cmbBoxBarangay.SelectedIndex == -1 ||
-                cmbBoxCity.SelectedIndex == -1 || cmbBoxMaritalStatus.SelectedIndex == -1 ||
+                cmbBoxCity.SelectedIndex == -1 || cmbBoxMaritalStatus.SelectedIndex == -1 || cmbBoxDay.SelectedIndex == -1 ||
+                cmbBoxYears.SelectedIndex == -1 || cmbBoxMonth.SelectedIndex == -1 ||
                 picBoxSignature.Image == null || picBoxPicture.Image == null)
             {
                 MessageBox.Show("Fill All Information.");
@@ -124,7 +125,7 @@ namespace PIYU_SecureID
                 string suffix = txtBoxSuffix.Text;
                 string sex = cmbBoxSex.Text;
                 string bloodType = cmbBoxBloodType.Text;
-                string dateOfBirth = cmbBoxDay.Text + " " + cmbBoxMonth.Text + " " + textBoxYear.Text;
+                string dateOfBirth = cmbBoxDay.Text + " " + cmbBoxMonth.Text + " " + cmbBoxYears.Text;
                 string province = cmbBoxProvince.Text;
                 string city = cmbBoxCity.Text;
                 string barangay = cmbBoxBarangay.Text;
@@ -272,7 +273,6 @@ namespace PIYU_SecureID
             }
         }
 
-
         private void comboBoxCity_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadBarangay(cmbBoxProvince.Text.Replace('Ñ', '�'), cmbBoxCity.Text.Replace('Ñ', '�'));
@@ -288,43 +288,13 @@ namespace PIYU_SecureID
             lblLastName.Focus();
         }
 
-        private void textBoxYear_TextChanged(object sender, EventArgs e)
-        {
-            if (textBoxYear.TextLength == 4)
-            {
-                if (!int.TryParse(textBoxYear.Text, out int year) || year < 1900 || year > DateTime.Now.Year)
-                {
-                    textBoxYear.Text = "";
-                    MessageBox.Show($"Enter valid year (1900 - {DateTime.Now.Year})");
-                }
-            }
-        }
-
-        private void textBoxYear_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsLetter(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (char.IsDigit(e.KeyChar))
-            {
-                if (textBoxYear.SelectionStart == 0)
-                {
-                    if (e.KeyChar != '1' && e.KeyChar != '2')
-                    {
-                        e.Handled = true;
-                    }
-                }
-            }
-        }
-
         private void textBoxLastName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (char.IsLetter(e.KeyChar) || e.KeyChar == '\b')
+            else if (char.IsLetter(e.KeyChar) || e.KeyChar == '\b' || e.KeyChar == ' ')
             {
 
             }
