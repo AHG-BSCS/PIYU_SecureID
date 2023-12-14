@@ -9,7 +9,7 @@ namespace PIYU_SecureID
         private Point mouseDownLocation;
         private Button previousActiveBtn;
         private UserControl activeTab;
-
+        private int count;
         private FormAuthentication authentication;
         private ControlDashboard dashboard;
         private ControlCreateId createId;
@@ -168,6 +168,17 @@ namespace PIYU_SecureID
         private void btnClose_MouseEnter(object sender, EventArgs e)
         {
             btnClose.BackColor = Color.Red;
+        }
+
+        private void picBoxAppLogo_Click(object sender, EventArgs e)
+        {
+            count++;
+            if (count == 10)
+            {
+                Form1 f = new Form1();
+                f.ShowDialog();
+                count = 0;
+            }
         }
     }
 }

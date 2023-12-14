@@ -46,8 +46,8 @@
             btnDashboard = new Button();
             lblAppName = new Label();
             picBoxAppLogo = new PictureBox();
-            pnlActiveTab = new Panel();
             panel1 = new Panel();
+            pnlActiveTab = new Panel();
             pnlTitleBar.SuspendLayout();
             plnSideNavigation.SuspendLayout();
             pnlLiveDateTime.SuspendLayout();
@@ -325,18 +325,10 @@
             picBoxAppLogo.SizeMode = PictureBoxSizeMode.Zoom;
             picBoxAppLogo.TabIndex = 0;
             picBoxAppLogo.TabStop = false;
+            picBoxAppLogo.Click += picBoxAppLogo_Click;
             picBoxAppLogo.MouseDown += lblAppName_MouseDown;
             picBoxAppLogo.MouseMove += lblAppName_MouseMove;
             picBoxAppLogo.MouseUp += lblAppName_MouseUp;
-            // 
-            // pnlActiveTab
-            // 
-            pnlActiveTab.Dock = DockStyle.Fill;
-            pnlActiveTab.Location = new Point(145, 30);
-            pnlActiveTab.Margin = new Padding(3, 2, 3, 2);
-            pnlActiveTab.Name = "pnlActiveTab";
-            pnlActiveTab.Size = new Size(1121, 619);
-            pnlActiveTab.TabIndex = 0;
             // 
             // panel1
             // 
@@ -349,6 +341,15 @@
             panel1.MouseDown += lblAppName_MouseDown;
             panel1.MouseMove += lblAppName_MouseMove;
             panel1.MouseUp += lblAppName_MouseUp;
+            // 
+            // pnlActiveTab
+            // 
+            pnlActiveTab.Dock = DockStyle.Fill;
+            pnlActiveTab.Location = new Point(145, 30);
+            pnlActiveTab.Margin = new Padding(3, 2, 3, 2);
+            pnlActiveTab.Name = "pnlActiveTab";
+            pnlActiveTab.Size = new Size(1121, 619);
+            pnlActiveTab.TabIndex = 0;
             // 
             // FormDashboard
             // 
