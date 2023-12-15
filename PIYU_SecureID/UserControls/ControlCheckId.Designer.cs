@@ -108,6 +108,7 @@
             textBoxTransactionNum.Size = new Size(310, 30);
             textBoxTransactionNum.TabIndex = 3;
             textBoxTransactionNum.TextChanged += textBoxTransactionNum_TextChanged;
+            textBoxTransactionNum.KeyPress += textBoxTransactionNum_KeyPress;
             // 
             // buttonSearch
             // 
