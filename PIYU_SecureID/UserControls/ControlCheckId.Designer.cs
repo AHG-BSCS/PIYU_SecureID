@@ -45,6 +45,7 @@
             pictureBoxSign = new PictureBox();
             pictureBoxIdPhoto = new PictureBox();
             panelInfo = new Panel();
+            label12 = new Label();
             panel11 = new Panel();
             label11 = new Label();
             panel10 = new Panel();
@@ -75,7 +76,6 @@
             panel14 = new Panel();
             panel13 = new Panel();
             panel15 = new Panel();
-            label12 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSign).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).BeginInit();
             panelInfo.SuspendLayout();
@@ -98,6 +98,7 @@
             // 
             // textBoxTransactionNum
             // 
+            textBoxTransactionNum.Cursor = Cursors.IBeam;
             textBoxTransactionNum.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             textBoxTransactionNum.Location = new Point(10, 10);
             textBoxTransactionNum.Margin = new Padding(10);
@@ -105,16 +106,17 @@
             textBoxTransactionNum.Multiline = true;
             textBoxTransactionNum.Name = "textBoxTransactionNum";
             textBoxTransactionNum.Size = new Size(310, 30);
-            textBoxTransactionNum.TabIndex = 0;
+            textBoxTransactionNum.TabIndex = 3;
             textBoxTransactionNum.TextChanged += textBoxTransactionNum_TextChanged;
             // 
             // buttonSearch
             // 
+            buttonSearch.Cursor = Cursors.Hand;
             buttonSearch.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonSearch.Location = new Point(105, 53);
             buttonSearch.Name = "buttonSearch";
             buttonSearch.Size = new Size(120, 35);
-            buttonSearch.TabIndex = 1;
+            buttonSearch.TabIndex = 4;
             buttonSearch.Text = "GENERATE ID";
             buttonSearch.UseVisualStyleBackColor = true;
             buttonSearch.Click += buttonSearch_Click;
@@ -127,7 +129,7 @@
             labelLastName.Location = new Point(118, 0);
             labelLastName.Name = "labelLastName";
             labelLastName.Size = new Size(0, 21);
-            labelLastName.TabIndex = 2;
+            labelLastName.TabIndex = 0;
             // 
             // labelGivenName
             // 
@@ -137,7 +139,7 @@
             labelGivenName.Location = new Point(116, 0);
             labelGivenName.Name = "labelGivenName";
             labelGivenName.Size = new Size(0, 21);
-            labelGivenName.TabIndex = 3;
+            labelGivenName.TabIndex = 0;
             // 
             // labelMiddleName
             // 
@@ -147,7 +149,7 @@
             labelMiddleName.Location = new Point(117, 0);
             labelMiddleName.Name = "labelMiddleName";
             labelMiddleName.Size = new Size(0, 21);
-            labelMiddleName.TabIndex = 4;
+            labelMiddleName.TabIndex = 0;
             // 
             // labelSuffix
             // 
@@ -157,7 +159,7 @@
             labelSuffix.Location = new Point(116, 0);
             labelSuffix.Name = "labelSuffix";
             labelSuffix.Size = new Size(0, 21);
-            labelSuffix.TabIndex = 5;
+            labelSuffix.TabIndex = 0;
             // 
             // labelCity
             // 
@@ -167,7 +169,7 @@
             labelCity.Location = new Point(114, 0);
             labelCity.Name = "labelCity";
             labelCity.Size = new Size(0, 21);
-            labelCity.TabIndex = 9;
+            labelCity.TabIndex = 0;
             // 
             // labelProvince
             // 
@@ -177,7 +179,7 @@
             labelProvince.Location = new Point(113, 0);
             labelProvince.Name = "labelProvince";
             labelProvince.Size = new Size(0, 21);
-            labelProvince.TabIndex = 8;
+            labelProvince.TabIndex = 0;
             // 
             // labelBloodType
             // 
@@ -187,7 +189,7 @@
             labelBloodType.Location = new Point(121, 0);
             labelBloodType.Name = "labelBloodType";
             labelBloodType.Size = new Size(0, 21);
-            labelBloodType.TabIndex = 7;
+            labelBloodType.TabIndex = 0;
             // 
             // labelSex
             // 
@@ -197,7 +199,7 @@
             labelSex.Location = new Point(120, 0);
             labelSex.Name = "labelSex";
             labelSex.Size = new Size(0, 21);
-            labelSex.TabIndex = 6;
+            labelSex.TabIndex = 0;
             // 
             // labelMaritalStatus
             // 
@@ -207,7 +209,7 @@
             labelMaritalStatus.Location = new Point(118, 0);
             labelMaritalStatus.Name = "labelMaritalStatus";
             labelMaritalStatus.Size = new Size(0, 21);
-            labelMaritalStatus.TabIndex = 11;
+            labelMaritalStatus.TabIndex = 0;
             // 
             // labelBarangay
             // 
@@ -217,7 +219,7 @@
             labelBarangay.Location = new Point(113, 0);
             labelBarangay.Name = "labelBarangay";
             labelBarangay.Size = new Size(0, 21);
-            labelBarangay.TabIndex = 10;
+            labelBarangay.TabIndex = 0;
             // 
             // labelDateOfBirth
             // 
@@ -227,15 +229,17 @@
             labelDateOfBirth.Location = new Point(119, 0);
             labelDateOfBirth.Name = "labelDateOfBirth";
             labelDateOfBirth.Size = new Size(0, 21);
-            labelDateOfBirth.TabIndex = 12;
+            labelDateOfBirth.TabIndex = 0;
             // 
             // pictureBoxSign
             // 
             pictureBoxSign.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pictureBoxSign.BackColor = Color.White;
             pictureBoxSign.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxSign.Cursor = Cursors.No;
             pictureBoxSign.Location = new Point(23, 243);
             pictureBoxSign.Name = "pictureBoxSign";
-            pictureBoxSign.Size = new Size(150, 150);
+            pictureBoxSign.Size = new Size(150, 153);
             pictureBoxSign.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxSign.TabIndex = 13;
             pictureBoxSign.TabStop = false;
@@ -243,10 +247,12 @@
             // pictureBoxIdPhoto
             // 
             pictureBoxIdPhoto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pictureBoxIdPhoto.BackColor = Color.White;
             pictureBoxIdPhoto.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxIdPhoto.Cursor = Cursors.No;
             pictureBoxIdPhoto.Location = new Point(23, 23);
             pictureBoxIdPhoto.Name = "pictureBoxIdPhoto";
-            pictureBoxIdPhoto.Size = new Size(200, 200);
+            pictureBoxIdPhoto.Size = new Size(200, 203);
             pictureBoxIdPhoto.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxIdPhoto.TabIndex = 14;
             pictureBoxIdPhoto.TabStop = false;
@@ -255,26 +261,36 @@
             // 
             panelInfo.BackColor = SystemColors.Control;
             panelInfo.Controls.Add(label12);
+            panelInfo.Controls.Add(pictureBoxIdPhoto);
+            panelInfo.Controls.Add(pictureBoxSign);
+            panelInfo.Controls.Add(panel1);
+            panelInfo.Controls.Add(panel2);
+            panelInfo.Controls.Add(panel3);
+            panelInfo.Controls.Add(panel4);
             panelInfo.Controls.Add(panel11);
             panelInfo.Controls.Add(panel10);
             panelInfo.Controls.Add(panel9);
             panelInfo.Controls.Add(panel8);
-            panelInfo.Controls.Add(panel7);
-            panelInfo.Controls.Add(panel6);
             panelInfo.Controls.Add(panel5);
-            panelInfo.Controls.Add(panel4);
-            panelInfo.Controls.Add(panel3);
-            panelInfo.Controls.Add(panel2);
-            panelInfo.Controls.Add(panel1);
-            panelInfo.Controls.Add(pictureBoxIdPhoto);
-            panelInfo.Controls.Add(pictureBoxSign);
+            panelInfo.Controls.Add(panel6);
+            panelInfo.Controls.Add(panel7);
             panelInfo.Dock = DockStyle.Top;
             panelInfo.Location = new Point(363, 0);
             panelInfo.Name = "panelInfo";
             panelInfo.Padding = new Padding(20);
-            panelInfo.Size = new Size(748, 621);
-            panelInfo.TabIndex = 15;
+            panelInfo.Size = new Size(748, 624);
+            panelInfo.TabIndex = 0;
             panelInfo.Visible = false;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.Location = new Point(371, 23);
+            label12.Name = "label12";
+            label12.Size = new Size(253, 25);
+            label12.TabIndex = 0;
+            label12.Text = "PERSONAL INFORMATIION";
             // 
             // panel11
             // 
@@ -283,7 +299,7 @@
             panel11.Location = new Point(258, 243);
             panel11.Name = "panel11";
             panel11.Size = new Size(306, 21);
-            panel11.TabIndex = 36;
+            panel11.TabIndex = 0;
             // 
             // label11
             // 
@@ -293,7 +309,7 @@
             label11.Location = new Point(0, 0);
             label11.Name = "label11";
             label11.Size = new Size(120, 21);
-            label11.TabIndex = 25;
+            label11.TabIndex = 0;
             label11.Text = "Sex                   : ";
             // 
             // panel10
@@ -303,7 +319,7 @@
             panel10.Location = new Point(258, 280);
             panel10.Name = "panel10";
             panel10.Size = new Size(306, 21);
-            panel10.TabIndex = 35;
+            panel10.TabIndex = 0;
             // 
             // label10
             // 
@@ -313,7 +329,7 @@
             label10.Location = new Point(0, 0);
             label10.Name = "label10";
             label10.Size = new Size(121, 21);
-            label10.TabIndex = 22;
+            label10.TabIndex = 0;
             label10.Text = "Blood Type     : ";
             // 
             // panel9
@@ -323,7 +339,7 @@
             panel9.Location = new Point(258, 317);
             panel9.Name = "panel9";
             panel9.Size = new Size(306, 21);
-            panel9.TabIndex = 34;
+            panel9.TabIndex = 0;
             // 
             // label8
             // 
@@ -333,7 +349,7 @@
             label8.Location = new Point(0, 0);
             label8.Name = "label8";
             label8.Size = new Size(119, 21);
-            label8.TabIndex = 24;
+            label8.TabIndex = 0;
             label8.Text = "Date of Birth  : ";
             // 
             // panel8
@@ -343,7 +359,7 @@
             panel8.Location = new Point(258, 354);
             panel8.Name = "panel8";
             panel8.Size = new Size(306, 21);
-            panel8.TabIndex = 33;
+            panel8.TabIndex = 0;
             // 
             // label9
             // 
@@ -353,7 +369,7 @@
             label9.Location = new Point(0, 0);
             label9.Name = "label9";
             label9.Size = new Size(118, 21);
-            label9.TabIndex = 23;
+            label9.TabIndex = 0;
             label9.Text = "Marital Status: ";
             // 
             // panel7
@@ -363,7 +379,7 @@
             panel7.Location = new Point(258, 489);
             panel7.Name = "panel7";
             panel7.Size = new Size(392, 21);
-            panel7.TabIndex = 32;
+            panel7.TabIndex = 0;
             // 
             // label5
             // 
@@ -373,7 +389,7 @@
             label5.Location = new Point(0, 0);
             label5.Name = "label5";
             label5.Size = new Size(113, 21);
-            label5.TabIndex = 21;
+            label5.TabIndex = 0;
             label5.Text = "Barangay       : ";
             // 
             // panel6
@@ -383,7 +399,7 @@
             panel6.Location = new Point(258, 452);
             panel6.Name = "panel6";
             panel6.Size = new Size(392, 21);
-            panel6.TabIndex = 31;
+            panel6.TabIndex = 0;
             // 
             // label6
             // 
@@ -393,7 +409,7 @@
             label6.Location = new Point(0, 0);
             label6.Name = "label6";
             label6.Size = new Size(114, 21);
-            label6.TabIndex = 20;
+            label6.TabIndex = 0;
             label6.Text = "City                 : ";
             // 
             // panel5
@@ -403,7 +419,7 @@
             panel5.Location = new Point(258, 415);
             panel5.Name = "panel5";
             panel5.Size = new Size(392, 21);
-            panel5.TabIndex = 30;
+            panel5.TabIndex = 0;
             // 
             // label7
             // 
@@ -413,7 +429,7 @@
             label7.Location = new Point(0, 0);
             label7.Name = "label7";
             label7.Size = new Size(113, 21);
-            label7.TabIndex = 19;
+            label7.TabIndex = 0;
             label7.Text = "Province        : ";
             // 
             // panel4
@@ -423,7 +439,7 @@
             panel4.Location = new Point(258, 178);
             panel4.Name = "panel4";
             panel4.Size = new Size(392, 21);
-            panel4.TabIndex = 29;
+            panel4.TabIndex = 0;
             // 
             // label4
             // 
@@ -433,7 +449,7 @@
             label4.Location = new Point(0, 0);
             label4.Name = "label4";
             label4.Size = new Size(116, 21);
-            label4.TabIndex = 18;
+            label4.TabIndex = 0;
             label4.Text = "Suffix              : ";
             // 
             // panel3
@@ -443,7 +459,7 @@
             panel3.Location = new Point(258, 141);
             panel3.Name = "panel3";
             panel3.Size = new Size(392, 21);
-            panel3.TabIndex = 28;
+            panel3.TabIndex = 0;
             // 
             // label3
             // 
@@ -453,7 +469,7 @@
             label3.Location = new Point(0, 0);
             label3.Name = "label3";
             label3.Size = new Size(117, 21);
-            label3.TabIndex = 17;
+            label3.TabIndex = 0;
             label3.Text = "Middle Name: ";
             // 
             // panel2
@@ -463,7 +479,7 @@
             panel2.Location = new Point(258, 104);
             panel2.Name = "panel2";
             panel2.Size = new Size(392, 21);
-            panel2.TabIndex = 27;
+            panel2.TabIndex = 0;
             // 
             // label2
             // 
@@ -473,7 +489,7 @@
             label2.Location = new Point(0, 0);
             label2.Name = "label2";
             label2.Size = new Size(116, 21);
-            label2.TabIndex = 16;
+            label2.TabIndex = 0;
             label2.Text = "First Name     : ";
             // 
             // panel1
@@ -483,7 +499,7 @@
             panel1.Location = new Point(258, 67);
             panel1.Name = "panel1";
             panel1.Size = new Size(392, 21);
-            panel1.TabIndex = 26;
+            panel1.TabIndex = 20;
             // 
             // label1
             // 
@@ -493,29 +509,31 @@
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.Size = new Size(118, 21);
-            label1.TabIndex = 15;
+            label1.TabIndex = 0;
             label1.Text = "Last Name      : ";
             // 
             // buttonStartStop
             // 
+            buttonStartStop.Cursor = Cursors.Hand;
             buttonStartStop.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonStartStop.Location = new Point(117, 326);
             buttonStartStop.Name = "buttonStartStop";
             buttonStartStop.Size = new Size(90, 35);
-            buttonStartStop.TabIndex = 18;
+            buttonStartStop.TabIndex = 1;
             buttonStartStop.Text = "CAMERA";
             buttonStartStop.UseVisualStyleBackColor = true;
             buttonStartStop.Click += buttonStartStop_Click;
             // 
             // comboBoxCameras
             // 
+            comboBoxCameras.Cursor = Cursors.Hand;
             comboBoxCameras.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxCameras.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             comboBoxCameras.FormattingEnabled = true;
             comboBoxCameras.Location = new Point(213, 326);
             comboBoxCameras.Name = "comboBoxCameras";
             comboBoxCameras.Size = new Size(99, 25);
-            comboBoxCameras.TabIndex = 17;
+            comboBoxCameras.TabIndex = 2;
             // 
             // pictureBoxQrScanner
             // 
@@ -541,7 +559,7 @@
             panel12.Name = "panel12";
             panel12.Padding = new Padding(15);
             panel12.Size = new Size(360, 624);
-            panel12.TabIndex = 37;
+            panel12.TabIndex = 0;
             // 
             // panel14
             // 
@@ -553,7 +571,7 @@
             panel14.Name = "panel14";
             panel14.Padding = new Padding(10);
             panel14.Size = new Size(330, 100);
-            panel14.TabIndex = 20;
+            panel14.TabIndex = 0;
             // 
             // panel13
             // 
@@ -565,7 +583,7 @@
             panel13.Name = "panel13";
             panel13.Padding = new Padding(10);
             panel13.Size = new Size(325, 375);
-            panel13.TabIndex = 19;
+            panel13.TabIndex = 0;
             // 
             // panel15
             // 
@@ -575,16 +593,6 @@
             panel15.Name = "panel15";
             panel15.Size = new Size(3, 624);
             panel15.TabIndex = 37;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.Location = new Point(371, 23);
-            label12.Name = "label12";
-            label12.Size = new Size(253, 25);
-            label12.TabIndex = 37;
-            label12.Text = "PERSONAL INFORMATIION";
             // 
             // ControlCheckId
             // 
