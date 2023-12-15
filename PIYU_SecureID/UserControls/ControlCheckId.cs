@@ -152,7 +152,7 @@ namespace PIYU_SecureID
                     RefreshData();
                 }
             }
-            else if (textBoxTransactionNum.Text == "")
+            else if (textBoxTransactionNum.TextLength < 13)
             {
                 lastResult = "";
                 pictureBoxIdPhoto.Image = null;
