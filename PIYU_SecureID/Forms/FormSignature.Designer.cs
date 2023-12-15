@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSignature));
             btnSave = new Button();
             picBoxSignatureDrawing = new PictureBox();
             btnClear = new Button();
@@ -152,6 +153,7 @@
             Controls.Add(pnlCameraDisplay);
             Controls.Add(pnlTitleBar);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormSignature";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Signature";

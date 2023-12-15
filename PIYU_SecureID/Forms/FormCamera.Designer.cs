@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCamera));
             btnSave = new Button();
             picBoxCameraDisplay = new PictureBox();
             btnClear = new Button();
@@ -152,6 +153,7 @@
             Controls.Add(pnlTitleBar);
             Font = new Font("Corbel", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormCamera";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Camera";

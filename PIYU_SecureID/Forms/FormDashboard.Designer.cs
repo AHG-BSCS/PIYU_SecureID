@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDashboard));
             timerDateTime = new System.Windows.Forms.Timer(components);
             btnMinimize = new Button();
             btnMinimizeMaximize = new Button();
@@ -433,6 +434,7 @@
             Controls.Add(plnSideNavigation);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 2, 4, 2);
             Name = "FormDashboard";
             StartPosition = FormStartPosition.CenterScreen;
