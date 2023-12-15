@@ -19,6 +19,7 @@ namespace PIYU_SecureID
             GenerateTransactionNum();
             LoadCameraSource();
             LoadProvinces();
+            cmbBoxMonth.SelectedIndexChanged += UpdateDayComboBox;
         }
 
         private void buttonBrowse_Click(object sender, EventArgs e)
@@ -302,5 +303,64 @@ namespace PIYU_SecureID
                 return ms.ToArray();
             }
         }
+
+        private Dictionary<string, int> daysInMonth = new Dictionary<string, int>
+        {
+            { "JANUARY", 31 }, // January
+            { "FEBRUARY", 28 }, // February (non-leap year)
+            { "MARCH", 31 }, // March
+            { "APRIL", 30 }, // April
+            { "MAY", 31 }, // May
+            { "JUNE", 30 }, // June
+            { "JULY", 31 }, // July
+            { "AUGUST", 31 }, // August
+            { "SEPTEMBER", 30 }, // September
+            { "OCTOBER", 31 }, // October
+            { "NOVEMBER", 30 }, // November
+            { "DECEMBER", 31 }  // December
+        };
+        private void UpdateDayComboBox(object sender, EventArgs e)
+        {
+            try
+            {
+                // Check if an item is selected in cmbBoxMonth
+                if (cmbBoxMonth.SelectedItem != null)
+                {
+                    // Update the days ComboBox based on the selected month
+                    string selectedMonth = cmbBoxMonth.SelectedItem.ToString().ToUpper();
+
+                    // Check if the selected month is in the dictionary
+                    if (daysInMonth.ContainsKey(selectedMonth))
+                    {
+                        int maxDays = daysInMonth[selectedMonth];
+
+                        // Populate Day ComboBox
+                        cmbBoxDay.Items.Clear();
+                        for (int i = 1; i <= maxDays; i++)
+                        {
+                            cmbBoxDay.Items.Add(i.ToString("D2"));
+                        }
+
+                        // Set default day value
+                        cmbBoxDay.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid month selection.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select a month.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+
     }
 }

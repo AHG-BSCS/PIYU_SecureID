@@ -402,7 +402,6 @@
             cmbBoxDay.FlatStyle = FlatStyle.Flat;
             cmbBoxDay.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             cmbBoxDay.FormattingEnabled = true;
-            cmbBoxDay.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" });
             cmbBoxDay.Location = new Point(175, 352);
             cmbBoxDay.Margin = new Padding(3, 2, 3, 2);
             cmbBoxDay.Name = "cmbBoxDay";
