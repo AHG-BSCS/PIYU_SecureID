@@ -342,6 +342,7 @@
             // pictureBoxQrScanner
             // 
             pictureBoxQrScanner.BackColor = Color.White;
+            pictureBoxQrScanner.Cursor = Cursors.No;
             pictureBoxQrScanner.Location = new Point(13, 13);
             pictureBoxQrScanner.Margin = new Padding(10);
             pictureBoxQrScanner.Name = "pictureBoxQrScanner";
@@ -428,9 +429,9 @@
             textBoxTransactionNum.Location = new Point(12, 12);
             textBoxTransactionNum.Margin = new Padding(10);
             textBoxTransactionNum.MaxLength = 13;
-            textBoxTransactionNum.Multiline = true;
             textBoxTransactionNum.Name = "textBoxTransactionNum";
-            textBoxTransactionNum.Size = new Size(300, 30);
+            textBoxTransactionNum.ReadOnly = true;
+            textBoxTransactionNum.Size = new Size(300, 29);
             textBoxTransactionNum.TabIndex = 3;
             textBoxTransactionNum.Visible = false;
             // 

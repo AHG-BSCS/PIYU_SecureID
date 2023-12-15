@@ -196,6 +196,7 @@
             // 
             // cmbBoxSex
             // 
+            cmbBoxSex.Cursor = Cursors.Hand;
             cmbBoxSex.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBoxSex.FlatStyle = FlatStyle.Flat;
             cmbBoxSex.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -253,6 +254,7 @@
             // 
             // cmbBoxBloodType
             // 
+            cmbBoxBloodType.Cursor = Cursors.Hand;
             cmbBoxBloodType.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBoxBloodType.FlatStyle = FlatStyle.Flat;
             cmbBoxBloodType.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -267,6 +269,7 @@
             // 
             // cmbBoxMaritalStatus
             // 
+            cmbBoxMaritalStatus.Cursor = Cursors.Hand;
             cmbBoxMaritalStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBoxMaritalStatus.FlatStyle = FlatStyle.Flat;
             cmbBoxMaritalStatus.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -281,6 +284,7 @@
             // 
             // cmbBoxProvince
             // 
+            cmbBoxProvince.Cursor = Cursors.Hand;
             cmbBoxProvince.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBoxProvince.FlatStyle = FlatStyle.Flat;
             cmbBoxProvince.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -306,6 +310,7 @@
             // 
             // cmbBoxCity
             // 
+            cmbBoxCity.Cursor = Cursors.Hand;
             cmbBoxCity.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBoxCity.FlatStyle = FlatStyle.Flat;
             cmbBoxCity.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -331,6 +336,7 @@
             // 
             // cmbBoxBarangay
             // 
+            cmbBoxBarangay.Cursor = Cursors.Hand;
             cmbBoxBarangay.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBoxBarangay.FlatStyle = FlatStyle.Flat;
             cmbBoxBarangay.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -357,6 +363,7 @@
             // 
             btnSignature.Anchor = AnchorStyles.None;
             btnSignature.BackColor = Color.White;
+            btnSignature.Cursor = Cursors.Hand;
             btnSignature.FlatAppearance.BorderSize = 0;
             btnSignature.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnSignature.ForeColor = Color.FromArgb(53, 69, 93);
@@ -373,6 +380,7 @@
             picBoxSignature.Anchor = AnchorStyles.None;
             picBoxSignature.BackColor = Color.White;
             picBoxSignature.BorderStyle = BorderStyle.FixedSingle;
+            picBoxSignature.Cursor = Cursors.No;
             picBoxSignature.Location = new Point(10, 43);
             picBoxSignature.Name = "picBoxSignature";
             picBoxSignature.Size = new Size(300, 300);
@@ -385,6 +393,7 @@
             // 
             btnClearSign.Anchor = AnchorStyles.None;
             btnClearSign.BackColor = Color.White;
+            btnClearSign.Cursor = Cursors.Hand;
             btnClearSign.FlatAppearance.BorderSize = 0;
             btnClearSign.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnClearSign.ForeColor = Color.DarkRed;
@@ -398,6 +407,7 @@
             // 
             // cmbBoxDay
             // 
+            cmbBoxDay.Cursor = Cursors.Hand;
             cmbBoxDay.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBoxDay.FlatStyle = FlatStyle.Flat;
             cmbBoxDay.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -411,6 +421,7 @@
             // 
             // cmbBoxMonth
             // 
+            cmbBoxMonth.Cursor = Cursors.Hand;
             cmbBoxMonth.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBoxMonth.FlatStyle = FlatStyle.Flat;
             cmbBoxMonth.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -510,6 +521,7 @@
             // 
             // cmbBoxYears
             // 
+            cmbBoxYears.Cursor = Cursors.Hand;
             cmbBoxYears.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBoxYears.FlatStyle = FlatStyle.Flat;
             cmbBoxYears.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -581,6 +593,7 @@
             picBoxPicture.Anchor = AnchorStyles.None;
             picBoxPicture.BackColor = Color.White;
             picBoxPicture.BorderStyle = BorderStyle.FixedSingle;
+            picBoxPicture.Cursor = Cursors.No;
             picBoxPicture.Location = new Point(10, 43);
             picBoxPicture.Name = "picBoxPicture";
             picBoxPicture.Size = new Size(300, 300);
@@ -593,6 +606,7 @@
             // 
             btnCamera.Anchor = AnchorStyles.None;
             btnCamera.BackColor = Color.White;
+            btnCamera.Cursor = Cursors.Hand;
             btnCamera.FlatAppearance.BorderSize = 0;
             btnCamera.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnCamera.ForeColor = Color.FromArgb(53, 69, 93);
@@ -608,6 +622,7 @@
             // 
             btnBrowse.Anchor = AnchorStyles.None;
             btnBrowse.BackColor = Color.White;
+            btnBrowse.Cursor = Cursors.Hand;
             btnBrowse.FlatAppearance.BorderSize = 0;
             btnBrowse.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnBrowse.ForeColor = Color.FromArgb(53, 69, 93);
@@ -623,6 +638,7 @@
             // 
             btnClear.Anchor = AnchorStyles.None;
             btnClear.BackColor = Color.White;
+            btnClear.Cursor = Cursors.Hand;
             btnClear.FlatAppearance.BorderSize = 0;
             btnClear.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnClear.ForeColor = Color.DarkRed;
@@ -638,6 +654,7 @@
             // 
             cmbBoxCameraList.Anchor = AnchorStyles.None;
             cmbBoxCameraList.BackColor = Color.White;
+            cmbBoxCameraList.Cursor = Cursors.Hand;
             cmbBoxCameraList.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBoxCameraList.FlatStyle = FlatStyle.Flat;
             cmbBoxCameraList.FormattingEnabled = true;
@@ -677,6 +694,7 @@
             // 
             btnCreateId.Anchor = AnchorStyles.Top;
             btnCreateId.BackColor = Color.FromArgb(29, 146, 61);
+            btnCreateId.Cursor = Cursors.Hand;
             btnCreateId.FlatAppearance.BorderSize = 0;
             btnCreateId.FlatStyle = FlatStyle.Flat;
             btnCreateId.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -693,6 +711,7 @@
             // 
             btnClearForm.Anchor = AnchorStyles.Top;
             btnClearForm.BackColor = Color.DarkRed;
+            btnClearForm.Cursor = Cursors.Hand;
             btnClearForm.FlatAppearance.BorderSize = 0;
             btnClearForm.FlatStyle = FlatStyle.Flat;
             btnClearForm.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);

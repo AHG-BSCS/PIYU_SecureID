@@ -87,6 +87,7 @@
             // 
             // picBoxQRCode
             // 
+            picBoxQRCode.Cursor = Cursors.No;
             picBoxQRCode.InitialImage = Properties.Resources.PIYU_SecureID;
             picBoxQRCode.Location = new Point(544, 6);
             picBoxQRCode.Name = "picBoxQRCode";

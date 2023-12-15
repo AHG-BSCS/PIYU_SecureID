@@ -103,10 +103,9 @@
             textBoxTransactionNum.Location = new Point(10, 10);
             textBoxTransactionNum.Margin = new Padding(10);
             textBoxTransactionNum.MaxLength = 13;
-            textBoxTransactionNum.Multiline = true;
             textBoxTransactionNum.Name = "textBoxTransactionNum";
             textBoxTransactionNum.PlaceholderText = "Transaction Number";
-            textBoxTransactionNum.Size = new Size(310, 30);
+            textBoxTransactionNum.Size = new Size(310, 29);
             textBoxTransactionNum.TabIndex = 3;
             textBoxTransactionNum.TextChanged += textBoxTransactionNum_TextChanged;
             textBoxTransactionNum.KeyPress += textBoxTransactionNum_KeyPress;

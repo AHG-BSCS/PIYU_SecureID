@@ -94,7 +94,7 @@
             // 
             btnBypass.Anchor = AnchorStyles.Bottom;
             btnBypass.BackColor = Color.FromArgb(250, 201, 48);
-            btnBypass.Cursor = Cursors.Hand;
+            btnBypass.Cursor = Cursors.No;
             btnBypass.FlatAppearance.BorderSize = 0;
             btnBypass.FlatStyle = FlatStyle.Flat;
             btnBypass.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
