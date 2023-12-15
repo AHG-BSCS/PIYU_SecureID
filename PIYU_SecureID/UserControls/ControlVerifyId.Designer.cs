@@ -419,6 +419,7 @@
             panel14.Padding = new Padding(10);
             panel14.Size = new Size(325, 55);
             panel14.TabIndex = 0;
+            panel14.Visible = false;
             // 
             // textBoxTransactionNum
             // 
@@ -431,6 +432,7 @@
             textBoxTransactionNum.Name = "textBoxTransactionNum";
             textBoxTransactionNum.Size = new Size(300, 30);
             textBoxTransactionNum.TabIndex = 3;
+            textBoxTransactionNum.Visible = false;
             // 
             // panel15
             // 

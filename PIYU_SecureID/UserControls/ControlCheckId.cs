@@ -13,12 +13,14 @@ using AForge.Video.DirectShow;
 using ZXing;
 using ZXing.QrCode;
 using ZXing.Windows.Compatibility;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PIYU_SecureID
 {
     public partial class ControlCheckId : UserControl
     {
         private long? key;
+        private string lastResult = "";
         private FilterInfoCollection videoDevices;
         private VideoCaptureDevice videoSource;
         public delegate void btnCheckIDClickedEventHandler();
@@ -222,10 +224,18 @@ namespace PIYU_SecureID
             {
                 BarcodeReader barcodeReader = new BarcodeReader();
                 Result result = barcodeReader.Decode((Bitmap)pictureBoxQrScanner.Image);
-                string lastResult = "";
                 if (result != null && result.ToString() != lastResult)
                 {
-                    textBoxTransactionNum.Text = result.ToString();
+                    if (result.ToString().Length == 13)
+                    {
+                        lastResult = result.ToString();
+                        textBoxTransactionNum.Text = result.ToString();
+                    }
+                    else
+                    {
+                        lastResult = result.ToString();
+                        MessageBox.Show("Invalid QR.");
+                    }
                 }
             }
         }
@@ -236,6 +246,14 @@ namespace PIYU_SecureID
                 comboBoxCameras.Items.Add(Device.Name);
             comboBoxCameras.SelectedIndex = 0;
             VideoCaptureDevice captureDevice = new VideoCaptureDevice();
+        }
+
+        private void textBoxTransactionNum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
         }
     }
 }
