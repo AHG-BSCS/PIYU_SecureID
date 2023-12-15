@@ -360,11 +360,11 @@
             btnSignature.FlatAppearance.BorderSize = 0;
             btnSignature.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnSignature.ForeColor = Color.FromArgb(53, 69, 93);
-            btnSignature.Location = new Point(103, 359);
+            btnSignature.Location = new Point(76, 359);
             btnSignature.Name = "btnSignature";
-            btnSignature.Size = new Size(90, 35);
+            btnSignature.Size = new Size(80, 35);
             btnSignature.TabIndex = 14;
-            btnSignature.Text = "SIGNATURE";
+            btnSignature.Text = "SIGN";
             btnSignature.UseVisualStyleBackColor = false;
             btnSignature.Click += buttonSignature_Click;
             // 
@@ -373,7 +373,7 @@
             picBoxSignature.Anchor = AnchorStyles.None;
             picBoxSignature.BackColor = Color.White;
             picBoxSignature.BorderStyle = BorderStyle.FixedSingle;
-            picBoxSignature.Location = new Point(46, 43);
+            picBoxSignature.Location = new Point(10, 43);
             picBoxSignature.Name = "picBoxSignature";
             picBoxSignature.Size = new Size(300, 300);
             picBoxSignature.SizeMode = PictureBoxSizeMode.Zoom;
@@ -388,9 +388,9 @@
             btnClearSign.FlatAppearance.BorderSize = 0;
             btnClearSign.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnClearSign.ForeColor = Color.DarkRed;
-            btnClearSign.Location = new Point(199, 359);
+            btnClearSign.Location = new Point(164, 359);
             btnClearSign.Name = "btnClearSign";
-            btnClearSign.Size = new Size(90, 35);
+            btnClearSign.Size = new Size(80, 35);
             btnClearSign.TabIndex = 15;
             btnClearSign.Text = "CLEAR";
             btnClearSign.UseVisualStyleBackColor = false;
@@ -494,7 +494,7 @@
             pnlInfoForm.Location = new Point(0, 0);
             pnlInfoForm.Name = "pnlInfoForm";
             pnlInfoForm.Padding = new Padding(20);
-            pnlInfoForm.Size = new Size(453, 637);
+            pnlInfoForm.Size = new Size(453, 624);
             pnlInfoForm.TabIndex = 0;
             // 
             // lblFormTitle
@@ -528,7 +528,7 @@
             pnlSeparator.Dock = DockStyle.Left;
             pnlSeparator.Location = new Point(453, 0);
             pnlSeparator.Name = "pnlSeparator";
-            pnlSeparator.Size = new Size(5, 637);
+            pnlSeparator.Size = new Size(5, 624);
             pnlSeparator.TabIndex = 0;
             // 
             // tblPnlProof
@@ -545,7 +545,7 @@
             tblPnlProof.Name = "tblPnlProof";
             tblPnlProof.RowCount = 1;
             tblPnlProof.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tblPnlProof.Size = new Size(798, 453);
+            tblPnlProof.Size = new Size(653, 453);
             tblPnlProof.TabIndex = 48;
             // 
             // pnlPictureProof
@@ -558,10 +558,10 @@
             pnlPictureProof.Controls.Add(btnClear);
             pnlPictureProof.Controls.Add(cmbBoxCameraList);
             pnlPictureProof.Dock = DockStyle.Fill;
-            pnlPictureProof.Location = new Point(402, 3);
+            pnlPictureProof.Location = new Point(329, 3);
             pnlPictureProof.Name = "pnlPictureProof";
             pnlPictureProof.Padding = new Padding(20);
-            pnlPictureProof.Size = new Size(393, 447);
+            pnlPictureProof.Size = new Size(321, 447);
             pnlPictureProof.TabIndex = 0;
             // 
             // lblPicture
@@ -570,7 +570,7 @@
             lblPicture.AutoSize = true;
             lblPicture.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblPicture.ForeColor = Color.White;
-            lblPicture.Location = new Point(152, 10);
+            lblPicture.Location = new Point(116, 10);
             lblPicture.Name = "lblPicture";
             lblPicture.Size = new Size(89, 25);
             lblPicture.TabIndex = 0;
@@ -581,7 +581,7 @@
             picBoxPicture.Anchor = AnchorStyles.None;
             picBoxPicture.BackColor = Color.White;
             picBoxPicture.BorderStyle = BorderStyle.FixedSingle;
-            picBoxPicture.Location = new Point(46, 43);
+            picBoxPicture.Location = new Point(10, 43);
             picBoxPicture.Name = "picBoxPicture";
             picBoxPicture.Size = new Size(300, 300);
             picBoxPicture.SizeMode = PictureBoxSizeMode.Zoom;
@@ -596,7 +596,7 @@
             btnCamera.FlatAppearance.BorderSize = 0;
             btnCamera.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnCamera.ForeColor = Color.FromArgb(53, 69, 93);
-            btnCamera.Location = new Point(70, 359);
+            btnCamera.Location = new Point(34, 359);
             btnCamera.Name = "btnCamera";
             btnCamera.Size = new Size(80, 35);
             btnCamera.TabIndex = 17;
@@ -611,7 +611,7 @@
             btnBrowse.FlatAppearance.BorderSize = 0;
             btnBrowse.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnBrowse.ForeColor = Color.FromArgb(53, 69, 93);
-            btnBrowse.Location = new Point(156, 359);
+            btnBrowse.Location = new Point(120, 359);
             btnBrowse.Name = "btnBrowse";
             btnBrowse.Size = new Size(80, 35);
             btnBrowse.TabIndex = 18;
@@ -626,7 +626,7 @@
             btnClear.FlatAppearance.BorderSize = 0;
             btnClear.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnClear.ForeColor = Color.DarkRed;
-            btnClear.Location = new Point(242, 359);
+            btnClear.Location = new Point(206, 359);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(80, 35);
             btnClear.TabIndex = 19;
@@ -641,7 +641,7 @@
             cmbBoxCameraList.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBoxCameraList.FlatStyle = FlatStyle.Flat;
             cmbBoxCameraList.FormattingEnabled = true;
-            cmbBoxCameraList.Location = new Point(70, 402);
+            cmbBoxCameraList.Location = new Point(34, 402);
             cmbBoxCameraList.Name = "cmbBoxCameraList";
             cmbBoxCameraList.Size = new Size(105, 23);
             cmbBoxCameraList.TabIndex = 16;
@@ -658,7 +658,7 @@
             pnlSignatureProof.Location = new Point(3, 3);
             pnlSignatureProof.Name = "pnlSignatureProof";
             pnlSignatureProof.Padding = new Padding(20);
-            pnlSignatureProof.Size = new Size(393, 447);
+            pnlSignatureProof.Size = new Size(320, 447);
             pnlSignatureProof.TabIndex = 0;
             // 
             // lblSignature
@@ -667,7 +667,7 @@
             lblSignature.AutoSize = true;
             lblSignature.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblSignature.ForeColor = Color.White;
-            lblSignature.Location = new Point(138, 10);
+            lblSignature.Location = new Point(102, 10);
             lblSignature.Name = "lblSignature";
             lblSignature.Size = new Size(117, 25);
             lblSignature.TabIndex = 0;
@@ -681,7 +681,7 @@
             btnCreateId.FlatStyle = FlatStyle.Flat;
             btnCreateId.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnCreateId.ForeColor = Color.White;
-            btnCreateId.Location = new Point(403, 30);
+            btnCreateId.Location = new Point(330, 30);
             btnCreateId.Name = "btnCreateId";
             btnCreateId.Size = new Size(120, 40);
             btnCreateId.TabIndex = 21;
@@ -697,7 +697,7 @@
             btnClearForm.FlatStyle = FlatStyle.Flat;
             btnClearForm.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnClearForm.ForeColor = Color.White;
-            btnClearForm.Location = new Point(275, 30);
+            btnClearForm.Location = new Point(202, 30);
             btnClearForm.Name = "btnClearForm";
             btnClearForm.Size = new Size(120, 40);
             btnClearForm.TabIndex = 20;
@@ -712,7 +712,7 @@
             pnlControls.Dock = DockStyle.Top;
             pnlControls.Location = new Point(458, 453);
             pnlControls.Name = "pnlControls";
-            pnlControls.Size = new Size(798, 100);
+            pnlControls.Size = new Size(653, 100);
             pnlControls.TabIndex = 0;
             // 
             // ControlCreateId
@@ -726,7 +726,7 @@
             Controls.Add(pnlSeparator);
             Controls.Add(pnlInfoForm);
             Name = "ControlCreateId";
-            Size = new Size(1256, 637);
+            Size = new Size(1111, 624);
             Click += ControlCreateId_Click;
             ((System.ComponentModel.ISupportInitialize)picBoxSignature).EndInit();
             pnlInfoForm.ResumeLayout(false);

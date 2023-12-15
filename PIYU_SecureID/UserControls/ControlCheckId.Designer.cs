@@ -71,6 +71,11 @@
             comboBoxCameras = new ComboBox();
             pictureBoxQrScanner = new PictureBox();
             timer1 = new System.Windows.Forms.Timer(components);
+            panel12 = new Panel();
+            panel14 = new Panel();
+            panel13 = new Panel();
+            panel15 = new Panel();
+            label12 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSign).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).BeginInit();
             panelInfo.SuspendLayout();
@@ -86,25 +91,29 @@
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).BeginInit();
+            panel12.SuspendLayout();
+            panel14.SuspendLayout();
+            panel13.SuspendLayout();
             SuspendLayout();
             // 
             // textBoxTransactionNum
             // 
             textBoxTransactionNum.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxTransactionNum.Location = new Point(22, 22);
+            textBoxTransactionNum.Location = new Point(10, 10);
+            textBoxTransactionNum.Margin = new Padding(10);
             textBoxTransactionNum.MaxLength = 13;
             textBoxTransactionNum.Multiline = true;
             textBoxTransactionNum.Name = "textBoxTransactionNum";
-            textBoxTransactionNum.Size = new Size(299, 31);
+            textBoxTransactionNum.Size = new Size(310, 30);
             textBoxTransactionNum.TabIndex = 0;
             textBoxTransactionNum.TextChanged += textBoxTransactionNum_TextChanged;
             // 
             // buttonSearch
             // 
             buttonSearch.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonSearch.Location = new Point(327, 22);
+            buttonSearch.Location = new Point(105, 53);
             buttonSearch.Name = "buttonSearch";
-            buttonSearch.Size = new Size(120, 31);
+            buttonSearch.Size = new Size(120, 35);
             buttonSearch.TabIndex = 1;
             buttonSearch.Text = "GENERATE ID";
             buttonSearch.UseVisualStyleBackColor = true;
@@ -125,7 +134,7 @@
             labelGivenName.AutoSize = true;
             labelGivenName.Dock = DockStyle.Left;
             labelGivenName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelGivenName.Location = new Point(118, 0);
+            labelGivenName.Location = new Point(116, 0);
             labelGivenName.Name = "labelGivenName";
             labelGivenName.Size = new Size(0, 21);
             labelGivenName.TabIndex = 3;
@@ -223,7 +232,8 @@
             // pictureBoxSign
             // 
             pictureBoxSign.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pictureBoxSign.Location = new Point(594, 384);
+            pictureBoxSign.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxSign.Location = new Point(23, 243);
             pictureBoxSign.Name = "pictureBoxSign";
             pictureBoxSign.Size = new Size(150, 150);
             pictureBoxSign.SizeMode = PictureBoxSizeMode.Zoom;
@@ -233,16 +243,18 @@
             // pictureBoxIdPhoto
             // 
             pictureBoxIdPhoto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pictureBoxIdPhoto.Location = new Point(438, 384);
+            pictureBoxIdPhoto.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxIdPhoto.Location = new Point(23, 23);
             pictureBoxIdPhoto.Name = "pictureBoxIdPhoto";
-            pictureBoxIdPhoto.Size = new Size(150, 150);
+            pictureBoxIdPhoto.Size = new Size(200, 200);
             pictureBoxIdPhoto.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxIdPhoto.TabIndex = 14;
             pictureBoxIdPhoto.TabStop = false;
             // 
             // panelInfo
             // 
-            panelInfo.BorderStyle = BorderStyle.FixedSingle;
+            panelInfo.BackColor = SystemColors.Control;
+            panelInfo.Controls.Add(label12);
             panelInfo.Controls.Add(panel11);
             panelInfo.Controls.Add(panel10);
             panelInfo.Controls.Add(panel9);
@@ -256,9 +268,11 @@
             panelInfo.Controls.Add(panel1);
             panelInfo.Controls.Add(pictureBoxIdPhoto);
             panelInfo.Controls.Add(pictureBoxSign);
-            panelInfo.Location = new Point(328, 59);
+            panelInfo.Dock = DockStyle.Top;
+            panelInfo.Location = new Point(363, 0);
             panelInfo.Name = "panelInfo";
-            panelInfo.Size = new Size(765, 554);
+            panelInfo.Padding = new Padding(20);
+            panelInfo.Size = new Size(748, 621);
             panelInfo.TabIndex = 15;
             panelInfo.Visible = false;
             // 
@@ -266,7 +280,7 @@
             // 
             panel11.Controls.Add(labelSex);
             panel11.Controls.Add(label11);
-            panel11.Location = new Point(438, 89);
+            panel11.Location = new Point(258, 243);
             panel11.Name = "panel11";
             panel11.Size = new Size(306, 21);
             panel11.TabIndex = 36;
@@ -286,7 +300,7 @@
             // 
             panel10.Controls.Add(labelBloodType);
             panel10.Controls.Add(label10);
-            panel10.Location = new Point(438, 131);
+            panel10.Location = new Point(258, 280);
             panel10.Name = "panel10";
             panel10.Size = new Size(306, 21);
             panel10.TabIndex = 35;
@@ -306,7 +320,7 @@
             // 
             panel9.Controls.Add(labelDateOfBirth);
             panel9.Controls.Add(label8);
-            panel9.Location = new Point(438, 173);
+            panel9.Location = new Point(258, 317);
             panel9.Name = "panel9";
             panel9.Size = new Size(306, 21);
             panel9.TabIndex = 34;
@@ -326,7 +340,7 @@
             // 
             panel8.Controls.Add(labelMaritalStatus);
             panel8.Controls.Add(label9);
-            panel8.Location = new Point(438, 244);
+            panel8.Location = new Point(258, 354);
             panel8.Name = "panel8";
             panel8.Size = new Size(306, 21);
             panel8.TabIndex = 33;
@@ -346,7 +360,7 @@
             // 
             panel7.Controls.Add(labelBarangay);
             panel7.Controls.Add(label5);
-            panel7.Location = new Point(31, 328);
+            panel7.Location = new Point(258, 489);
             panel7.Name = "panel7";
             panel7.Size = new Size(392, 21);
             panel7.TabIndex = 32;
@@ -366,7 +380,7 @@
             // 
             panel6.Controls.Add(labelCity);
             panel6.Controls.Add(label6);
-            panel6.Location = new Point(31, 286);
+            panel6.Location = new Point(258, 452);
             panel6.Name = "panel6";
             panel6.Size = new Size(392, 21);
             panel6.TabIndex = 31;
@@ -386,7 +400,7 @@
             // 
             panel5.Controls.Add(labelProvince);
             panel5.Controls.Add(label7);
-            panel5.Location = new Point(31, 244);
+            panel5.Location = new Point(258, 415);
             panel5.Name = "panel5";
             panel5.Size = new Size(392, 21);
             panel5.TabIndex = 30;
@@ -406,7 +420,7 @@
             // 
             panel4.Controls.Add(labelSuffix);
             panel4.Controls.Add(label4);
-            panel4.Location = new Point(31, 173);
+            panel4.Location = new Point(258, 178);
             panel4.Name = "panel4";
             panel4.Size = new Size(392, 21);
             panel4.TabIndex = 29;
@@ -426,7 +440,7 @@
             // 
             panel3.Controls.Add(labelMiddleName);
             panel3.Controls.Add(label3);
-            panel3.Location = new Point(31, 131);
+            panel3.Location = new Point(258, 141);
             panel3.Name = "panel3";
             panel3.Size = new Size(392, 21);
             panel3.TabIndex = 28;
@@ -446,7 +460,7 @@
             // 
             panel2.Controls.Add(labelGivenName);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(31, 89);
+            panel2.Location = new Point(258, 104);
             panel2.Name = "panel2";
             panel2.Size = new Size(392, 21);
             panel2.TabIndex = 27;
@@ -458,15 +472,15 @@
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(0, 0);
             label2.Name = "label2";
-            label2.Size = new Size(118, 21);
+            label2.Size = new Size(116, 21);
             label2.TabIndex = 16;
-            label2.Text = "Given Name   : ";
+            label2.Text = "First Name     : ";
             // 
             // panel1
             // 
             panel1.Controls.Add(labelLastName);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(31, 43);
+            panel1.Location = new Point(258, 67);
             panel1.Name = "panel1";
             panel1.Size = new Size(392, 21);
             panel1.TabIndex = 26;
@@ -485,27 +499,29 @@
             // buttonStartStop
             // 
             buttonStartStop.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonStartStop.Location = new Point(22, 364);
+            buttonStartStop.Location = new Point(117, 326);
             buttonStartStop.Name = "buttonStartStop";
-            buttonStartStop.Size = new Size(116, 36);
+            buttonStartStop.Size = new Size(90, 35);
             buttonStartStop.TabIndex = 18;
-            buttonStartStop.Text = "START";
+            buttonStartStop.Text = "CAMERA";
             buttonStartStop.UseVisualStyleBackColor = true;
             buttonStartStop.Click += buttonStartStop_Click;
             // 
             // comboBoxCameras
             // 
             comboBoxCameras.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxCameras.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxCameras.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             comboBoxCameras.FormattingEnabled = true;
-            comboBoxCameras.Location = new Point(144, 364);
+            comboBoxCameras.Location = new Point(213, 326);
             comboBoxCameras.Name = "comboBoxCameras";
-            comboBoxCameras.Size = new Size(178, 29);
+            comboBoxCameras.Size = new Size(99, 25);
             comboBoxCameras.TabIndex = 17;
             // 
             // pictureBoxQrScanner
             // 
-            pictureBoxQrScanner.Location = new Point(22, 58);
+            pictureBoxQrScanner.BackColor = Color.White;
+            pictureBoxQrScanner.Location = new Point(13, 13);
+            pictureBoxQrScanner.Margin = new Padding(10);
             pictureBoxQrScanner.Name = "pictureBoxQrScanner";
             pictureBoxQrScanner.Size = new Size(300, 300);
             pictureBoxQrScanner.SizeMode = PictureBoxSizeMode.Zoom;
@@ -516,23 +532,75 @@
             // 
             timer1.Tick += timer1_Tick;
             // 
+            // panel12
+            // 
+            panel12.Controls.Add(panel14);
+            panel12.Controls.Add(panel13);
+            panel12.Dock = DockStyle.Left;
+            panel12.Location = new Point(0, 0);
+            panel12.Name = "panel12";
+            panel12.Padding = new Padding(15);
+            panel12.Size = new Size(360, 624);
+            panel12.TabIndex = 37;
+            // 
+            // panel14
+            // 
+            panel14.BackColor = Color.FromArgb(53, 69, 93);
+            panel14.Controls.Add(textBoxTransactionNum);
+            panel14.Controls.Add(buttonSearch);
+            panel14.Dock = DockStyle.Bottom;
+            panel14.Location = new Point(15, 509);
+            panel14.Name = "panel14";
+            panel14.Padding = new Padding(10);
+            panel14.Size = new Size(330, 100);
+            panel14.TabIndex = 20;
+            // 
+            // panel13
+            // 
+            panel13.BackColor = Color.FromArgb(53, 69, 93);
+            panel13.Controls.Add(pictureBoxQrScanner);
+            panel13.Controls.Add(buttonStartStop);
+            panel13.Controls.Add(comboBoxCameras);
+            panel13.Location = new Point(18, 18);
+            panel13.Name = "panel13";
+            panel13.Padding = new Padding(10);
+            panel13.Size = new Size(325, 375);
+            panel13.TabIndex = 19;
+            // 
+            // panel15
+            // 
+            panel15.BackColor = Color.FromArgb(53, 69, 93);
+            panel15.Dock = DockStyle.Left;
+            panel15.Location = new Point(360, 0);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(3, 624);
+            panel15.TabIndex = 37;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.Location = new Point(371, 23);
+            label12.Name = "label12";
+            label12.Size = new Size(253, 25);
+            label12.TabIndex = 37;
+            label12.Text = "PERSONAL INFORMATIION";
+            // 
             // ControlCheckId
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(buttonSearch);
-            Controls.Add(buttonStartStop);
-            Controls.Add(textBoxTransactionNum);
-            Controls.Add(pictureBoxQrScanner);
-            Controls.Add(comboBoxCameras);
             Controls.Add(panelInfo);
+            Controls.Add(panel15);
+            Controls.Add(panel12);
             Name = "ControlCheckId";
-            Size = new Size(1116, 628);
+            Size = new Size(1111, 624);
             Leave += ControlCheckId_Leave;
             ((System.ComponentModel.ISupportInitialize)pictureBoxSign).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).EndInit();
             panelInfo.ResumeLayout(false);
+            panelInfo.PerformLayout();
             panel11.ResumeLayout(false);
             panel11.PerformLayout();
             panel10.ResumeLayout(false);
@@ -556,8 +624,11 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).EndInit();
+            panel12.ResumeLayout(false);
+            panel14.ResumeLayout(false);
+            panel14.PerformLayout();
+            panel13.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -604,5 +675,10 @@
         private Panel panel9;
         private Panel panel8;
         private Panel panel7;
+        private Panel panel12;
+        private Panel panel13;
+        private Panel panel14;
+        private Panel panel15;
+        private Label label12;
     }
 }

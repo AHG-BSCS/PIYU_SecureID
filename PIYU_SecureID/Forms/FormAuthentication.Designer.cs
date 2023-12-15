@@ -169,10 +169,10 @@
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.ForeColor = Color.White;
             btnClose.Image = Properties.Resources.icons_close;
-            btnClose.Location = new Point(542, 0);
+            btnClose.Location = new Point(555, 0);
             btnClose.Margin = new Padding(4, 3, 4, 3);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(58, 25);
+            btnClose.Size = new Size(45, 25);
             btnClose.TabIndex = 8;
             btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
