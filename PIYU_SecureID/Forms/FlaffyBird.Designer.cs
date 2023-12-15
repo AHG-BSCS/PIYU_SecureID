@@ -113,7 +113,7 @@
             scoreText.MouseDown += Form1_MouseDown;
             scoreText.MouseUp += Form1_MouseUp;
             // 
-            // Form1
+            // FlaffyBird
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -125,10 +125,12 @@
             Controls.Add(pipeTop);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             KeyPreview = true;
-            Name = "Form1";
+            Name = "FlaffyBird";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MiniGame";
             Click += Form1_Click_1;
+            MouseDown += Form1_MouseDown;
+            MouseUp += Form1_MouseUp;
             ((System.ComponentModel.ISupportInitialize)pipeTop).EndInit();
             ((System.ComponentModel.ISupportInitialize)ground).EndInit();
             ((System.ComponentModel.ISupportInitialize)pipeBottom).EndInit();

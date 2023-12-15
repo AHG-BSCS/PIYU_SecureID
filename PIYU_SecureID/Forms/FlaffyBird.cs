@@ -53,10 +53,13 @@ namespace PIYU_SecureID
             {
                 pipeSpeed = 15;
             }
-
-            if (score == 50)
+            else if (score == 50)
             {
                 pipeSpeed = 25;
+            }
+            else if (score > 50)
+            {
+                pipeSpeed = 40;
             }
         }
 
@@ -67,16 +70,10 @@ namespace PIYU_SecureID
                 flappyBird.Location = new Point(41, 127);
                 pipeTop.Location = new Point(235, 0);
                 pipeBottom.Location = new Point(235, 203);
-                pipeSpeed = 10;
-                gravity = 10;
                 score = 0;
 
                 isGameRunning = true;
                 gameTimer.Start();
-            }
-            else
-            {
-                flappyBird.Top -= 50;
             }
         }
 
