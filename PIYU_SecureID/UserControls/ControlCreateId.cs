@@ -339,9 +339,6 @@ namespace PIYU_SecureID
                         {
                             cmbBoxDay.Items.Add(i.ToString("D2"));
                         }
-
-                        // Set default day value
-                        cmbBoxDay.SelectedIndex = 0;
                     }
                     else
                     {
