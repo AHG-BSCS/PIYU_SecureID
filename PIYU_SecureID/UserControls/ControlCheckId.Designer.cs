@@ -46,6 +46,14 @@
             pictureBoxIdPhoto = new PictureBox();
             panelInfo = new Panel();
             label12 = new Label();
+            panel1 = new Panel();
+            label1 = new Label();
+            panel2 = new Panel();
+            label2 = new Label();
+            panel3 = new Panel();
+            label3 = new Label();
+            panel4 = new Panel();
+            label4 = new Label();
             panel11 = new Panel();
             label11 = new Label();
             panel10 = new Panel();
@@ -54,20 +62,12 @@
             label8 = new Label();
             panel8 = new Panel();
             label9 = new Label();
-            panel7 = new Panel();
-            label5 = new Label();
-            panel6 = new Panel();
-            label6 = new Label();
             panel5 = new Panel();
             label7 = new Label();
-            panel4 = new Panel();
-            label4 = new Label();
-            panel3 = new Panel();
-            label3 = new Label();
-            panel2 = new Panel();
-            label2 = new Label();
-            panel1 = new Panel();
-            label1 = new Label();
+            panel6 = new Panel();
+            label6 = new Label();
+            panel7 = new Panel();
+            label5 = new Label();
             buttonStartStop = new Button();
             comboBoxCameras = new ComboBox();
             pictureBoxQrScanner = new PictureBox();
@@ -79,17 +79,17 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxSign).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).BeginInit();
             panelInfo.SuspendLayout();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            panel4.SuspendLayout();
             panel11.SuspendLayout();
             panel10.SuspendLayout();
             panel9.SuspendLayout();
             panel8.SuspendLayout();
-            panel7.SuspendLayout();
-            panel6.SuspendLayout();
             panel5.SuspendLayout();
-            panel4.SuspendLayout();
-            panel3.SuspendLayout();
-            panel2.SuspendLayout();
-            panel1.SuspendLayout();
+            panel6.SuspendLayout();
+            panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).BeginInit();
             panel12.SuspendLayout();
             panel14.SuspendLayout();
@@ -239,7 +239,7 @@
             pictureBoxSign.Cursor = Cursors.No;
             pictureBoxSign.Location = new Point(23, 243);
             pictureBoxSign.Name = "pictureBoxSign";
-            pictureBoxSign.Size = new Size(150, 153);
+            pictureBoxSign.Size = new Size(150, 150);
             pictureBoxSign.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxSign.TabIndex = 13;
             pictureBoxSign.TabStop = false;
@@ -252,7 +252,7 @@
             pictureBoxIdPhoto.Cursor = Cursors.No;
             pictureBoxIdPhoto.Location = new Point(23, 23);
             pictureBoxIdPhoto.Name = "pictureBoxIdPhoto";
-            pictureBoxIdPhoto.Size = new Size(200, 203);
+            pictureBoxIdPhoto.Size = new Size(200, 200);
             pictureBoxIdPhoto.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxIdPhoto.TabIndex = 14;
             pictureBoxIdPhoto.TabStop = false;
@@ -291,6 +291,86 @@
             label12.Size = new Size(253, 25);
             label12.TabIndex = 0;
             label12.Text = "PERSONAL INFORMATIION";
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(labelLastName);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(258, 67);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(392, 21);
+            panel1.TabIndex = 20;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Dock = DockStyle.Left;
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(118, 21);
+            label1.TabIndex = 0;
+            label1.Text = "Last Name      : ";
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(labelGivenName);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(258, 104);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(392, 21);
+            panel2.TabIndex = 0;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Dock = DockStyle.Left;
+            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(0, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(116, 21);
+            label2.TabIndex = 0;
+            label2.Text = "First Name     : ";
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(labelMiddleName);
+            panel3.Controls.Add(label3);
+            panel3.Location = new Point(258, 141);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(392, 21);
+            panel3.TabIndex = 0;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Dock = DockStyle.Left;
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(0, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(117, 21);
+            label3.TabIndex = 0;
+            label3.Text = "Middle Name: ";
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(labelSuffix);
+            panel4.Controls.Add(label4);
+            panel4.Location = new Point(258, 178);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(392, 21);
+            panel4.TabIndex = 0;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Dock = DockStyle.Left;
+            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(0, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(116, 21);
+            label4.TabIndex = 0;
+            label4.Text = "Suffix              : ";
             // 
             // panel11
             // 
@@ -372,25 +452,25 @@
             label9.TabIndex = 0;
             label9.Text = "Marital Status: ";
             // 
-            // panel7
+            // panel5
             // 
-            panel7.Controls.Add(labelBarangay);
-            panel7.Controls.Add(label5);
-            panel7.Location = new Point(258, 489);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(392, 21);
-            panel7.TabIndex = 0;
+            panel5.Controls.Add(labelProvince);
+            panel5.Controls.Add(label7);
+            panel5.Location = new Point(258, 415);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(392, 21);
+            panel5.TabIndex = 0;
             // 
-            // label5
+            // label7
             // 
-            label5.AutoSize = true;
-            label5.Dock = DockStyle.Left;
-            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(0, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(113, 21);
-            label5.TabIndex = 0;
-            label5.Text = "Barangay       : ";
+            label7.AutoSize = true;
+            label7.Dock = DockStyle.Left;
+            label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(0, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(113, 21);
+            label7.TabIndex = 0;
+            label7.Text = "Province        : ";
             // 
             // panel6
             // 
@@ -412,105 +492,25 @@
             label6.TabIndex = 0;
             label6.Text = "City                 : ";
             // 
-            // panel5
+            // panel7
             // 
-            panel5.Controls.Add(labelProvince);
-            panel5.Controls.Add(label7);
-            panel5.Location = new Point(258, 415);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(392, 21);
-            panel5.TabIndex = 0;
+            panel7.Controls.Add(labelBarangay);
+            panel7.Controls.Add(label5);
+            panel7.Location = new Point(258, 489);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(392, 21);
+            panel7.TabIndex = 0;
             // 
-            // label7
+            // label5
             // 
-            label7.AutoSize = true;
-            label7.Dock = DockStyle.Left;
-            label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(0, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(113, 21);
-            label7.TabIndex = 0;
-            label7.Text = "Province        : ";
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(labelSuffix);
-            panel4.Controls.Add(label4);
-            panel4.Location = new Point(258, 178);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(392, 21);
-            panel4.TabIndex = 0;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Dock = DockStyle.Left;
-            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(0, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(116, 21);
-            label4.TabIndex = 0;
-            label4.Text = "Suffix              : ";
-            // 
-            // panel3
-            // 
-            panel3.Controls.Add(labelMiddleName);
-            panel3.Controls.Add(label3);
-            panel3.Location = new Point(258, 141);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(392, 21);
-            panel3.TabIndex = 0;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Dock = DockStyle.Left;
-            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(0, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(117, 21);
-            label3.TabIndex = 0;
-            label3.Text = "Middle Name: ";
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(labelGivenName);
-            panel2.Controls.Add(label2);
-            panel2.Location = new Point(258, 104);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(392, 21);
-            panel2.TabIndex = 0;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Dock = DockStyle.Left;
-            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(0, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(116, 21);
-            label2.TabIndex = 0;
-            label2.Text = "First Name     : ";
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(labelLastName);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(258, 67);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(392, 21);
-            panel1.TabIndex = 20;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Dock = DockStyle.Left;
-            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(118, 21);
-            label1.TabIndex = 0;
-            label1.Text = "Last Name      : ";
+            label5.AutoSize = true;
+            label5.Dock = DockStyle.Left;
+            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(0, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(113, 21);
+            label5.TabIndex = 0;
+            label5.Text = "Barangay       : ";
             // 
             // buttonStartStop
             // 
@@ -609,6 +609,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).EndInit();
             panelInfo.ResumeLayout(false);
             panelInfo.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             panel11.ResumeLayout(false);
             panel11.PerformLayout();
             panel10.ResumeLayout(false);
@@ -617,20 +625,12 @@
             panel9.PerformLayout();
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxQrScanner).EndInit();
             panel12.ResumeLayout(false);
             panel14.ResumeLayout(false);
