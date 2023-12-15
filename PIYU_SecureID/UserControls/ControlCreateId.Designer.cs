@@ -421,6 +421,7 @@
             cmbBoxMonth.Name = "cmbBoxMonth";
             cmbBoxMonth.Size = new Size(128, 28);
             cmbBoxMonth.TabIndex = 9;
+            cmbBoxMonth.SelectedIndexChanged += cmbBoxMonth_SelectedIndexChanged;
             cmbBoxMonth.DropDownClosed += comboBoxSex_DropDownClosed;
             // 
             // lblDay
