@@ -32,35 +32,38 @@ namespace PIYU_SecureID
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            if (timer1.Enabled)
+            if (pictureBoxIdPhoto.Image != null)
             {
-                timer1.Stop();
-            }
-            if (videoSource != null)
-            {
-                videoSource.SignalToStop();
-                videoSource.WaitForStop();
-            }
-            pictureBoxQrScanner.Image = null;
-            buttonStartStop.Text = "START";
+                if (timer1.Enabled)
+                {
+                    timer1.Stop();
+                }
+                if (videoSource != null)
+                {
+                    videoSource.SignalToStop();
+                    videoSource.WaitForStop();
+                }
+                pictureBoxQrScanner.Image = null;
+                buttonStartStop.Text = "START";
 
-            long? transactionNum = key;
-            string lastName = labelLastName.Text;
-            string givenName = labelGivenName.Text;
-            string middleName = labelMiddleName.Text;
-            string suffix = labelSuffix.Text;
-            string sex = labelSex.Text;
-            string bloodType = labelBloodType.Text;
-            string dateOfBirth = labelDateOfBirth.Text;
-            string province = labelProvince.Text;
-            string city = labelCity.Text;
-            string barangay = labelBarangay.Text;
-            string maritalStatus = labelMaritalStatus.Text;
-            FormIDGenerate generate = new FormIDGenerate(lastName, givenName, middleName, suffix, transactionNum,
-                                                        sex, bloodType, dateOfBirth, province, city, barangay, maritalStatus,
-                                                        ConvertPictureBoxImageToBase64(pictureBoxIdPhoto.Image));
-            generate.ShowDialog();
-            OnCheckIDClicked?.Invoke();
+                long? transactionNum = key;
+                string lastName = labelLastName.Text;
+                string givenName = labelGivenName.Text;
+                string middleName = labelMiddleName.Text;
+                string suffix = labelSuffix.Text;
+                string sex = labelSex.Text;
+                string bloodType = labelBloodType.Text;
+                string dateOfBirth = labelDateOfBirth.Text;
+                string province = labelProvince.Text;
+                string city = labelCity.Text;
+                string barangay = labelBarangay.Text;
+                string maritalStatus = labelMaritalStatus.Text;
+                FormIDGenerate generate = new FormIDGenerate(lastName, givenName, middleName, suffix, transactionNum,
+                                                            sex, bloodType, dateOfBirth, province, city, barangay, maritalStatus,
+                                                            ConvertPictureBoxImageToBase64(pictureBoxIdPhoto.Image));
+                generate.ShowDialog();
+                OnCheckIDClicked?.Invoke();
+            }
         }
 
         private byte[] ConvertPictureBoxImageToBase64(Image image)
