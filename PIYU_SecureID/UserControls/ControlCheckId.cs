@@ -19,7 +19,7 @@ namespace PIYU_SecureID
 {
     public partial class ControlCheckId : UserControl
     {
-        private long? key;
+        private long? key = 0;
         private string lastResult = "";
         private FilterInfoCollection videoDevices;
         private VideoCaptureDevice videoSource;
@@ -46,7 +46,7 @@ namespace PIYU_SecureID
                     videoSource.WaitForStop();
                 }
                 pictureBoxQrScanner.Image = null;
-                buttonStartStop.Text = "START";
+                buttonStartStop.Text = "CAMERA";
 
                 long? transactionNum = key;
                 string lastName = labelLastName.Text;
@@ -64,6 +64,8 @@ namespace PIYU_SecureID
                                                             sex, bloodType, dateOfBirth, province, city, barangay, maritalStatus,
                                                             ConvertPictureBoxImageToBase64(pictureBoxIdPhoto.Image));
                 generate.ShowDialog();
+                textBoxTransactionNum.Text = "";
+                RefreshData();
                 OnCheckIDClicked?.Invoke();
             }
         }
@@ -82,6 +84,7 @@ namespace PIYU_SecureID
             try
             {
                 RefreshData();
+                key = info.TransactionNum;
                 labelLastName.Text = info.LastName;
                 labelGivenName.Text = info.GivenName;
                 labelMiddleName.Text = info.MiddleName;
@@ -117,7 +120,7 @@ namespace PIYU_SecureID
 
         private void RefreshData()
         {
-            this.key = null;
+            this.key = 0;
             labelLastName.Text = "";
             labelGivenName.Text = "";
             labelMiddleName.Text = "";
@@ -142,13 +145,18 @@ namespace PIYU_SecureID
                     long key = long.Parse(textBoxTransactionNum.Text);
 
                     FillData(info.LoadFromFile("Resources/info.txt", key));
-                    this.key = key;
                 }
                 catch
                 {
                     MessageBox.Show("Invalid transaction number.");
                     RefreshData();
                 }
+            }
+            else if (textBoxTransactionNum.Text == "")
+            {
+                lastResult = "";
+                pictureBoxIdPhoto.Image = null;
+                RefreshData();
             }
         }
 
@@ -212,7 +220,7 @@ namespace PIYU_SecureID
                 videoSource.SignalToStop();
                 videoSource.WaitForStop();
             }
-            buttonStartStop.Text = "START";
+            buttonStartStop.Text = "CAMERA";
             pictureBoxQrScanner.Image = null;
             textBoxTransactionNum.Text = "";
             RefreshData();

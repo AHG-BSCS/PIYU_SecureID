@@ -18,7 +18,6 @@ namespace PIYU_SecureID
 {
     public partial class FormIDGenerate : Form
     {
-        private Panel panelToPrint;
         private PrintDocument printDocument;
         private int currentPage = 1;
         private long transactionNum;
