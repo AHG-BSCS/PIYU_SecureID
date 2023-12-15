@@ -1,4 +1,5 @@
-﻿using QRCoder;
+﻿using PIYU_SecureID.Classes;
+using QRCoder;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,6 +53,7 @@ namespace PIYU_SecureID
             this.maritalStatus = maritalStatus;
             this.idPhoto = idPhoto;
             InitializeComponent();
+            DesignHelper.PaintRoundBorder(this);
 
             picBoxIdPhoto.Image = BytesToImage(idPhoto);
 

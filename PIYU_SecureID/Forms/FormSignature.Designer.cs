@@ -62,6 +62,7 @@
             // picBoxSignatureDrawing
             // 
             picBoxSignatureDrawing.BackColor = Color.White;
+            picBoxSignatureDrawing.Cursor = Cursors.No;
             picBoxSignatureDrawing.Dock = DockStyle.Fill;
             picBoxSignatureDrawing.Location = new Point(10, 0);
             picBoxSignatureDrawing.Name = "picBoxSignatureDrawing";

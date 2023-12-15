@@ -62,6 +62,7 @@
             // picBoxCameraDisplay
             // 
             picBoxCameraDisplay.BackColor = Color.White;
+            picBoxCameraDisplay.Cursor = Cursors.No;
             picBoxCameraDisplay.Dock = DockStyle.Fill;
             picBoxCameraDisplay.Location = new Point(10, 0);
             picBoxCameraDisplay.Name = "picBoxCameraDisplay";

@@ -236,6 +236,7 @@
             picBoxQREncrypted.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             picBoxQREncrypted.BackColor = Color.White;
             picBoxQREncrypted.BorderStyle = BorderStyle.FixedSingle;
+            picBoxQREncrypted.Cursor = Cursors.No;
             picBoxQREncrypted.Location = new Point(296, 48);
             picBoxQREncrypted.Margin = new Padding(3, 2, 3, 2);
             picBoxQREncrypted.Name = "picBoxQREncrypted";
@@ -249,6 +250,7 @@
             picBoxIdPhoto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             picBoxIdPhoto.BackColor = Color.White;
             picBoxIdPhoto.BorderStyle = BorderStyle.FixedSingle;
+            picBoxIdPhoto.Cursor = Cursors.No;
             picBoxIdPhoto.Location = new Point(93, 126);
             picBoxIdPhoto.Name = "picBoxIdPhoto";
             picBoxIdPhoto.Size = new Size(126, 126);

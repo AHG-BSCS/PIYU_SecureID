@@ -387,6 +387,7 @@
             // 
             // picBoxAppLogo
             // 
+            picBoxAppLogo.Cursor = Cursors.WaitCursor;
             picBoxAppLogo.Dock = DockStyle.Top;
             picBoxAppLogo.Image = Properties.Resources.PIYU_SecureID;
             picBoxAppLogo.Location = new Point(0, 11);
