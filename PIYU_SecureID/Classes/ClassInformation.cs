@@ -131,15 +131,13 @@ namespace PIYU_SecureID
                             }
                         }
                     }
-
-                    MessageBox.Show("Record not found.");
                 }
                 else
                 {
                     MessageBox.Show($"File not found: {filename}. Creating a new data structure.");
                 }
 
-                return new ClassInformation();
+                return null;
             }
             catch (Exception ex)
             {

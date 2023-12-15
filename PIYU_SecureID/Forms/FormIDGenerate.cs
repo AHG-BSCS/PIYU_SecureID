@@ -219,24 +219,40 @@ namespace PIYU_SecureID
                 printDocument.Print();
 
                 ClassInformation data = new ClassInformation();
+                data = data.LoadIdQrFromFile("Resources/idQr.txt", transactionNum);
+                if (data == null)
+                {
+                    data = new ClassInformation();
+                    data.TransactionNum = transactionNum;
 
-                data.TransactionNum = transactionNum;
+                    SaveToFile("Resources/idQr.txt", data);
 
-                SaveToFile("Resources/idQr.txt", data);
-
-                this.Close();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("ID already issued.");
+                }
             }
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
             ClassInformation data = new ClassInformation();
+            data = data.LoadIdQrFromFile("Resources/idQr.txt", transactionNum);
+            if (data == null)
+            {
+                data = new ClassInformation();
+                data.TransactionNum = transactionNum;
 
-            data.TransactionNum = transactionNum;
+                SaveToFile("Resources/idQr.txt", data);
 
-            SaveToFile("Resources/idQr.txt", data);
-
-            this.Close();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("ID already issued.");
+            }
         }
 
         private void SaveToFile(string filename, ClassInformation data)
