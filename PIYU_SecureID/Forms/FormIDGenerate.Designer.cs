@@ -28,357 +28,397 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pictureBoxQREncrypted = new System.Windows.Forms.PictureBox();
-            this.pictureBoxIdPhoto = new System.Windows.Forms.PictureBox();
-            this.buttonPrint = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panelFrontId = new System.Windows.Forms.Panel();
-            this.panelBackId = new System.Windows.Forms.Panel();
-            this.buttonSave = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQREncrypted)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdPhoto)).BeginInit();
-            this.panelFrontId.SuspendLayout();
-            this.panelBackId.SuspendLayout();
-            this.SuspendLayout();
+            picBoxFrontBackground = new PictureBox();
+            picBoxBackBackground = new PictureBox();
+            lblFont = new Label();
+            lblBack = new Label();
+            lblLastname = new Label();
+            lblMiddleName = new Label();
+            lblGivenName = new Label();
+            lblSuffix = new Label();
+            lblSex = new Label();
+            lblMaritalStatus = new Label();
+            lblDateOfBirth = new Label();
+            lblBloodType = new Label();
+            lblAddress = new Label();
+            lblGenerationDate = new Label();
+            picBoxQREncrypted = new PictureBox();
+            picBoxIdPhoto = new PictureBox();
+            buttonPrint = new Button();
+            pnlFrontId = new Panel();
+            pnlBackId = new Panel();
+            buttonSave = new Button();
+            pnlTitleBar = new Panel();
+            btnClose = new Button();
+            tblPnlIdPreview = new TableLayoutPanel();
+            ((System.ComponentModel.ISupportInitialize)picBoxFrontBackground).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picBoxBackBackground).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picBoxQREncrypted).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picBoxIdPhoto).BeginInit();
+            pnlFrontId.SuspendLayout();
+            pnlBackId.SuspendLayout();
+            pnlTitleBar.SuspendLayout();
+            tblPnlIdPreview.SuspendLayout();
+            SuspendLayout();
             // 
-            // pictureBox1
+            // picBoxFrontBackground
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::PIYU_SecureID.Properties.Resources.secureid_front;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(573, 358);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            picBoxFrontBackground.Dock = DockStyle.Fill;
+            picBoxFrontBackground.Image = Properties.Resources.secureid_front;
+            picBoxFrontBackground.Location = new Point(10, 10);
+            picBoxFrontBackground.Margin = new Padding(3, 2, 3, 2);
+            picBoxFrontBackground.Name = "picBoxFrontBackground";
+            picBoxFrontBackground.Size = new Size(612, 376);
+            picBoxFrontBackground.SizeMode = PictureBoxSizeMode.StretchImage;
+            picBoxFrontBackground.TabIndex = 0;
+            picBoxFrontBackground.TabStop = false;
             // 
-            // pictureBox2
+            // picBoxBackBackground
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::PIYU_SecureID.Properties.Resources.secureid_back;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(573, 358);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            picBoxBackBackground.Dock = DockStyle.Fill;
+            picBoxBackBackground.Image = Properties.Resources.secureid_back;
+            picBoxBackBackground.Location = new Point(5, 10);
+            picBoxBackBackground.Margin = new Padding(3, 2, 3, 2);
+            picBoxBackBackground.Name = "picBoxBackBackground";
+            picBoxBackBackground.Size = new Size(612, 376);
+            picBoxBackBackground.SizeMode = PictureBoxSizeMode.StretchImage;
+            picBoxBackBackground.TabIndex = 1;
+            picBoxBackBackground.TabStop = false;
             // 
-            // label1
+            // lblFont
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(243, 380);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "FRONT";
+            lblFont.AutoSize = true;
+            lblFont.Dock = DockStyle.Top;
+            lblFont.Font = new Font("Segoe UI Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblFont.ForeColor = Color.White;
+            lblFont.Location = new Point(3, 402);
+            lblFont.Name = "lblFont";
+            lblFont.Size = new Size(627, 37);
+            lblFont.TabIndex = 0;
+            lblFont.Text = "FRONT";
+            lblFont.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // lblBack
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(854, 380);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 21);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "BACK";
+            lblBack.AutoSize = true;
+            lblBack.Dock = DockStyle.Top;
+            lblBack.Font = new Font("Segoe UI Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblBack.ForeColor = Color.White;
+            lblBack.Location = new Point(636, 402);
+            lblBack.Name = "lblBack";
+            lblBack.Size = new Size(627, 37);
+            lblBack.TabIndex = 0;
+            lblBack.Text = "BACK";
+            lblBack.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lblLastname
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(47, 293);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 15);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
+            lblLastname.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblLastname.AutoSize = true;
+            lblLastname.BackColor = Color.Transparent;
+            lblLastname.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblLastname.Location = new Point(60, 317);
+            lblLastname.Name = "lblLastname";
+            lblLastname.Size = new Size(61, 21);
+            lblLastname.TabIndex = 0;
+            lblLastname.Text = "Tamad";
             // 
-            // label5
+            // lblMiddleName
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(248, 330);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 15);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "label5";
+            lblMiddleName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblMiddleName.AutoSize = true;
+            lblMiddleName.BackColor = Color.Transparent;
+            lblMiddleName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMiddleName.Location = new Point(278, 358);
+            lblMiddleName.Name = "lblMiddleName";
+            lblMiddleName.Size = new Size(64, 21);
+            lblMiddleName.TabIndex = 0;
+            lblMiddleName.Text = "Panget";
             // 
-            // label4
+            // lblGivenName
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(47, 330);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 15);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "label4";
+            lblGivenName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblGivenName.AutoSize = true;
+            lblGivenName.BackColor = Color.Transparent;
+            lblGivenName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblGivenName.Location = new Point(60, 358);
+            lblGivenName.Name = "lblGivenName";
+            lblGivenName.Size = new Size(46, 21);
+            lblGivenName.TabIndex = 0;
+            lblGivenName.Text = "Juan";
             // 
-            // label6
+            // lblSuffix
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(483, 330);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 15);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "label6";
+            lblSuffix.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblSuffix.AutoSize = true;
+            lblSuffix.BackColor = Color.Transparent;
+            lblSuffix.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSuffix.Location = new Point(533, 358);
+            lblSuffix.Name = "lblSuffix";
+            lblSuffix.Size = new Size(31, 21);
+            lblSuffix.TabIndex = 0;
+            lblSuffix.Text = "Dr.";
             // 
-            // label7
+            // lblSex
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(63, 76);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 15);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "label7";
+            lblSex.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblSex.AutoSize = true;
+            lblSex.BackColor = Color.Transparent;
+            lblSex.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSex.Location = new Point(70, 89);
+            lblSex.Name = "lblSex";
+            lblSex.Size = new Size(29, 20);
+            lblSex.TabIndex = 0;
+            lblSex.Text = "Oo";
             // 
-            // label8
+            // lblMaritalStatus
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(279, 76);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 15);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "label8";
+            lblMaritalStatus.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblMaritalStatus.AutoSize = true;
+            lblMaritalStatus.BackColor = Color.Transparent;
+            lblMaritalStatus.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMaritalStatus.Location = new Point(303, 89);
+            lblMaritalStatus.Name = "lblMaritalStatus";
+            lblMaritalStatus.Size = new Size(51, 20);
+            lblMaritalStatus.TabIndex = 0;
+            lblMaritalStatus.Text = "Secret";
             // 
-            // label9
+            // lblDateOfBirth
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(63, 126);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 15);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "label9";
+            lblDateOfBirth.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblDateOfBirth.AutoSize = true;
+            lblDateOfBirth.BackColor = Color.Transparent;
+            lblDateOfBirth.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDateOfBirth.Location = new Point(70, 143);
+            lblDateOfBirth.Name = "lblDateOfBirth";
+            lblDateOfBirth.Size = new Size(82, 20);
+            lblDateOfBirth.TabIndex = 0;
+            lblDateOfBirth.Text = "01/01/2024";
             // 
-            // label10
+            // lblBloodType
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(279, 126);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 15);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "label10";
+            lblBloodType.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblBloodType.AutoSize = true;
+            lblBloodType.BackColor = Color.Transparent;
+            lblBloodType.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblBloodType.Location = new Point(303, 143);
+            lblBloodType.Name = "lblBloodType";
+            lblBloodType.Size = new Size(48, 20);
+            lblBloodType.TabIndex = 0;
+            lblBloodType.Text = "(A+B)";
             // 
-            // label11
+            // lblAddress
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(63, 165);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 15);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "label11";
+            lblAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblAddress.AutoSize = true;
+            lblAddress.BackColor = Color.Transparent;
+            lblAddress.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAddress.Location = new Point(70, 185);
+            lblAddress.Name = "lblAddress";
+            lblAddress.Size = new Size(186, 20);
+            lblAddress.TabIndex = 0;
+            lblAddress.Text = "Inayawan, Bangag, Talaga";
             // 
-            // label12
+            // lblGenerationDate
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(63, 203);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 15);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "label12";
+            lblGenerationDate.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblGenerationDate.AutoSize = true;
+            lblGenerationDate.BackColor = Color.Transparent;
+            lblGenerationDate.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblGenerationDate.Location = new Point(70, 224);
+            lblGenerationDate.Name = "lblGenerationDate";
+            lblGenerationDate.Size = new Size(65, 20);
+            lblGenerationDate.TabIndex = 0;
+            lblGenerationDate.Text = "12/15/23";
             // 
-            // pictureBoxQREncrypted
+            // picBoxQREncrypted
             // 
-            this.pictureBoxQREncrypted.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxQREncrypted.Location = new System.Drawing.Point(266, 26);
-            this.pictureBoxQREncrypted.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxQREncrypted.Name = "pictureBoxQREncrypted";
-            this.pictureBoxQREncrypted.Size = new System.Drawing.Size(278, 284);
-            this.pictureBoxQREncrypted.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxQREncrypted.TabIndex = 14;
-            this.pictureBoxQREncrypted.TabStop = false;
+            picBoxQREncrypted.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            picBoxQREncrypted.BackColor = Color.White;
+            picBoxQREncrypted.BorderStyle = BorderStyle.FixedSingle;
+            picBoxQREncrypted.Location = new Point(296, 48);
+            picBoxQREncrypted.Margin = new Padding(3, 2, 3, 2);
+            picBoxQREncrypted.Name = "picBoxQREncrypted";
+            picBoxQREncrypted.Size = new Size(295, 287);
+            picBoxQREncrypted.SizeMode = PictureBoxSizeMode.StretchImage;
+            picBoxQREncrypted.TabIndex = 14;
+            picBoxQREncrypted.TabStop = false;
             // 
-            // pictureBoxIdPhoto
+            // picBoxIdPhoto
             // 
-            this.pictureBoxIdPhoto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxIdPhoto.Location = new System.Drawing.Point(64, 110);
-            this.pictureBoxIdPhoto.Name = "pictureBoxIdPhoto";
-            this.pictureBoxIdPhoto.Size = new System.Drawing.Size(144, 122);
-            this.pictureBoxIdPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxIdPhoto.TabIndex = 15;
-            this.pictureBoxIdPhoto.TabStop = false;
+            picBoxIdPhoto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            picBoxIdPhoto.BackColor = Color.White;
+            picBoxIdPhoto.BorderStyle = BorderStyle.FixedSingle;
+            picBoxIdPhoto.Location = new Point(93, 126);
+            picBoxIdPhoto.Name = "picBoxIdPhoto";
+            picBoxIdPhoto.Size = new Size(126, 126);
+            picBoxIdPhoto.SizeMode = PictureBoxSizeMode.Zoom;
+            picBoxIdPhoto.TabIndex = 15;
+            picBoxIdPhoto.TabStop = false;
             // 
             // buttonPrint
             // 
-            this.buttonPrint.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonPrint.Location = new System.Drawing.Point(943, 417);
-            this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(106, 49);
-            this.buttonPrint.TabIndex = 16;
-            this.buttonPrint.Text = "PRINT";
-            this.buttonPrint.UseVisualStyleBackColor = true;
-            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            buttonPrint.BackColor = Color.FromArgb(53, 69, 93);
+            buttonPrint.Cursor = Cursors.Hand;
+            buttonPrint.FlatAppearance.BorderSize = 0;
+            buttonPrint.FlatStyle = FlatStyle.Flat;
+            buttonPrint.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonPrint.ForeColor = Color.White;
+            buttonPrint.Location = new Point(550, 487);
+            buttonPrint.Name = "buttonPrint";
+            buttonPrint.Size = new Size(80, 40);
+            buttonPrint.TabIndex = 1;
+            buttonPrint.Text = "PRINT";
+            buttonPrint.UseVisualStyleBackColor = false;
+            buttonPrint.Click += buttonPrint_Click;
             // 
-            // button1
+            // pnlFrontId
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(839, 417);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 49);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "CLOSE";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            pnlFrontId.Controls.Add(picBoxIdPhoto);
+            pnlFrontId.Controls.Add(picBoxQREncrypted);
+            pnlFrontId.Controls.Add(lblLastname);
+            pnlFrontId.Controls.Add(lblGivenName);
+            pnlFrontId.Controls.Add(lblMiddleName);
+            pnlFrontId.Controls.Add(lblSuffix);
+            pnlFrontId.Controls.Add(picBoxFrontBackground);
+            pnlFrontId.Dock = DockStyle.Fill;
+            pnlFrontId.Location = new Point(3, 3);
+            pnlFrontId.Name = "pnlFrontId";
+            pnlFrontId.Padding = new Padding(10, 10, 5, 10);
+            pnlFrontId.Size = new Size(627, 396);
+            pnlFrontId.TabIndex = 0;
             // 
-            // panelFrontId
+            // pnlBackId
             // 
-            this.panelFrontId.Controls.Add(this.label3);
-            this.panelFrontId.Controls.Add(this.label5);
-            this.panelFrontId.Controls.Add(this.pictureBoxIdPhoto);
-            this.panelFrontId.Controls.Add(this.label4);
-            this.panelFrontId.Controls.Add(this.pictureBoxQREncrypted);
-            this.panelFrontId.Controls.Add(this.label6);
-            this.panelFrontId.Controls.Add(this.pictureBox1);
-            this.panelFrontId.Location = new System.Drawing.Point(4, 5);
-            this.panelFrontId.Name = "panelFrontId";
-            this.panelFrontId.Size = new System.Drawing.Size(573, 358);
-            this.panelFrontId.TabIndex = 18;
-            // 
-            // panelBackId
-            // 
-            this.panelBackId.Controls.Add(this.label7);
-            this.panelBackId.Controls.Add(this.label8);
-            this.panelBackId.Controls.Add(this.label12);
-            this.panelBackId.Controls.Add(this.label9);
-            this.panelBackId.Controls.Add(this.label11);
-            this.panelBackId.Controls.Add(this.label10);
-            this.panelBackId.Controls.Add(this.pictureBox2);
-            this.panelBackId.Location = new System.Drawing.Point(583, 5);
-            this.panelBackId.Name = "panelBackId";
-            this.panelBackId.Size = new System.Drawing.Size(573, 358);
-            this.panelBackId.TabIndex = 19;
+            pnlBackId.Controls.Add(lblSex);
+            pnlBackId.Controls.Add(lblMaritalStatus);
+            pnlBackId.Controls.Add(lblDateOfBirth);
+            pnlBackId.Controls.Add(lblBloodType);
+            pnlBackId.Controls.Add(lblAddress);
+            pnlBackId.Controls.Add(lblGenerationDate);
+            pnlBackId.Controls.Add(picBoxBackBackground);
+            pnlBackId.Dock = DockStyle.Fill;
+            pnlBackId.Location = new Point(636, 3);
+            pnlBackId.Name = "pnlBackId";
+            pnlBackId.Padding = new Padding(5, 10, 10, 10);
+            pnlBackId.Size = new Size(627, 396);
+            pnlBackId.TabIndex = 0;
             // 
             // buttonSave
             // 
-            this.buttonSave.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonSave.Location = new System.Drawing.Point(1047, 417);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(106, 49);
-            this.buttonSave.TabIndex = 20;
-            this.buttonSave.Text = "SAVE";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            buttonSave.BackColor = Color.FromArgb(53, 69, 93);
+            buttonSave.Cursor = Cursors.Hand;
+            buttonSave.FlatAppearance.BorderSize = 0;
+            buttonSave.FlatStyle = FlatStyle.Flat;
+            buttonSave.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonSave.ForeColor = Color.White;
+            buttonSave.Location = new Point(636, 487);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(80, 40);
+            buttonSave.TabIndex = 2;
+            buttonSave.Text = "SAVE";
+            buttonSave.UseVisualStyleBackColor = false;
+            buttonSave.Click += buttonSave_Click;
+            // 
+            // pnlTitleBar
+            // 
+            pnlTitleBar.BackColor = Color.FromArgb(53, 69, 93);
+            pnlTitleBar.Controls.Add(btnClose);
+            pnlTitleBar.Dock = DockStyle.Top;
+            pnlTitleBar.Location = new Point(0, 0);
+            pnlTitleBar.Name = "pnlTitleBar";
+            pnlTitleBar.Size = new Size(1266, 20);
+            pnlTitleBar.TabIndex = 0;
+            // 
+            // btnClose
+            // 
+            btnClose.BackColor = Color.Transparent;
+            btnClose.Cursor = Cursors.Hand;
+            btnClose.Dock = DockStyle.Right;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.ForeColor = Color.White;
+            btnClose.Image = Properties.Resources.icons_close;
+            btnClose.Location = new Point(1236, 0);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(30, 20);
+            btnClose.TabIndex = 3;
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
+            btnClose.MouseEnter += btnClose_MouseEnter;
+            btnClose.MouseLeave += btnClose_MouseLeave;
+            // 
+            // tblPnlIdPreview
+            // 
+            tblPnlIdPreview.BackColor = Color.FromArgb(53, 69, 93);
+            tblPnlIdPreview.ColumnCount = 2;
+            tblPnlIdPreview.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblPnlIdPreview.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblPnlIdPreview.Controls.Add(lblFont, 0, 1);
+            tblPnlIdPreview.Controls.Add(lblBack, 1, 1);
+            tblPnlIdPreview.Controls.Add(pnlBackId, 1, 0);
+            tblPnlIdPreview.Controls.Add(pnlFrontId, 0, 0);
+            tblPnlIdPreview.Dock = DockStyle.Top;
+            tblPnlIdPreview.Location = new Point(0, 20);
+            tblPnlIdPreview.Name = "tblPnlIdPreview";
+            tblPnlIdPreview.RowCount = 2;
+            tblPnlIdPreview.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tblPnlIdPreview.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
+            tblPnlIdPreview.Size = new Size(1266, 452);
+            tblPnlIdPreview.TabIndex = 0;
             // 
             // FormIDGenerate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1165, 478);
-            this.Controls.Add(this.buttonSave);
-            this.Controls.Add(this.panelBackId);
-            this.Controls.Add(this.panelFrontId);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonPrint);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FormIDGenerate";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.FormIDGenerate_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQREncrypted)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIdPhoto)).EndInit();
-            this.panelFrontId.ResumeLayout(false);
-            this.panelFrontId.PerformLayout();
-            this.panelBackId.ResumeLayout(false);
-            this.panelBackId.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1266, 543);
+            Controls.Add(tblPnlIdPreview);
+            Controls.Add(pnlTitleBar);
+            Controls.Add(buttonSave);
+            Controls.Add(buttonPrint);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "FormIDGenerate";
+            StartPosition = FormStartPosition.CenterScreen;
+            Load += FormIDGenerate_Load;
+            ((System.ComponentModel.ISupportInitialize)picBoxFrontBackground).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picBoxBackBackground).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picBoxQREncrypted).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picBoxIdPhoto).EndInit();
+            pnlFrontId.ResumeLayout(false);
+            pnlFrontId.PerformLayout();
+            pnlBackId.ResumeLayout(false);
+            pnlBackId.PerformLayout();
+            pnlTitleBar.ResumeLayout(false);
+            tblPnlIdPreview.ResumeLayout(false);
+            tblPnlIdPreview.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label5;
-        private Label label4;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Label label9;
-        private Label label10;
-        private Label label11;
-        private Label label12;
-        private PictureBox pictureBoxIdPhoto;
+        private PictureBox picBoxFrontBackground;
+        private PictureBox picBoxBackBackground;
+        private Label lblFont;
+        private Label lblBack;
+        private Label lblLastname;
+        private Label lblMiddleName;
+        private Label lblGivenName;
+        private Label lblSuffix;
+        private Label lblSex;
+        private Label lblMaritalStatus;
+        private Label lblDateOfBirth;
+        private Label lblBloodType;
+        private Label lblAddress;
+        private Label lblGenerationDate;
+        private PictureBox picBoxIdPhoto;
         private Button buttonPrint;
-        private Button button1;
-        private Panel panelFrontId;
-        private Panel panelBackId;
+        private Panel pnlFrontId;
+        private Panel pnlBackId;
         private Button buttonSave;
-        public PictureBox pictureBoxQREncrypted;
+        public PictureBox picBoxQREncrypted;
+        private Panel pnlTitleBar;
+        private Button btnClose;
+        private TableLayoutPanel tblPnlIdPreview;
     }
 }

@@ -99,12 +99,13 @@
             // textBoxTransactionNum
             // 
             textBoxTransactionNum.Cursor = Cursors.IBeam;
-            textBoxTransactionNum.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            textBoxTransactionNum.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             textBoxTransactionNum.Location = new Point(10, 10);
             textBoxTransactionNum.Margin = new Padding(10);
             textBoxTransactionNum.MaxLength = 13;
             textBoxTransactionNum.Multiline = true;
             textBoxTransactionNum.Name = "textBoxTransactionNum";
+            textBoxTransactionNum.PlaceholderText = "Transaction Number";
             textBoxTransactionNum.Size = new Size(310, 30);
             textBoxTransactionNum.TabIndex = 3;
             textBoxTransactionNum.TextChanged += textBoxTransactionNum_TextChanged;
@@ -113,7 +114,7 @@
             // buttonSearch
             // 
             buttonSearch.Cursor = Cursors.Hand;
-            buttonSearch.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonSearch.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonSearch.Location = new Point(105, 53);
             buttonSearch.Name = "buttonSearch";
             buttonSearch.Size = new Size(120, 35);
@@ -137,7 +138,7 @@
             labelGivenName.AutoSize = true;
             labelGivenName.Dock = DockStyle.Left;
             labelGivenName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelGivenName.Location = new Point(116, 0);
+            labelGivenName.Location = new Point(118, 0);
             labelGivenName.Name = "labelGivenName";
             labelGivenName.Size = new Size(0, 21);
             labelGivenName.TabIndex = 0;
@@ -329,9 +330,9 @@
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(0, 0);
             label2.Name = "label2";
-            label2.Size = new Size(116, 21);
+            label2.Size = new Size(118, 21);
             label2.TabIndex = 0;
-            label2.Text = "First Name     : ";
+            label2.Text = "Given Name   : ";
             // 
             // panel3
             // 
@@ -516,7 +517,7 @@
             // buttonStartStop
             // 
             buttonStartStop.Cursor = Cursors.Hand;
-            buttonStartStop.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonStartStop.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonStartStop.Location = new Point(117, 326);
             buttonStartStop.Name = "buttonStartStop";
             buttonStartStop.Size = new Size(90, 35);

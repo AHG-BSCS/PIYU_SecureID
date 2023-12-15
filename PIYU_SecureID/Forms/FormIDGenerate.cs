@@ -54,7 +54,7 @@ namespace PIYU_SecureID
             this.idPhoto = idPhoto;
             InitializeComponent();
 
-            pictureBoxIdPhoto.Image = BytesToImage(idPhoto);
+            picBoxIdPhoto.Image = BytesToImage(idPhoto);
 
             printDocument = new PrintDocument();
             printDocument.PrintPage += PrintDocument_PrintPage;
@@ -67,91 +67,91 @@ namespace PIYU_SecureID
 
             if (currentPage == 1)
             {
-                PrintPanel(panelFrontId, e.Graphics, e.MarginBounds);
+                PrintPanel(pnlFrontId, e.Graphics, e.MarginBounds);
                 currentPage++;
                 e.HasMorePages = true;
             }
             else if (currentPage == 2)
             {
-                PrintPanel(panelBackId, e.Graphics, e.MarginBounds);
+                PrintPanel(pnlBackId, e.Graphics, e.MarginBounds);
                 currentPage = 1;
             }
         }
 
         private void FormIDGenerate_Load(object sender, EventArgs e)
         {
-            var pos = label3.Parent.PointToScreen(label3.Location);
-            var pos2 = label4.Parent.PointToScreen(label4.Location);
-            var pos3 = label5.Parent.PointToScreen(label5.Location);
-            var pos4 = label6.Parent.PointToScreen(label6.Location);
-            var pos5 = label7.Parent.PointToScreen(label7.Location);
-            var pos6 = label8.Parent.PointToScreen(label8.Location);
-            var pos7 = label9.Parent.PointToScreen(label9.Location);
-            var pos8 = label10.Parent.PointToScreen(label10.Location);
-            var pos9 = label11.Parent.PointToScreen(label11.Location);
-            var pos10 = label12.Parent.PointToScreen(label12.Location);
+            var pos = lblLastname.Parent.PointToScreen(lblLastname.Location);
+            var pos2 = lblGivenName.Parent.PointToScreen(lblGivenName.Location);
+            var pos3 = lblMiddleName.Parent.PointToScreen(lblMiddleName.Location);
+            var pos4 = lblSuffix.Parent.PointToScreen(lblSuffix.Location);
+            var pos5 = lblSex.Parent.PointToScreen(lblSex.Location);
+            var pos6 = lblMaritalStatus.Parent.PointToScreen(lblMaritalStatus.Location);
+            var pos7 = lblDateOfBirth.Parent.PointToScreen(lblDateOfBirth.Location);
+            var pos8 = lblBloodType.Parent.PointToScreen(lblBloodType.Location);
+            var pos9 = lblAddress.Parent.PointToScreen(lblAddress.Location);
+            var pos10 = lblGenerationDate.Parent.PointToScreen(lblGenerationDate.Location);
 
 
-            pos = pictureBox1.PointToClient(pos);
-            pos2 = pictureBox1.PointToClient(pos2);
-            pos3 = pictureBox1.PointToClient(pos3);
-            pos4 = pictureBox1.PointToClient(pos4);
-            pos5 = pictureBox2.PointToClient(pos5);
-            pos6 = pictureBox2.PointToClient(pos6);
-            pos7 = pictureBox2.PointToClient(pos7);
-            pos8 = pictureBox2.PointToClient(pos8);
-            pos9 = pictureBox2.PointToClient(pos9);
-            pos10 = pictureBox2.PointToClient(pos10);
+            pos = picBoxFrontBackground.PointToClient(pos);
+            pos2 = picBoxFrontBackground.PointToClient(pos2);
+            pos3 = picBoxFrontBackground.PointToClient(pos3);
+            pos4 = picBoxFrontBackground.PointToClient(pos4);
+            pos5 = picBoxBackBackground.PointToClient(pos5);
+            pos6 = picBoxBackBackground.PointToClient(pos6);
+            pos7 = picBoxBackBackground.PointToClient(pos7);
+            pos8 = picBoxBackBackground.PointToClient(pos8);
+            pos9 = picBoxBackBackground.PointToClient(pos9);
+            pos10 = picBoxBackBackground.PointToClient(pos10);
 
-            label3.Parent = pictureBox1;
-            label3.Location = pos;
-            label3.BackColor = Color.Transparent;
-            label3.Text = lastName;
+            lblLastname.Parent = picBoxFrontBackground;
+            lblLastname.Location = pos;
+            lblLastname.BackColor = Color.Transparent;
+            lblLastname.Text = lastName;
 
-            label4.Parent = pictureBox1;
-            label4.Location = pos2;
-            label4.BackColor = Color.Transparent;
-            label4.Text = givenName;
+            lblGivenName.Parent = picBoxFrontBackground;
+            lblGivenName.Location = pos2;
+            lblGivenName.BackColor = Color.Transparent;
+            lblGivenName.Text = givenName;
 
-            label5.Parent = pictureBox1;
-            label5.Location = pos3;
-            label5.BackColor = Color.Transparent;
-            label5.Text = middleName;
+            lblMiddleName.Parent = picBoxFrontBackground;
+            lblMiddleName.Location = pos3;
+            lblMiddleName.BackColor = Color.Transparent;
+            lblMiddleName.Text = middleName;
 
-            label6.Parent = pictureBox1;
-            label6.Location = pos4;
-            label6.BackColor = Color.Transparent;
-            label6.Text = suffix;
+            lblSuffix.Parent = picBoxFrontBackground;
+            lblSuffix.Location = pos4;
+            lblSuffix.BackColor = Color.Transparent;
+            lblSuffix.Text = suffix;
 
-            label7.Parent = pictureBox2;
-            label7.Location = pos5;
-            label7.BackColor = Color.Transparent;
-            label7.Text = sex;
+            lblSex.Parent = picBoxBackBackground;
+            lblSex.Location = pos5;
+            lblSex.BackColor = Color.Transparent;
+            lblSex.Text = sex;
 
-            label8.Parent = pictureBox2;
-            label8.Location = pos6;
-            label8.BackColor = Color.Transparent;
-            label8.Text = maritalStatus;
+            lblMaritalStatus.Parent = picBoxBackBackground;
+            lblMaritalStatus.Location = pos6;
+            lblMaritalStatus.BackColor = Color.Transparent;
+            lblMaritalStatus.Text = maritalStatus;
 
-            label9.Parent = pictureBox2;
-            label9.Location = pos7;
-            label9.BackColor = Color.Transparent;
-            label9.Text = dateOfBirth;
+            lblDateOfBirth.Parent = picBoxBackBackground;
+            lblDateOfBirth.Location = pos7;
+            lblDateOfBirth.BackColor = Color.Transparent;
+            lblDateOfBirth.Text = dateOfBirth;
 
-            label10.Parent = pictureBox2;
-            label10.Location = pos8;
-            label10.BackColor = Color.Transparent;
-            label10.Text = bloodType;
+            lblBloodType.Parent = picBoxBackBackground;
+            lblBloodType.Location = pos8;
+            lblBloodType.BackColor = Color.Transparent;
+            lblBloodType.Text = bloodType;
 
-            label11.Parent = pictureBox2;
-            label11.Location = pos9;
-            label11.BackColor = Color.Transparent;
-            label11.Text = "Barangay " + barangay + ", " + city + ", " + province;
+            lblAddress.Parent = picBoxBackBackground;
+            lblAddress.Location = pos9;
+            lblAddress.BackColor = Color.Transparent;
+            lblAddress.Text = "Barangay " + barangay + ", " + city + ", " + province;
 
-            label12.Parent = pictureBox2;
-            label12.Location = pos10;
-            label12.BackColor = Color.Transparent;
-            label12.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            lblGenerationDate.Parent = picBoxBackBackground;
+            lblGenerationDate.Location = pos10;
+            lblGenerationDate.BackColor = Color.Transparent;
+            lblGenerationDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
             LoadQr();
         }
@@ -195,12 +195,7 @@ namespace PIYU_SecureID
 
             Bitmap qrCodeImage = qrCode.GetGraphic(20);
 
-            pictureBoxQREncrypted.Image = qrCodeImage;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            picBoxQREncrypted.Image = qrCodeImage;
         }
 
         private void PrintPanel(Panel panel, Graphics graphics, Rectangle bounds)
@@ -257,6 +252,21 @@ namespace PIYU_SecureID
             {
                 MessageBox.Show($"Error saving data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Transparent;
+        }
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Red;
         }
     }
 }
