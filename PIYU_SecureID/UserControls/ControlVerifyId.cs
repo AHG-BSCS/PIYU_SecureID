@@ -29,7 +29,7 @@ namespace PIYU_SecureID
 
         private void buttonStartStop_Click(object sender, EventArgs e)
         {
-            if (buttonStartStop.Text == "START")
+            if (buttonStartStop.Text == "CAMERA")
             {
                 InitializeWebCam();
                 timer1.Start();
@@ -41,7 +41,7 @@ namespace PIYU_SecureID
                 videoSource.SignalToStop();
                 videoSource.WaitForStop();
                 pictureBoxQrScanner.Image = null;
-                buttonStartStop.Text = "START";
+                buttonStartStop.Text = "CAMERA";
             }
         }
 
