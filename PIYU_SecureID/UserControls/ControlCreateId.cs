@@ -323,8 +323,7 @@ namespace PIYU_SecureID
         {
             try
             {
-                // Check if an item is selected in cmbBoxMonth
-                if (cmbBoxMonth.SelectedItem != null)
+                if (cmbBoxMonth.SelectedIndex > -1)
                 {
                     // Update the days ComboBox based on the selected month
                     string selectedMonth = cmbBoxMonth.SelectedItem.ToString().ToUpper();
@@ -351,7 +350,7 @@ namespace PIYU_SecureID
                 }
                 else
                 {
-                    MessageBox.Show("Please select a month.");
+                    cmbBoxDay.Items.Clear();
                 }
             }
             catch (Exception ex)
@@ -360,7 +359,5 @@ namespace PIYU_SecureID
             }
 
         }
-
-
     }
 }
