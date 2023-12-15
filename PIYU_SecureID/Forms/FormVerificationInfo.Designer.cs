@@ -282,6 +282,7 @@
             Controls.Add(pnlTitleBar);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormVerificationInfo";
             Padding = new Padding(20, 0, 0, 20);
             StartPosition = FormStartPosition.CenterScreen;
