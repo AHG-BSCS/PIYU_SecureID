@@ -169,5 +169,12 @@ namespace PIYU_SecureID
         {
             btnClose.BackColor = Color.Red;
         }
+
+        private void buttonCopyTN_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(transactionNum.ToString());
+
+            MessageBox.Show("Transaction Number copied to clipboard!");
+        }
     }
 }

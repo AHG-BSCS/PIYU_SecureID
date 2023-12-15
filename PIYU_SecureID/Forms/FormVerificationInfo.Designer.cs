@@ -29,253 +29,276 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVerificationInfo));
-            picBoxAppLogo = new PictureBox();
-            pnlTransactionSlip = new Panel();
-            picBoxQRCode = new PictureBox();
-            lblNoteText = new Label();
-            lblNote = new Label();
-            lblInformationText = new Label();
-            lblInformation = new Label();
-            lblTransactionNumber = new Label();
-            lblName = new Label();
-            lblBrand = new Label();
-            lblRepublic = new Label();
-            lblDocumentTitle = new Label();
-            btnSave = new Button();
-            btnPrint = new Button();
-            pnlControls = new Panel();
-            pnlTitleBar = new Panel();
-            btnClose = new Button();
-            ((System.ComponentModel.ISupportInitialize)picBoxAppLogo).BeginInit();
-            pnlTransactionSlip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)picBoxQRCode).BeginInit();
-            pnlControls.SuspendLayout();
-            pnlTitleBar.SuspendLayout();
-            SuspendLayout();
+            this.picBoxAppLogo = new System.Windows.Forms.PictureBox();
+            this.pnlTransactionSlip = new System.Windows.Forms.Panel();
+            this.picBoxQRCode = new System.Windows.Forms.PictureBox();
+            this.lblNoteText = new System.Windows.Forms.Label();
+            this.lblNote = new System.Windows.Forms.Label();
+            this.lblInformationText = new System.Windows.Forms.Label();
+            this.lblInformation = new System.Windows.Forms.Label();
+            this.lblTransactionNumber = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblBrand = new System.Windows.Forms.Label();
+            this.lblRepublic = new System.Windows.Forms.Label();
+            this.lblDocumentTitle = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.pnlControls = new System.Windows.Forms.Panel();
+            this.buttonCopyTN = new System.Windows.Forms.Button();
+            this.pnlTitleBar = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxAppLogo)).BeginInit();
+            this.pnlTransactionSlip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxQRCode)).BeginInit();
+            this.pnlControls.SuspendLayout();
+            this.pnlTitleBar.SuspendLayout();
+            this.SuspendLayout();
             // 
             // picBoxAppLogo
             // 
-            picBoxAppLogo.Image = Properties.Resources.PIYU_SecureID;
-            picBoxAppLogo.InitialImage = Properties.Resources.PIYU_SecureID;
-            picBoxAppLogo.Location = new Point(30, 30);
-            picBoxAppLogo.Name = "picBoxAppLogo";
-            picBoxAppLogo.Size = new Size(90, 90);
-            picBoxAppLogo.SizeMode = PictureBoxSizeMode.Zoom;
-            picBoxAppLogo.TabIndex = 0;
-            picBoxAppLogo.TabStop = false;
+            this.picBoxAppLogo.Image = global::PIYU_SecureID.Properties.Resources.PIYU_SecureID;
+            this.picBoxAppLogo.InitialImage = global::PIYU_SecureID.Properties.Resources.PIYU_SecureID;
+            this.picBoxAppLogo.Location = new System.Drawing.Point(34, 40);
+            this.picBoxAppLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.picBoxAppLogo.Name = "picBoxAppLogo";
+            this.picBoxAppLogo.Size = new System.Drawing.Size(103, 120);
+            this.picBoxAppLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxAppLogo.TabIndex = 0;
+            this.picBoxAppLogo.TabStop = false;
             // 
             // pnlTransactionSlip
             // 
-            pnlTransactionSlip.BackColor = Color.White;
-            pnlTransactionSlip.Controls.Add(picBoxAppLogo);
-            pnlTransactionSlip.Controls.Add(picBoxQRCode);
-            pnlTransactionSlip.Controls.Add(lblNoteText);
-            pnlTransactionSlip.Controls.Add(lblNote);
-            pnlTransactionSlip.Controls.Add(lblInformationText);
-            pnlTransactionSlip.Controls.Add(lblInformation);
-            pnlTransactionSlip.Controls.Add(lblTransactionNumber);
-            pnlTransactionSlip.Controls.Add(lblName);
-            pnlTransactionSlip.Controls.Add(lblBrand);
-            pnlTransactionSlip.Controls.Add(lblRepublic);
-            pnlTransactionSlip.Controls.Add(lblDocumentTitle);
-            pnlTransactionSlip.Dock = DockStyle.Left;
-            pnlTransactionSlip.Location = new Point(20, 20);
-            pnlTransactionSlip.Name = "pnlTransactionSlip";
-            pnlTransactionSlip.Size = new Size(750, 410);
-            pnlTransactionSlip.TabIndex = 1;
+            this.pnlTransactionSlip.BackColor = System.Drawing.Color.White;
+            this.pnlTransactionSlip.Controls.Add(this.picBoxAppLogo);
+            this.pnlTransactionSlip.Controls.Add(this.picBoxQRCode);
+            this.pnlTransactionSlip.Controls.Add(this.lblNoteText);
+            this.pnlTransactionSlip.Controls.Add(this.lblNote);
+            this.pnlTransactionSlip.Controls.Add(this.lblInformationText);
+            this.pnlTransactionSlip.Controls.Add(this.lblInformation);
+            this.pnlTransactionSlip.Controls.Add(this.lblTransactionNumber);
+            this.pnlTransactionSlip.Controls.Add(this.lblName);
+            this.pnlTransactionSlip.Controls.Add(this.lblBrand);
+            this.pnlTransactionSlip.Controls.Add(this.lblRepublic);
+            this.pnlTransactionSlip.Controls.Add(this.lblDocumentTitle);
+            this.pnlTransactionSlip.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlTransactionSlip.Location = new System.Drawing.Point(23, 27);
+            this.pnlTransactionSlip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlTransactionSlip.Name = "pnlTransactionSlip";
+            this.pnlTransactionSlip.Size = new System.Drawing.Size(857, 546);
+            this.pnlTransactionSlip.TabIndex = 1;
             // 
             // picBoxQRCode
             // 
-            picBoxQRCode.InitialImage = Properties.Resources.PIYU_SecureID;
-            picBoxQRCode.Location = new Point(554, 6);
-            picBoxQRCode.Name = "picBoxQRCode";
-            picBoxQRCode.Size = new Size(190, 190);
-            picBoxQRCode.SizeMode = PictureBoxSizeMode.Zoom;
-            picBoxQRCode.TabIndex = 8;
-            picBoxQRCode.TabStop = false;
+            this.picBoxQRCode.InitialImage = global::PIYU_SecureID.Properties.Resources.PIYU_SecureID;
+            this.picBoxQRCode.Location = new System.Drawing.Point(633, 8);
+            this.picBoxQRCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.picBoxQRCode.Name = "picBoxQRCode";
+            this.picBoxQRCode.Size = new System.Drawing.Size(217, 253);
+            this.picBoxQRCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxQRCode.TabIndex = 8;
+            this.picBoxQRCode.TabStop = false;
             // 
             // lblNoteText
             // 
-            lblNoteText.AutoSize = true;
-            lblNoteText.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblNoteText.Location = new Point(77, 359);
-            lblNoteText.Name = "lblNoteText";
-            lblNoteText.Size = new Size(597, 21);
-            lblNoteText.TabIndex = 0;
-            lblNoteText.Text = "Please keep your transaction number and QR code safe, secure, and confidential.";
+            this.lblNoteText.AutoSize = true;
+            this.lblNoteText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNoteText.Location = new System.Drawing.Point(88, 479);
+            this.lblNoteText.Name = "lblNoteText";
+            this.lblNoteText.Size = new System.Drawing.Size(751, 28);
+            this.lblNoteText.TabIndex = 0;
+            this.lblNoteText.Text = "Please keep your transaction number and QR code safe, secure, and confidential.";
             // 
             // lblNote
             // 
-            lblNote.AutoSize = true;
-            lblNote.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblNote.Location = new Point(41, 338);
-            lblNote.Name = "lblNote";
-            lblNote.Size = new Size(668, 21);
-            lblNote.TabIndex = 0;
-            lblNote.Text = "NOTE: DO NOT SHARE YOUR TRANSACTION SLIP TO ANYONE OR POST ON SOCIAL MEDIA";
+            this.lblNote.AutoSize = true;
+            this.lblNote.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNote.Location = new System.Drawing.Point(47, 451);
+            this.lblNote.Name = "lblNote";
+            this.lblNote.Size = new System.Drawing.Size(840, 28);
+            this.lblNote.TabIndex = 0;
+            this.lblNote.Text = "NOTE: DO NOT SHARE YOUR TRANSACTION SLIP TO ANYONE OR POST ON SOCIAL MEDIA";
             // 
             // lblInformationText
             // 
-            lblInformationText.AutoSize = true;
-            lblInformationText.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblInformationText.Location = new Point(54, 230);
-            lblInformationText.Name = "lblInformationText";
-            lblInformationText.Size = new Size(655, 84);
-            lblInformationText.TabIndex = 0;
-            lblInformationText.Text = resources.GetString("lblInformationText.Text");
+            this.lblInformationText.AutoSize = true;
+            this.lblInformationText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblInformationText.Location = new System.Drawing.Point(62, 307);
+            this.lblInformationText.Name = "lblInformationText";
+            this.lblInformationText.Size = new System.Drawing.Size(831, 112);
+            this.lblInformationText.TabIndex = 0;
+            this.lblInformationText.Text = resources.GetString("lblInformationText.Text");
             // 
             // lblInformation
             // 
-            lblInformation.AutoSize = true;
-            lblInformation.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblInformation.Location = new Point(30, 209);
-            lblInformation.Name = "lblInformation";
-            lblInformation.Size = new Size(124, 21);
-            lblInformation.TabIndex = 0;
-            lblInformation.Text = "INFORMATION:";
+            this.lblInformation.AutoSize = true;
+            this.lblInformation.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblInformation.Location = new System.Drawing.Point(34, 279);
+            this.lblInformation.Name = "lblInformation";
+            this.lblInformation.Size = new System.Drawing.Size(152, 28);
+            this.lblInformation.TabIndex = 0;
+            this.lblInformation.Text = "INFORMATION:";
             // 
             // lblTransactionNumber
             // 
-            lblTransactionNumber.AutoSize = true;
-            lblTransactionNumber.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTransactionNumber.Location = new Point(30, 170);
-            lblTransactionNumber.Name = "lblTransactionNumber";
-            lblTransactionNumber.Size = new Size(158, 21);
-            lblTransactionNumber.TabIndex = 0;
-            lblTransactionNumber.Text = "Transaction Number: ";
+            this.lblTransactionNumber.AutoSize = true;
+            this.lblTransactionNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTransactionNumber.Location = new System.Drawing.Point(34, 227);
+            this.lblTransactionNumber.Name = "lblTransactionNumber";
+            this.lblTransactionNumber.Size = new System.Drawing.Size(196, 28);
+            this.lblTransactionNumber.TabIndex = 0;
+            this.lblTransactionNumber.Text = "Transaction Number: ";
             // 
             // lblName
             // 
-            lblName.AutoSize = true;
-            lblName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblName.Location = new Point(30, 142);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(59, 21);
-            lblName.TabIndex = 0;
-            lblName.Text = "Name: ";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblName.Location = new System.Drawing.Point(34, 189);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(73, 28);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Name: ";
             // 
             // lblBrand
             // 
-            lblBrand.AutoSize = true;
-            lblBrand.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblBrand.Location = new Point(333, 72);
-            lblBrand.Name = "lblBrand";
-            lblBrand.Size = new Size(76, 21);
-            lblBrand.TabIndex = 0;
-            lblBrand.Text = "Secure ID";
+            this.lblBrand.AutoSize = true;
+            this.lblBrand.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblBrand.Location = new System.Drawing.Point(381, 96);
+            this.lblBrand.Name = "lblBrand";
+            this.lblBrand.Size = new System.Drawing.Size(94, 28);
+            this.lblBrand.TabIndex = 0;
+            this.lblBrand.Text = "Secure ID";
             // 
             // lblRepublic
             // 
-            lblRepublic.AutoSize = true;
-            lblRepublic.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblRepublic.Location = new Point(278, 51);
-            lblRepublic.Name = "lblRepublic";
-            lblRepublic.Size = new Size(194, 21);
-            lblRepublic.TabIndex = 0;
-            lblRepublic.Text = "Republic of the Philippines";
+            this.lblRepublic.AutoSize = true;
+            this.lblRepublic.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblRepublic.Location = new System.Drawing.Point(318, 68);
+            this.lblRepublic.Name = "lblRepublic";
+            this.lblRepublic.Size = new System.Drawing.Size(243, 28);
+            this.lblRepublic.TabIndex = 0;
+            this.lblRepublic.Text = "Republic of the Philippines";
             // 
             // lblDocumentTitle
             // 
-            lblDocumentTitle.AutoSize = true;
-            lblDocumentTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblDocumentTitle.Location = new Point(254, 30);
-            lblDocumentTitle.Name = "lblDocumentTitle";
-            lblDocumentTitle.Size = new Size(242, 21);
-            lblDocumentTitle.TabIndex = 0;
-            lblDocumentTitle.Text = "SECURE ID TRANSACTION SLIP";
+            this.lblDocumentTitle.AutoSize = true;
+            this.lblDocumentTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDocumentTitle.Location = new System.Drawing.Point(290, 40);
+            this.lblDocumentTitle.Name = "lblDocumentTitle";
+            this.lblDocumentTitle.Size = new System.Drawing.Size(303, 28);
+            this.lblDocumentTitle.TabIndex = 0;
+            this.lblDocumentTitle.Text = "SECURE ID TRANSACTION SLIP";
             // 
             // btnSave
             // 
-            btnSave.BackColor = Color.White;
-            btnSave.Cursor = Cursors.Hand;
-            btnSave.FlatAppearance.BorderSize = 0;
-            btnSave.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSave.ForeColor = Color.FromArgb(53, 69, 93);
-            btnSave.Location = new Point(10, 319);
-            btnSave.Name = "btnSave";
-            btnSave.Size = new Size(76, 40);
-            btnSave.TabIndex = 1;
-            btnSave.Text = "SAVE";
-            btnSave.UseVisualStyleBackColor = false;
-            btnSave.Click += buttonSave_Click;
+            this.btnSave.BackColor = System.Drawing.Color.White;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(69)))), ((int)(((byte)(93)))));
+            this.btnSave.Location = new System.Drawing.Point(11, 425);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(87, 53);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "SAVE";
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
             // btnPrint
             // 
-            btnPrint.BackColor = Color.White;
-            btnPrint.Cursor = Cursors.Hand;
-            btnPrint.Dock = DockStyle.Bottom;
-            btnPrint.FlatAppearance.BorderSize = 0;
-            btnPrint.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnPrint.ForeColor = Color.FromArgb(53, 69, 93);
-            btnPrint.Location = new Point(10, 370);
-            btnPrint.Name = "btnPrint";
-            btnPrint.Size = new Size(76, 40);
-            btnPrint.TabIndex = 2;
-            btnPrint.Text = "PRINT";
-            btnPrint.UseVisualStyleBackColor = false;
-            btnPrint.Click += buttonPrint_Click;
+            this.btnPrint.BackColor = System.Drawing.Color.White;
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrint.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(69)))), ((int)(((byte)(93)))));
+            this.btnPrint.Location = new System.Drawing.Point(11, 493);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(88, 53);
+            this.btnPrint.TabIndex = 2;
+            this.btnPrint.Text = "PRINT";
+            this.btnPrint.UseVisualStyleBackColor = false;
             // 
             // pnlControls
             // 
-            pnlControls.Controls.Add(btnSave);
-            pnlControls.Controls.Add(btnPrint);
-            pnlControls.Dock = DockStyle.Left;
-            pnlControls.Location = new Point(770, 20);
-            pnlControls.Name = "pnlControls";
-            pnlControls.Padding = new Padding(10, 0, 10, 0);
-            pnlControls.Size = new Size(96, 410);
-            pnlControls.TabIndex = 0;
+            this.pnlControls.Controls.Add(this.buttonCopyTN);
+            this.pnlControls.Controls.Add(this.btnSave);
+            this.pnlControls.Controls.Add(this.btnPrint);
+            this.pnlControls.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlControls.Location = new System.Drawing.Point(880, 27);
+            this.pnlControls.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlControls.Name = "pnlControls";
+            this.pnlControls.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
+            this.pnlControls.Size = new System.Drawing.Size(110, 546);
+            this.pnlControls.TabIndex = 0;
+            // 
+            // buttonCopyTN
+            // 
+            this.buttonCopyTN.BackColor = System.Drawing.Color.White;
+            this.buttonCopyTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCopyTN.FlatAppearance.BorderSize = 0;
+            this.buttonCopyTN.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCopyTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(69)))), ((int)(((byte)(93)))));
+            this.buttonCopyTN.Location = new System.Drawing.Point(11, 347);
+            this.buttonCopyTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonCopyTN.Name = "buttonCopyTN";
+            this.buttonCopyTN.Size = new System.Drawing.Size(87, 72);
+            this.buttonCopyTN.TabIndex = 3;
+            this.buttonCopyTN.Text = "COPY TN";
+            this.buttonCopyTN.UseVisualStyleBackColor = false;
+            this.buttonCopyTN.Click += new System.EventHandler(this.buttonCopyTN_Click);
             // 
             // pnlTitleBar
             // 
-            pnlTitleBar.BackColor = Color.FromArgb(53, 69, 93);
-            pnlTitleBar.Controls.Add(btnClose);
-            pnlTitleBar.Dock = DockStyle.Top;
-            pnlTitleBar.Location = new Point(20, 0);
-            pnlTitleBar.Name = "pnlTitleBar";
-            pnlTitleBar.Size = new Size(845, 20);
-            pnlTitleBar.TabIndex = 0;
+            this.pnlTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(69)))), ((int)(((byte)(93)))));
+            this.pnlTitleBar.Controls.Add(this.btnClose);
+            this.pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitleBar.Location = new System.Drawing.Point(23, 0);
+            this.pnlTitleBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlTitleBar.Name = "pnlTitleBar";
+            this.pnlTitleBar.Size = new System.Drawing.Size(966, 27);
+            this.pnlTitleBar.TabIndex = 0;
             // 
             // btnClose
             // 
-            btnClose.BackColor = Color.Transparent;
-            btnClose.Cursor = Cursors.Hand;
-            btnClose.Dock = DockStyle.Right;
-            btnClose.FlatAppearance.BorderSize = 0;
-            btnClose.FlatStyle = FlatStyle.Flat;
-            btnClose.ForeColor = Color.White;
-            btnClose.Image = Properties.Resources.icons_close;
-            btnClose.Location = new Point(825, 0);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(20, 20);
-            btnClose.TabIndex = 8;
-            btnClose.UseVisualStyleBackColor = false;
-            btnClose.Click += btnClose_Click;
-            btnClose.MouseEnter += btnClose_MouseEnter;
-            btnClose.MouseLeave += btnClose_MouseLeave;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Image = global::PIYU_SecureID.Properties.Resources.icons_close;
+            this.btnClose.Location = new System.Drawing.Point(943, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(23, 27);
+            this.btnClose.TabIndex = 8;
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // FormVerificationInfo
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(53, 69, 93);
-            ClientSize = new Size(865, 450);
-            Controls.Add(pnlControls);
-            Controls.Add(pnlTransactionSlip);
-            Controls.Add(pnlTitleBar);
-            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "FormVerificationInfo";
-            Padding = new Padding(20, 0, 0, 20);
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormVerificationInfo";
-            ((System.ComponentModel.ISupportInitialize)picBoxAppLogo).EndInit();
-            pnlTransactionSlip.ResumeLayout(false);
-            pnlTransactionSlip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)picBoxQRCode).EndInit();
-            pnlControls.ResumeLayout(false);
-            pnlTitleBar.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(69)))), ((int)(((byte)(93)))));
+            this.ClientSize = new System.Drawing.Size(989, 600);
+            this.Controls.Add(this.pnlControls);
+            this.Controls.Add(this.pnlTransactionSlip);
+            this.Controls.Add(this.pnlTitleBar);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "FormVerificationInfo";
+            this.Padding = new System.Windows.Forms.Padding(23, 0, 0, 27);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FormVerificationInfo";
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxAppLogo)).EndInit();
+            this.pnlTransactionSlip.ResumeLayout(false);
+            this.pnlTransactionSlip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxQRCode)).EndInit();
+            this.pnlControls.ResumeLayout(false);
+            this.pnlTitleBar.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -297,5 +320,6 @@
         private Panel pnlControls;
         private Panel pnlTitleBar;
         private Button btnClose;
+        private Button buttonCopyTN;
     }
 }
