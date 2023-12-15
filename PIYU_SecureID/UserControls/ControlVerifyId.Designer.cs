@@ -430,7 +430,6 @@
             textBoxTransactionNum.MaxLength = 13;
             textBoxTransactionNum.Multiline = true;
             textBoxTransactionNum.Name = "textBoxTransactionNum";
-            textBoxTransactionNum.PlaceholderText = "Transaction Number";
             textBoxTransactionNum.Size = new Size(300, 30);
             textBoxTransactionNum.TabIndex = 3;
             textBoxTransactionNum.Visible = false;
@@ -493,7 +492,6 @@
             // 
             // pictureBoxIdPhoto
             // 
-            pictureBoxIdPhoto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBoxIdPhoto.BackColor = Color.White;
             pictureBoxIdPhoto.BorderStyle = BorderStyle.FixedSingle;
             pictureBoxIdPhoto.Cursor = Cursors.No;
@@ -506,7 +504,6 @@
             // 
             // pictureBoxSign
             // 
-            pictureBoxSign.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBoxSign.BackColor = Color.White;
             pictureBoxSign.BorderStyle = BorderStyle.FixedSingle;
             pictureBoxSign.Cursor = Cursors.No;

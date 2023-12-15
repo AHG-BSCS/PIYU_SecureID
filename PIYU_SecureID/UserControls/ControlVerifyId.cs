@@ -177,7 +177,7 @@ namespace PIYU_SecureID
                 videoSource.SignalToStop();
                 videoSource.WaitForStop();
             }
-            buttonStartStop.Text = "START";
+            buttonStartStop.Text = "CAMERA";
             lastDecodedResult = "";
             pictureBoxQrScanner.Image = null;
             panelInfo.Visible = false;

@@ -235,7 +235,6 @@
             // 
             // pictureBoxSign
             // 
-            pictureBoxSign.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBoxSign.BackColor = Color.White;
             pictureBoxSign.BorderStyle = BorderStyle.FixedSingle;
             pictureBoxSign.Cursor = Cursors.No;
@@ -248,7 +247,6 @@
             // 
             // pictureBoxIdPhoto
             // 
-            pictureBoxIdPhoto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBoxIdPhoto.BackColor = Color.White;
             pictureBoxIdPhoto.BorderStyle = BorderStyle.FixedSingle;
             pictureBoxIdPhoto.Cursor = Cursors.No;
