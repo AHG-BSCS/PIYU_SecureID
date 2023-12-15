@@ -4,7 +4,7 @@ namespace PIYU_SecureID
 {
     public partial class FlaffyBird : Form
     {
-        int pipeSpeed = 5;
+        int pipeSpeed = 20;
         int gravity = 10;
         int score = 0;
         bool isGameRunning = false;
@@ -49,13 +49,13 @@ namespace PIYU_SecureID
                 endGame();
             }
 
-            if (score > 25)
+            if (score == 25)
             {
-                pipeSpeed = 15;
+                pipeSpeed = 25;
             }
             else if (score == 50)
             {
-                pipeSpeed = 25;
+                pipeSpeed = 30;
             }
             else if (score > 50)
             {
@@ -70,6 +70,7 @@ namespace PIYU_SecureID
                 flappyBird.Location = new Point(41, 127);
                 pipeTop.Location = new Point(235, 0);
                 pipeBottom.Location = new Point(235, 203);
+                pipeSpeed = 20;
                 score = 0;
 
                 isGameRunning = true;
