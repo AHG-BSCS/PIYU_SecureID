@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLoad));
             picBoxAppLogo = new PictureBox();
             lblAppName = new Label();
             ((System.ComponentModel.ISupportInitialize)picBoxAppLogo).BeginInit();
@@ -67,6 +68,7 @@
             Controls.Add(lblAppName);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
             Name = "FormLoad";
             StartPosition = FormStartPosition.CenterScreen;
