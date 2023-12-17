@@ -148,7 +148,7 @@ namespace PIYU_SecureID
                 }
                 catch
                 {
-                    MessageBox.Show("Invalid transaction number.");
+                    MessageBox.Show("Invalid transaction number.", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     RefreshData();
                 }
             }
@@ -193,12 +193,12 @@ namespace PIYU_SecureID
                 }
                 else
                 {
-                    MessageBox.Show("Please select a camera from the list.");
+                    MessageBox.Show("Please select a camera from the list.", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
             else
             {
-                MessageBox.Show("No video devices found.");
+                MessageBox.Show("No video devices found.", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -242,7 +242,7 @@ namespace PIYU_SecureID
                     else
                     {
                         lastResult = result.ToString();
-                        MessageBox.Show("Invalid QR.");
+                        MessageBox.Show("Invalid QR.", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

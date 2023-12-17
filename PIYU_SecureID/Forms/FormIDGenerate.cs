@@ -233,7 +233,7 @@ namespace PIYU_SecureID
                 }
                 else
                 {
-                    MessageBox.Show("ID already issued.");
+                    MessageBox.Show("ID already issued.","Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -253,7 +253,7 @@ namespace PIYU_SecureID
             }
             else
             {
-                MessageBox.Show("ID already issued.");
+                MessageBox.Show("ID already issued.", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -263,7 +263,7 @@ namespace PIYU_SecureID
             {
                 string csvString = data.ToQrIdCsvString();
                 File.AppendAllText(filename, csvString + Environment.NewLine);
-                MessageBox.Show("Data saved successfully!");
+                MessageBox.Show("Data saved successfully!", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

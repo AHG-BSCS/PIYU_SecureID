@@ -147,7 +147,7 @@ namespace PIYU_SecureID
             {
                 string csvString = data.ToCsvString();
                 File.AppendAllText(filename, csvString + Environment.NewLine);
-                MessageBox.Show("Data saved successfully!");
+                MessageBox.Show("Data saved successfully!", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -174,7 +174,7 @@ namespace PIYU_SecureID
         {
             Clipboard.SetText(transactionNum.ToString());
 
-            MessageBox.Show("Transaction Number copied to clipboard!");
+            MessageBox.Show("Transaction Number copied to clipboard!", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -60,12 +60,12 @@ namespace PIYU_SecureID
                 }
                 else
                 {
-                    MessageBox.Show("Please select a camera from the list.");
+                    MessageBox.Show("Please select a camera from the list.", "Admin", MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("No video devices found.");
+                MessageBox.Show("No video devices found.", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -127,7 +127,7 @@ namespace PIYU_SecureID
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error decoding QR code: {ex.Message}");
+                MessageBox.Show($"Error decoding QR code: {ex.Message}", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -157,7 +157,7 @@ namespace PIYU_SecureID
             }
             catch
             {
-                MessageBox.Show("Invalid QR.");
+                MessageBox.Show("Invalid QR.", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

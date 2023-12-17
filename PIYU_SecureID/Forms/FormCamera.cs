@@ -63,12 +63,12 @@ namespace PIYU_SecureID
                 }
                 else
                 {
-                    MessageBox.Show("Please select a camera from the list.");
+                    MessageBox.Show("Please select a camera from the list.", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("No video devices found.");
+                MessageBox.Show("No video devices found.", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -93,7 +93,7 @@ namespace PIYU_SecureID
             }
             else
             {
-                MessageBox.Show("Webcam not available or not started.");
+                MessageBox.Show("Webcam not available or not started.", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

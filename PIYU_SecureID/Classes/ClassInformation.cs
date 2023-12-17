@@ -81,18 +81,18 @@ namespace PIYU_SecureID
                         }
                     }
 
-                    MessageBox.Show($"Record with key {targetKey} not found.");
+                    MessageBox.Show($"Record with key {targetKey} not found.","Admin",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 }
                 else
                 {
-                    MessageBox.Show($"File not found: {filename}. Creating a new data structure.");
+                    MessageBox.Show($"File not found: {filename}. Creating a new data structure.","Admin",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
 
                 return new ClassInformation();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading data: {ex.Message}");
+                MessageBox.Show($"Error loading data: {ex.Message}","Admin",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return new ClassInformation();
             }
         }
@@ -134,14 +134,14 @@ namespace PIYU_SecureID
                 }
                 else
                 {
-                    MessageBox.Show($"File not found: {filename}. Creating a new data structure.");
+                    MessageBox.Show($"File not found: {filename}. Creating a new data structure.", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 return null;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading data: {ex.Message}");
+                MessageBox.Show($"Error loading data: {ex.Message}", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return new ClassInformation();
             }
         }
@@ -163,14 +163,14 @@ namespace PIYU_SecureID
                 }
                 else
                 {
-                    MessageBox.Show($"File not found. Creating a new data structure.");
+                    MessageBox.Show($"File not found. Creating a new data structure.","Admin",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 }
 
                 return 0;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading data: {ex.Message}");
+                MessageBox.Show($"Error loading data: {ex.Message}", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
             }
         }
@@ -192,14 +192,14 @@ namespace PIYU_SecureID
                 }
                 else
                 {
-                    MessageBox.Show($"File not found. Creating a new data structure.");
+                    MessageBox.Show($"File not found. Creating a new data structure.", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
                 return 0;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading data: {ex.Message}");
+                MessageBox.Show($"Error loading data: {ex.Message}", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
             }
         }
