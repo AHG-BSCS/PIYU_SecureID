@@ -94,7 +94,7 @@ namespace PIYU_SecureID
                 cmbBoxYears.SelectedIndex == -1 || cmbBoxMonth.SelectedIndex == -1 ||
                 picBoxSignature.Image == null || picBoxPicture.Image == null)
             {
-                MessageBox.Show("Fill All Information.");
+                MessageBox.Show("Fill All Information.","Admin",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             else
             {
@@ -226,7 +226,7 @@ namespace PIYU_SecureID
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}");
+                MessageBox.Show($"An error occurred: {ex.Message}","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -258,7 +258,7 @@ namespace PIYU_SecureID
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}");
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -290,7 +290,7 @@ namespace PIYU_SecureID
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}");
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
