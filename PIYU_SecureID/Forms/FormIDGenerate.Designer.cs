@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIDGenerate));
             picBoxFrontBackground = new PictureBox();
             picBoxBackBackground = new PictureBox();
             lblFont = new Label();
@@ -379,6 +380,7 @@
             Controls.Add(buttonSave);
             Controls.Add(buttonPrint);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormIDGenerate";
             StartPosition = FormStartPosition.CenterScreen;

@@ -124,6 +124,7 @@
             Controls.Add(ground);
             Controls.Add(pipeTop);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             KeyPreview = true;
             Name = "FlaffyBird";
             StartPosition = FormStartPosition.CenterScreen;
