@@ -5,6 +5,7 @@ namespace PIYU_SecureID
     public partial class FormSignature : Form
     {
         private Point previousPoint;
+        private Pen signaturePen;
         private bool isDrawing;
         private ControlCreateId saveSign;
 
@@ -12,6 +13,18 @@ namespace PIYU_SecureID
         {
             InitializeComponent();
             this.saveSign = saveSign;
+            this.signaturePen = CreateSignaturePen();
+        }
+
+        private Pen CreateSignaturePen()
+        {
+            Pen signaturePen = new Pen(Color.Black);
+            signaturePen.Width = 3;
+            signaturePen.StartCap = signaturePen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
+            signaturePen.LineJoin = System.Drawing.Drawing2D.LineJoin.Round;
+            signaturePen.MiterLimit = 10;
+
+            return signaturePen;
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
@@ -37,7 +50,7 @@ namespace PIYU_SecureID
             {
                 using (Graphics g = picBoxSignatureDrawing.CreateGraphics())
                 {
-                    g.DrawLine(Pens.Black, previousPoint, e.Location);
+                    g.DrawLine(signaturePen, previousPoint, e.Location);
                 }
                 previousPoint = e.Location;
             }

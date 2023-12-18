@@ -1,18 +1,10 @@
 ﻿using PIYU_SecureID.Classes;
 using QRCoder;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Imaging;
 using System.Drawing.Printing;
-using System.Linq;
 using System.Security.Cryptography;
-using System.Security.Policy;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 using static QRCoder.PayloadGenerator.SwissQrCode;
 
 namespace PIYU_SecureID
@@ -35,6 +27,7 @@ namespace PIYU_SecureID
         public string maritalStatus;
         public byte[] idPhoto;
         public byte[] sign;
+
         public FormIDGenerate(string lastName, string givenName, string middleName, string suffix, long? transactionNum,
                                     string sex, string bloodType, string dateOfBirth, string province, string city, string barangay, string maritalStatus,
                                     byte[] idPhoto)
