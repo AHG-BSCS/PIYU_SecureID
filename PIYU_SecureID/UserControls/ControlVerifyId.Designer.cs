@@ -66,8 +66,6 @@
             label4 = new Label();
             panelInfo = new Panel();
             label12 = new Label();
-            pictureBoxIdPhoto = new PictureBox();
-            pictureBoxSign = new PictureBox();
             panel1 = new Panel();
             labelLastName = new Label();
             label1 = new Label();
@@ -91,8 +89,6 @@
             panel13.SuspendLayout();
             panel14.SuspendLayout();
             panelInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxSign).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -103,7 +99,7 @@
             // 
             panel16.Controls.Add(labelDateIssued);
             panel16.Controls.Add(label13);
-            panel16.Location = new Point(258, 550);
+            panel16.Location = new Point(44, 546);
             panel16.Name = "panel16";
             panel16.Size = new Size(306, 21);
             panel16.TabIndex = 0;
@@ -133,7 +129,7 @@
             // 
             panel11.Controls.Add(labelSex);
             panel11.Controls.Add(label11);
-            panel11.Location = new Point(258, 243);
+            panel11.Location = new Point(44, 239);
             panel11.Name = "panel11";
             panel11.Size = new Size(306, 21);
             panel11.TabIndex = 0;
@@ -163,7 +159,7 @@
             // 
             panel10.Controls.Add(labelBloodType);
             panel10.Controls.Add(label10);
-            panel10.Location = new Point(258, 280);
+            panel10.Location = new Point(44, 276);
             panel10.Name = "panel10";
             panel10.Size = new Size(306, 21);
             panel10.TabIndex = 0;
@@ -193,7 +189,7 @@
             // 
             panel9.Controls.Add(labelDateOfBirth);
             panel9.Controls.Add(label8);
-            panel9.Location = new Point(258, 317);
+            panel9.Location = new Point(44, 313);
             panel9.Name = "panel9";
             panel9.Size = new Size(306, 21);
             panel9.TabIndex = 0;
@@ -223,7 +219,7 @@
             // 
             panel8.Controls.Add(labelMaritalStatus);
             panel8.Controls.Add(label9);
-            panel8.Location = new Point(258, 354);
+            panel8.Location = new Point(44, 350);
             panel8.Name = "panel8";
             panel8.Size = new Size(306, 21);
             panel8.TabIndex = 0;
@@ -253,7 +249,7 @@
             // 
             panel5.Controls.Add(labelProvince);
             panel5.Controls.Add(label7);
-            panel5.Location = new Point(258, 415);
+            panel5.Location = new Point(44, 411);
             panel5.Name = "panel5";
             panel5.Size = new Size(392, 21);
             panel5.TabIndex = 0;
@@ -283,7 +279,7 @@
             // 
             panel6.Controls.Add(labelCity);
             panel6.Controls.Add(label6);
-            panel6.Location = new Point(258, 452);
+            panel6.Location = new Point(44, 448);
             panel6.Name = "panel6";
             panel6.Size = new Size(392, 21);
             panel6.TabIndex = 0;
@@ -313,7 +309,7 @@
             // 
             panel7.Controls.Add(labelBarangay);
             panel7.Controls.Add(label5);
-            panel7.Location = new Point(258, 489);
+            panel7.Location = new Point(44, 485);
             panel7.Name = "panel7";
             panel7.Size = new Size(392, 21);
             panel7.TabIndex = 0;
@@ -460,8 +456,6 @@
             panelInfo.BackColor = SystemColors.Control;
             panelInfo.Controls.Add(panel16);
             panelInfo.Controls.Add(label12);
-            panelInfo.Controls.Add(pictureBoxIdPhoto);
-            panelInfo.Controls.Add(pictureBoxSign);
             panelInfo.Controls.Add(panel1);
             panelInfo.Controls.Add(panel2);
             panelInfo.Controls.Add(panel3);
@@ -485,41 +479,17 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.Location = new Point(371, 23);
+            label12.Location = new Point(246, 20);
             label12.Name = "label12";
             label12.Size = new Size(253, 25);
             label12.TabIndex = 0;
             label12.Text = "PERSONAL INFORMATIION";
             // 
-            // pictureBoxIdPhoto
-            // 
-            pictureBoxIdPhoto.BackColor = Color.White;
-            pictureBoxIdPhoto.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxIdPhoto.Cursor = Cursors.No;
-            pictureBoxIdPhoto.Location = new Point(23, 23);
-            pictureBoxIdPhoto.Name = "pictureBoxIdPhoto";
-            pictureBoxIdPhoto.Size = new Size(200, 200);
-            pictureBoxIdPhoto.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxIdPhoto.TabIndex = 14;
-            pictureBoxIdPhoto.TabStop = false;
-            // 
-            // pictureBoxSign
-            // 
-            pictureBoxSign.BackColor = Color.White;
-            pictureBoxSign.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxSign.Cursor = Cursors.No;
-            pictureBoxSign.Location = new Point(23, 243);
-            pictureBoxSign.Name = "pictureBoxSign";
-            pictureBoxSign.Size = new Size(150, 150);
-            pictureBoxSign.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxSign.TabIndex = 13;
-            pictureBoxSign.TabStop = false;
-            // 
             // panel1
             // 
             panel1.Controls.Add(labelLastName);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(258, 67);
+            panel1.Location = new Point(44, 63);
             panel1.Name = "panel1";
             panel1.Size = new Size(392, 21);
             panel1.TabIndex = 20;
@@ -549,7 +519,7 @@
             // 
             panel2.Controls.Add(labelGivenName);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(258, 104);
+            panel2.Location = new Point(44, 100);
             panel2.Name = "panel2";
             panel2.Size = new Size(392, 21);
             panel2.TabIndex = 0;
@@ -579,7 +549,7 @@
             // 
             panel3.Controls.Add(labelMiddleName);
             panel3.Controls.Add(label3);
-            panel3.Location = new Point(258, 141);
+            panel3.Location = new Point(44, 137);
             panel3.Name = "panel3";
             panel3.Size = new Size(392, 21);
             panel3.TabIndex = 0;
@@ -609,7 +579,7 @@
             // 
             panel4.Controls.Add(labelSuffix);
             panel4.Controls.Add(label4);
-            panel4.Location = new Point(258, 178);
+            panel4.Location = new Point(44, 174);
             panel4.Name = "panel4";
             panel4.Size = new Size(392, 21);
             panel4.TabIndex = 0;
@@ -648,8 +618,6 @@
             panel14.PerformLayout();
             panelInfo.ResumeLayout(false);
             panelInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxIdPhoto).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxSign).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -700,8 +668,6 @@
         private Label label4;
         private Panel panelInfo;
         private Label label12;
-        private PictureBox pictureBoxIdPhoto;
-        private PictureBox pictureBoxSign;
         private Panel panel1;
         private Label labelLastName;
         private Label label1;

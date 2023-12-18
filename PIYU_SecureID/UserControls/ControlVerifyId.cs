@@ -14,7 +14,6 @@ namespace PIYU_SecureID
 {
     public partial class ControlVerifyId : UserControl
     {
-        private long? key;
         private FilterInfoCollection videoDevices;
         private VideoCaptureDevice videoSource;
         private ClassInformation info = new ClassInformation();
@@ -127,7 +126,7 @@ namespace PIYU_SecureID
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error decoding QR code: {ex.Message}", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid QR.", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -137,36 +136,39 @@ namespace PIYU_SecureID
             {
                 var pieces = decryptedData.Split('~');
                 RefreshData();
-                info = info.LoadIdQrFromFile("Resources/idQr.txt", long.Parse(pieces[12]));
-                if (info.TransactionNum == long.Parse(pieces[12]))
+                if (long.TryParse(pieces[12], out long result))
                 {
-                    labelLastName.Text = pieces[0];
-                    labelGivenName.Text = pieces[1];
-                    labelMiddleName.Text = pieces[2];
-                    labelSuffix.Text = pieces[3];
-                    labelSex.Text = pieces[4];
-                    labelMaritalStatus.Text = pieces[5];
-                    labelBloodType.Text = pieces[6];
-                    labelDateOfBirth.Text = pieces[7];
-                    labelProvince.Text = pieces[8];
-                    labelCity.Text = pieces[9];
-                    labelBarangay.Text = pieces[10];
-                    labelDateIssued.Text = pieces[11];
-                    panelInfo.Visible = true;
+                    info = info.LoadIdQrFromFile("Resources/idQr.txt", long.Parse(pieces[12]));
+                    if (info != null)
+                    {
+                        if (info.TransactionNum == long.Parse(pieces[12]))
+                        {
+                            labelLastName.Text = pieces[0];
+                            labelGivenName.Text = pieces[1];
+                            labelMiddleName.Text = pieces[2];
+                            labelSuffix.Text = pieces[3];
+                            labelSex.Text = pieces[4];
+                            labelMaritalStatus.Text = pieces[5];
+                            labelBloodType.Text = pieces[6];
+                            labelDateOfBirth.Text = pieces[7];
+                            labelProvince.Text = pieces[8];
+                            labelCity.Text = pieces[9];
+                            labelBarangay.Text = pieces[10];
+                            labelDateIssued.Text = pieces[11];
+                            panelInfo.Visible = true;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid ID.", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        info = new ClassInformation();
+                    }
                 }
             }
             catch
             {
-                MessageBox.Show("Invalid QR.", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-
-        public static Image BytesToImage(byte[] bytes)
-        {
-            using (MemoryStream ms = new MemoryStream(bytes))
-            {
-                return Image.FromStream(ms);
+                MessageBox.Show("Invalid ID.", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                info = new ClassInformation();
             }
         }
 
@@ -186,7 +188,6 @@ namespace PIYU_SecureID
 
         private void RefreshData()
         {
-            this.key = null;
             labelLastName.Text = "";
             labelGivenName.Text = "";
             labelMiddleName.Text = "";
@@ -198,8 +199,6 @@ namespace PIYU_SecureID
             labelCity.Text = "";
             labelBarangay.Text = "";
             labelMaritalStatus.Text = "";
-            pictureBoxIdPhoto.Image = null;
-            pictureBoxSign.Image = null;
             panelInfo.Visible = false;
         }
 

@@ -238,6 +238,7 @@
             btnSettings.Text = "Settings";
             btnSettings.TextAlign = ContentAlignment.MiddleLeft;
             btnSettings.UseVisualStyleBackColor = true;
+            btnSettings.Visible = false;
             btnSettings.Click += btnSettings_Click;
             // 
             // btnLogout
