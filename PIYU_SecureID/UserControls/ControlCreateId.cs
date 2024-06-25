@@ -205,7 +205,7 @@ namespace PIYU_SecureID
             try
             {
                 string file;
-                using (System.IO.StreamReader f = System.IO.File.OpenText("Resources/Address.txt"))
+                using (System.IO.StreamReader f = System.IO.File.OpenText("Resources/auto_complete_address.txt"))
                 {
                     file = f.ReadToEnd();
                 }
@@ -238,7 +238,7 @@ namespace PIYU_SecureID
                 cmbBoxBarangay.Items.Clear();
 
                 string file;
-                using (System.IO.StreamReader f = System.IO.File.OpenText("Resources/Address.txt"))
+                using (System.IO.StreamReader f = System.IO.File.OpenText("Resources/auto_complete_address.txt"))
                 {
                     file = f.ReadToEnd();
                 }
@@ -269,7 +269,7 @@ namespace PIYU_SecureID
                 cmbBoxBarangay.Items.Clear();
 
                 string file;
-                using (System.IO.StreamReader f = System.IO.File.OpenText("Resources/Address.txt"))
+                using (System.IO.StreamReader f = System.IO.File.OpenText("Resources/auto_complete_address.txt"))
                 {
                     file = f.ReadToEnd();
                 }

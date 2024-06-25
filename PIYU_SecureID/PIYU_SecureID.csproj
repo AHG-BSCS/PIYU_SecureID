@@ -39,13 +39,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Resources\Address.txt">
+    <None Update="Resources\auto_complete_address.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\idQr.txt">
+    <None Update="Resources\ID_QR.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\info.txt">
+    <None Update="Resources\ID_info.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

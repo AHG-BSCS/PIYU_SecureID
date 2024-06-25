@@ -138,7 +138,7 @@ namespace PIYU_SecureID
                 RefreshData();
                 if (long.TryParse(pieces[12], out long result))
                 {
-                    info = info.LoadIdQrFromFile("Resources/idQr.txt", long.Parse(pieces[12]));
+                    info = info.LoadIdQrFromFile("Resources/ID_QR.txt", long.Parse(pieces[12]));
                     if (info != null)
                     {
                         if (info.TransactionNum == long.Parse(pieces[12]))

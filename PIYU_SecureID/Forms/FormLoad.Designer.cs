@@ -36,7 +36,7 @@
             // 
             // picBoxAppLogo
             // 
-            picBoxAppLogo.Image = Properties.Resources.PIYU_SecureID;
+            picBoxAppLogo.Image = Properties.Resources.icon_secureID;
             picBoxAppLogo.Location = new Point(162, 120);
             picBoxAppLogo.Margin = new Padding(1167, 3, 1167, 3);
             picBoxAppLogo.Name = "picBoxAppLogo";

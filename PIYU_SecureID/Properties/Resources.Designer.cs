@@ -61,6 +61,45 @@ namespace PIYU_SecureID.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;01&quot;: {
+        ///    &quot;region_name&quot;: &quot;REGION I&quot;,
+        ///    &quot;province_list&quot;: {
+        ///      &quot;ILOCOS NORTE&quot;: {
+        ///        &quot;municipality_list&quot;: {
+        ///          &quot;ADAMS&quot;: {
+        ///            &quot;barangay_list&quot;: [
+        ///              &quot;ADAMS (POB.)&quot;
+        ///            ]
+        ///          },
+        ///          &quot;BACARRA&quot;: {
+        ///            &quot;barangay_list&quot;: [
+        ///              &quot;BANI&quot;,
+        ///              &quot;BUYON&quot;,
+        ///              &quot;CABARUAN&quot;,
+        ///              &quot;CABULALAAN&quot;,
+        ///              &quot;CABUSLIGAN&quot;,
+        ///              &quot;CADARATAN&quot;,
+        ///              &quot;CALIOET-LIBONG&quot;,
+        ///              &quot;CASILIAN [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string auto_complete_address {
+            get {
+                return ResourceManager.GetString("auto_complete_address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_secureID {
+            get {
+                object obj = ResourceManager.GetObject("icon_secureID", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap icons_close {
@@ -101,12 +140,20 @@ namespace PIYU_SecureID.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to 4902846422877~SIA~GEORGE JOSEPH~MANILA~~MALE~B+~8 NOVEMBER 2003~QUEZON~CITY1~BARANGAY1~MARRIED~iVBORw0KGgoAAAANSUhEUgAAAtAAAALQCAIAAAA2NdDLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAP+lSURBVHhevP3ncxtZmu/71ssbcW+cMzPdXU6enjAECICgAQl6KxqJpEiJRjSi994TJEiA3nvZklSue0/39OzZO859cf+5+1v5ZD5YyAQgVnXPzvgGI5FIQCoD4MOVKxNf1WaloMqcJFThEZXnpVR4U1FZbpJcSU5CgftRtsvldqSn29LSLCZLakpqchIypSRjHVuy3AUos9CLsory3QV5jkx3mjM9MTHx0aNHd+7c+fbbb7/++us//elPf9SWP2jLvyoLVtQ7/vhH7PmNsty9excPT0pKSk1NNZvNFmWxp1ndL [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static System.Drawing.Bitmap PIYU_SecureID {
+        internal static string ID_info {
             get {
-                object obj = ResourceManager.GetObject("PIYU_SecureID", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("ID_info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string ID_QR {
+            get {
+                return ResourceManager.GetString("ID_QR", resourceCulture);
             }
         }
         

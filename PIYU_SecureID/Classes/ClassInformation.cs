@@ -144,9 +144,9 @@ namespace PIYU_SecureID
         {
             try
             {
-                if (File.Exists("Resources/info.txt"))
+                if (File.Exists("Resources/ID_info.txt"))
                 {
-                    string[] lines = File.ReadAllLines("Resources/info.txt");
+                    string[] lines = File.ReadAllLines("Resources/ID_info.txt");
 
                     int i = 0;
                     foreach (string line in lines)
@@ -173,9 +173,9 @@ namespace PIYU_SecureID
         {
             try
             {
-                if (File.Exists("Resources/idQr.txt"))
+                if (File.Exists("Resources/ID_QR.txt"))
                 {
-                    string[] lines = File.ReadAllLines("Resources/idQr.txt");
+                    string[] lines = File.ReadAllLines("Resources/ID_QR.txt");
 
                     int i = 0;
                     foreach (string line in lines)

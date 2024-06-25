@@ -111,7 +111,7 @@
             // picBoxAppLogo
             // 
             picBoxAppLogo.BackColor = Color.Transparent;
-            picBoxAppLogo.Image = Properties.Resources.PIYU_SecureID;
+            picBoxAppLogo.Image = Properties.Resources.icon_secureID;
             picBoxAppLogo.Location = new Point(165, 1);
             picBoxAppLogo.Margin = new Padding(4, 2, 4, 2);
             picBoxAppLogo.Name = "picBoxAppLogo";

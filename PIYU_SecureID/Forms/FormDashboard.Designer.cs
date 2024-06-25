@@ -389,7 +389,7 @@
             // picBoxAppLogo
             // 
             picBoxAppLogo.Dock = DockStyle.Top;
-            picBoxAppLogo.Image = Properties.Resources.PIYU_SecureID;
+            picBoxAppLogo.Image = Properties.Resources.icon_secureID;
             picBoxAppLogo.Location = new Point(0, 11);
             picBoxAppLogo.Margin = new Padding(4, 2, 4, 2);
             picBoxAppLogo.Name = "picBoxAppLogo";

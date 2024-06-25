@@ -84,7 +84,7 @@
             // 
             // flappyBird
             // 
-            flappyBird.Image = Properties.Resources.PIYU_SecureID;
+            flappyBird.Image = Properties.Resources.icon_secureID;
             flappyBird.Location = new Point(41, 127);
             flappyBird.Name = "flappyBird";
             flappyBird.Size = new Size(28, 31);

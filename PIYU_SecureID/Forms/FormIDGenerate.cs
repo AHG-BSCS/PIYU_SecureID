@@ -214,13 +214,13 @@ namespace PIYU_SecureID
                 printDocument.Print();
 
                 ClassInformation data = new ClassInformation();
-                data = data.LoadIdQrFromFile("Resources/idQr.txt", transactionNum);
+                data = data.LoadIdQrFromFile("Resources/ID_QR.txt", transactionNum);
                 if (data == null)
                 {
                     data = new ClassInformation();
                     data.TransactionNum = transactionNum;
 
-                    SaveToFile("Resources/idQr.txt", data);
+                    SaveToFile("Resources/ID_QR.txt", data);
 
                     this.Close();
                 }
@@ -234,13 +234,13 @@ namespace PIYU_SecureID
         private void buttonSave_Click(object sender, EventArgs e)
         {
             ClassInformation data = new ClassInformation();
-            data = data.LoadIdQrFromFile("Resources/idQr.txt", transactionNum);
+            data = data.LoadIdQrFromFile("Resources/ID_QR.txt", transactionNum);
             if (data == null)
             {
                 data = new ClassInformation();
                 data.TransactionNum = transactionNum;
 
-                SaveToFile("Resources/idQr.txt", data);
+                SaveToFile("Resources/ID_QR.txt", data);
 
                 this.Close();
             }

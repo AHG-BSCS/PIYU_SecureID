@@ -124,9 +124,6 @@
   <data name="icons_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons-close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PIYU_SecureID" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PIYU_SecureID2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="secureid_front" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\secureid_front.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -138,5 +135,17 @@
   </data>
   <data name="icons_square" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons-square.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_secureID" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_secureID.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="auto_complete_address" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\auto_complete_address.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="ID_QR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ID_QR.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="ID_info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ID_info.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
 </root>

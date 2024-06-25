@@ -56,8 +56,8 @@
             // 
             // picBoxAppLogo
             // 
-            picBoxAppLogo.Image = Properties.Resources.PIYU_SecureID;
-            picBoxAppLogo.InitialImage = Properties.Resources.PIYU_SecureID;
+            picBoxAppLogo.Image = Properties.Resources.icon_secureID;
+            picBoxAppLogo.InitialImage = Properties.Resources.icon_secureID;
             picBoxAppLogo.Location = new Point(30, 30);
             picBoxAppLogo.Name = "picBoxAppLogo";
             picBoxAppLogo.Size = new Size(90, 90);
@@ -88,7 +88,7 @@
             // picBoxQRCode
             // 
             picBoxQRCode.Cursor = Cursors.No;
-            picBoxQRCode.InitialImage = Properties.Resources.PIYU_SecureID;
+            picBoxQRCode.InitialImage = Properties.Resources.icon_secureID;
             picBoxQRCode.Location = new Point(544, 6);
             picBoxQRCode.Name = "picBoxQRCode";
             picBoxQRCode.Size = new Size(200, 200);
