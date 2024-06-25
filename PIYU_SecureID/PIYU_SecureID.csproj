@@ -14,6 +14,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Address.txt" />
+    <None Remove="Resources\idQr.txt" />
+    <None Remove="Resources\info.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Address.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\idQr.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\info.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AForge.Video.DirectShow" Version="2.2.5" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Otp.NET" Version="1.3.0" />
