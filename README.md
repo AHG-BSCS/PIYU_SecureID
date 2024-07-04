@@ -1,9 +1,10 @@
 # ![secureid thumbnail][secureid-thumbnail] SecureID ![secureid badge][secureid-badge]
-A Windows form application that can generate an encrypted digital ID. The application has a registration form that needs to be filled out using the applicant's information, a sign and a 1x1 picture. This information will be encrypted and saved to the database for further processing. The applicant will receive a transaction slip that will be used for the next step. The ID provider can then print the ID on a physical card by generating the ID using the transaction slip. The ID contains an encrypted QR code which includes all the ID's information. This QR code can then be used to verify if the ID is genuine and registered to the database.
+A Windows form application that can generate a digital ID where the ID's information is stored in an encrypted QR code. A registration form is filled out to apply for the ID. The QR code generated to the ID can then be used to verify if the ID is genuine and registered to the database.
 
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
+- [Usage](#usage)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
@@ -11,13 +12,21 @@ A Windows form application that can generate an encrypted digital ID. The applic
 ![login screen][login-screen] &nbsp;
 ![application form][application-form]
 - **Login Screen** - The application requires a passcode provided by the authentication application.
-- **Application Form** - A form that requires the necessary information of applicants to apply for the ID.
+- **Application Form** - A form that requires to be filled out using the applicant's information, a sign and a 1x1 picture
 
 ![id generation][id-generation] &nbsp;
 ![id verification][id-verification]
 - **Encrypted ID Generation** - The generated QR code in front of the ID is encrypted and makes it unreadable with traditional QR reader applications.
 - **ID Verification** - In case that ID is required to be verified first for some reason, verification can be done directly through the application.
 - **Transaction Counter** - Display the number of processed transactions.
+
+## Usage
+1. The application has a registration form that needs to be filled out using the applicant's information, a sign and a 1x1 picture. This information will be encrypted and saved to the database for further processing.
+2. The applicant will receive a transaction slip that will be used for the next step.
+3. The ID provider can then print the ID on a physical card by generating the ID using the transaction slip.
+
+> [!IMPORTANT]
+> The ID contains an encrypted QR code which includes all the ID's information. This QR code can then be used to verify if the ID is genuine and registered to the database.
 
 ## Installation
 1. Download the latest version of [SecureID][release-page].
