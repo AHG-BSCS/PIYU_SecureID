@@ -2,11 +2,23 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows7.0</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>PIYU_SecureID.Program</StartupObject>
+    <ApplicationIcon>Resources\secureID.ico</ApplicationIcon>
+    <Title>SecureID</Title>
+    <Authors>AHG-BSCS</Authors>
+    <Description>A windows form application that can generate encrypted digital ID.</Description>
+    <Copyright>This project is licensed under the MIT License.</Copyright>
+    <PackageProjectUrl>https://github.com/AHG-BSCS/PIYU_SecureID</PackageProjectUrl>
+    <PackageIcon>icon_secureID.png</PackageIcon>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/AHG-BSCS/PIYU_SecureID</RepositoryUrl>
+    <AssemblyVersion>0.1.0</AssemblyVersion>
+    <FileVersion>0.1.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,21 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Resources\Address.txt" />
-    <None Remove="Resources\idQr.txt" />
-    <None Remove="Resources\info.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Resources\Address.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\idQr.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\info.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Resources\secureID.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -59,6 +57,10 @@
   <ItemGroup>
     <None Update="Resources\auto_complete_address.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\icon_secureID.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
     </None>
     <None Update="Resources\ID_QR.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
