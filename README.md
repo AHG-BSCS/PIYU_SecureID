@@ -54,7 +54,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 [id-verification]: https://github.com/AHG-BSCS/PIYU_SecureID/assets/130748576/67beb747-7b36-4eb3-87f0-aa80f43eea95
 
 [release-page]: https://github.com/AHG-BSCS/PIYU_SecureID/releases
-[latest-release]: https://github.com/AHG-BSCS/PIYU_SecureID/releases/download/v0.1.0-Alpha/PIYU_SecureID-0.1.0-Alpha.exe
+[latest-release]: https://github.com/AHG-BSCS/PIYU_SecureID/releases/download/v0.1.0-Alpha/SecureID-0.1.0-Alpha.exe
 [visual-studio-2022]: https://learn.microsoft.com/en-us/visualstudio/ide/?view=vs-2022
 [windows-forms]: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/?view=netdesktop-8.0
 [advanced-installer]: https://www.advancedinstaller.com/user-guide/using.html
