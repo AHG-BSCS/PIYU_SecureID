@@ -1,11 +1,10 @@
-﻿using PIYU_SecureID.Classes;
-using QRCoder;
-using System;
+﻿using System;
 using System.Drawing.Printing;
 using System.Security.Cryptography;
 using System.Text;
 
-using static QRCoder.PayloadGenerator.SwissQrCode;
+using PIYU_SecureID.Classes;
+using QRCoder;
 
 namespace PIYU_SecureID
 {

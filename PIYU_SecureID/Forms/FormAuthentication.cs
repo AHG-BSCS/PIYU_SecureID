@@ -1,3 +1,4 @@
+using System;
 using OtpNet;
 using PIYU_SecureID.Classes;
 

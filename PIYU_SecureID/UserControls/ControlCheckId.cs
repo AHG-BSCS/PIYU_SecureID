@@ -1,19 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Drawing.Imaging;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
 using ZXing;
-using ZXing.QrCode;
 using ZXing.Windows.Compatibility;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PIYU_SecureID
 {

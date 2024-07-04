@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing.Drawing2D;
 using PIYU_SecureID.Classes;
 
 namespace PIYU_SecureID
