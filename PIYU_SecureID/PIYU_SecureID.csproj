@@ -10,15 +10,24 @@
     <StartupObject>PIYU_SecureID.Program</StartupObject>
     <ApplicationIcon>Resources\secureID.ico</ApplicationIcon>
     <Title>SecureID</Title>
-    <Authors>AHG-BSCS</Authors>
-    <Description>A windows form application that can generate encrypted digital ID.</Description>
+    <Version>0.1.0</Version>
+    <Authors>AHG</Authors>
+    <Description>Generate a digital ID where the ID's information is stored in an encrypted QR code.</Description>
     <Copyright>This project is licensed under the MIT License.</Copyright>
     <PackageProjectUrl>https://github.com/AHG-BSCS/PIYU_SecureID</PackageProjectUrl>
     <PackageIcon>icon_secureID.png</PackageIcon>
-    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/AHG-BSCS/PIYU_SecureID</RepositoryUrl>
-    <AssemblyVersion>0.1.0</AssemblyVersion>
-    <FileVersion>0.1.0</FileVersion>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>## Initial release of SecureID
+
+### Features
+Login Screen - The application requires a passcode provided by the authentication application.
+Application Form - A form that requires the necessary information of applicants to apply for the ID.
+Encrypted ID Generation - The generated QR code in front of the ID is encrypted and makes it unreadable with traditional QR reader applications.
+ID Verification - In case that ID is required to be verified first for some reason, verification can be done directly through the application.
+Transaction Counter - Display the number of processed transactions.</PackageReleaseNotes>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,6 +36,17 @@
 
   <ItemGroup>
     <Content Include="Resources\secureID.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
